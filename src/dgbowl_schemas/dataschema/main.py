@@ -5,12 +5,13 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+
 class Metadata(BaseModel):
     provenance: str
     version: str
     timezone: str = "localtime"
     provenance_metadata: Optional[dict]
-    
+
     @root_validator(pre=True)
     def check_version(cls, values):
         version = values.get("version")
@@ -22,7 +23,7 @@ class Metadata(BaseModel):
         return values
 
 
-class Input(BaseModel):
+class Input(BaseModel, extra=Extra.forbid):
     files: list[str]
     prefix: Optional[str]
     suffix: Optional[str]
@@ -30,25 +31,25 @@ class Input(BaseModel):
     exclude: Optional[str]
     encoding: Optional[str] = "UTF-8"
 
-    class Config:
-        extra = Extra.forbid
-
     @root_validator(pre=True)
-    def check_files(cls, values):
-        files, folders = values.pop("files", None), values.pop("folders", None)
-        if files is not None and folders is not None:
-            raise ValueError("cannot specify both 'files' and 'folders'")
-        elif files is None and folders is None:
-            raise ValueError("must specify either 'files' or 'folders'")
-        elif files is not None:
+    def check_exclusive(cls, values):
+        keys = {"files", "folders"}.intersection(set(values))
+        if len(keys) > 1:
+            raise ValueError(
+                f"Specifying multiple arguments ({keys}) to Input is not allowed."
+            )
+        elif len(keys) == 0:
+            raise ValueError(f"Either 'files' or 'folders' must be supplied to Input.")
+        if values.get("files") is not None:
             pass
-        elif folders is not None:
+        else:
+            folders = values.pop("folders")
             files = []
             for folder in folders:
                 files += [os.path.join(folder, file) for file in os.listdir(folder)]
-        values["files"] = files
+            values["files"] = files
         return values
-    
+
     def paths(self) -> list[str]:
         ret = []
         for path in self.files:
@@ -65,10 +66,38 @@ class Input(BaseModel):
             if inc:
                 ret.append(path)
         return ret
-        
+
+
+class ED_File(BaseModel):
+    path: str
+    type: str
+    match: Optional[str]
+
+
+class ED_Filename(BaseModel):
+    format: str
+    len: int
+
+
+class ED_Using(BaseModel):
+    isostring: Optional[str]
+    utsoffset: Optional[float]
+    file: Optional[ED_File]
+    filename: Optional[ED_Filename]
+
+    @root_validator(pre=True)
+    def check_exclusive(cls, values):
+        keys = {"isostring", "utsoffset", "file", "filename"}.intersection(set(values))
+        if len(keys) > 1:
+            raise ValueError(
+                f"Specifying multiple arguments ({keys}) to ExternalDate "
+                "is not allowed."
+            )
+        return values
+
 
 class ExternalDate(BaseModel):
-    using: dict
+    using: ED_Using
     mode: str = "add"
     _default: bool = PrivateAttr()
 
@@ -94,7 +123,7 @@ class ExternalDate(BaseModel):
         values["using"] = using
         return values
 
-    @validator('mode')
+    @validator("mode")
     def mode_is_known(cls, v):
         if v not in {"add", "replace"}:
             raise ValueError(
@@ -110,7 +139,6 @@ class Timestamp(BaseModel):
 
 class Parameters(BaseModel):
     filetype: Optional[str]
-    
 
     @root_validator(pre=True)
     def check_tracetype(cls, values):
@@ -123,14 +151,14 @@ class Parameters(BaseModel):
                 )
                 values["filetype"] = filetype
         return values
-    
-    @validator('filetype', always=False)
+
+    @validator("filetype", always=False)
     def filetype_is_known(cls, v):
         if v in {"drycal"}:
             logger.warning(
-                    "The entry '{v}' supplied as 'filetype' in Parameters is "
-                    "deprecated and may stop working in future versions of Dataschema."
-                )
+                "The entry '{v}' supplied as 'filetype' in Parameters is "
+                "deprecated and may stop working in future versions of Dataschema."
+            )
             return v
         if v not in {
             "ezchrom.asc",
@@ -146,7 +174,7 @@ class Parameters(BaseModel):
             "drycal.rtf",
             "drycal.txt",
             "eclab.mpt",
-            "eclab.mpr"
+            "eclab.mpr",
         }:
             raise ValueError(
                 "The entry '{v}' supplied as 'filetype' in Parameters is "
@@ -155,16 +183,13 @@ class Parameters(BaseModel):
         return v
 
 
-class Step(BaseModel):
+class Step(BaseModel, extra=Extra.forbid):
     parser: str
     input: Input
     tag: str = None
     parameters: Optional[dict]
     externaldate: Optional[ExternalDate]
     export: Optional[str]
-    
-    class Config:
-        extra = Extra.forbid
 
     @root_validator(pre=True)
     def check_import(cls, values):
@@ -176,24 +201,22 @@ class Step(BaseModel):
             )
             input = values.pop("import")
         if input is None:
-            raise ValueError(
-                "The 'input' section has to be specified for each Step."
-            )
+            raise ValueError("The 'input' section has to be specified for each Step.")
         values["input"] = input
         return values
-    
-    @validator('externaldate', always=True, pre=True)
+
+    @validator("externaldate", always=True, pre=True)
     def default_externaldate(cls, v):
         return v or {}
 
-    @validator('parameters', always=True, pre=True)
+    @validator("parameters", always=True, pre=True)
     def default_parameters(cls, v):
         return v or {}
-    
-    @validator('parser')
+
+    @validator("parser")
     def parser_is_known(cls, v):
         if v not in {
-            "chromtrace", 
+            "chromtrace",
             "masstrace",
             "qftrace",
             "xpstrace",
@@ -210,5 +233,14 @@ class Step(BaseModel):
 
 
 class Dataschema(BaseModel, extra=Extra.forbid):
+    """
+    Schema of the Dataschema object.
+
+    Must contain:
+    
+    - a 'metadata' entry containing a Metadata object
+    - a 'steps' entry containing a list of Step objects
+
+    """
     metadata: Metadata
     steps: list[Step]
