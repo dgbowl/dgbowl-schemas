@@ -1,0 +1,33 @@
+load:
+  - as: dg
+    path: normalized.dg.json
+extract:
+  - into: df
+    from: dg
+    at:
+      steps: b1, b2, b3
+    columns:
+      - key: derived->xout->*
+        as: xout
+  - into: df
+    from: dg
+    at:
+      step: a
+    columns:
+      - key: derived->xin->*
+        as: xin
+transform:
+  - table: df
+    with: catalysis.conversion
+    using:
+      - feedstock: propane
+        xin: xin
+        xout: xout
+      - feedstock: propane
+        product: False
+        xin: xin
+        xout: xout
+      - feedstock: O2
+        element: O
+        xin: xin
+        xout: xout
