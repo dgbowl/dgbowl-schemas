@@ -17,7 +17,7 @@ extract:
   - into: table 2
     from: norm
     at:
-      steps: [b1, b2, b3]
+      indices: [0, 1, 2]
   - into: table 2
     from: norm
     at:

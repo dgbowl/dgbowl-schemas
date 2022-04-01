@@ -1,3 +1,4 @@
+version: v1.0
 load:
   - as: norm
     path: normalized.dg.json
@@ -13,11 +14,16 @@ extract:
         as: rawT
       - key: derived->T
         as: derT
-  - into: df
+  - into: temp
     from: sparse
     at:
-      steps: b1, b2, b3
+      steps: [b1, b2, b3]
     columns:
       - key: derived->xout->*
+        as: xout
+  - into: df
+    from: temp
+    columns:
+      - key: xout->*
         as: xout
   

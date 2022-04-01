@@ -63,7 +63,7 @@ from dgbowl_schemas.dgpost_recipe import recipe_parser
                     {
                         "into": "table 2",
                         "from": "norm",
-                        "at": {"steps": ["b1", "b2", "b3"]},
+                        "at": {"indices": [0, 1, 2]},
                     },
                     {
                         "into": "table 2",
@@ -73,6 +73,262 @@ from dgbowl_schemas.dgpost_recipe import recipe_parser
                             {"key": "derived->xin->*", "as": "xin"}
                         ],
                     },
+                ]
+            }
+        ),
+        (
+            "lee_1.yaml",
+            {
+                "version": "v1.0",
+                "load": [
+                    {
+                        "as": "norm", 
+                        "path": "normalized.dg.json",
+                        "check": True,
+                        "type": "datagram"
+                    },
+                    {
+                        "as": "sparse", 
+                        "path": "sparse.dg.json",
+                        "check": True,
+                        "type": "datagram"
+                    },
+                ],
+                "extract": [
+                    {
+                        "into": "df",
+                        "from": "norm",
+                        "at": {"steps": ["a"]},
+                        "columns": [
+                            {"key": "raw->T_f", "as": "rawT"},
+                            {"key": "derived->T", "as": "derT"},
+                        ]
+                    },
+                    {
+                        "into": "df",
+                        "from": "sparse",
+                        "at": {"steps": ["b1", "b2", "b3"]},
+                        "columns": [
+                            {"key": "derived->xout->*", "as": "xout"}
+                        ],
+                    },
+                ]
+            }
+        ),
+        (
+            "lee_2.yaml",
+            {
+                "version": "v1.0",
+                "load": [
+                    {
+                        "as": "norm", 
+                        "path": "normalized.dg.json",
+                        "check": True,
+                        "type": "datagram"
+                    },
+                    {
+                        "as": "sparse", 
+                        "path": "sparse.dg.json",
+                        "check": True,
+                        "type": "datagram"
+                    },
+                ],
+                "extract": [
+                    {
+                        "into": "df",
+                        "from": "norm",
+                        "at": {"steps": ["a"]},
+                        "columns": [
+                            {"key": "raw->T_f", "as": "rawT"},
+                            {"key": "derived->T", "as": "derT"},
+                        ]
+                    },
+                    {
+                        "into": "temp",
+                        "from": "sparse",
+                        "at": {"steps": ["b1", "b2", "b3"]},
+                        "columns": [
+                            {"key": "derived->xout->*", "as": "xout"}
+                        ],
+                    },
+                    {
+                        "into": "df",
+                        "from": "temp",
+                        "columns": [
+                            {"key": "xout->*", "as": "xout"}
+                        ],
+                    },
+                ]
+            }
+        ),
+        (
+            "les_1.yaml",
+            {
+                "version": "v1.0",
+                "load": [
+                    {
+                        "as": "sparse", 
+                        "path": "sparse.dg.json",
+                        "check": True,
+                        "type": "datagram"
+                    },
+                ],
+                "extract": [
+                    {
+                        "into": "table 1",
+                        "from": "sparse",
+                        "at": {"steps": ["a"]},
+                        "columns": [
+                            {"key": "raw->T_f", "as": "rawT"},
+                            {"key": "derived->T", "as": "derT"},
+                        ]
+                    },
+                ],
+                "save": [
+                    {"table": "table 1", "as": "sparse.pkl", "sigma": True},
+                    {"table": "table 1", "as": "sparse.json", "sigma": True},
+                    {"table": "table 1", "as": "sparse.csv", "sigma": True},
+                    {"table": "table 1", "as": "sparse.xlsx", "sigma": True},
+                ]
+            }
+        ),
+        (
+            "les_2.yaml",
+            {
+                "version": "v1.0",
+                "load": [
+                    {
+                        "as": "sparse", 
+                        "path": "sparse.dg.json",
+                        "check": True,
+                        "type": "datagram"
+                    },
+                ],
+                "extract": [
+                    {
+                        "into": "table 1",
+                        "from": "sparse",
+                        "at": {"steps": ["a"]},
+                        "columns": [
+                            {"key": "raw->T_f", "as": "rawT"},
+                            {"key": "derived->T", "as": "derT"},
+                        ]
+                    },
+                ],
+                "save": [
+                    {"table": "table 1", "as": "sparse.extension", "type": "csv", "sigma": False},
+                ]
+            }
+        ),
+        (
+            "let_1.yaml",
+            {
+                "version": "v1.0",
+                "load": [
+                    {
+                        "as": "dg", 
+                        "path": "normalized.dg.json",
+                        "check": True,
+                        "type": "datagram"
+                    },
+                ],
+                "extract": [
+                    {
+                        "into": "df",
+                        "from": "dg",
+                        "at": {"indices": [2, 3, 4]},
+                        "columns": [
+                            {"key": "derived->xout->*", "as": "xout"},
+                        ]
+                    },
+                    {
+                        "into": "df",
+                        "from": "dg",
+                        "at": {"indices": [1]},
+                        "columns": [
+                            {"key": "derived->xin->*", "as": "xin"},
+                        ]
+                    },
+                ],
+                "transform": [
+                    {
+                        "table": "df", 
+                        "with": "catalysis.conversion",
+                        "using": [
+                            {
+                                "feedstock": "propane",
+                                "xin": "xin",
+                                "xout": "xout"
+                            },
+                            {
+                                "feedstock": "propane",
+                                "product": False,
+                                "xin": "xin",
+                                "xout": "xout"
+                            },
+                            {
+                                "feedstock": "O2",
+                                "element": "O",
+                                "xin": "xin",
+                                "xout": "xout"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ),
+        (
+            "let_2.yaml",
+            {
+                "version": "v1.0",
+                "load": [
+                    {
+                        "as": "dg", 
+                        "path": "normalized.dg.json",
+                        "check": True,
+                        "type": "datagram"
+                    },
+                ],
+                "extract": [
+                    {
+                        "into": "df",
+                        "from": "dg",
+                        "at": {"steps": ["b1", "b2", "b3"]},
+                        "columns": [
+                            {"key": "derived->xout->*", "as": "xout"},
+                        ]
+                    },
+                    {
+                        "into": "df",
+                        "from": "dg",
+                        "at": {"steps": ["a"]},
+                        "columns": [
+                            {"key": "derived->xin->*", "as": "xin"},
+                        ]
+                    },
+                ],
+                "transform": [
+                    {
+                        "table": "df", 
+                        "with": "catalysis.selectivity",
+                        "using": [
+                            {
+                                "feedstock": "propane",
+                                "xin": "xin",
+                                "xout": "xout"
+                            }
+                        ]
+                    },
+                    {
+                        "table": "df", 
+                        "with": "catalysis.atom_balance",
+                        "using": [
+                            {
+                                "xin": "xin",
+                                "xout": "xout"
+                            }
+                        ]
+                    }
                 ]
             }
         )

@@ -10,7 +10,7 @@ class Save(BaseModel):
         }
     table: str
     as_: str
-    type: Literal["pkl", "json", "xlsx", "csv"] = "pkl"
+    type: Literal["pkl", "json", "xlsx", "csv"] = None
     sigma: bool = True
 
     
