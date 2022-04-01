@@ -1,0 +1,39 @@
+{
+    "version": "v1.0",
+    "load": [
+        {"as": "d1", "path": "table.pkl", "type": "table"},
+        {"as": "d2", "path": "dg.json", "type": "datagram", "check": false}
+    ],
+    "extract": [
+        {
+            "into": "t1",
+            "from": "d2",
+            "at": {"index": 4},
+            "columns": [{"key": "raw->T_f", "as": "rawT"}]
+        },
+        {
+            "into": "t1",
+            "constants": [
+                {"value": "0.65(5)", "as": "m", "units": "kg"},
+                {"value": 0.53, "as": "x"}
+            ]
+        }
+    ],
+    "transform": [
+        {
+            "table": "t1", 
+            "with": "catalysis.conversion", 
+            "using": [
+                {"feedstock": "propane", "xin": "xin", "xout": "xout"}
+            ]
+        }
+    ],
+    "save": [
+        {
+            "table": "t1",
+            "as": "sparse.csv",
+            "type": "csv",
+            "sigma": false
+        }
+    ]
+}

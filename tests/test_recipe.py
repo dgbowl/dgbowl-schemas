@@ -1,6 +1,7 @@
 import pytest
 import os
 import yaml
+import json
 from dgbowl_schemas.dgpost_recipe import recipe_parser
 
 
@@ -322,5 +323,55 @@ def test_recipe_from_yml(inpath, outdict, datadir):
     os.chdir(datadir)
     with open(inpath, "r") as infile:
         indict = yaml.safe_load(infile)
+    ret = recipe_parser(indict)
+    assert outdict == ret
+
+
+@pytest.mark.parametrize(
+    "inpath, outdict",
+    [
+        (
+            "lets.json",
+            {
+                "version": "v1.0",
+                "load": [
+                    {"as": "d1", "path": "table.pkl", "type": "table", "check": True},
+                    {"as": "d2", "path": "dg.json", "type": "datagram", "check": False},
+                ],
+                "extract": [
+                    {
+                        "into": "t1",
+                        "from": "d2",
+                        "at": {"indices": [4]},
+                        "columns": [{"key": "raw->T_f", "as": "rawT"}],
+                    },
+                    {
+                        "into": "t1",
+                        "constants": [
+                            {"value": "0.65(5)", "as": "m", "units": "kg"},
+                            {"value": 0.53, "as": "x"},
+                        ],
+                    },
+                ],
+                "transform": [
+                    {
+                        "table": "t1",
+                        "with": "catalysis.conversion",
+                        "using": [
+                            {"feedstock": "propane", "xin": "xin", "xout": "xout"}
+                        ],
+                    }
+                ],
+                "save": [
+                    {"table": "t1", "as": "sparse.csv", "type": "csv", "sigma": False}
+                ],
+            },
+        )
+    ],
+)
+def test_recipe_from_json(inpath, outdict, datadir):
+    os.chdir(datadir)
+    with open(inpath, "r") as infile:
+        indict = json.load(infile)
     ret = recipe_parser(indict)
     assert outdict == ret
