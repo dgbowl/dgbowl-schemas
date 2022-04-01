@@ -3,6 +3,7 @@ import os
 import yaml
 from dgbowl_schemas.dgpost_recipe import recipe_parser
 
+
 @pytest.mark.parametrize(
     "inpath, outdict",
     [
@@ -12,10 +13,10 @@ from dgbowl_schemas.dgpost_recipe import recipe_parser
                 "version": "v1.0",
                 "load": [
                     {
-                        "as": "sparse", 
+                        "as": "sparse",
                         "path": "sparse.dg.json",
                         "check": True,
-                        "type": "datagram"
+                        "type": "datagram",
                     }
                 ],
                 "extract": [
@@ -26,10 +27,10 @@ from dgbowl_schemas.dgpost_recipe import recipe_parser
                         "columns": [
                             {"key": "raw->T_f", "as": "rawT"},
                             {"key": "derived->T", "as": "derT"},
-                        ]
+                        ],
                     }
-                ]
-            }
+                ],
+            },
         ),
         (
             "le_2.yaml",
@@ -37,18 +38,17 @@ from dgbowl_schemas.dgpost_recipe import recipe_parser
                 "version": "v1.0",
                 "load": [
                     {
-                        "as": "sparse", 
+                        "as": "sparse",
                         "path": "sparse.dg.json",
                         "check": True,
-                        "type": "datagram"
+                        "type": "datagram",
                     },
                     {
-                        "as": "norm", 
+                        "as": "norm",
                         "path": "normalized.dg.json",
                         "check": True,
-                        "type": "datagram"
+                        "type": "datagram",
                     },
-
                 ],
                 "extract": [
                     {
@@ -58,7 +58,7 @@ from dgbowl_schemas.dgpost_recipe import recipe_parser
                         "columns": [
                             {"key": "raw->T_f", "as": "rawT"},
                             {"key": "derived->T", "as": "derT"},
-                        ]
+                        ],
                     },
                     {
                         "into": "table 2",
@@ -69,12 +69,10 @@ from dgbowl_schemas.dgpost_recipe import recipe_parser
                         "into": "table 2",
                         "from": "norm",
                         "at": {"steps": ["a"]},
-                        "columns": [
-                            {"key": "derived->xin->*", "as": "xin"}
-                        ],
+                        "columns": [{"key": "derived->xin->*", "as": "xin"}],
                     },
-                ]
-            }
+                ],
+            },
         ),
         (
             "lee_1.yaml",
@@ -82,16 +80,16 @@ from dgbowl_schemas.dgpost_recipe import recipe_parser
                 "version": "v1.0",
                 "load": [
                     {
-                        "as": "norm", 
+                        "as": "norm",
                         "path": "normalized.dg.json",
                         "check": True,
-                        "type": "datagram"
+                        "type": "datagram",
                     },
                     {
-                        "as": "sparse", 
+                        "as": "sparse",
                         "path": "sparse.dg.json",
                         "check": True,
-                        "type": "datagram"
+                        "type": "datagram",
                     },
                 ],
                 "extract": [
@@ -102,18 +100,16 @@ from dgbowl_schemas.dgpost_recipe import recipe_parser
                         "columns": [
                             {"key": "raw->T_f", "as": "rawT"},
                             {"key": "derived->T", "as": "derT"},
-                        ]
+                        ],
                     },
                     {
                         "into": "df",
                         "from": "sparse",
                         "at": {"steps": ["b1", "b2", "b3"]},
-                        "columns": [
-                            {"key": "derived->xout->*", "as": "xout"}
-                        ],
+                        "columns": [{"key": "derived->xout->*", "as": "xout"}],
                     },
-                ]
-            }
+                ],
+            },
         ),
         (
             "lee_2.yaml",
@@ -121,16 +117,16 @@ from dgbowl_schemas.dgpost_recipe import recipe_parser
                 "version": "v1.0",
                 "load": [
                     {
-                        "as": "norm", 
+                        "as": "norm",
                         "path": "normalized.dg.json",
                         "check": True,
-                        "type": "datagram"
+                        "type": "datagram",
                     },
                     {
-                        "as": "sparse", 
+                        "as": "sparse",
                         "path": "sparse.dg.json",
                         "check": True,
-                        "type": "datagram"
+                        "type": "datagram",
                     },
                 ],
                 "extract": [
@@ -141,25 +137,21 @@ from dgbowl_schemas.dgpost_recipe import recipe_parser
                         "columns": [
                             {"key": "raw->T_f", "as": "rawT"},
                             {"key": "derived->T", "as": "derT"},
-                        ]
+                        ],
                     },
                     {
                         "into": "temp",
                         "from": "sparse",
                         "at": {"steps": ["b1", "b2", "b3"]},
-                        "columns": [
-                            {"key": "derived->xout->*", "as": "xout"}
-                        ],
+                        "columns": [{"key": "derived->xout->*", "as": "xout"}],
                     },
                     {
                         "into": "df",
                         "from": "temp",
-                        "columns": [
-                            {"key": "xout->*", "as": "xout"}
-                        ],
+                        "columns": [{"key": "xout->*", "as": "xout"}],
                     },
-                ]
-            }
+                ],
+            },
         ),
         (
             "les_1.yaml",
@@ -167,10 +159,10 @@ from dgbowl_schemas.dgpost_recipe import recipe_parser
                 "version": "v1.0",
                 "load": [
                     {
-                        "as": "sparse", 
+                        "as": "sparse",
                         "path": "sparse.dg.json",
                         "check": True,
-                        "type": "datagram"
+                        "type": "datagram",
                     },
                 ],
                 "extract": [
@@ -181,7 +173,7 @@ from dgbowl_schemas.dgpost_recipe import recipe_parser
                         "columns": [
                             {"key": "raw->T_f", "as": "rawT"},
                             {"key": "derived->T", "as": "derT"},
-                        ]
+                        ],
                     },
                 ],
                 "save": [
@@ -189,8 +181,8 @@ from dgbowl_schemas.dgpost_recipe import recipe_parser
                     {"table": "table 1", "as": "sparse.json", "sigma": True},
                     {"table": "table 1", "as": "sparse.csv", "sigma": True},
                     {"table": "table 1", "as": "sparse.xlsx", "sigma": True},
-                ]
-            }
+                ],
+            },
         ),
         (
             "les_2.yaml",
@@ -198,10 +190,10 @@ from dgbowl_schemas.dgpost_recipe import recipe_parser
                 "version": "v1.0",
                 "load": [
                     {
-                        "as": "sparse", 
+                        "as": "sparse",
                         "path": "sparse.dg.json",
                         "check": True,
-                        "type": "datagram"
+                        "type": "datagram",
                     },
                 ],
                 "extract": [
@@ -212,13 +204,18 @@ from dgbowl_schemas.dgpost_recipe import recipe_parser
                         "columns": [
                             {"key": "raw->T_f", "as": "rawT"},
                             {"key": "derived->T", "as": "derT"},
-                        ]
+                        ],
                     },
                 ],
                 "save": [
-                    {"table": "table 1", "as": "sparse.extension", "type": "csv", "sigma": False},
-                ]
-            }
+                    {
+                        "table": "table 1",
+                        "as": "sparse.extension",
+                        "type": "csv",
+                        "sigma": False,
+                    },
+                ],
+            },
         ),
         (
             "let_1.yaml",
@@ -226,10 +223,10 @@ from dgbowl_schemas.dgpost_recipe import recipe_parser
                 "version": "v1.0",
                 "load": [
                     {
-                        "as": "dg", 
+                        "as": "dg",
                         "path": "normalized.dg.json",
                         "check": True,
-                        "type": "datagram"
+                        "type": "datagram",
                     },
                 ],
                 "extract": [
@@ -239,7 +236,7 @@ from dgbowl_schemas.dgpost_recipe import recipe_parser
                         "at": {"indices": [2, 3, 4]},
                         "columns": [
                             {"key": "derived->xout->*", "as": "xout"},
-                        ]
+                        ],
                     },
                     {
                         "into": "df",
@@ -247,35 +244,31 @@ from dgbowl_schemas.dgpost_recipe import recipe_parser
                         "at": {"indices": [1]},
                         "columns": [
                             {"key": "derived->xin->*", "as": "xin"},
-                        ]
+                        ],
                     },
                 ],
                 "transform": [
                     {
-                        "table": "df", 
+                        "table": "df",
                         "with": "catalysis.conversion",
                         "using": [
-                            {
-                                "feedstock": "propane",
-                                "xin": "xin",
-                                "xout": "xout"
-                            },
+                            {"feedstock": "propane", "xin": "xin", "xout": "xout"},
                             {
                                 "feedstock": "propane",
                                 "product": False,
                                 "xin": "xin",
-                                "xout": "xout"
+                                "xout": "xout",
                             },
                             {
                                 "feedstock": "O2",
                                 "element": "O",
                                 "xin": "xin",
-                                "xout": "xout"
-                            }
-                        ]
+                                "xout": "xout",
+                            },
+                        ],
                     }
-                ]
-            }
+                ],
+            },
         ),
         (
             "let_2.yaml",
@@ -283,10 +276,10 @@ from dgbowl_schemas.dgpost_recipe import recipe_parser
                 "version": "v1.0",
                 "load": [
                     {
-                        "as": "dg", 
+                        "as": "dg",
                         "path": "normalized.dg.json",
                         "check": True,
-                        "type": "datagram"
+                        "type": "datagram",
                     },
                 ],
                 "extract": [
@@ -296,7 +289,7 @@ from dgbowl_schemas.dgpost_recipe import recipe_parser
                         "at": {"steps": ["b1", "b2", "b3"]},
                         "columns": [
                             {"key": "derived->xout->*", "as": "xout"},
-                        ]
+                        ],
                     },
                     {
                         "into": "df",
@@ -304,35 +297,26 @@ from dgbowl_schemas.dgpost_recipe import recipe_parser
                         "at": {"steps": ["a"]},
                         "columns": [
                             {"key": "derived->xin->*", "as": "xin"},
-                        ]
+                        ],
                     },
                 ],
                 "transform": [
                     {
-                        "table": "df", 
+                        "table": "df",
                         "with": "catalysis.selectivity",
                         "using": [
-                            {
-                                "feedstock": "propane",
-                                "xin": "xin",
-                                "xout": "xout"
-                            }
-                        ]
+                            {"feedstock": "propane", "xin": "xin", "xout": "xout"}
+                        ],
                     },
                     {
-                        "table": "df", 
+                        "table": "df",
                         "with": "catalysis.atom_balance",
-                        "using": [
-                            {
-                                "xin": "xin",
-                                "xout": "xout"
-                            }
-                        ]
-                    }
-                ]
-            }
-        )
-    ]
+                        "using": [{"xin": "xin", "xout": "xout"}],
+                    },
+                ],
+            },
+        ),
+    ],
 )
 def test_recipe_from_yml(inpath, outdict, datadir):
     os.chdir(datadir)
