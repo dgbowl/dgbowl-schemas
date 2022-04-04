@@ -317,6 +317,84 @@ from dgbowl_schemas.dgpost_recipe import recipe_parser
                 ],
             },
         ),
+        (
+            "letp_1.yaml",
+            {
+                "version": "v1.0",
+                "load": [
+                    {
+                        "as": "dg",
+                        "path": "normalized.dg.json",
+                        "check": True,
+                        "type": "datagram",
+                    },
+                ],
+                "extract": [
+                    {
+                        "into": "df",
+                        "from": "dg",
+                        "at": {"steps": ["b1", "b2", "b3"]},
+                        "columns": [
+                            {"key": "derived->xout->*", "as": "xout"},
+                        ],
+                    },
+                    {
+                        "into": "df",
+                        "from": "dg",
+                        "at": {"steps": ["a"]},
+                        "columns": [
+                            {"key": "derived->xin->*", "as": "xin"},
+                        ],
+                    },
+                ],
+                "transform": [
+                    {
+                        "table": "df",
+                        "with": "catalysis.selectivity",
+                        "using": [
+                            {"feedstock": "propane", "xin": "xin", "xout": "xout"}
+                        ],
+                    },
+                    {
+                        "table": "df",
+                        "with": "catalysis.atom_balance",
+                        "using": [{"xin": "xin", "xout": "xout"}],
+                    },
+                ],
+                "plot": [
+                    {
+                        "table": "df",
+                        "ncols": 1,
+                        "nrows": 2,
+                        "ax_args": [
+                            {
+                                "rows": (0, 1),
+                                "series": [
+                                    {
+                                        "y": "Sp_C->*",
+                                        "index": {"from_zero": True},
+                                        "kind": "scatter",
+                                    }
+                                ],
+                                "legend": True,
+                            },
+                            {
+                                "rows": (1, 2),
+                                "series": [
+                                    {
+                                        "y": "xout->*",
+                                        "index": {"from_zero": True},
+                                        "kind": "line",
+                                    }
+                                ],
+                                "legend": True,
+                            },
+                        ],
+                        "save": {"as": "test.png"},
+                    }
+                ],
+            },
+        ),
     ],
 )
 def test_recipe_from_yml(inpath, outdict, datadir):

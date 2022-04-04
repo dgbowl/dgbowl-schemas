@@ -3,6 +3,7 @@ from typing import Optional, Literal, Sequence
 from .load import Load
 from .extract import Extract
 from .transform import Transform
+from .plot import Plot
 from .save import Save
 
 
@@ -11,6 +12,7 @@ class RecipeSchema(BaseModel):
     load: Sequence[Load]
     extract: Optional[Sequence[Extract]]
     transform: Optional[Sequence[Transform]]
+    plot: Optional[Sequence[Plot]]
     save: Optional[Sequence[Save]]
 
 
