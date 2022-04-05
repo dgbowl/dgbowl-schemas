@@ -1,0 +1,34 @@
+version: v1.0
+load:
+  - as: dg
+    path: normalized.dg.json
+extract:
+  - into: df
+    from: dg
+    at:
+      indices: [2, 3, 4]
+    columns:
+      - key: derived->xout->*
+        as: xout
+  - into: df
+    from: dg
+    at:
+      index: 1
+    columns:
+      - key: derived->xin->*
+        as: xin
+transform:
+  - table: df
+    with: catalysis.conversion
+    using:
+      - feedstock: propane
+        xin: xin
+        xout: xout
+      - feedstock: propane
+        product: False
+        xin: xin
+        xout: xout
+      - feedstock: O2
+        element: O
+        xin: xin
+        xout: xout
