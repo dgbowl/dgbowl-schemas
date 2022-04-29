@@ -1,0 +1,27 @@
+{
+    "metadata": {
+        "provenance": "manual",
+        "schema_version": "0.1"
+    },
+    "steps": [
+        {
+            "parser": "basiccsv",
+            "import": {"files": ["measurement.csv"]},
+            "parameters": {
+                "sep": ";",
+                "sigma": {
+                    "T_f": {"atol": 0.05},
+                    "N2": {"atol": 0.005},
+                    "O2": {"atol": 0.005},
+                    "alkane": {"atol": 0.005},
+                    "flow low": {"atol": 0.0005},
+                    "flow high": {"atol": 0.005}
+                },
+                "timestamp": {
+                    "timestamp": {"index": 0, "format": "%Y-%m-%d-%H-%M-%S"}
+                },
+                "calfile": "fhi_tfcal.json"
+            }
+        }
+    ]
+}

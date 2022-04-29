@@ -1,0 +1,17 @@
+{
+    "metadata": {
+        "provenance": "manual",
+        "schema_version": "0.1",
+        "timezone": "UTC"
+    },
+    "steps": [
+        {
+            "parser": "flowdata",
+            "import": {
+                "files": ["Cp_100mA_1mindelay.rtf"]
+            },
+            "parameters": {"filetype": "drycal.rtf"},
+            "externaldate": {"from": {"isostring": "2021-09-17"}}
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "provenance": "manual",
+        "schema_version": "0.1"
+    },
+    "steps": [
+        {
+            "parser": "basiccsv",
+            "import": {"files": ["measurement.csv"]},
+            "parameters": {
+                "timestamp": {
+                    "date": {"index": 0},
+                    "time": {"index": 1}
+                }
+            }
+        }
+    ]
+}
