@@ -32,7 +32,7 @@ class Input(BaseModel, extra=Extra.forbid):
 
     def paths(self) -> list[str]:
         ret = []
-        for path in self.files:
+        for path in sorted(self.files):
             tail = os.path.basename(path)
             inc = True
             if self.prefix is not None and not tail.startswith(self.prefix):
