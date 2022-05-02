@@ -371,10 +371,10 @@ ts9 = {
     "version": "v1.0",
     "load": [
         {
-            "as": "df", 
-            "path": "ref.electrochemistry_fe.ts0.pkl", 
+            "as": "df",
+            "path": "ref.electrochemistry_fe.ts0.pkl",
             "type": "table",
-            "check": True
+            "check": True,
         },
     ],
     "plot": [
@@ -387,46 +387,44 @@ ts9 = {
                     "rows": (0, 2),
                     "series": [
                         {
-                            "y": "fe->H2", 
+                            "y": "fe->H2",
                             "index": {"from_zero": True},
                             "kind": "scatter",
                         },
                         {
-                            "y": "fe->C2H4", 
+                            "y": "fe->C2H4",
                             "index": {"from_zero": True},
                             "kind": "scatter",
                         },
                         {
-                            "y": "fe->CO", 
+                            "y": "fe->CO",
                             "index": {"from_zero": True},
                             "kind": "scatter",
                         },
                         {
-                            "y": "fe->CH4", 
+                            "y": "fe->CH4",
                             "index": {"from_zero": True},
                             "kind": "scatter",
                         },
                     ],
                     "legend": True,
-                    "ylabel": "$\\eta_F$"
+                    "ylabel": "$\\eta_F$",
                 },
                 {
                     "rows": (2, 3),
                     "series": [
                         {
-                            "y": "I", 
+                            "y": "I",
                             "index": {"from_zero": True},
                             "kind": "scatter",
                         },
                     ],
                     "legend": False,
-                }
+                },
             ],
-            "save": {
-                "as": "test.png"
-            }
+            "save": {"as": "test.png"},
         }
-    ]
+    ],
 }
 
 

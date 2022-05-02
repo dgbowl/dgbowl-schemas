@@ -23,5 +23,3 @@ def test_dataschema_from_json(inpath, ref, datadir):
         indict = json.load(infile)
     ret = DataSchema(**indict)
     assert ret.dict() == ref
-
-

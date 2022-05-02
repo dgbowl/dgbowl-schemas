@@ -20,7 +20,7 @@ from ref_recipe import js0
         ("let_1.yaml", ts6),
         ("let_2.yaml", ts7),
         ("letp_1.yaml", ts8),
-        ("lp_1.yaml", ts9)
+        ("lp_1.yaml", ts9),
     ],
 )
 def test_recipe_from_yml(inpath, outdict, datadir):
