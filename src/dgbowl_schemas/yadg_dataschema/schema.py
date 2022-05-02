@@ -9,6 +9,7 @@ from .parameters import (
     BasicCSV,
     MeasCSV,
     XPSTrace,
+    XRDTrace,
     ChromTrace,
     ElectroChem,
     FlowData,
@@ -42,6 +43,7 @@ class Step(BaseModel, extra=Extra.forbid):
         "basiccsv",
         "meascsv",
         "xpstrace",
+        "xrdtrace",
         "chromtrace",
         "electrochem",
         "flowdata",
@@ -55,6 +57,7 @@ class Step(BaseModel, extra=Extra.forbid):
         BasicCSV,
         MeasCSV,
         XPSTrace,
+        XRDTrace,
         ChromTrace,
         ElectroChem,
         FlowData,
@@ -70,7 +73,7 @@ class Step(BaseModel, extra=Extra.forbid):
         if input is None and "import" in values:
             logger.warning(
                 "Specifying 'input' files of a Step using the 'import' key is "
-                "deprecated and may stop working in future versions of 'dataschema'."
+                "deprecated and may stop working in future versions of DataSchema."
             )
             input = values.pop("import")
         if input is None:
@@ -85,26 +88,7 @@ class Step(BaseModel, extra=Extra.forbid):
             values["parameters"]["parser"] = values["parser"]
         return values
 
-    # @validator("parser")
-    # def copy_parser_to_params(cls, v, values):
-    #    values["parameters"]["parser"] = v
-    #    return v, values
-
-    # @validator("externaldate", always=True, pre=True)
-    # def default_externaldate(cls, v):
-    #    return v or {}
-
 
 class DataSchema(BaseModel, extra=Extra.forbid):
-    """
-    Schema of the Dataschema object.
-
-    Must contain:
-
-    - a 'metadata' entry containing a Metadata object
-    - a 'steps' entry containing a list of Step objects
-
-    """
-
     metadata: Metadata
     steps: Sequence[Step]

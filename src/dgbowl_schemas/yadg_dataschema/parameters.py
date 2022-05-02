@@ -1,5 +1,5 @@
-from pydantic import BaseModel, Extra, Field, root_validator, PrivateAttr
-from typing import Literal, Optional, Union, Any, Mapping, ClassVar
+from pydantic import BaseModel, Extra, Field, root_validator
+from typing import Literal, Optional, Union, Any, Mapping
 import logging
 
 from .timestamp import Timestamp, TimeDate, UTS
@@ -42,6 +42,24 @@ class XPSTrace(BaseModel, extra=Extra.forbid):
         if input is None and "tracetype" in values:
             logger.warning(
                 "Specifying 'tracetype' for XPSTrace was deprecated in "
+                "dgbowl_schemas-v103, and may stop working in future versions "
+                "of DataSchema. Please use 'filetype' instead."
+            )
+            input = values.pop("tracetype")
+            values["filetype"] = input
+        return values
+
+
+class XRDTrace(BaseModel, extra=Extra.forbid):
+    parser: Literal["xrdtrace"]
+    filetype: Literal["panalytical.xy", "panalytical.csv", "panalytical.rdxml"]
+
+    @root_validator(pre=True, allow_reuse=True)
+    def check_tracetype(cls, values):
+        input = values.get("filetype")
+        if input is None and "tracetype" in values:
+            logger.warning(
+                "Specifying 'tracetype' for XRDTrace was deprecated in "
                 "dgbowl_schemas-v103, and may stop working in future versions "
                 "of DataSchema. Please use 'filetype' instead."
             )
