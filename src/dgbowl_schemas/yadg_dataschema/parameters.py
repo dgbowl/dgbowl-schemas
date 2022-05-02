@@ -52,7 +52,7 @@ class XPSTrace(BaseModel, extra=Extra.forbid):
 
 class XRDTrace(BaseModel, extra=Extra.forbid):
     parser: Literal["xrdtrace"]
-    filetype: Literal["panalytical.xy", "panalytical.csv", "panalytical.rdxml"]
+    filetype: Literal["panalytical.xy", "panalytical.csv", "panalytical.xrdml"]
 
     @root_validator(pre=True, allow_reuse=True)
     def check_tracetype(cls, values):
