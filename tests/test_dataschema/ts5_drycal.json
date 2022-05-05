@@ -10,8 +10,7 @@
             "import": {
                 "files": ["Cp_100mA_1mindelay.rtf"]
             },
-            "parameters": {"filetype": "drycal.rtf"},
-            "externaldate": {"from": {"isostring": "2021-09-17"}}
+            "parameters": {"filetype": "drycal.rtf"}
         }
     ]
 }

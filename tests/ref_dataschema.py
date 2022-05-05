@@ -1,9 +1,8 @@
 ts0 = {
     "metadata": {
         "provenance": "manual",
-        "version": "0.1",
-        "timezone": "localtime",
-        "provenance_metadata": None,
+        "version": "4.0",
+        "timezone": "localtime"
     },
     "steps": [
         {
@@ -27,9 +26,8 @@ ts0 = {
 ts1 = {
     "metadata": {
         "provenance": "manual",
-        "version": "0.1",
-        "timezone": "localtime",
-        "provenance_metadata": None,
+        "version": "4.0.1",
+        "timezone": "localtime"
     },
     "steps": [
         {
@@ -51,14 +49,11 @@ ts1 = {
             "parser": "dummy",
             "input": {
                 "files": [
-                    ".\\ts0_dummy.json",
-                    ".\\ts1_dummy.json",
-                    ".\\ts2_basiccsv.json",
-                    ".\\ts3_basiccsv.json",
-                    ".\\ts4_drycal.json",
+                    'fol\\dummy.txt',
+                    'fol\\other.txt'
                 ],
                 "prefix": None,
-                "suffix": ".json",
+                "suffix": ".txt",
                 "contains": "dummy",
                 "exclude": None,
                 "encoding": "UTF-8",
@@ -74,9 +69,8 @@ ts1 = {
 ts2 = {
     "metadata": {
         "provenance": "manual",
-        "version": "0.1",
-        "timezone": "localtime",
-        "provenance_metadata": None,
+        "version": "4.0",
+        "timezone": "localtime"
     },
     "steps": [
         {
@@ -115,9 +109,8 @@ ts2 = {
 ts3 = {
     "metadata": {
         "provenance": "manual",
-        "version": "0.1",
-        "timezone": "localtime",
-        "provenance_metadata": None,
+        "version": "4.0.1",
+        "timezone": "localtime"
     },
     "steps": [
         {
@@ -152,9 +145,8 @@ ts3 = {
 ts4 = {
     "metadata": {
         "provenance": "manual",
-        "version": "0.1",
-        "timezone": "UTC",
-        "provenance_metadata": None,
+        "version": "4.0.1",
+        "timezone": "UTC"
     },
     "steps": [
         {
@@ -176,6 +168,36 @@ ts4 = {
             },
             "export": None,
             "externaldate": {"mode": "add", "using": {"isostring": "2021-09-17"}},
+        }
+    ],
+}
+
+ts5 = {
+    "metadata": {
+        "provenance": "manual",
+        "version": "4.0.1",
+        "timezone": "UTC"
+    },
+    "steps": [
+        {
+            "parser": "flowdata",
+            "input": {
+                "files": ["Cp_100mA_1mindelay.rtf"],
+                "prefix": None,
+                "suffix": None,
+                "contains": None,
+                "exclude": None,
+                "encoding": "UTF-8",
+            },
+            "tag": None,
+            "parameters": {
+                "convert": None,
+                "parser": "flowdata",
+                "filetype": "drycal.rtf",
+                "calfile": None,
+            },
+            "export": None,
+            "externaldate": None,
         }
     ],
 }

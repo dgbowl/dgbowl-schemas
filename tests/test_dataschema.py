@@ -4,7 +4,7 @@ import yaml
 import json
 from dgbowl_schemas.yadg_dataschema import DataSchema
 
-from ref_dataschema import ts0, ts1, ts2, ts3, ts4
+from ref_dataschema import ts0, ts1, ts2, ts3, ts4, ts5
 
 
 @pytest.mark.parametrize(
@@ -15,6 +15,7 @@ from ref_dataschema import ts0, ts1, ts2, ts3, ts4
         ("ts2_basiccsv.json", ts2),
         ("ts3_basiccsv.json", ts3),
         ("ts4_drycal.json", ts4),
+        ("ts5_drycal.json", ts5),
     ],
 )
 def test_dataschema_from_json(inpath, ref, datadir):

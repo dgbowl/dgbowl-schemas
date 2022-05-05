@@ -1,7 +1,7 @@
 {
     "metadata": {
         "provenance": "manual",
-        "schema_version": "0.1"
+        "schema_version": "4.0.1"
     },
     "steps": [
         {
@@ -10,7 +10,7 @@
         },
         {
             "parser": "dummy",
-            "import": {"folders": ["."], "suffix": ".json", "contains": "dummy"},
+            "import": {"folders": ["fol"], "suffix": ".txt", "contains": "dummy"},
             "parameters": {"k": "v"}
         } 
     ]
