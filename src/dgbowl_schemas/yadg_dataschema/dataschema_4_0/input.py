@@ -14,8 +14,10 @@ class Input(BaseModel, extra=Extra.forbid):
 
     @root_validator
     def files_or_folders(cls, values):
-        assert values.get("files") is not None or values.get("folders") is not None
-        assert values.get("files") is None or values.get("folders") is None
+        if values.get("files") is not None and values.get("folders") is not None:
+            raise ValueError("Both 'files' and 'folders' provided.")
+        elif values.get("files") is None and values.get("folders") is None:
+            raise ValueError("Neither 'files' nor 'folders' provided.")
         return values
 
     def paths(self) -> list[str]:
