@@ -30,11 +30,11 @@ class ExternalDateUTSOffset(BaseModel, extra=Extra.forbid):
     utsoffset: float
 
 
-class ExternalDate(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
+class ExternalDate(BaseModel, extra=Extra.forbid):
     using: Union[
         ExternalDateFile,
         ExternalDateFilename,
         ExternalDateISOString,
         ExternalDateUTSOffset,
-    ] = Field(alias="from")
+    ]
     mode: Literal["add", "replace"] = "add"
