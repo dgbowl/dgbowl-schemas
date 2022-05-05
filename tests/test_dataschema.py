@@ -2,7 +2,7 @@ import pytest
 import os
 import yaml
 import json
-from dgbowl_schemas.yadg_dataschema import dataschema
+from dgbowl_schemas.yadg_dataschema import to_dataschema
 
 from ref_dataschema import ts0, ts1, ts2, ts3, ts4, ts5
 
@@ -22,5 +22,5 @@ def test_dataschema_from_json(inpath, ref, datadir):
     os.chdir(datadir)
     with open(inpath, "r") as infile:
         indict = json.load(infile)
-    ret = dataschema(**indict)
+    ret = to_dataschema(**indict)
     assert ret.dict() == ref
