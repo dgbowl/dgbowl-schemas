@@ -27,9 +27,6 @@ class FlowData(BaseModel, extra=Extra.forbid):
     filetype: Literal["drycal", "drycal.csv", "drycal.rtf", "drycal.txt"] = "drycal"
     calfile: Optional[str]
     convert: Optional[Any]
-    timestamp: Union[Timestamp, UTS, TimeDate] = Field(
-        default = TimeDate(time={"index": 4, "format": "%I:%M:%S %p"})
-    )
 
 
 class MeasCSV(BaseModel, extra=Extra.forbid):
