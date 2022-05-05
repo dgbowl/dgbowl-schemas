@@ -26,6 +26,9 @@ class MeasCSV(BaseModel, extra=Extra.forbid):
     parser: Literal["meascsv"]
     calfile: Optional[str]
     convert: Optional[Any]
+    timestamp: Timestamp = Field(
+        default = Timestamp(timestamp={"index": 0, "format": "%Y-%m-%d-%H-%M-%S"})
+    )
 
 
 class XPSTrace(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
