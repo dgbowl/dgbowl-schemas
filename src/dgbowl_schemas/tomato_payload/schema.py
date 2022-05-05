@@ -4,7 +4,8 @@ import json
 import yaml
 
 from .sample import BatterySample, Sample
-from .biologic import BiologicPayloads
+from .electrochem import ElectroChemPayloads
+from .dummy import DummyPayloads
 
 class Payload(BaseModel, extra = Extra.forbid):
     version: Literal["0.1"]
@@ -13,7 +14,7 @@ class Payload(BaseModel, extra = Extra.forbid):
         Sample
     ] = Field(..., discriminator = "type")
     payload: Sequence[
-        BiologicPayloads, 
+        ElectroChemPayloads, 
         DummyPayloads
     ] = Field(..., discriminator = "name")
 
