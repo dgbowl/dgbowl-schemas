@@ -1,15 +1,13 @@
 from pydantic import BaseModel, Extra, Field, root_validator
-from typing import Literal, Optional
-
-
+from typing import Optional
 from .parameters import Parameters, Parsernames
-    
 from .externaldate import ExternalDate
 from .input import Input
 
+
 class Step(BaseModel, extra=Extra.forbid):
     parser: Parsernames
-    input: Input = Field(alias = "import")
+    input: Input = Field(alias="import")
     parameters: Parameters = Field(default=None, discriminator="parser")
     tag: Optional[str]
     externaldate: Optional[ExternalDate]

@@ -3,12 +3,12 @@ from typing import Literal, Optional, Union, Any, Mapping
 
 from .timestamp import Timestamp, TimeDate, UTS
 
+
 class Dummy(BaseModel, extra=Extra.allow):
     parser: Literal["dummy"]
 
 
 class BasicCSV(BaseModel, extra=Extra.forbid):
-    
     class Tol(BaseModel, extra=Extra.forbid):
         atol: Optional[float]
         rtol: Optional[float]
@@ -74,6 +74,7 @@ class QFTrace(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True
     threshold: float = 1e-6
     filetype: Literal["labview.csv"] = Field("labview.csv", alias="tracetype")
 
+
 Parameters = Union[
     Dummy,
     BasicCSV,
@@ -87,11 +88,11 @@ Parameters = Union[
 ]
 
 Parsernames = Literal[
-    "dummy", 
-    "basiccsv", 
-    "meascsv", 
-    "xpstrace", 
-    "chromtrace", 
+    "dummy",
+    "basiccsv",
+    "meascsv",
+    "xpstrace",
+    "chromtrace",
     "electrochem",
     "flowdata",
     "masstrace",
