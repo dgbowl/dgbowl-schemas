@@ -7,6 +7,6 @@ class Metadata(BaseModel, extra=Extra.forbid):
         type: str
         metadata: Optional[Mapping[str, Any]]
 
-    provenance: Union[Provenance, str]
+    provenance: Provenance
     version: Literal["4.1"]
     timezone: str = "localtime"

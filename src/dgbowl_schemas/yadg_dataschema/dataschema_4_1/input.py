@@ -3,7 +3,7 @@ from typing import Optional, Sequence
 import os
 
 
-class Input(BaseModel, extra=Extra.forbid):
+class Input(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
     files: Sequence[str] = Field(alias="folders")
     prefix: Optional[str]
     suffix: Optional[str]
