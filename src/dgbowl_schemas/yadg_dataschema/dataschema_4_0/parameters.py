@@ -26,7 +26,7 @@ class MeasCSV(BaseModel, extra=Extra.forbid):
     parser: Literal["meascsv"]
     calfile: Optional[str]
     convert: Optional[Any]
-    timestamp: Timestamp = Field(
+    timestamp: Union[Timestamp, UTS, TimeDate] = Field(
         default = Timestamp(timestamp={"index": 0, "format": "%Y-%m-%d-%H-%M-%S"})
     )
 
@@ -61,6 +61,9 @@ class FlowData(BaseModel, extra=Extra.forbid, allow_population_by_field_name=Tru
     filetype: Literal["drycal", "drycal.csv", "drycal.rtf", "drycal.txt"] = "drycal"
     convert: Optional[Any]
     calfile: Optional[str]
+    timestamp: Union[Timestamp, UTS, TimeDate] = Field(
+        default = TimeDate(time={"index": 4, "format": "%I:%M:%S %p"})
+    )
 
 
 class MassTrace(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
