@@ -5,7 +5,7 @@ from .timestamp import Timestamp, TimeDate, UTS
 
 
 class Dummy(BaseModel, extra=Extra.allow):
-    parser: Literal["dummy"]
+    pass
 
 
 class BasicCSV(BaseModel, extra=Extra.forbid):
@@ -13,7 +13,6 @@ class BasicCSV(BaseModel, extra=Extra.forbid):
         atol: Optional[float]
         rtol: Optional[float]
 
-    parser: Literal["basiccsv"]
     sep: str = ","
     sigma: Optional[Mapping[str, Tol]]
     calfile: Optional[str]
@@ -23,7 +22,6 @@ class BasicCSV(BaseModel, extra=Extra.forbid):
 
 
 class MeasCSV(BaseModel, extra=Extra.forbid):
-    parser: Literal["meascsv"]
     calfile: Optional[str]
     convert: Optional[Any]
     timestamp: Union[Timestamp, UTS, TimeDate] = Field(
@@ -32,12 +30,10 @@ class MeasCSV(BaseModel, extra=Extra.forbid):
 
 
 class XPSTrace(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
-    parser: Literal["xpstrace"]
     filetype: Literal["phi.spe"] = Field("phi.spe", alias="tracetype")
 
 
 class ChromTrace(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
-    parser: Literal["chromtrace"]
     calfile: Optional[str]
     filetype: Literal[
         "ezchrom.asc",
@@ -52,24 +48,20 @@ class ChromTrace(BaseModel, extra=Extra.forbid, allow_population_by_field_name=T
 
 
 class ElectroChem(BaseModel, extra=Extra.forbid):
-    parser: Literal["electrochem"]
     filetype: Literal["eclab.mpt", "eclab.mpr"]
 
 
 class FlowData(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
-    parser: Literal["flowdata"] = Field(..., repr=False)
     filetype: Literal["drycal", "drycal.csv", "drycal.rtf", "drycal.txt"] = "drycal"
     convert: Optional[Any]
     calfile: Optional[str]
 
 
 class MassTrace(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
-    parser: Literal["masstrace"]
     filetype: Literal["quadstar.sac"] = Field("quadstar.sac", alias="tracetype")
 
 
 class QFTrace(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
-    parser: Literal["qftrace"]
     method: Literal["naive", "lorentz", "kajfez"] = "kajfez"
     height: float = 1.0
     distance: float = 5000.0
@@ -79,7 +71,6 @@ class QFTrace(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True
 
 
 Parameters = Union[
-    Dummy,
     BasicCSV,
     MeasCSV,
     XPSTrace,
@@ -88,6 +79,7 @@ Parameters = Union[
     FlowData,
     MassTrace,
     QFTrace,
+    Dummy,
 ]
 
 Parsernames = Literal[

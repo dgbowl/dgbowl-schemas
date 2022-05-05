@@ -4,35 +4,29 @@ import os
 
 
 class Input(BaseModel, extra=Extra.forbid):
-    files: Sequence[str]
+    files: Optional[Sequence[str]]
+    folders: Optional[Sequence[str]]
     prefix: Optional[str]
     suffix: Optional[str]
     contains: Optional[str]
     exclude: Optional[str]
     encoding: Optional[str] = "UTF-8"
 
-    @root_validator(pre=True, allow_reuse=True)
-    def check_exclusive(cls, values):
-        keys = {"files", "folders"}.intersection(set(values))
-        if len(keys) > 1:
-            raise ValueError(
-                f"Specifying multiple arguments ({keys}) to Input is not allowed."
-            )
-        elif len(keys) == 0:
-            raise ValueError(f"Either 'files' or 'folders' must be supplied to Input.")
-        if values.get("files") is not None:
-            pass
-        else:
-            folders = values.pop("folders")
-            files = []
-            for folder in folders:
-                files += [os.path.join(folder, file) for file in os.listdir(folder)]
-            values["files"] = files
+    @root_validator
+    def files_or_folders(cls, values):
+        assert values.get("files") is not None or values.get("folders") is not None
+        assert values.get("files") is None or values.get("folders") is None
         return values
 
     def paths(self) -> list[str]:
         ret = []
-        for path in sorted(self.files):
+        if self.files is not None:
+            paths = self.files
+        elif self.folders is not None:
+            paths = []
+            for folder in self.folders:
+                paths += [os.path.join(folder, fn) for fn in os.listdir(folder)]
+        for path in sorted(paths):
             tail = os.path.basename(path)
             inc = True
             if self.prefix is not None and not tail.startswith(self.prefix):

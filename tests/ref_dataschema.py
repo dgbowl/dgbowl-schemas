@@ -9,6 +9,7 @@ ts0 = {
             "parser": "dummy",
             "input": {
                 "files": ["dummy_schema_1.json"],
+                "folders": None,
                 "prefix": None,
                 "suffix": None,
                 "contains": None,
@@ -34,6 +35,7 @@ ts1 = {
             "parser": "dummy",
             "input": {
                 "files": ["dummy_schema_1.json"],
+                "folders": None,
                 "prefix": None,
                 "suffix": None,
                 "contains": None,
@@ -48,10 +50,8 @@ ts1 = {
         {
             "parser": "dummy",
             "input": {
-                "files": [
-                    'fol\\dummy.txt',
-                    'fol\\other.txt'
-                ],
+                "files": None,
+                "folders": ['fol'],
                 "prefix": None,
                 "suffix": ".txt",
                 "contains": "dummy",
@@ -59,7 +59,7 @@ ts1 = {
                 "encoding": "UTF-8",
             },
             "tag": None,
-            "parameters": {"k": "v", "parser": "dummy"},
+            "parameters": {"k": "v"},
             "export": None,
             "externaldate": None,
         },
@@ -77,6 +77,7 @@ ts2 = {
             "parser": "basiccsv",
             "input": {
                 "files": ["measurement.csv"],
+                "folders": None,
                 "prefix": None,
                 "suffix": None,
                 "contains": None,
@@ -86,7 +87,6 @@ ts2 = {
             "tag": None,
             "parameters": {
                 "convert": None,
-                "parser": "basiccsv",
                 "sep": ";",
                 "sigma": {
                     "T_f": {"atol": 0.05, "rtol": None},
@@ -117,6 +117,7 @@ ts3 = {
             "parser": "basiccsv",
             "input": {
                 "files": ["measurement.csv"],
+                "folders": None,
                 "prefix": None,
                 "suffix": None,
                 "contains": None,
@@ -126,7 +127,6 @@ ts3 = {
             "tag": None,
             "parameters": {
                 "convert": None,
-                "parser": "basiccsv",
                 "sep": ",",
                 "sigma": None,
                 "calfile": None,
@@ -153,6 +153,7 @@ ts4 = {
             "parser": "flowdata",
             "input": {
                 "files": ["Cp_100mA_1mindelay.rtf"],
+                "folders": None,
                 "prefix": None,
                 "suffix": None,
                 "contains": None,
@@ -162,7 +163,6 @@ ts4 = {
             "tag": None,
             "parameters": {
                 "convert": None,
-                "parser": "flowdata",
                 "filetype": "drycal.rtf",
                 "calfile": None,
             },
@@ -183,6 +183,7 @@ ts5 = {
             "parser": "flowdata",
             "input": {
                 "files": ["Cp_100mA_1mindelay.rtf"],
+                "folders": None,
                 "prefix": None,
                 "suffix": None,
                 "contains": None,
@@ -192,7 +193,6 @@ ts5 = {
             "tag": None,
             "parameters": {
                 "convert": None,
-                "parser": "flowdata",
                 "filetype": "drycal.rtf",
                 "calfile": None,
             },
