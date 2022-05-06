@@ -27,7 +27,7 @@ class BasicCSV(BaseModel, extra=Extra.forbid, allow_population_by_field_name=Tru
 
     parser: Literal["basiccsv"]
     input: Input = Field(alias="import")
-    parameters: Optional[Params]
+    parameters: Params = Field(default_factory=Params())
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
     export: Optional[str]
