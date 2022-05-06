@@ -1,9 +1,5 @@
-from pydantic import BaseModel, Extra, PrivateAttr, Field, root_validator, validator
+from pydantic import BaseModel, Extra
 from typing import Literal, Optional, Union
-import logging
-
-logger = logging.getLogger(__name__)
-
 
 class ExternalDateFile(BaseModel, extra=Extra.forbid):
     class Content(BaseModel, extra=Extra.forbid):
