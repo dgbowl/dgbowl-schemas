@@ -43,7 +43,7 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: dist-master
-      - run: pip install --pre --find-links=. dgbowl-schemas[testing]
+      - run: pip install --pre --find-links=. dgbowl-schemas[docs]
         shell: bash
       - uses: ./.github/workflows/docs-job
       - uses: actions/upload-artifact@v2
