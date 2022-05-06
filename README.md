@@ -3,9 +3,9 @@
 
 Currently implemented schemas are:
 - `recipe` validator for `dgpost` at `v1.0`
+- `dataschema` validator for `yadg` for `[4.1, 4.0.1, 4.0]`
 
 Schemas to be incorporated:
 
 - `payload` schema and validator for `tomato`
-- `dataschema` schema and validator for `yadg`
 - `datagram` validator for `yadg`
