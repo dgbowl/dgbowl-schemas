@@ -4,8 +4,6 @@ from pydantic import ValidationError
 import json
 from dgbowl_schemas.yadg import to_dataschema
 
-from ref_dataschema import ts0, ts1, ts2, ts3, ts4, ts5
-
 
 @pytest.mark.parametrize(
     "inpath, success",
