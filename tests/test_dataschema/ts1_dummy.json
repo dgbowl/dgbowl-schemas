@@ -1,0 +1,53 @@
+{
+    "input": {
+        "metadata": {
+            "provenance": "manual",
+            "schema_version": "4.0.1"
+        },
+        "steps": [
+            {
+                "parser": "dummy",
+                "import": {"files": ["dummy_schema_1.json"]}
+            },
+            {
+                "parser": "dummy",
+                "import": {"folders": ["fol"], "suffix": ".txt", "contains": "dummy"},
+                "parameters": {"k": "v"}
+            } 
+        ]
+    },
+    "output": [
+        {
+            "parser": "dummy",
+            "input": {
+                "files": ["dummy_schema_1.json"],
+                "folders": null,
+                "prefix": null,
+                "suffix": null,
+                "contains": null,
+                "exclude": null,
+                "encoding": "UTF-8"
+            },
+            "tag": null,
+            "parameters": null,
+            "export": null,
+            "externaldate": null
+        },
+        {
+            "parser": "dummy",
+            "input": {
+                "files": null,
+                "folders": ["fol"],
+                "prefix": null,
+                "suffix": ".txt",
+                "contains": "dummy",
+                "exclude": null,
+                "encoding": "UTF-8"
+            },
+            "tag": null,
+            "parameters": {"k": "v"},
+            "export": null,
+            "externaldate": null
+        }
+    ]
+}

@@ -21,13 +21,15 @@ setuptools.setup(
         "Bug Tracker": "https://github.com/dgbowl/dgbowl-schemas/issues",
     },
     classifiers=[
-        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
         "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
         "Operating System :: OS Independent",
     ],
     package_dir={"": packagedir},
     packages=setuptools.find_packages(where=packagedir),
-    python_requires=">=3.8",
+    python_requires=">=3.9",
     install_requires=[
         "pydantic>=1.8",
         "pyyaml>=5.0"
@@ -39,7 +41,8 @@ setuptools.setup(
         "docs": [
             "sphinx",
             "sphinx-rtd-theme",
-            "sphinx-autodoc-typehints"
+            "sphinx-autodoc-typehints",
+            "autodoc-pydantic"
         ]
     }
 )

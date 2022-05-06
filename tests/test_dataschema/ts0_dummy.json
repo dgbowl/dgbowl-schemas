@@ -1,0 +1,34 @@
+{
+    "input": {
+        "metadata": {
+            "provenance": "manual",
+            "schema_version": "4.0"
+        },
+        "steps": [
+            {
+                "parser": "dummy",
+                "import": {
+                    "files": ["dummy_schema_1.json"]
+                }
+            }
+        ]
+    },
+    "output": [
+        {
+            "parser": "dummy",
+            "input": {
+                "files": ["dummy_schema_1.json"],
+                "folders": null,
+                "prefix": null,
+                "suffix": null,
+                "contains": null,
+                "exclude": null,
+                "encoding": "UTF-8"
+            },
+            "tag": null,
+            "parameters": null,
+            "export": null,
+            "externaldate":null
+        }
+    ]
+}

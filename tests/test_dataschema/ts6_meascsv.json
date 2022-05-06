@@ -1,0 +1,39 @@
+{
+    "input": {
+        "metadata": {
+            "provenance": {
+                "type": "test"
+            },
+            "version": "4.1",
+            "timezone": "UTC"
+        },
+        "steps": [
+            {
+                "parser": "meascsv",
+                "input": {"files": ["measurement.csv"]}
+            }
+        ]
+    },
+    "output": [
+        {
+            "parser": "meascsv",
+            "input": {
+                "files": ["measurement.csv"],
+                "prefix": null,
+                "suffix": null,
+                "contains": null,
+                "exclude": null,
+                "encoding": "UTF-8"
+            },
+            "tag": null,
+            "parameters": {
+                "calfile": null,
+                "convert": null,
+                "timestamp": {
+                    "timestamp": {"format": "%Y-%m-%d-%H-%M-%S", "index": 0}
+                }
+            },
+            "externaldate":null
+        }
+    ]
+}

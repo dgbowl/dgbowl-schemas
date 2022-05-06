@@ -1,0 +1,37 @@
+{
+    "input": {
+        "metadata": {
+            "provenance": "manual",
+            "schema_version": "4.0.1",
+            "timezone": "UTC"
+        },
+        "steps": [
+            {
+                "parser": "flowdata",
+                "import": {"files": ["Cp_100mA_1mindelay.rtf"]}
+            }
+        ]
+    },
+    "output": [
+        {
+            "parser": "flowdata",
+            "input": {
+                "files": ["Cp_100mA_1mindelay.rtf"],
+                "folders": null,
+                "prefix": null,
+                "suffix": null,
+                "contains": null,
+                "exclude": null,
+                "encoding": "UTF-8"
+            },
+            "tag": null,
+            "parameters": {
+                "calfile": null,
+                "convert": null,
+                "filetype": "drycal"
+            },
+            "export": null,
+            "externaldate":null
+        }
+    ]
+}
