@@ -4,6 +4,7 @@ from .externaldate import ExternalDate
 from .input import Input
 from .parameters import Tol, Timestamps, Timestamp
 
+
 class Dummy(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
     class Params(BaseModel, extra=Extra.allow):
         pass
@@ -54,7 +55,7 @@ class FlowData(BaseModel, extra=Extra.forbid, allow_population_by_field_name=Tru
         filetype: Literal["drycal", "drycal.csv", "drycal.rtf", "drycal.txt"] = "drycal"
         convert: Optional[Any]
         calfile: Optional[str]
-    
+
     parser: Literal["flowdata"]
     input: Input = Field(alias="import")
     parameters: Params = Field(default_factory=Params)
@@ -103,7 +104,7 @@ class ChromTrace(BaseModel, extra=Extra.forbid, allow_population_by_field_name=T
 class MassTrace(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
     class Params(BaseModel, extra=Extra.forbid):
         filetype: Literal["quadstar.sac"] = Field("quadstar.sac", alias="tracetype")
-        
+
     parser: Literal["masstrace"]
     input: Input = Field(alias="import")
     parameters: Params = Field(default_factory=Params)
@@ -152,7 +153,3 @@ Steps = Union[
     QFTrace,
     XPSTrace,
 ]
-
-
-
-

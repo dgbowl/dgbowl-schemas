@@ -8,4 +8,5 @@ class Tol(BaseModel, extra=Extra.forbid):
     atol: Optional[float]
     rtol: Optional[float]
 
+
 Timestamps = Union[Timestamp, TimeDate, UTS]

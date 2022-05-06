@@ -45,7 +45,7 @@ def test_dataschema_metadata_json(inpath, success, datadir):
         ("ts5_flowdata.json"),
         ("ts6_meascsv.json"),
         ("ts7_electrochem.json"),
-    ]
+    ],
 )
 def test_dataschema_steps_json(inpath, datadir):
     os.chdir(datadir)
