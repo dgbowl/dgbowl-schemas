@@ -2,22 +2,21 @@
     "input": {
         "metadata": {
             "provenance": "manual",
-            "schema_version": "4.0"
+            "schema_version": "4.0.1",
+            "timezone": "UTC"
         },
         "steps": [
             {
-                "parser": "dummy",
-                "import": {
-                    "files": ["dummy_schema_1.json"]
-                }
+                "parser": "flowdata",
+                "import": {"files": ["Cp_100mA_1mindelay.rtf"]}
             }
         ]
     },
     "output": [
         {
-            "parser": "dummy",
+            "parser": "flowdata",
             "input": {
-                "files": ["dummy_schema_1.json"],
+                "files": ["Cp_100mA_1mindelay.rtf"],
                 "folders": null,
                 "prefix": null,
                 "suffix": null,
@@ -26,7 +25,11 @@
                 "encoding": "UTF-8"
             },
             "tag": null,
-            "parameters": null,
+            "parameters": {
+                "calfile": null,
+                "convert": null,
+                "filetype": "drycal"
+            },
             "export": null,
             "externaldate":null
         }

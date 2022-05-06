@@ -1,0 +1,49 @@
+{
+    "input": {
+        "metadata": {
+            "provenance": {"type": "test"},
+            "version": "4.1"
+        },
+        "steps": [
+            {
+                "parser": "electrochem",
+                "input": {"files": ["file.mpr"]}
+            },
+            {
+                "parser": "electrochem",
+                "input": {"files": ["file.mpt"]},
+                "parameters": {"filetype": "eclab.mpt"}
+            }
+        ]
+    },
+    "output": [
+        {
+            "parser": "electrochem",
+            "input": {
+                "files": ["file.mpr"],
+                "prefix": null,
+                "suffix": null,
+                "contains": null,
+                "exclude": null,
+                "encoding": "windows-1252"
+            },
+            "tag": null,
+            "parameters": {"filetype": "eclab.mpr"},
+            "externaldate": null
+        },
+        {
+            "parser": "electrochem",
+            "input": {
+                "files": ["file.mpt"],
+                "prefix": null,
+                "suffix": null,
+                "contains": null,
+                "exclude": null,
+                "encoding": "windows-1252"
+            },
+            "tag": null,
+            "parameters": {"filetype": "eclab.mpt"},
+            "externaldate": null
+        }
+    ]
+}

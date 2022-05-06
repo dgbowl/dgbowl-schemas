@@ -13,7 +13,6 @@ class Dummy(BaseModel, extra=Extra.forbid):
     parameters: Optional[Params]
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
-    export: Optional[str]
 
 
 class BasicCSV(BaseModel, extra=Extra.forbid):
@@ -30,7 +29,6 @@ class BasicCSV(BaseModel, extra=Extra.forbid):
     parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
-    export: Optional[str]
 
 
 class MeasCSV(BaseModel, extra=Extra.forbid):
@@ -46,7 +44,6 @@ class MeasCSV(BaseModel, extra=Extra.forbid):
     parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
-    export: Optional[str]
 
 
 class FlowData(BaseModel, extra=Extra.forbid):
@@ -60,7 +57,6 @@ class FlowData(BaseModel, extra=Extra.forbid):
     parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
-    export: Optional[str]
 
 
 class ElectroChem(BaseModel, extra=Extra.forbid):
@@ -75,7 +71,6 @@ class ElectroChem(BaseModel, extra=Extra.forbid):
     parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
-    export: Optional[str]
 
 
 class ChromTrace(BaseModel, extra=Extra.forbid):
@@ -97,7 +92,6 @@ class ChromTrace(BaseModel, extra=Extra.forbid):
     parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
-    export: Optional[str]
 
 
 class MassTrace(BaseModel, extra=Extra.forbid):
@@ -109,7 +103,6 @@ class MassTrace(BaseModel, extra=Extra.forbid):
     parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
-    export: Optional[str]
 
 
 class QFTrace(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
@@ -126,7 +119,6 @@ class QFTrace(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True
     parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
-    export: Optional[str]
 
 
 class XPSTrace(BaseModel, extra=Extra.forbid):
@@ -138,7 +130,6 @@ class XPSTrace(BaseModel, extra=Extra.forbid):
     parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
-    export: Optional[str]
 
 
 class XRDTrace(BaseModel, extra=Extra.forbid):
@@ -152,7 +143,6 @@ class XRDTrace(BaseModel, extra=Extra.forbid):
     parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
-    export: Optional[str]
 
 Steps = Union[
     Dummy,

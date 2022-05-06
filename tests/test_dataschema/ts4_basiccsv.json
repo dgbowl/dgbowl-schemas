@@ -1,0 +1,63 @@
+{
+    "input": {
+        "metadata": {
+            "provenance": {
+                "type": "test"
+            },
+            "version": "4.1"
+        },
+        "steps": [
+            {
+                "parser": "basiccsv",
+                "input": {"files": ["measurement.csv"]},
+                "parameters": {
+                    "sep": ";",
+                    "sigma": {
+                        "T_f": {"atol": 0.05},
+                        "N2": {"atol": 0.005},
+                        "O2": {"atol": 0.005},
+                        "alkane": {"atol": 0.005},
+                        "flow low": {"atol": 0.0005},
+                        "flow high": {"atol": 0.005}
+                    },
+                    "timestamp": {
+                        "timestamp": {"index": 0, "format": "%Y-%m-%d-%H-%M-%S"}
+                    },
+                    "calfile": "fhi_tfcal.json"
+                }
+            }
+        ]
+    },
+    "output": [
+        {
+            "parser": "basiccsv",
+            "input": {
+                "files": ["measurement.csv"],
+                "prefix": null,
+                "suffix": null,
+                "contains": null,
+                "exclude": null,
+                "encoding": "UTF-8"
+            },
+            "tag": null,
+            "parameters": {
+                "convert": null,
+                "sep": ";",
+                "sigma": {
+                    "T_f": {"atol": 0.05, "rtol": null},
+                    "N2": {"atol": 0.005, "rtol": null},
+                    "O2": {"atol": 0.005, "rtol": null},
+                    "alkane": {"atol": 0.005, "rtol": null},
+                    "flow low": {"atol": 0.0005, "rtol": null},
+                    "flow high": {"atol": 0.005, "rtol": null}
+                },
+                "calfile": "fhi_tfcal.json",
+                "timestamp": {
+                    "timestamp": {"index": 0, "format": "%Y-%m-%d-%H-%M-%S"}
+                },
+                "units": null
+            },
+            "externaldate": null
+        }
+    ]
+}

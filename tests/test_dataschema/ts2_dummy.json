@@ -1,0 +1,38 @@
+{
+    "input": {
+        "metadata": {
+            "version": "4.1",
+            "provenance": {
+                "type": "manual"
+            }
+        },
+        "steps": [
+            {
+                "parser": "dummy",
+                "tag": "test_tag",
+                "input": {"folders": ["fol"], "suffix": ".txt", "encoding": "test"},
+                "parameters": {"k": "v"},
+                "externaldate": {"using": {"filename": {"len": 10, "format": "%Y_%m_%d"}}}
+            } 
+        ]
+    },
+    "output": [
+        {
+            "parser": "dummy",
+            "input": {
+                "files": ["fol"],
+                "prefix": null,
+                "suffix": ".txt",
+                "contains": null,
+                "exclude": null,
+                "encoding": "test"
+            },
+            "tag": "test_tag",
+            "parameters": {"k": "v"},
+            "externaldate": {
+                "using": {"filename": {"len": 10, "format": "%Y_%m_%d"}},
+                "mode": "add"
+            }
+        }
+    ]
+}

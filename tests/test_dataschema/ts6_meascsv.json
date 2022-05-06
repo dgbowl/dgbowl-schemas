@@ -1,22 +1,24 @@
 {
     "input": {
         "metadata": {
-            "provenance": "manual",
-            "schema_version": "4.0.1"
+            "provenance": {
+                "type": "test"
+            },
+            "version": "4.1",
+            "timezone": "UTC"
         },
         "steps": [
             {
-                "parser": "basiccsv",
-                "import": {"files": ["measurement.csv"]}
+                "parser": "meascsv",
+                "input": {"files": ["measurement.csv"]}
             }
         ]
     },
     "output": [
         {
-            "parser": "basiccsv",
+            "parser": "meascsv",
             "input": {
                 "files": ["measurement.csv"],
-                "folders": null,
                 "prefix": null,
                 "suffix": null,
                 "contains": null,
@@ -25,15 +27,13 @@
             },
             "tag": null,
             "parameters": {
-                "convert": null,
-                "sep": ",",
-                "sigma": null,
                 "calfile": null,
-                "timestamp": null,
-                "units": null
+                "convert": null,
+                "timestamp": {
+                    "timestamp": {"format": "%Y-%m-%d-%H-%M-%S", "index": 0}
+                }
             },
-            "export": null,
-            "externaldate": null
+            "externaldate":null
         }
     ]
 }
