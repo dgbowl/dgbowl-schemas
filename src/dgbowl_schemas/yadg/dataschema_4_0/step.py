@@ -27,7 +27,7 @@ class BasicCSV(BaseModel, extra=Extra.forbid, allow_population_by_field_name=Tru
 
     parser: Literal["basiccsv"]
     input: Input = Field(alias="import")
-    parameters: Params = Field(default_factory=Params())
+    parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
     export: Optional[str]
@@ -43,7 +43,7 @@ class MeasCSV(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True
 
     parser: Literal["meascsv"]
     input: Input = Field(alias="import")
-    parameters: Params = Field(default_factory=Params())
+    parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
     export: Optional[str]
@@ -57,7 +57,7 @@ class FlowData(BaseModel, extra=Extra.forbid, allow_population_by_field_name=Tru
     
     parser: Literal["flowdata"]
     input: Input = Field(alias="import")
-    parameters: Params = Field(default_factory=Params())
+    parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
     export: Optional[str]
@@ -72,7 +72,7 @@ class ElectroChem(BaseModel, extra=Extra.forbid, allow_population_by_field_name=
 
     parser: Literal["electrochem"]
     input: ECInput = Field(alias="import")
-    parameters: Params = Field(default_factory=Params())
+    parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
     export: Optional[str]
@@ -94,7 +94,7 @@ class ChromTrace(BaseModel, extra=Extra.forbid, allow_population_by_field_name=T
 
     parser: Literal["chromtrace"]
     input: Input = Field(alias="import")
-    parameters: Params = Field(default_factory=Params())
+    parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
     export: Optional[str]
@@ -106,7 +106,7 @@ class MassTrace(BaseModel, extra=Extra.forbid, allow_population_by_field_name=Tr
         
     parser: Literal["masstrace"]
     input: Input = Field(alias="import")
-    parameters: Params = Field(default_factory=Params())
+    parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
     export: Optional[str]
@@ -123,7 +123,7 @@ class QFTrace(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True
 
     parser: Literal["qftrace"]
     input: Input = Field(alias="import")
-    parameters: Params = Field(default_factory=Params())
+    parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
     export: Optional[str]
@@ -135,7 +135,7 @@ class XPSTrace(BaseModel, extra=Extra.forbid, allow_population_by_field_name=Tru
 
     parser: Literal["xpstrace"]
     input: Input = Field(alias="import")
-    parameters: Params = Field(default_factory=Params())
+    parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
     export: Optional[str]

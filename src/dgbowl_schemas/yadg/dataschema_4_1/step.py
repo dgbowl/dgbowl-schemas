@@ -27,7 +27,7 @@ class BasicCSV(BaseModel, extra=Extra.forbid):
 
     parser: Literal["basiccsv"]
     input: Input
-    parameters: Params = Field(default_factory=Params())
+    parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
     export: Optional[str]
@@ -43,7 +43,7 @@ class MeasCSV(BaseModel, extra=Extra.forbid):
 
     parser: Literal["meascsv"]
     input: Input
-    parameters: Params = Field(default_factory=Params())
+    parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
     export: Optional[str]
@@ -57,7 +57,7 @@ class FlowData(BaseModel, extra=Extra.forbid):
     
     parser: Literal["flowdata"]
     input: Input
-    parameters: Params = Field(default_factory=Params())
+    parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
     export: Optional[str]
@@ -72,7 +72,7 @@ class ElectroChem(BaseModel, extra=Extra.forbid):
 
     parser: Literal["electrochem"]
     input: ECInput
-    parameters: Params = Field(default_factory=Params())
+    parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
     export: Optional[str]
@@ -94,7 +94,7 @@ class ChromTrace(BaseModel, extra=Extra.forbid):
 
     parser: Literal["chromtrace"]
     input: Input
-    parameters: Params = Field(default_factory=Params())
+    parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
     export: Optional[str]
@@ -106,7 +106,7 @@ class MassTrace(BaseModel, extra=Extra.forbid):
         
     parser: Literal["masstrace"]
     input: Input
-    parameters: Params = Field(default_factory=Params())
+    parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
     export: Optional[str]
@@ -123,7 +123,7 @@ class QFTrace(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True
 
     parser: Literal["qftrace"]
     input: Input
-    parameters: Params = Field(default_factory=Params())
+    parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
     export: Optional[str]
@@ -135,7 +135,7 @@ class XPSTrace(BaseModel, extra=Extra.forbid):
 
     parser: Literal["xpstrace"]
     input: Input
-    parameters: Params = Field(default_factory=Params())
+    parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
     export: Optional[str]
@@ -149,7 +149,7 @@ class XRDTrace(BaseModel, extra=Extra.forbid):
 
     parser: Literal["xrdtrace"]
     input: Input
-    parameters: Params = Field(default_factory=Params())
+    parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
     export: Optional[str]
