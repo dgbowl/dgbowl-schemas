@@ -64,8 +64,11 @@ class ElectroChem(BaseModel, extra=Extra.forbid):
     class Params(BaseModel, extra=Extra.forbid):
         filetype: Literal["eclab.mpt", "eclab.mpr", "tomato.json"] = "eclab.mpr"
 
+    class Input(Input):
+        encoding: str = "windows-1252"
+
     parser: Literal["electrochem"]
-    input: Input = Field(Input(encoding="windows-1252"))
+    input: Input
     parameters: Params = Field(default_factory=Params)
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
