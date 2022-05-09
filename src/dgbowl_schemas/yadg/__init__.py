@@ -9,5 +9,5 @@ def to_dataschema(**kwargs):
     return parse_obj_as(DataSchemas, kwargs)
 
 
-latest_version = "4.1"
+latest_version = "4.1.1"
 DataSchema = DataSchema_4_1
