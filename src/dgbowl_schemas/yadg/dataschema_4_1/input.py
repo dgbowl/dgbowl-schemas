@@ -15,7 +15,7 @@ class Input(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
         ret = []
         for item in sorted(self.files):
             if os.path.isdir(item):
-                paths = [os.path.join(item, fn) for fn in os.listdir(item)]
+                paths = [os.path.join(item, fn) for fn in sorted(os.listdir(item))]
             else:
                 paths = [item]
             for path in paths:
