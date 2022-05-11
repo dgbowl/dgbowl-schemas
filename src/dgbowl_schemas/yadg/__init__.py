@@ -8,6 +8,7 @@ logger = logging.getLogger(__name__)
 latest_version = "4.1.1"
 DataSchema = DataSchema_4_1
 
+
 def to_dataschema(**kwargs):
     models = {
         "4.1.1": DataSchema_4_1,
@@ -19,15 +20,8 @@ def to_dataschema(**kwargs):
             schema = Model(**kwargs)
             return schema
         except ValidationError as e:
-            logger.warning(
-                "Could not parse 'kwargs' using DataSchema v%s.", 
-                ver
-            )
+            logger.warning("Could not parse 'kwargs' using DataSchema v%s.", ver)
             logger.warning(e)
             if firste is None:
                 firste = e
-        
     raise ValueError(firste)
-        
-
-
