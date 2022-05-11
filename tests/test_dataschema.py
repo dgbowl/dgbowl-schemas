@@ -1,6 +1,5 @@
 import pytest
 import os
-from pydantic import ValidationError
 import json
 from dgbowl_schemas.yadg import to_dataschema
 
@@ -26,7 +25,7 @@ def test_dataschema_metadata_json(inpath, success, datadir):
     with open(inpath, "r") as infile:
         indict = json.load(infile)
     if not success:
-        with pytest.raises(ValidationError):
+        with pytest.raises(ValueError):
             to_dataschema(**indict)
     else:
         to_dataschema(**indict)
