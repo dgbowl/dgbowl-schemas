@@ -1,0 +1,11 @@
+{
+    "version": "0.1", 
+    "tomato": {
+        "unlock_when_done": false, 
+        "output": {"path": null, "prefix": null}
+    }, 
+    "sample": {"name": "dummy_random_1_0.1"}, 
+    "method": [
+        {"device": "worker", "technique": "random", "time": 1, "delay": 0.1}
+    ]
+}
