@@ -1,4 +1,5 @@
 from pydantic import BaseModel, Extra, Field
+from typing import Literal
 
 class Tomato(BaseModel, extra=Extra.forbid):
 
@@ -7,4 +8,7 @@ class Tomato(BaseModel, extra=Extra.forbid):
         prefix: str = None
 
     unlock_when_done: bool = False
+    verbosity: Literal[
+        "DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"
+    ] = "WARNING"
     output: Output = Field(default_factory=Output)

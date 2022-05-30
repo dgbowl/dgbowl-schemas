@@ -2,7 +2,8 @@
     "version": "0.1", 
     "tomato": {
         "unlock_when_done": false,
-        "output": {"path": null, "prefix": null}
+        "output": {"path": null, "prefix": null},
+        "verbosity": "WARNING"
     },
     "sample": {
         "name": "some name",

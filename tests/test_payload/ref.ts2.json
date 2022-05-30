@@ -2,7 +2,8 @@
     "version": "0.1", 
     "tomato": {
         "unlock_when_done": false,
-        "output": {"path": null, "prefix": "outfile"}
+        "output": {"path": null, "prefix": "outfile"},
+        "verbosity": "WARNING"
     },
     "sample": {
         "name": "dummy_random_1_0.1"

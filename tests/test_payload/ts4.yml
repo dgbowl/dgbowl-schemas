@@ -2,3 +2,5 @@ version: "0.1"
 sample:
   name: sample
 methodfile: ts4_method.yml
+tomato:
+  verbosity: DEBUG
