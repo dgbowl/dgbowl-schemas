@@ -13,4 +13,5 @@ Subpackages
    :maxdepth: 4
 
    dgbowl_schemas.dgpost_recipe
+   dgbowl_schemas.tomato
    dgbowl_schemas.yadg
