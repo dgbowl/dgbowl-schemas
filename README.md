@@ -3,7 +3,7 @@
 
 Currently implemented schemas are:
 - `recipe` validator for `dgpost` at `v1.0`
-- `dataschema` validator for `yadg` for `[4.1, 4.0.1, 4.0]`
+- `dataschema` validator for `yadg` for `[4.1.1, 4.1, 4.0.1, 4.0]`
 
 Schemas to be incorporated:
 

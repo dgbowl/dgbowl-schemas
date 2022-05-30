@@ -1,0 +1,16 @@
+{
+    "version": "0.1", 
+    "tomato": {
+        "unlock_when_done": false,
+        "output": {"path": null, "prefix": null},
+        "verbosity": "WARNING"
+    },
+    "sample": {
+        "name": "sample name", 
+        "capacity": 0.123
+    }, 
+    "method": [
+        {"device": "worker", "technique": "random", "time": 1, "delay": 0.1},
+        {"device": "worker", "technique": "sequential", "time": 1, "delay": 0.1}
+    ]
+}

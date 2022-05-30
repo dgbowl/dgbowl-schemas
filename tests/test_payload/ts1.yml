@@ -1,0 +1,13 @@
+version: "0.1"
+sample:
+    name: sample name
+    capacity: 0.123
+method:
+  - device: "worker"
+    technique: "random"
+    time: 1
+    delay: 0.1
+  - device: "worker"
+    technique: "sequential"
+    time: 1
+    delay: 0.1

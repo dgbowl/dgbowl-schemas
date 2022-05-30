@@ -1,0 +1,7 @@
+version: "0.1"
+samplefile: "ts3_sample.json"
+method:
+  - device: "worker"
+    technique: "random"
+    time: 1
+    delay: 0.1

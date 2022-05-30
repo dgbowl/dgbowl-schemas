@@ -1,0 +1,15 @@
+{
+    "version": "0.1", 
+    "tomato": {
+        "unlock_when_done": false,
+        "output": {"path": null, "prefix": null},
+        "verbosity": "DEBUG"
+    },
+    "sample": {
+        "name": "sample"
+    }, 
+    "method": [
+        {"device": "worker", "technique": "1", "time": 1, "delay": 0.1},
+        {"device": "worker", "technique": "2", "time": 2, "delay": 0.1}
+    ]
+}
