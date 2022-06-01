@@ -30,7 +30,7 @@ class Payload(BaseModel, extra=Extra.forbid):
             assert "sample" in sample
             values["sample"] = sample["sample"]
         return values
-    
+
     @root_validator(pre=True)
     def extract_methodfile(cls, values):
         if "methodfile" in values:
@@ -46,5 +46,3 @@ class Payload(BaseModel, extra=Extra.forbid):
             assert "method" in method
             values["method"] = method["method"]
         return values
-                
-

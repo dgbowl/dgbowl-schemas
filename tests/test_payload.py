@@ -4,6 +4,7 @@ import json
 import yaml
 from dgbowl_schemas.tomato import to_payload
 
+
 @pytest.mark.parametrize(
     "inpath",
     [
