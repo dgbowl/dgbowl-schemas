@@ -2,7 +2,7 @@ import pytest
 import os
 import yaml
 import json
-from dgbowl_schemas.dgpost_recipe import recipe_parser
+from dgbowl_schemas.dgpost import to_recipe
 
 from ref_recipe import ts0, ts1, ts2, ts3, ts4, ts5, ts6, ts7, ts8, ts9
 from ref_recipe import js0
@@ -27,7 +27,7 @@ def test_recipe_from_yml(inpath, outdict, datadir):
     os.chdir(datadir)
     with open(inpath, "r") as infile:
         indict = yaml.safe_load(infile)
-    ret = recipe_parser(indict)
+    ret = to_recipe(**indict).dict(by_alias=True, exclude_none=True)
     assert outdict == ret
 
 
@@ -39,5 +39,5 @@ def test_recipe_from_json(inpath, outdict, datadir):
     os.chdir(datadir)
     with open(inpath, "r") as infile:
         indict = json.load(infile)
-    ret = recipe_parser(indict)
+    ret = to_recipe(**indict).dict(by_alias=True, exclude_none=True)
     assert outdict == ret
