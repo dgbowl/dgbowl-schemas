@@ -12,6 +12,6 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   dgbowl_schemas.dgpost_recipe
+   dgbowl_schemas.dgpost
    dgbowl_schemas.tomato
    dgbowl_schemas.yadg
