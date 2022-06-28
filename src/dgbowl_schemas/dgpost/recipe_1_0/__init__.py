@@ -7,15 +7,10 @@ from .plot import Plot
 from .save import Save
 
 
-class RecipeSchema(BaseModel, extra=Extra.forbid):
+class Recipe(BaseModel, extra=Extra.forbid):
     version: Literal["v1.0"]
     load: Optional[Sequence[Load]]
     extract: Optional[Sequence[Extract]]
     transform: Optional[Sequence[Transform]]
     plot: Optional[Sequence[Plot]]
     save: Optional[Sequence[Save]]
-
-
-def recipe_parser(recipe: dict) -> dict:
-    ret = RecipeSchema(**recipe)
-    return ret.dict(by_alias=True, exclude_none=True)
