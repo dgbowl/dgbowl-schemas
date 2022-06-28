@@ -8,6 +8,7 @@ logger = logging.getLogger(__name__)
 latest_version = "1.1"
 Recipe = Recipe_1_1
 
+
 def to_recipe(**kwargs):
     models = {
         "1.1": Recipe_1_1,
