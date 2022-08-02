@@ -7,8 +7,6 @@ method:
     time: 1
     delay: 0.1
 tomato:
-  output:
-    prefix: "outfile"
   snapshot:
     prefix: "snap"
     frequency: 10
