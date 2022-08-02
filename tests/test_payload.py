@@ -8,11 +8,15 @@ from dgbowl_schemas.tomato import to_payload
 @pytest.mark.parametrize(
     "inpath",
     [
+        # v0.1
         "ts0.yml",
         "ts1.yml",
         "ts2.yml",
         "ts3.yml",
         "ts4.yml",
+        # v0.2
+        "ts5.yml",
+        "ts6.yml",
     ],
 )
 def test_payload_yml(inpath, datadir):

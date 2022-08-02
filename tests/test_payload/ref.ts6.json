@@ -1,0 +1,15 @@
+{
+    "version": "0.2", 
+    "tomato": {
+        "unlock_when_done": false,
+        "output": {"path": null, "prefix": "outfile"},
+        "verbosity": "WARNING",
+        "snapshot": {"path": null, "prefix": "snap", "frequency": 10}
+    },
+    "sample": {
+        "name": "dummy_random_1_0.1"
+    }, 
+    "method": [
+        {"device": "worker", "technique": "random", "time": 1, "delay": 0.1}
+    ]
+}
