@@ -2,7 +2,7 @@
     "version": "0.2", 
     "tomato": {
         "unlock_when_done": false,
-        "output": {"path": null, "prefix": "outfile"},
+        "output": {"path": null, "prefix": null},
         "verbosity": "WARNING",
         "snapshot": {"path": null, "prefix": "snap", "frequency": 10}
     },

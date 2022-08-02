@@ -5,11 +5,11 @@ from typing import Literal
 class Tomato(BaseModel, extra=Extra.forbid):
     class Output(BaseModel, extra=Extra.forbid):
         path: str = None
-        prefix: str = "results"
+        prefix: str = None
     
     class Snapshot(BaseModel, extra=Extra.forbid):
         path: str = None
-        prefix: str = "snapshot"
+        prefix: str = None
         frequency: int = 3600
 
     unlock_when_done: bool = False
