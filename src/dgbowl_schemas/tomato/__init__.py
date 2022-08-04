@@ -8,6 +8,7 @@ logger = logging.getLogger(__name__)
 latest_version = "0.2"
 Payload = Payload_0_2
 
+
 def to_payload(**kwargs):
     models = {
         "0.2": Payload_0_2,

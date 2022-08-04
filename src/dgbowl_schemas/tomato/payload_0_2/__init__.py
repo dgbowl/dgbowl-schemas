@@ -12,11 +12,19 @@ import json
 class Payload(BaseModel, extra=Extra.forbid):
     version: Literal["0.2"]
     tomato: Tomato = Field(default_factory=Tomato)
+    """Additional configuration options for tomato."""
+
     sample: Sample
+    """Specification of the experimental sample."""
+
     method: Sequence[Method]
+    """A sequence of the experimental methods."""
 
     @root_validator(pre=True)
     def extract_samplefile(cls, values):
+        """
+        If ``samplefile`` is provided in ``values``, parse the file as ``sample``.
+        """
         if "samplefile" in values:
             sf = Path(values.pop("samplefile"))
             assert sf.exists()
@@ -33,6 +41,9 @@ class Payload(BaseModel, extra=Extra.forbid):
 
     @root_validator(pre=True)
     def extract_methodfile(cls, values):
+        """
+        If ``methodfile`` is provided in ``values``, parse the file as ``method``.
+        """
         if "methodfile" in values:
             mf = Path(values.pop("methodfile"))
             assert mf.exists()
