@@ -1,0 +1,16 @@
+dgbowl\_schemas.dgpost package
+==============================
+
+.. automodule:: dgbowl_schemas.dgpost
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   dgbowl_schemas.dgpost.recipe_1_0
+   dgbowl_schemas.dgpost.recipe_1_1
