@@ -20,8 +20,8 @@ def to_dataschema(**kwargs):
             schema = Model(**kwargs)
             return schema
         except ValidationError as e:
-            logger.warning("Could not parse 'kwargs' using DataSchema v%s.", ver)
-            logger.warning(e)
+            logger.info("Could not parse 'kwargs' using DataSchema v%s.", ver)
+            logger.info(e)
             if firste is None:
                 firste = e
     raise ValueError(firste)

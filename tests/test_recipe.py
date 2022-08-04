@@ -2,7 +2,7 @@ import pytest
 import os
 import yaml
 import json
-from dgbowl_schemas.dgpost import to_recipe
+from dgbowl_schemas import to_recipe
 
 from ref_recipe import ts0, ts1, ts2, ts3, ts4, ts5, ts6, ts7, ts8, ts9
 from ref_recipe import js0

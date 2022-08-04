@@ -6,7 +6,7 @@ from .payload_0_2 import Payload as Payload_0_2
 logger = logging.getLogger(__name__)
 
 latest_version = "0.2"
-
+Payload = Payload_0_2
 
 def to_payload(**kwargs):
     models = {
@@ -19,8 +19,8 @@ def to_payload(**kwargs):
             payload = Model(**kwargs)
             return payload
         except ValidationError as e:
-            logger.warning("Could not parse 'kwargs' using Payload v%s.", ver)
-            logger.warning(e)
+            logger.info("Could not parse 'kwargs' using Payload v%s.", ver)
+            logger.info(e)
             if firste is None:
                 firste = e
     raise ValueError(firste)
