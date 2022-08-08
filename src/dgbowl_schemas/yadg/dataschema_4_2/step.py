@@ -95,6 +95,21 @@ class ChromTrace(BaseModel, extra=Extra.forbid):
     externaldate: Optional[ExternalDate]
 
 
+class ChromData(BaseModel, extra=Extra.forbid):
+    class Params(BaseModel, extra=Extra.forbid):
+        filetype: Literal[
+            "fusion.json",
+            "fusion.zip",
+            "fusion.csv", 
+        ] = "fusion.json"
+
+    parser: Literal["chromdata"]
+    input: Input
+    parameters: Params = Field(default_factory=Params)
+    tag: Optional[str]
+    externaldate: Optional[ExternalDate]
+
+
 class MassTrace(BaseModel, extra=Extra.forbid):
     class Params(BaseModel, extra=Extra.forbid):
         filetype: Literal["quadstar.sac"] = "quadstar.sac"
@@ -153,8 +168,10 @@ Steps = Union[
     FlowData,
     ElectroChem,
     ChromTrace,
+    ChromData,
     MassTrace,
     QFTrace,
     XPSTrace,
     XRDTrace,
 ]
+
