@@ -73,5 +73,6 @@ html_theme_options = {
 
 autosummary_generate = True
 autodoc_default_flags = ["members", "undoc-members", "show-inheritance"]
+autodoc_member_order = "bysource"
 autodoc_pydantic_model_show_field_summary = False
 autodoc_pydantic_model_member_order = "bysource"

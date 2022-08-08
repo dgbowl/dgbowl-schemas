@@ -10,7 +10,7 @@ class TimestampSpec(BaseModel, extra=Extra.forbid):
 
 
 class Timestamp(BaseModel, extra=Extra.forbid):
-    """Timestamp from a colum containing a single timestamp string."""
+    """Timestamp from a column containing a single timestamp string."""
 
     timestamp: TimestampSpec
 
