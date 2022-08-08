@@ -6,6 +6,8 @@ from .parameters import Tol, Timestamps, Timestamp
 
 
 class Dummy(BaseModel, extra=Extra.forbid):
+    """Dummy parser type, useful for testing."""
+
     class Params(BaseModel, extra=Extra.allow):
         pass
 
@@ -17,13 +19,51 @@ class Dummy(BaseModel, extra=Extra.forbid):
 
 
 class BasicCSV(BaseModel, extra=Extra.forbid):
+    """Customisable tabulated file parser."""
+
     class Params(BaseModel, extra=Extra.forbid):
         sep: str = ","
-        sigma: Optional[Mapping[str, Tol]]
-        calfile: Optional[str]
-        timestamp: Optional[Timestamps]
-        convert: Optional[Any]
+        """Separator of table columns."""
+
         units: Optional[Mapping[str, str]]
+        """A :class:`dict` containing ``column: unit`` keypairs."""
+
+        timestamp: Optional[Timestamps]
+        """Timestamp specification allowing calculation of Unix timestamp for 
+        each table row."""
+
+        sigma: Optional[Mapping[str, Tol]] = Field(None, deprecated=True)
+        """
+        External uncertainty specification.
+
+        .. note::
+
+            This feature is deprecated as of ``yadg-4.2`` and will
+            stop working in ``yadg-5.0``.
+
+        """
+
+        calfile: Optional[str] = Field(None, deprecated=True)
+        """
+        Column calibration specification.
+        
+        .. note::
+
+            This feature is deprecated as of ``yadg-4.2`` and will
+            stop working in ``yadg-5.0``.
+
+        """
+
+        convert: Optional[Any] = Field(None, deprecated=True)
+        """
+        Column renaming specification.
+        
+        .. note::
+
+            This feature is deprecated as of ``yadg-4.2`` and will
+            stop working in ``yadg-5.0``.
+            
+        """
 
     parser: Literal["basiccsv"]
     input: Input
@@ -33,12 +73,42 @@ class BasicCSV(BaseModel, extra=Extra.forbid):
 
 
 class MeasCSV(BaseModel, extra=Extra.forbid):
+    """
+    Legacy file parser for ``measurement.csv`` files from FHI.
+
+    .. note::
+
+        This parser is deprecated, and the :class:`BasicCSV` parser should be
+        used instead.
+
+    """
+
     class Params(BaseModel, extra=Extra.forbid):
         timestamp: Timestamps = Field(
             Timestamp(timestamp={"index": 0, "format": "%Y-%m-%d-%H-%M-%S"})
         )
-        calfile: Optional[str]
-        convert: Optional[Any]
+
+        calfile: Optional[str] = Field(None, deprecated=True)
+        """
+        Column calibration specification.
+        
+        .. note::
+
+            This feature is deprecated as of ``yadg-4.2`` and will
+            stop working in ``yadg-5.0``.
+
+        """
+
+        convert: Optional[Any] = Field(None, deprecated=True)
+        """
+        Column renaming specification.
+        
+        .. note::
+
+            This feature is deprecated as of ``yadg-4.2`` and will
+            stop working in ``yadg-5.0``.
+            
+        """
 
     parser: Literal["meascsv"]
     input: Input
@@ -48,10 +118,32 @@ class MeasCSV(BaseModel, extra=Extra.forbid):
 
 
 class FlowData(BaseModel, extra=Extra.forbid):
+    """Parser for flow controller/meter data."""
+
     class Params(BaseModel, extra=Extra.forbid):
         filetype: Literal["drycal.csv", "drycal.rtf", "drycal.txt"] = "drycal.csv"
-        convert: Optional[Any]
-        calfile: Optional[str]
+
+        calfile: Optional[str] = Field(None, deprecated=True)
+        """
+        Column calibration specification.
+        
+        .. note::
+
+            This feature is deprecated as of ``yadg-4.2`` and will
+            stop working in ``yadg-5.0``.
+
+        """
+
+        convert: Optional[Any] = Field(None, deprecated=True)
+        """
+        Column renaming specification.
+        
+        .. note::
+
+            This feature is deprecated as of ``yadg-4.2`` and will
+            stop working in ``yadg-5.0``.
+            
+        """
 
     parser: Literal["flowdata"]
     input: Input
@@ -61,6 +153,8 @@ class FlowData(BaseModel, extra=Extra.forbid):
 
 
 class ElectroChem(BaseModel, extra=Extra.forbid):
+    """Parser for electrochemistry files."""
+
     class Params(BaseModel, extra=Extra.forbid):
         filetype: Literal["eclab.mpt", "eclab.mpr", "tomato.json"] = "eclab.mpr"
 
@@ -75,6 +169,16 @@ class ElectroChem(BaseModel, extra=Extra.forbid):
 
 
 class ChromTrace(BaseModel, extra=Extra.forbid):
+    """
+    Parser for raw chromatography traces.
+
+    .. note::
+
+        For parsing processed (integrated) chromatographic data, use the
+        :class:`ChromData` parser.
+
+    """
+
     class Params(BaseModel, extra=Extra.forbid):
         filetype: Literal[
             "ezchrom.asc",
@@ -84,9 +188,39 @@ class ChromTrace(BaseModel, extra=Extra.forbid):
             "agilent.dx",
             "agilent.csv",
         ] = "ezchrom.asc"
-        calfile: Optional[str]
-        species: Optional[Any]
-        detectors: Optional[Any]
+
+        calfile: Optional[str] = Field(None, deprecated=True)
+        """
+        Species calibration specification.
+        
+        .. note::
+
+            This feature is deprecated as of ``yadg-4.2`` and will
+            stop working in ``yadg-5.0``.
+
+        """
+
+        species: Optional[Any] = Field(None, deprecated=True)
+        """
+        Species information as a :class:`dict`.
+        
+        .. note::
+
+            This feature is deprecated as of ``yadg-4.2`` and will
+            stop working in ``yadg-5.0``.
+        
+        """
+
+        detectors: Optional[Any] = Field(None, deprecated=True)
+        """
+        Detector integration parameters as a :class:`dict`.
+
+        .. note::
+
+            This feature is deprecated as of ``yadg-4.2`` and will
+            stop working in ``yadg-5.0``.
+        
+        """
 
     parser: Literal["chromtrace"]
     input: Input
@@ -96,11 +230,13 @@ class ChromTrace(BaseModel, extra=Extra.forbid):
 
 
 class ChromData(BaseModel, extra=Extra.forbid):
+    """Parser for processed chromatography data."""
+
     class Params(BaseModel, extra=Extra.forbid):
         filetype: Literal[
             "fusion.json",
             "fusion.zip",
-            "fusion.csv", 
+            "fusion.csv",
         ] = "fusion.json"
 
     parser: Literal["chromdata"]
@@ -111,6 +247,8 @@ class ChromData(BaseModel, extra=Extra.forbid):
 
 
 class MassTrace(BaseModel, extra=Extra.forbid):
+    """Parser for mass spectroscopy traces."""
+
     class Params(BaseModel, extra=Extra.forbid):
         filetype: Literal["quadstar.sac"] = "quadstar.sac"
 
@@ -122,6 +260,8 @@ class MassTrace(BaseModel, extra=Extra.forbid):
 
 
 class QFTrace(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
+    """Parser for network analyzer traces."""
+
     class Params(BaseModel, extra=Extra.forbid):
         filetype: Literal["labview.csv"] = "labview.csv"
         method: Literal["naive", "lorentz", "kajfez"] = "kajfez"
@@ -138,6 +278,8 @@ class QFTrace(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True
 
 
 class XPSTrace(BaseModel, extra=Extra.forbid):
+    """Parser for XPS traces."""
+
     class Params(BaseModel, extra=Extra.forbid):
         filetype: Literal["phi.spe"] = "phi.spe"
 
@@ -149,6 +291,8 @@ class XPSTrace(BaseModel, extra=Extra.forbid):
 
 
 class XRDTrace(BaseModel, extra=Extra.forbid):
+    """Parser for XRD traces."""
+
     class Params(BaseModel, extra=Extra.forbid):
         filetype: Literal[
             "panalytical.xy", "panalytical.csv", "panalytical.xrdml"
@@ -174,4 +318,3 @@ Steps = Union[
     XPSTrace,
     XRDTrace,
 ]
-

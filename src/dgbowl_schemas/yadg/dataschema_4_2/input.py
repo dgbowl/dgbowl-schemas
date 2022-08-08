@@ -4,14 +4,28 @@ import os
 
 
 class Input(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
+    """Specification of input files/folders to be processed by the :class:`Step`."""
+
     files: Sequence[str] = Field(alias="folders")
+    """Files, or folders to be searched for matching files."""
+
     prefix: Optional[str]
+    """Prefix of the filenames to be matched."""
+
     suffix: Optional[str]
+    """Suffix of the filenames to be matched."""
+
     contains: Optional[str]
+    """A string the matched filenames must contain."""
+
     exclude: Optional[str]
+    """A string the matched filenames must not contain."""
+
     encoding: str = "UTF-8"
+    """File encoding."""
 
     def paths(self) -> list[str]:
+        """Returns a list of files to be processed by the :class:`Step`."""
         ret = []
         for item in sorted(self.files):
             if os.path.isdir(item):
