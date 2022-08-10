@@ -156,7 +156,11 @@ class ElectroChem(BaseModel, extra=Extra.forbid):
     """Parser for electrochemistry files."""
 
     class Params(BaseModel, extra=Extra.forbid):
+
         filetype: Literal["eclab.mpt", "eclab.mpr", "tomato.json"] = "eclab.mpr"
+
+        transpose: bool = True
+        """Transpose impedance data into traces (default) or keep as timesteps."""
 
     class Input(Input):
         encoding: str = "windows-1252"
@@ -297,8 +301,8 @@ class XRDTrace(BaseModel, extra=Extra.forbid):
 
     class Params(BaseModel, extra=Extra.forbid):
         filetype: Literal[
-            "panalytical.xy", 
-            "panalytical.csv", 
+            "panalytical.xy",
+            "panalytical.csv",
             "panalytical.xrdml",
         ] = "panalytical.csv"
 
