@@ -36,7 +36,7 @@ class BasicCSV(BaseModel, extra=Extra.forbid):
         """
         External uncertainty specification.
 
-        .. note::
+        .. admonition:: DEPRECATED in ``DataSchema-4.2``
 
             This feature is deprecated as of ``yadg-4.2`` and will
             stop working in ``yadg-5.0``.
@@ -47,7 +47,7 @@ class BasicCSV(BaseModel, extra=Extra.forbid):
         """
         Column calibration specification.
         
-        .. note::
+        .. admonition:: DEPRECATED in ``DataSchema-4.2``
 
             This feature is deprecated as of ``yadg-4.2`` and will
             stop working in ``yadg-5.0``.
@@ -58,7 +58,7 @@ class BasicCSV(BaseModel, extra=Extra.forbid):
         """
         Column renaming specification.
         
-        .. note::
+        .. admonition:: DEPRECATED in ``DataSchema-4.2``
 
             This feature is deprecated as of ``yadg-4.2`` and will
             stop working in ``yadg-5.0``.
@@ -92,7 +92,7 @@ class MeasCSV(BaseModel, extra=Extra.forbid):
         """
         Column calibration specification.
         
-        .. note::
+        .. admonition:: DEPRECATED in ``DataSchema-4.2``
 
             This feature is deprecated as of ``yadg-4.2`` and will
             stop working in ``yadg-5.0``.
@@ -103,7 +103,7 @@ class MeasCSV(BaseModel, extra=Extra.forbid):
         """
         Column renaming specification.
         
-        .. note::
+        .. admonition:: DEPRECATED in ``DataSchema-4.2``
 
             This feature is deprecated as of ``yadg-4.2`` and will
             stop working in ``yadg-5.0``.
@@ -127,7 +127,7 @@ class FlowData(BaseModel, extra=Extra.forbid):
         """
         Column calibration specification.
         
-        .. note::
+        .. admonition:: DEPRECATED in ``DataSchema-4.2``
 
             This feature is deprecated as of ``yadg-4.2`` and will
             stop working in ``yadg-5.0``.
@@ -138,7 +138,7 @@ class FlowData(BaseModel, extra=Extra.forbid):
         """
         Column renaming specification.
         
-        .. note::
+        .. admonition:: DEPRECATED in ``DataSchema-4.2``
 
             This feature is deprecated as of ``yadg-4.2`` and will
             stop working in ``yadg-5.0``.
@@ -193,7 +193,7 @@ class ChromTrace(BaseModel, extra=Extra.forbid):
         """
         Species calibration specification.
         
-        .. note::
+        .. admonition:: DEPRECATED in ``DataSchema-4.2``
 
             This feature is deprecated as of ``yadg-4.2`` and will
             stop working in ``yadg-5.0``.
@@ -204,7 +204,7 @@ class ChromTrace(BaseModel, extra=Extra.forbid):
         """
         Species information as a :class:`dict`.
         
-        .. note::
+        .. admonition:: DEPRECATED in ``DataSchema-4.2``
 
             This feature is deprecated as of ``yadg-4.2`` and will
             stop working in ``yadg-5.0``.
@@ -215,7 +215,7 @@ class ChromTrace(BaseModel, extra=Extra.forbid):
         """
         Detector integration parameters as a :class:`dict`.
 
-        .. note::
+        .. admonition:: DEPRECATED in ``DataSchema-4.2``
 
             This feature is deprecated as of ``yadg-4.2`` and will
             stop working in ``yadg-5.0``.
@@ -237,6 +237,8 @@ class ChromData(BaseModel, extra=Extra.forbid):
             "fusion.json",
             "fusion.zip",
             "fusion.csv",
+            "empalc.csv",
+            "empalc.xlsx",
         ] = "fusion.json"
 
     parser: Literal["chromdata"]
@@ -295,7 +297,9 @@ class XRDTrace(BaseModel, extra=Extra.forbid):
 
     class Params(BaseModel, extra=Extra.forbid):
         filetype: Literal[
-            "panalytical.xy", "panalytical.csv", "panalytical.xrdml"
+            "panalytical.xy", 
+            "panalytical.csv", 
+            "panalytical.xrdml",
         ] = "panalytical.csv"
 
     parser: Literal["xrdtrace"]
