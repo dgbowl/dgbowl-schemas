@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Extra, root_validator
-from typing import Optional, Sequence
+from typing import Optional, Sequence, List
 import os
 
 
@@ -20,7 +20,7 @@ class Input(BaseModel, extra=Extra.forbid):
             raise ValueError("Neither 'files' nor 'folders' provided.")
         return values
 
-    def paths(self) -> list[str]:
+    def paths(self) -> List[str]:
         ret = []
         if self.files is not None:
             paths = self.files
