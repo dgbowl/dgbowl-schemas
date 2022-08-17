@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Extra, Field
-from typing import Optional, Sequence
+from typing import Optional, Sequence, List
 import os
 
 
@@ -24,7 +24,7 @@ class Input(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
     encoding: str = "UTF-8"
     """File encoding."""
 
-    def paths(self) -> list[str]:
+    def paths(self) -> List[str]:
         """Returns a list of files to be processed by the :class:`Step`."""
         ret = []
         for item in sorted(self.files):

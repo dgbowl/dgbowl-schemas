@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Extra, Field
-from typing import Optional, Sequence
+from typing import Optional, Sequence, List
 import os
 
 
@@ -11,7 +11,7 @@ class Input(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
     exclude: Optional[str]
     encoding: str = "UTF-8"
 
-    def paths(self) -> list[str]:
+    def paths(self) -> List[str]:
         ret = []
         for item in sorted(self.files):
             if os.path.isdir(item):
