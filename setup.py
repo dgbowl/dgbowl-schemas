@@ -21,6 +21,7 @@ setuptools.setup(
         "Bug Tracker": "https://github.com/dgbowl/dgbowl-schemas/issues",
     },
     classifiers=[
+        "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
@@ -29,7 +30,7 @@ setuptools.setup(
     ],
     package_dir={"": packagedir},
     packages=setuptools.find_packages(where=packagedir),
-    python_requires=">=3.9",
+    python_requires=">=3.8",
     install_requires=[
         "pydantic>=1.8",
         "pyyaml>=5.0"
