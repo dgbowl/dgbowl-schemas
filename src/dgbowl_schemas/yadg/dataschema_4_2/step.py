@@ -25,6 +25,9 @@ class BasicCSV(BaseModel, extra=Extra.forbid):
         sep: str = ","
         """Separator of table columns."""
 
+        strip: str = None
+        """A :class:`str` of characters to strip from headers & data."""
+
         units: Optional[Mapping[str, str]]
         """A :class:`dict` containing ``column: unit`` keypairs."""
 

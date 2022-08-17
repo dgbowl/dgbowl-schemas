@@ -1,0 +1,38 @@
+{
+    "input": {
+        "metadata": {
+            "provenance": {"type": "manual"},
+            "version": "4.2"
+        },
+        "steps": [
+            {
+                "parser": "basiccsv",
+                "input": {"files": ["measurement.csv"]}
+            }
+        ]
+    },
+    "output": [
+        {
+            "parser": "basiccsv",
+            "input": {
+                "files": ["measurement.csv"],
+                "prefix": null,
+                "suffix": null,
+                "contains": null,
+                "exclude": null,
+                "encoding": "UTF-8"
+            },
+            "tag": null,
+            "parameters": {
+                "convert": null,
+                "sep": ",",
+                "sigma": null,
+                "calfile": null,
+                "timestamp": null,
+                "units": null,
+                "strip": null
+            },
+            "externaldate": null
+        }
+    ]
+}

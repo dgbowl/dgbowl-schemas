@@ -43,6 +43,7 @@ def test_dataschema_metadata_json(inpath, success, datadir):
         ("ts6_meascsv.json"),
         ("ts7_electrochem.json"),
         ("ts8_chromdata.json"),
+        ("ts9_basiccsv.json"),
     ],
 )
 def test_dataschema_steps_json(inpath, datadir):
@@ -51,5 +52,4 @@ def test_dataschema_steps_json(inpath, datadir):
         jsdata = json.load(infile)
     ref = jsdata["output"]
     ret = to_dataschema(**jsdata["input"])
-    print(ret.dict()["steps"])
     assert ret.dict()["steps"] == ref
