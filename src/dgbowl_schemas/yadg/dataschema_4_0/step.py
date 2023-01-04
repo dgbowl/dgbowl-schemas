@@ -4,6 +4,11 @@ from .externaldate import ExternalDate
 from .input import Input
 from .parameters import Tol, Timestamps, Timestamp
 
+try:
+    from typing import Annotated
+except ImportError:
+    from typing_extensions import Annotated
+
 
 class Dummy(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
     class Params(BaseModel, extra=Extra.allow):
@@ -142,14 +147,17 @@ class XPSTrace(BaseModel, extra=Extra.forbid, allow_population_by_field_name=Tru
     export: Optional[str]
 
 
-Steps = Union[
-    Dummy,
-    BasicCSV,
-    MeasCSV,
-    FlowData,
-    ElectroChem,
-    ChromTrace,
-    MassTrace,
-    QFTrace,
-    XPSTrace,
+Steps = Annotated[
+    Union[
+        Dummy,
+        BasicCSV,
+        MeasCSV,
+        FlowData,
+        ElectroChem,
+        ChromTrace,
+        MassTrace,
+        QFTrace,
+        XPSTrace,
+    ],
+    Field(discriminator="parser"),
 ]

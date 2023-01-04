@@ -2,23 +2,21 @@
     "input": {
         "metadata": {
             "provenance": {"type": "manual"}, 
-            "version": "5.0",
+            "version": "4.2",
             "timezone": "UTC"
         }, 
         "steps": [
             {
-                "parser": "chromdata", 
+                "parser": "typo", 
                 "input": {
                     "prefix": null, 
                     "suffix": "txt", 
                     "contains": null, 
                     "encoding": "UTF-8", 
                     "folders": ["fol"]
-                }, 
-                "parameters": {"filetype": "fusion.json"}, 
-                "externaldate": null
+                } 
             }
         ]
     },
-    "exception": "steps -> 0 -> ChromData -> parameters -> filetype"
+    "exception": "No match for discriminator 'parser' and value 'typo'"
 }

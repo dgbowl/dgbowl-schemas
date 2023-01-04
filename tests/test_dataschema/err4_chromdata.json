@@ -1,0 +1,24 @@
+{
+    "input": {
+        "metadata": {
+            "provenance": {"type": "manual"}, 
+            "version": "5.0",
+            "timezone": "UTC"
+        }, 
+        "steps": [
+            {
+                "parser": "chromdata", 
+                "input": {
+                    "prefix": null, 
+                    "suffix": "txt", 
+                    "contains": null, 
+                    "encoding": "UTF-8", 
+                    "folders": ["fol"]
+                }, 
+                "parameters": {"filetype": "fusion.json"}, 
+                "externaldate": null
+            }
+        ]
+    },
+    "exception": "steps -> 0 -> ChromData -> parameters -> filetype\n  extra fields not permitted"
+}
