@@ -73,3 +73,14 @@ jobs:
         with: 
           name: public-${{ matrix.os }}-${{ matrix.pyver }}
           path: public
+  lint:
+   runs-on: ubuntu-latest
+   steps:
+     - uses: actions/checkout@v2
+       with:
+         fetch-depth: 0
+     - uses: github/super-linter@v4
+       env:
+         VALIDATE_ALL_CODEBASE: false
+         DEFAULT_BRANCH: master
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
