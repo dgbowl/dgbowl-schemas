@@ -1,13 +1,13 @@
 from pydantic import BaseModel, Extra, Field
 from typing import Optional, Literal, Mapping, Any, Union
+from .externaldate import ExternalDate
+from .input import Input
+from .parameters import Tol, Timestamps, Timestamp
 
 try:
     from typing import Annotated
 except ImportError:
     from typing_extensions import Annotated
-from .externaldate import ExternalDate
-from .input import Input
-from .parameters import Tol, Timestamps, Timestamp
 
 
 class Dummy(BaseModel, extra=Extra.forbid):

@@ -20,5 +20,5 @@
             }
         ]
     },
-    "exception": "steps -> 0 -> ChromData -> parameters -> filetype"
+    "exception": "steps -> 0 -> ChromData -> parameters -> filetype\n  extra fields not permitted"
 }

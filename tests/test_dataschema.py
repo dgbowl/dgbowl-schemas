@@ -66,6 +66,8 @@ def test_dataschema_steps_json(inpath, datadir):
         ("err3_typo.json"),  # 4.2
         ("err4_chromdata.json"),  # 5.0
         ("err5_typo.json"),  # 5.0
+        ("err6_chromtrace.json"),  # 4.0
+        ("err7_typo.json"),  # 4.0
     ],
 )
 def test_dataschema_err(inpath, datadir):

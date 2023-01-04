@@ -1,14 +1,14 @@
 from pydantic import BaseModel, Extra, Field
 from abc import ABC
 from typing import Optional, Literal, Mapping, Union
+from .externaldate import ExternalDate
+from .input import Input
+from .parameters import Parameters, Timestamps, Timestamp
 
 try:
     from typing import Annotated
 except ImportError:
     from typing_extensions import Annotated
-from .externaldate import ExternalDate
-from .input import Input
-from .parameters import Parameters, Timestamps, Timestamp
 
 
 class Parser(BaseModel, ABC, extra=Extra.forbid):
