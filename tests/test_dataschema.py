@@ -34,16 +34,18 @@ def test_dataschema_metadata_json(inpath, success, datadir):
 @pytest.mark.parametrize(
     "inpath",
     [
-        ("ts0_dummy.json"),
-        ("ts1_dummy.json"),
-        ("ts2_dummy.json"),
-        ("ts3_basiccsv.json"),
-        ("ts4_basiccsv.json"),
-        ("ts5_flowdata.json"),
-        ("ts6_meascsv.json"),
-        ("ts7_electrochem.json"),
-        ("ts8_chromdata.json"),
-        ("ts9_basiccsv.json"),
+        ("ts0_dummy.json"),  # 4.0
+        ("ts1_dummy.json"),  # 4.0.1
+        ("ts2_dummy.json"),  # 4.1
+        ("ts3_basiccsv.json"),  # 4.0.1
+        ("ts4_basiccsv.json"),  # 4.1
+        ("ts5_flowdata.json"),  # 4.0.1
+        ("ts6_meascsv.json"),  # 4.1
+        ("ts7_electrochem.json"),  # 4.1
+        ("ts8_chromdata.json"),  # 4.2
+        ("ts9_basiccsv.json"),  # 4.2
+        ("ts10_chromdata.json"),  # 5.0
+        ("ts11_basiccsv.json"),  # 5.0
     ],
 )
 def test_dataschema_steps_json(inpath, datadir):
@@ -53,3 +55,20 @@ def test_dataschema_steps_json(inpath, datadir):
     ref = jsdata["output"]
     ret = to_dataschema(**jsdata["input"])
     assert ret.dict()["steps"] == ref
+
+
+@pytest.mark.parametrize(
+    "inpath",
+    [
+        ("err0_chromdata.json"),  # 4.2
+        ("err1_chromdata.json"),  # 5.0
+        ("err2_typo.json"),  # 5.0
+    ],
+)
+def test_dataschema_err(inpath, datadir):
+    os.chdir(datadir)
+    with open(inpath, "r") as infile:
+        jsdata = json.load(infile)
+    with pytest.raises(ValueError) as e:
+        to_dataschema(**jsdata["input"])
+    assert jsdata["exception"] in str(e.value)

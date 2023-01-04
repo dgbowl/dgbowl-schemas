@@ -1,0 +1,40 @@
+{
+    "input": {
+        "metadata": {
+            "provenance": {"type": "datagram_from_input"}, 
+            "version": "5.0",
+            "timezone": "UTC"
+        }, 
+        "steps": [
+            {
+                "parser": "chromdata", 
+                "input": {
+                    "prefix": null, 
+                    "suffix": "txt", 
+                    "contains": null, 
+                    "encoding": "UTF-8", 
+                    "folders": ["fol"]
+                }, 
+                "filetype": "fusion.json", 
+                "externaldate": null
+            }
+        ]
+    },
+    "output": [
+        {
+            "parser": "chromdata",
+            "tag": null, 
+            "input": {
+                "prefix": null, 
+                "suffix": "txt", 
+                "contains": null, 
+                "encoding": "UTF-8", 
+                "files": ["fol"],
+                "exclude": null
+            }, 
+            "parameters": null,
+            "filetype": "fusion.json", 
+            "externaldate": null
+        }
+    ]
+}
