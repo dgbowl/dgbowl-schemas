@@ -1,0 +1,22 @@
+{
+    "input": {
+        "metadata": {
+            "provenance": {"type": "manual"}, 
+            "version": "5.0",
+            "timezone": "UTC"
+        }, 
+        "steps": [
+            {
+                "parser": "typo", 
+                "input": {
+                    "prefix": null, 
+                    "suffix": "txt", 
+                    "contains": null, 
+                    "encoding": "UTF-8", 
+                    "folders": ["fol"]
+                } 
+            }
+        ]
+    },
+    "exception": "No match for discriminator 'parser' and value 'typo'"
+}

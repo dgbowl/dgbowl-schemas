@@ -1,0 +1,37 @@
+{
+    "input": {
+        "metadata": {
+            "provenance": {"type": "datagram_from_input"}, 
+            "version": "5.0",
+            "timezone": "UTC"
+        }, 
+        "steps": [
+            {
+                "parser": "basiccsv",
+                "input": {"files": ["measurement.csv"]}
+            }
+        ]
+    },
+    "output": [
+        {
+            "parser": "basiccsv",
+            "input": {
+                "files": ["measurement.csv"],
+                "prefix": null,
+                "suffix": null,
+                "contains": null,
+                "exclude": null,
+                "encoding": "UTF-8"
+            },
+            "tag": null,
+            "parameters": {
+                "sep": ",",
+                "timestamp": null,
+                "units": null,
+                "strip": null
+            },
+            "filetype": null,
+            "externaldate": null
+        }
+    ]
+}
