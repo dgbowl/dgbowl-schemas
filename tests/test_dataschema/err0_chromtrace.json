@@ -1,0 +1,20 @@
+{
+    "input": {
+        "metadata": {
+            "provenance": {"type": "manual"}, 
+            "version": "4.1"
+        }, 
+        "steps": [
+            {
+                "parser": "chromtrace", 
+                "input": {
+                    "suffix": "txt", 
+                    "encoding": "UTF-8", 
+                    "folders": ["fol"]
+                }, 
+                "parameters": {"filetype": "wrong.filetype"}
+            }
+        ]
+    },
+    "exception": "steps -> 0 -> ChromTrace -> parameters -> filetype"
+}

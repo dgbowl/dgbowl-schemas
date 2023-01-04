@@ -60,9 +60,12 @@ def test_dataschema_steps_json(inpath, datadir):
 @pytest.mark.parametrize(
     "inpath",
     [
-        ("err0_chromdata.json"),  # 4.2
-        ("err1_chromdata.json"),  # 5.0
-        ("err2_typo.json"),  # 5.0
+        ("err0_chromtrace.json"),  # 4.1
+        ("err1_typo.json"),  # 4.1
+        ("err2_chromdata.json"),  # 4.2
+        ("err3_typo.json"),  # 4.2
+        ("err4_chromdata.json"),  # 5.0
+        ("err5_typo.json"),  # 5.0
     ],
 )
 def test_dataschema_err(inpath, datadir):
