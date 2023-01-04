@@ -36,7 +36,7 @@ def to_dataschema(**kwargs):
         raise ValueError("\n".join(errors))
 
     logger.debug("Identified 'kwargs['metadata']' as Metadata v%s.", ver)
-    
+
     # attempt to parse using identified Model
     schema = Model(**kwargs)
     return schema

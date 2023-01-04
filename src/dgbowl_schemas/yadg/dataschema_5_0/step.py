@@ -7,7 +7,7 @@ from .parameters import Parameters, Timestamps, Timestamp
 
 
 class Parser(BaseModel, ABC, extra=Extra.forbid):
-    """Template parser ABC."""
+    """Template ABC for parser classes."""
 
     parser: str
     input: Input

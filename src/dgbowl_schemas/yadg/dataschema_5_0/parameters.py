@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Extra
-from typing import Optional, Union
+from typing import Union
 
 from .timestamp import Timestamp, TimeDate, UTS
 

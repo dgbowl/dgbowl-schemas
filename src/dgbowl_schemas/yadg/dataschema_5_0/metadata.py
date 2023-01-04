@@ -3,16 +3,22 @@ from typing import Optional, Mapping, Literal, Any, Union
 
 
 class Metadata(BaseModel, extra=Extra.forbid):
-    """Metadata, including version and provenance of the :class:`DataSchema`."""
+    """
+    The :class:`Metadata` is a container for any metadata of the :class:`DataSchema`.
+
+    """
 
     class Provenance(BaseModel, extra=Extra.forbid):
         type: str
+        """Provenance type. Common values include ``'manual'`` etc."""
+
         metadata: Optional[Mapping[str, Any]]
+        """Detailed provenance metadata in a free-form :class:`dict`."""
 
     version: Literal["5.0"]
 
     provenance: Provenance
-    """Provenance information."""
+    """Provenance of the :class:`DataSchema`."""
 
     timezone: str = "localtime"
     """Timezone specification. 
@@ -20,7 +26,7 @@ class Metadata(BaseModel, extra=Extra.forbid):
     .. note:: 
     
         This should be set to the timezone where the measurements have been 
-        performed, as opposed to the timezone where yadg is being executed, 
-        otherwise timezone offsets may not be accounted for correctly.
+        performed, as opposed to the timezone where ``yadg`` is being executed. 
+        Otherwise timezone offsets may not be accounted for correctly.
     
     """
