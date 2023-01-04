@@ -110,7 +110,21 @@
 <span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Steps&quot;</span><span class="p">,</span>
 <span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
 <span class="w">         </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="nt">&quot;discriminator&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;propertyName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;parser&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;dummy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/Dummy&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;basiccsv&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/BasicCSV&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;meascsv&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/MeasCSV&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;flowdata&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/FlowData&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;electrochem&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/ElectroChem&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;chromtrace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/ChromTrace&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;masstrace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/MassTrace&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;qftrace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/QFTrace&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;xpstrace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/XPSTrace&quot;</span>
+<span class="w">               </span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;oneOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">               </span><span class="p">{</span>
 <span class="w">                  </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/Dummy&quot;</span>
 <span class="w">               </span><span class="p">},</span>

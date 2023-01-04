@@ -110,7 +110,22 @@
 <span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Steps&quot;</span><span class="p">,</span>
 <span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
 <span class="w">         </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="nt">&quot;discriminator&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;propertyName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;parser&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;dummy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/Dummy&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;basiccsv&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/BasicCSV&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;meascsv&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/MeasCSV&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;flowdata&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/FlowData&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;electrochem&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/ElectroChem&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;chromtrace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/ChromTrace&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;masstrace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/MassTrace&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;qftrace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/QFTrace&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;xpstrace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/XPSTrace&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;xrdtrace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/XRDTrace&quot;</span>
+<span class="w">               </span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;oneOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">               </span><span class="p">{</span>
 <span class="w">                  </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/Dummy&quot;</span>
 <span class="w">               </span><span class="p">},</span>
@@ -180,7 +195,10 @@
 <span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Version&quot;</span><span class="p">,</span>
 <span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">                  </span><span class="s2">&quot;4.1&quot;</span><span class="p">,</span>
-<span class="w">                  </span><span class="s2">&quot;4.1.1&quot;</span>
+<span class="w">                  </span><span class="s2">&quot;4.1.0&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s2">&quot;4.1.1&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s2">&quot;4.1.2&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s2">&quot;4.1.3&quot;</span>
 <span class="w">               </span><span class="p">],</span>
 <span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">            </span><span class="p">},</span>
@@ -1547,7 +1565,10 @@
 <span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Version&quot;</span><span class="p">,</span>
 <span class="w">         </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">            </span><span class="s2">&quot;4.1&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;4.1.1&quot;</span>
+<span class="w">            </span><span class="s2">&quot;4.1.0&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;4.1.1&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;4.1.2&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;4.1.3&quot;</span>
 <span class="w">         </span><span class="p">],</span>
 <span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">      </span><span class="p">},</span>
@@ -1629,7 +1650,7 @@
 
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.metadata.Metadata.version">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'4.1'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'4.1.1'</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.metadata.Metadata.version" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'4.1'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'4.1.0'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'4.1.1'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'4.1.2'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'4.1.3'</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.metadata.Metadata.version" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute pydantic_field">
