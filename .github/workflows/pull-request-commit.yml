@@ -81,6 +81,6 @@ jobs:
          fetch-depth: 0
      - uses: github/super-linter@v4
        env:
-         VALIDATE_ALL_CODEBASE: false
+         VALIDATE_ALL_CODEBASE: true
          DEFAULT_BRANCH: master
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
