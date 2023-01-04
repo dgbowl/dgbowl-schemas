@@ -8,5 +8,5 @@ class Metadata(BaseModel, extra=Extra.forbid):
         metadata: Optional[Mapping[str, Any]]
 
     provenance: Provenance
-    version: Literal["4.1", "4.1.1"]
+    version: Literal["4.1", "4.1.0", "4.1.1", "4.1.2", "4.1.3"]
     timezone: str = "localtime"

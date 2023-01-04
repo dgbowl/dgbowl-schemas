@@ -1,5 +1,9 @@
 from pydantic import BaseModel, Extra, Field
 from typing import Optional, Literal, Mapping, Any, Union
+try:
+    from typing import Annotated
+except ImportError:
+    from typing_extensions import Annotated
 from .externaldate import ExternalDate
 from .input import Input
 from .parameters import Tol, Timestamps, Timestamp
@@ -146,7 +150,7 @@ class XRDTrace(BaseModel, extra=Extra.forbid):
     externaldate: Optional[ExternalDate]
 
 
-Steps = Union[
+Steps = Annotated[Union[
     Dummy,
     BasicCSV,
     MeasCSV,
@@ -157,4 +161,6 @@ Steps = Union[
     QFTrace,
     XPSTrace,
     XRDTrace,
+    ],
+    Field(discriminator="parser"),
 ]
