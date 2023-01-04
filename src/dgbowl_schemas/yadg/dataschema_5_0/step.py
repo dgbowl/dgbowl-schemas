@@ -1,6 +1,10 @@
 from pydantic import BaseModel, Extra, Field
 from abc import ABC
-from typing import Optional, Literal, Mapping, Union, Annotated
+from typing import Optional, Literal, Mapping, Union
+try:
+    from typing import Annotated
+except ImportError:
+    from typing_extensions import Annotated
 from .externaldate import ExternalDate
 from .input import Input
 from .parameters import Parameters, Timestamps, Timestamp

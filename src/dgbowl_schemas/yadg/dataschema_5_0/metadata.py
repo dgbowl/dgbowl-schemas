@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Extra
-from typing import Optional, Mapping, Literal, Any, Union
+from typing import Optional, Mapping, Literal, Any
 
 
 class Metadata(BaseModel, extra=Extra.forbid):
