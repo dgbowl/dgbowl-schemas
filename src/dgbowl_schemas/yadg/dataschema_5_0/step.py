@@ -1,6 +1,7 @@
 from pydantic import BaseModel, Extra, Field
 from abc import ABC
 from typing import Optional, Literal, Mapping, Union
+
 try:
     from typing import Annotated
 except ImportError:

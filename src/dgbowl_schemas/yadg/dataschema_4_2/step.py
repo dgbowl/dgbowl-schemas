@@ -1,5 +1,6 @@
 from pydantic import BaseModel, Extra, Field
 from typing import Optional, Literal, Mapping, Any, Union
+
 try:
     from typing import Annotated
 except ImportError:
@@ -320,19 +321,19 @@ class XRDTrace(BaseModel, extra=Extra.forbid):
     externaldate: Optional[ExternalDate]
 
 
-Steps = Annotated[Union[
-    Dummy,
-    BasicCSV,
-    MeasCSV,
-    FlowData,
-    ElectroChem,
-    ChromTrace,
-    ChromData,
-    MassTrace,
-    QFTrace,
-    XPSTrace,
-    XRDTrace,
+Steps = Annotated[
+    Union[
+        Dummy,
+        BasicCSV,
+        MeasCSV,
+        FlowData,
+        ElectroChem,
+        ChromTrace,
+        ChromData,
+        MassTrace,
+        QFTrace,
+        XPSTrace,
+        XRDTrace,
     ],
     Field(discriminator="parser"),
 ]
-
