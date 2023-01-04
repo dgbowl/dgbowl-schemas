@@ -4,6 +4,21 @@ on:
     branches:
       - master
 jobs:
+  lint:
+   runs-on: ubuntu-latest
+   steps:
+     - uses: actions/checkout@v2
+       with:
+         fetch-depth: 0
+     - uses: github/super-linter/slim@v4
+       env:
+         VALIDATE_ALL_CODEBASE: false
+         DEFAULT_BRANCH: master
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         VALIDATE_PYTHON_BLACK: true
+         VALIDATE_PYTHON_MYPY: true
+         VALIDATE_PYTHON_FLAKE8: true
+         VALIDATE_PYTHON_PYLINT: true
   build:
     strategy:
       matrix:
@@ -73,14 +88,3 @@ jobs:
         with: 
           name: public-${{ matrix.os }}-${{ matrix.pyver }}
           path: public
-  lint:
-   runs-on: ubuntu-latest
-   steps:
-     - uses: actions/checkout@v2
-       with:
-         fetch-depth: 0
-     - uses: github/super-linter@v4
-       env:
-         VALIDATE_ALL_CODEBASE: true
-         DEFAULT_BRANCH: master
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
