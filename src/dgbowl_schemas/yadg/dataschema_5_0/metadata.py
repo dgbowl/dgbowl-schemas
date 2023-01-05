@@ -21,7 +21,7 @@ class Metadata(BaseModel, extra=Extra.forbid):
     """Provenance of the :class:`DataSchema`."""
 
     timezone: str = "localtime"
-    """Timezone specification. 
+    """Timezone specification.
 
     .. note::
 
