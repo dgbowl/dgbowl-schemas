@@ -1,4 +1,4 @@
-name: lint-every-pr-commit
+name: lint-every-pr
 on:
   pull_request:
     branches:
