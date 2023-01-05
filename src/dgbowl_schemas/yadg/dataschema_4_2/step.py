@@ -37,7 +37,7 @@ class BasicCSV(BaseModel, extra=Extra.forbid):
         """A :class:`dict` containing ``column: unit`` keypairs."""
 
         timestamp: Optional[Timestamps]
-        """Timestamp specification allowing calculation of Unix timestamp for 
+        """Timestamp specification allowing calculation of Unix timestamp for
         each table row."""
 
         sigma: Optional[Mapping[str, Tol]] = Field(None, deprecated=True)
@@ -54,7 +54,7 @@ class BasicCSV(BaseModel, extra=Extra.forbid):
         calfile: Optional[str] = Field(None, deprecated=True)
         """
         Column calibration specification.
-        
+
         .. admonition:: DEPRECATED in ``DataSchema-4.2``
 
             This feature is deprecated as of ``yadg-4.2`` and will
@@ -65,12 +65,12 @@ class BasicCSV(BaseModel, extra=Extra.forbid):
         convert: Optional[Any] = Field(None, deprecated=True)
         """
         Column renaming specification.
-        
+
         .. admonition:: DEPRECATED in ``DataSchema-4.2``
 
             This feature is deprecated as of ``yadg-4.2`` and will
             stop working in ``yadg-5.0``.
-            
+
         """
 
     parser: Literal["basiccsv"]
@@ -99,7 +99,7 @@ class MeasCSV(BaseModel, extra=Extra.forbid):
         calfile: Optional[str] = Field(None, deprecated=True)
         """
         Column calibration specification.
-        
+
         .. admonition:: DEPRECATED in ``DataSchema-4.2``
 
             This feature is deprecated as of ``yadg-4.2`` and will
@@ -110,12 +110,12 @@ class MeasCSV(BaseModel, extra=Extra.forbid):
         convert: Optional[Any] = Field(None, deprecated=True)
         """
         Column renaming specification.
-        
+
         .. admonition:: DEPRECATED in ``DataSchema-4.2``
 
             This feature is deprecated as of ``yadg-4.2`` and will
             stop working in ``yadg-5.0``.
-            
+
         """
 
     parser: Literal["meascsv"]
@@ -134,7 +134,7 @@ class FlowData(BaseModel, extra=Extra.forbid):
         calfile: Optional[str] = Field(None, deprecated=True)
         """
         Column calibration specification.
-        
+
         .. admonition:: DEPRECATED in ``DataSchema-4.2``
 
             This feature is deprecated as of ``yadg-4.2`` and will
@@ -145,12 +145,12 @@ class FlowData(BaseModel, extra=Extra.forbid):
         convert: Optional[Any] = Field(None, deprecated=True)
         """
         Column renaming specification.
-        
+
         .. admonition:: DEPRECATED in ``DataSchema-4.2``
 
             This feature is deprecated as of ``yadg-4.2`` and will
             stop working in ``yadg-5.0``.
-            
+
         """
 
     parser: Literal["flowdata"]
@@ -204,7 +204,7 @@ class ChromTrace(BaseModel, extra=Extra.forbid):
         calfile: Optional[str] = Field(None, deprecated=True)
         """
         Species calibration specification.
-        
+
         .. admonition:: DEPRECATED in ``DataSchema-4.2``
 
             This feature is deprecated as of ``yadg-4.2`` and will
@@ -215,12 +215,12 @@ class ChromTrace(BaseModel, extra=Extra.forbid):
         species: Optional[Any] = Field(None, deprecated=True)
         """
         Species information as a :class:`dict`.
-        
+
         .. admonition:: DEPRECATED in ``DataSchema-4.2``
 
             This feature is deprecated as of ``yadg-4.2`` and will
             stop working in ``yadg-5.0``.
-        
+
         """
 
         detectors: Optional[Any] = Field(None, deprecated=True)
@@ -231,7 +231,7 @@ class ChromTrace(BaseModel, extra=Extra.forbid):
 
             This feature is deprecated as of ``yadg-4.2`` and will
             stop working in ``yadg-5.0``.
-        
+
         """
 
     parser: Literal["chromtrace"]

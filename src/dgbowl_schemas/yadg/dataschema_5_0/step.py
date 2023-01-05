@@ -46,7 +46,7 @@ class BasicCSV(Parser):
         """A :class:`dict` containing ``column: unit`` keypairs."""
 
         timestamp: Optional[Timestamps]
-        """Timestamp specification allowing calculation of Unix timestamp for 
+        """Timestamp specification allowing calculation of Unix timestamp for
         each table row."""
 
     parser: Literal["basiccsv"]

@@ -31,19 +31,14 @@ setuptools.setup(
     package_dir={"": packagedir},
     packages=setuptools.find_packages(where=packagedir),
     python_requires=">=3.8",
-    install_requires=[
-        "pydantic>=1.8",
-        "pyyaml>=5.0"
-    ],
+    install_requires=["pydantic>=1.8", "pyyaml>=5.0"],
     extras_require={
-        "testing": [
-            "pytest"
-        ],
+        "testing": ["pytest"],
         "docs": [
             "sphinx==4.5.0",
             "sphinx-rtd-theme",
             "sphinx-autodoc-typehints",
-            "autodoc-pydantic"
-        ]
-    }
+            "autodoc-pydantic",
+        ],
+    },
 )

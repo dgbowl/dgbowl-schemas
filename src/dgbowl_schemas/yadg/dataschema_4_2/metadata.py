@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Extra
-from typing import Optional, Mapping, Literal, Any, Union
+from typing import Optional, Mapping, Literal, Any
 
 
 class Metadata(BaseModel, extra=Extra.forbid):
@@ -15,12 +15,12 @@ class Metadata(BaseModel, extra=Extra.forbid):
     """Provenance information."""
 
     timezone: str = "localtime"
-    """Timezone specification. 
-    
-    .. note:: 
-    
-        This should be set to the timezone where the measurements have been 
-        performed, as opposed to the timezone where yadg is being executed, 
+    """Timezone specification.
+
+    .. note::
+
+        This should be set to the timezone where the measurements have been
+        performed, as opposed to the timezone where yadg is being executed,
         otherwise timezone offsets may not be accounted for correctly.
-    
+
     """
