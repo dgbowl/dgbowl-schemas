@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Extra, Field
+from pydantic import BaseModel, Extra
 from typing import Sequence
 from .metadata import Metadata
 from .step import Steps

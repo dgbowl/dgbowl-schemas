@@ -22,11 +22,11 @@ class Metadata(BaseModel, extra=Extra.forbid):
 
     timezone: str = "localtime"
     """Timezone specification. 
-    
-    .. note:: 
-    
-        This should be set to the timezone where the measurements have been 
-        performed, as opposed to the timezone where ``yadg`` is being executed. 
+
+    .. note::
+
+        This should be set to the timezone where the measurements have been
+        performed, as opposed to the timezone where ``yadg`` is being executed.
         Otherwise timezone offsets may not be accounted for correctly.
-    
+
     """

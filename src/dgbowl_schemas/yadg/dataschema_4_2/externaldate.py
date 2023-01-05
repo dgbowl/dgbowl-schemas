@@ -55,5 +55,5 @@ class ExternalDate(BaseModel, extra=Extra.forbid):
     """Specification of the external date format."""
 
     mode: Literal["add", "replace"] = "add"
-    """Whether the external timestamps should be added to or should replace the 
+    """Whether the external timestamps should be added to or should replace the
     parsed data."""
