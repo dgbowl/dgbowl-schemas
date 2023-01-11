@@ -53,7 +53,7 @@ class BasicCSV(Parser):
     parameters: Parameters = Field(default_factory=Parameters)
 
 
-class MeasCSV(BaseModel, extra=Extra.forbid):
+class MeasCSV(Parser, extra=Extra.forbid):
     """
     Legacy file parser for ``measurement.csv`` files from FHI.
 
