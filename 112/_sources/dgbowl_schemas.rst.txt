@@ -1,0 +1,17 @@
+dgbowl\_schemas package
+=======================
+
+.. automodule:: dgbowl_schemas
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   dgbowl_schemas.dgpost
+   dgbowl_schemas.tomato
+   dgbowl_schemas.yadg

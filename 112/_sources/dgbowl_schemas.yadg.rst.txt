@@ -1,0 +1,18 @@
+dgbowl\_schemas.yadg package
+============================
+
+.. automodule:: dgbowl_schemas.yadg
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   dgbowl_schemas.yadg.dataschema_4_0
+   dgbowl_schemas.yadg.dataschema_4_1
+   dgbowl_schemas.yadg.dataschema_4_2
+   dgbowl_schemas.yadg.dataschema_5_0
