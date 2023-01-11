@@ -77,3 +77,39 @@ def test_dataschema_err(inpath, datadir):
     with pytest.raises(ValueError) as e:
         to_dataschema(**jsdata["input"])
     assert jsdata["exception"] in str(e.value)
+
+
+@pytest.mark.parametrize(
+    "inpath",
+    [
+        ("up0_chromtrace.json"),  # 4.0
+        ("up1_chromtrace.json"),  # 4.1
+        ("up2_chromtrace.json"),  # 4.2
+        ("up3_chromdata.json"),  # 4.2
+    ],
+)
+def test_dataschema_update(inpath, datadir):
+    os.chdir(datadir)
+    with open(inpath, "r") as infile:
+        jsdata = json.load(infile)
+    ref = jsdata["output"]
+    ret = to_dataschema(**jsdata["input"]).update()
+    assert ref == ret.dict(exclude_none=True)
+
+
+@pytest.mark.parametrize(
+    "inpath",
+    [
+        ("chain_vna_4.0.json"),  # 4.0
+        ("chain_gc_4.0.json"),  # 4.0
+        ("chain_basiccsv_4.1.json"),  # 4.1
+    ],
+)
+def test_dataschema_update_chain(inpath, datadir):
+    os.chdir(datadir)
+    with open(inpath, "r") as infile:
+        jsdata = json.load(infile)
+    ret = to_dataschema(**jsdata)
+    while hasattr(ret, "update"):
+        ret = ret.update()
+    assert ret.metadata.version == "5.0"

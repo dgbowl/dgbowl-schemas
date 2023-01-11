@@ -1,0 +1,20 @@
+{
+    "metadata": {
+        "provenance": {"type": "manual"},
+        "version": "4.1"
+    },
+    "steps": [
+        {
+            "parser": "basiccsv",
+            "input": {
+                "folders": ["data/agilentcsv/"],
+                "suffix": "csv"
+            },
+            "parameters": {
+                "sep": ";",
+                "sigma": {"col": {"atol": 1e-4}}
+            }
+        }
+
+    ]
+}

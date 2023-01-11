@@ -1,0 +1,36 @@
+{
+    "input": {
+        "metadata": {
+            "provenance": {"type": "up2_chromtrace.json"},
+            "version": "4.2",
+            "timezone": "Europe/Berlin"
+        },
+        "steps": [
+            {
+                "parser": "chromtrace",
+                "input": {"files": ["file.dat"]},
+                "parameters": {"filetype": "ezchrom.asc", "calfile": "caldata.json"}
+            }
+        ]
+    },
+    "output": {
+        "metadata": {
+            "provenance": {
+                "type": "up2_chromtrace.json",
+                "metadata": {"updated-using": "dgbowl-schemas", "from": "4.2"}
+            },
+            "version": "5.0",
+            "timezone": "Europe/Berlin"
+        },
+        "steps": [
+            {
+                "parser": "chromtrace",
+                "input": {
+                    "files": ["file.dat"],
+                    "encoding": "UTF-8"
+                },
+                "filetype": "ezchrom.asc"
+            }
+        ]
+    }
+}
