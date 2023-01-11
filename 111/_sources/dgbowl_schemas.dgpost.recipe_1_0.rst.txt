@@ -1,0 +1,40 @@
+dgbowl\_schemas.dgpost.recipe\_1\_0 package
+===========================================
+
+.. automodule:: dgbowl_schemas.dgpost.recipe_1_0
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+
+.. automodule:: dgbowl_schemas.dgpost.recipe_1_0.extract
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+.. automodule:: dgbowl_schemas.dgpost.recipe_1_0.load
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+.. automodule:: dgbowl_schemas.dgpost.recipe_1_0.plot
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+.. automodule:: dgbowl_schemas.dgpost.recipe_1_0.save
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+.. automodule:: dgbowl_schemas.dgpost.recipe_1_0.transform
+   :members:
+   :undoc-members:
+   :show-inheritance:
