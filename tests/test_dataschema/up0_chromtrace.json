@@ -1,0 +1,37 @@
+{
+    "input": {
+        "metadata": {
+            "provenance": "up0_chromtrace.json",
+            "schema_version": "4.0"
+        },
+        "steps": [
+            {
+                "parser": "chromtrace",
+                "import": {"files": ["file.dat"]},
+                "parameters": {"tracetype": "ezchrom.asc"}
+            }
+        ]
+    },
+    "output": {
+        "metadata": {
+            "provenance": {
+                "type": "up0_chromtrace.json",
+                "metadata": {"updated-using": "dgbowl-schemas", "from": "4.0"}
+            },
+            "version": "4.1",
+            "timezone": "localtime"
+        },
+        "steps": [
+            {
+                "parser": "chromtrace",
+                "input": {
+                    "files": ["file.dat"],
+                    "encoding": "UTF-8"
+                },
+                "parameters": {
+                    "filetype": "ezchrom.asc"
+                }
+            }
+        ]
+    }
+}
