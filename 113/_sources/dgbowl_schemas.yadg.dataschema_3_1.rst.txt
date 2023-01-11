@@ -1,0 +1,46 @@
+dgbowl\_schemas.yadg.dataschema\_3\_1 package
+=============================================
+
+.. automodule:: dgbowl_schemas.yadg.dataschema_3_1
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+
+.. automodule:: dgbowl_schemas.yadg.dataschema_3_1.externaldate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+.. automodule:: dgbowl_schemas.yadg.dataschema_3_1.input
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+.. automodule:: dgbowl_schemas.yadg.dataschema_3_1.metadata
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+.. automodule:: dgbowl_schemas.yadg.dataschema_3_1.parameters
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+.. automodule:: dgbowl_schemas.yadg.dataschema_3_1.step
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+.. automodule:: dgbowl_schemas.yadg.dataschema_3_1.timestamp
+   :members:
+   :undoc-members:
+   :show-inheritance:
