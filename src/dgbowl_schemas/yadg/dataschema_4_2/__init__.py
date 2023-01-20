@@ -22,9 +22,10 @@ class DataSchema(BaseModel, extra=Extra.forbid):
         nsch = {"metadata": {}, "steps": []}
         nsch["metadata"] = {
             "version": "5.0",
-            "timezone": self.metadata.timezone,
             "provenance": self.metadata.provenance.dict(exclude_none=True),
         }
+        if self.metadata.timezone is not None:
+            nsch["step_defaults"] = {"timezone": self.metadata.timezone}
         if "metadata" not in nsch["metadata"]["provenance"]:
             nsch["metadata"]["provenance"]["metadata"] = {
                 "updated-using": "dgbowl-schemas",
@@ -36,6 +37,8 @@ class DataSchema(BaseModel, extra=Extra.forbid):
                 "tag": step.tag,
                 "input": step.input.dict(exclude_none=True),
             }
+            if "encoding" in nstep["input"]:
+                nstep["encoding"] = nstep["input"].pop("encoding")
             if step.externaldate is not None:
                 nstep["externaldate"] = step.externaldate.dict(exclude_none=True)
             if step.parameters is not None:

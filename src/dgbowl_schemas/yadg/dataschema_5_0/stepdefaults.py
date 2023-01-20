@@ -18,7 +18,6 @@ class StepDefaults(BaseModel, extra=Extra.forbid):
 
     locale: str = "en_GB.UTF-8"
     """Global locale specification."""
-    
+
     encoding: str = "UTF-8"
     """Global filetype encoding."""
-

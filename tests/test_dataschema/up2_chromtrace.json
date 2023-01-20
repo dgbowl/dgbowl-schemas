@@ -19,16 +19,18 @@
                 "type": "up2_chromtrace.json",
                 "metadata": {"updated-using": "dgbowl-schemas", "from": "4.2"}
             },
-            "version": "5.0",
-            "timezone": "Europe/Berlin"
+            "version": "5.0"
+        },
+        "step_defaults": {
+            "locale": "en_GB.UTF-8",
+            "timezone": "Europe/Berlin",
+            "encoding": "UTF-8"
         },
         "steps": [
             {
                 "parser": "chromtrace",
-                "input": {
-                    "files": ["file.dat"],
-                    "encoding": "UTF-8"
-                },
+                "input": {"files": ["file.dat"]},
+                "encoding": "UTF-8",
                 "filetype": "ezchrom.asc"
             }
         ]

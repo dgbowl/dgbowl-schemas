@@ -90,12 +90,10 @@ class ElectroChem(Parser):
         transpose: bool = True
         """Transpose impedance data into traces (default) or keep as timesteps."""
 
-
     parser: Literal["electrochem"]
     filetype: Literal["eclab.mpt", "eclab.mpr", "tomato.json"] = "eclab.mpr"
     parameters: Parameters = Field(default_factory=Parameters)
     encoding: str = "windows-1252"
-
 
 
 class ChromTrace(Parser):
