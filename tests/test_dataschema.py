@@ -68,6 +68,7 @@ def test_dataschema_steps_json(inpath, datadir):
         ("err5_typo.json"),  # 5.0
         ("err6_chromtrace.json"),  # 4.0
         ("err7_typo.json"),  # 4.0
+        ("err8_metadata.json"),  # 5.0
     ],
 )
 def test_dataschema_err(inpath, datadir):
