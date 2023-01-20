@@ -2,8 +2,7 @@
     "input": {
         "metadata": {
             "provenance": {"type": "manual"}, 
-            "version": "5.0",
-            "timezone": "UTC"
+            "version": "5.0"
         }, 
         "steps": [
             {
@@ -11,8 +10,7 @@
                 "input": {
                     "prefix": null, 
                     "suffix": "txt", 
-                    "contains": null, 
-                    "encoding": "UTF-8", 
+                    "contains": null,
                     "folders": ["fol"]
                 } 
             }
