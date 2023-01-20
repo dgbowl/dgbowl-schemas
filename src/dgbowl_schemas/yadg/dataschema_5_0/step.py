@@ -20,6 +20,9 @@ class Parser(BaseModel, ABC, extra=Extra.forbid):
     parameters: Optional[Parameters]
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
+    timezone: Optional[str]
+    locale: Optional[str]
+    encoding: Optional[str]
 
 
 class Dummy(Parser):
@@ -87,13 +90,12 @@ class ElectroChem(Parser):
         transpose: bool = True
         """Transpose impedance data into traces (default) or keep as timesteps."""
 
-    class Input(Input):
-        encoding: str = "windows-1252"
 
     parser: Literal["electrochem"]
-    input: Input
     filetype: Literal["eclab.mpt", "eclab.mpr", "tomato.json"] = "eclab.mpr"
     parameters: Parameters = Field(default_factory=Parameters)
+    encoding: str = "windows-1252"
+
 
 
 class ChromTrace(Parser):
