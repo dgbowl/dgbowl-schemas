@@ -1,5 +1,4 @@
 from pydantic import BaseModel, Extra
-from typing import Union, Tuple
 
 
 class StepDefaults(BaseModel, extra=Extra.forbid):
