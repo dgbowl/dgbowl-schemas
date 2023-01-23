@@ -1,6 +1,6 @@
 from pydantic import ValidationError
 import logging
-from .dataschema_5_0.filetype import FileTypes
+from .dataschema_5_0.filetype import FileTypes as FileTypes_5_0
 from .dataschema_5_0 import DataSchema as DataSchema_5_0, Metadata as Metadata_5_0
 from .dataschema_4_2 import DataSchema as DataSchema_4_2, Metadata as Metadata_4_2
 from .dataschema_4_1 import DataSchema as DataSchema_4_1, Metadata as Metadata_4_1
@@ -10,6 +10,7 @@ from .dataschema_4_0 import DataSchema as DataSchema_4_0, Metadata as Metadata_4
 logger = logging.getLogger(__name__)
 
 DataSchema = DataSchema_5_0
+FileTypes = FileTypes_5_0
 
 models = {
     "5.0": (DataSchema_5_0, Metadata_5_0),
@@ -41,6 +42,3 @@ def to_dataschema(**kwargs):
     # attempt to parse using identified Model
     schema = Model(**kwargs)
     return schema
-
-
-__all__ = ["DataSchema", "FileTypes", "to_dataschema"]
