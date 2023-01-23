@@ -17,19 +17,24 @@ class FileType(BaseModel, ABC, extra=Extra.forbid):
     encoding: Optional[str]
 
 
-class EClab_MPR(FileType):
+class EClab_mpr(FileType):
     filetype: Literal["eclab.mpr", "marda:biologic-mpr"]
 
 
-class EClab_MPT(FileType):
+class EClab_mpt(FileType):
     filetype: Literal["eclab.mpt", "marda:biologic-mpt"]
     encoding: str = "windows-1252"
 
 
+class Tomato_json(FileType):
+    filetype: Literal["tomato.json"]
+
+
 FileTypes = Annotated[
     Union[
-        EClab_MPR,
-        EClab_MPT,
+        EClab_mpt,
+        EClab_mpr,
+        Tomato_json,
     ],
     Field(discriminator="filetype"),
 ]

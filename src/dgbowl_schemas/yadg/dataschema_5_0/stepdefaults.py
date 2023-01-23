@@ -1,6 +1,7 @@
 from pydantic import BaseModel, Extra, validator
 from typing import Optional, Tuple, Union
 import locale
+import tzlocal
 
 
 class StepDefaults(BaseModel, extra=Extra.forbid):
@@ -22,6 +23,13 @@ class StepDefaults(BaseModel, extra=Extra.forbid):
 
     encoding: Optional[str] = None
     """Global filetype encoding. Will default to ``None``."""
+
+    @validator("timezone", always=True)
+    @classmethod
+    def timezone_resolve_localtime(cls, v):
+        if v == "localtime":
+            v = tzlocal.get_localzone_name()
+        return v
 
     @validator("locale", always=True)
     @classmethod
