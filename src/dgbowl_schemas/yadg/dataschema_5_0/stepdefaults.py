@@ -24,6 +24,7 @@ class StepDefaults(BaseModel, extra=Extra.forbid):
     """Global filetype encoding. Will default to ``None``."""
 
     @validator("locale", always=True)
+    @classmethod
     def locale_set_default(cls, v):
         if v is None:
             v = ".".join(locale.getlocale())
