@@ -1,9 +1,11 @@
-from pydantic import BaseModel, Extra, Field
+from pydantic import BaseModel, Extra, Field, validator
 from abc import ABC
+import tzlocal
 from typing import Optional, Literal, Mapping, Union
 from .externaldate import ExternalDate
 from .input import Input
 from .parameters import Parameters, Timestamps, Timestamp
+
 
 try:
     from typing import Annotated
@@ -20,6 +22,16 @@ class Parser(BaseModel, ABC, extra=Extra.forbid):
     parameters: Optional[Parameters]
     tag: Optional[str]
     externaldate: Optional[ExternalDate]
+    timezone: Optional[str]
+    locale: Optional[str]
+    encoding: Optional[str]
+
+    @validator("timezone", always=True)
+    @classmethod
+    def timezone_resolve_localtime(cls, v):
+        if v == "localtime":
+            v = tzlocal.get_localzone_name()
+        return v
 
 
 class Dummy(Parser):
@@ -87,13 +99,10 @@ class ElectroChem(Parser):
         transpose: bool = True
         """Transpose impedance data into traces (default) or keep as timesteps."""
 
-    class Input(Input):
-        encoding: str = "windows-1252"
-
     parser: Literal["electrochem"]
-    input: Input
     filetype: Literal["eclab.mpt", "eclab.mpr", "tomato.json"] = "eclab.mpr"
     parameters: Parameters = Field(default_factory=Parameters)
+    encoding: str = "windows-1252"
 
 
 class ChromTrace(Parser):

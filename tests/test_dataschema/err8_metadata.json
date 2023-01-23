@@ -1,0 +1,11 @@
+{
+    "input": {
+        "metadata": {
+            "provenance": {"type": "manual"}, 
+            "version": "5.0",
+            "timezone": "UTC"
+        }, 
+        "steps": []
+    },
+    "exception": "validation error for Metadata\n timezone\n   extra fields not permitted"
+}

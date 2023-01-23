@@ -2,9 +2,12 @@
     "input": {
         "metadata": {
             "provenance": {"type": "datagram_from_input"}, 
-            "version": "5.0",
-            "timezone": "UTC"
+            "version": "5.0"
         }, 
+        "step_defaults": {
+            "timezone": "UTC",
+            "locale": "en_GB.UTF-8"
+        },
         "steps": [
             {
                 "parser": "basiccsv",
@@ -20,8 +23,7 @@
                 "prefix": null,
                 "suffix": null,
                 "contains": null,
-                "exclude": null,
-                "encoding": "UTF-8"
+                "exclude": null
             },
             "tag": null,
             "parameters": {
@@ -31,7 +33,10 @@
                 "strip": null
             },
             "filetype": null,
-            "externaldate": null
+            "externaldate": null,
+            "timezone": null,
+            "locale": null,
+            "encoding": null
         }
     ]
 }

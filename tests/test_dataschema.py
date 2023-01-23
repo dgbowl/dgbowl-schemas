@@ -2,6 +2,7 @@ import pytest
 import os
 import json
 from dgbowl_schemas import to_dataschema
+import locale
 
 
 @pytest.mark.parametrize(
@@ -68,6 +69,7 @@ def test_dataschema_steps_json(inpath, datadir):
         ("err5_typo.json"),  # 5.0
         ("err6_chromtrace.json"),  # 4.0
         ("err7_typo.json"),  # 4.0
+        ("err8_metadata.json"),  # 5.0
     ],
 )
 def test_dataschema_err(inpath, datadir):
@@ -89,6 +91,7 @@ def test_dataschema_err(inpath, datadir):
     ],
 )
 def test_dataschema_update(inpath, datadir):
+    locale.setlocale(locale.LC_CTYPE, "en_GB.UTF-8")
     os.chdir(datadir)
     with open(inpath, "r") as infile:
         jsdata = json.load(infile)
@@ -106,6 +109,7 @@ def test_dataschema_update(inpath, datadir):
     ],
 )
 def test_dataschema_update_chain(inpath, datadir):
+    locale.setlocale(locale.LC_CTYPE, "en_GB.UTF-8")
     os.chdir(datadir)
     with open(inpath, "r") as infile:
         jsdata = json.load(infile)
