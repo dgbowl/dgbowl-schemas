@@ -16,6 +16,12 @@ Submodules
    :show-inheritance:
 
 
+.. automodule:: dgbowl_schemas.yadg.dataschema_5_0.filetype
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
 .. automodule:: dgbowl_schemas.yadg.dataschema_5_0.input
    :members:
    :undoc-members:
@@ -35,6 +41,12 @@ Submodules
 
 
 .. automodule:: dgbowl_schemas.yadg.dataschema_5_0.step
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+.. automodule:: dgbowl_schemas.yadg.dataschema_5_0.stepdefaults
    :members:
    :undoc-members:
    :show-inheritance:
