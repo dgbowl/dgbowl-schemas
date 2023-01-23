@@ -1,9 +1,11 @@
-from pydantic import BaseModel, Extra, Field
+from pydantic import BaseModel, Extra, Field, validator
 from abc import ABC
+import tzlocal
 from typing import Optional, Literal, Mapping, Union
 from .externaldate import ExternalDate
 from .input import Input
 from .parameters import Parameters, Timestamps, Timestamp
+
 
 try:
     from typing import Annotated
@@ -23,6 +25,13 @@ class Parser(BaseModel, ABC, extra=Extra.forbid):
     timezone: Optional[str]
     locale: Optional[str]
     encoding: Optional[str]
+
+    @validator("timezone", always=True)
+    @classmethod
+    def timezone_resolve_localtime(cls, v):
+        if v == "localtime":
+            v = tzlocal.get_localzone_name()
+        return v
 
 
 class Dummy(Parser):
