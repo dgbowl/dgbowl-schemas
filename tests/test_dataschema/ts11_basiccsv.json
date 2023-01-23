@@ -5,7 +5,8 @@
             "version": "5.0"
         }, 
         "step_defaults": {
-            "timezone": "UTC"
+            "timezone": "UTC",
+            "locale": "en_GB.UTF-8"
         },
         "steps": [
             {

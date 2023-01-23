@@ -1,4 +1,6 @@
-from pydantic import BaseModel, Extra
+from pydantic import BaseModel, Extra, validator
+from typing import Optional, Tuple, Union
+import locale
 
 
 class StepDefaults(BaseModel, extra=Extra.forbid):
@@ -15,8 +17,14 @@ class StepDefaults(BaseModel, extra=Extra.forbid):
 
     """
 
-    locale: str = "en_GB.UTF-8"
-    """Global locale specification."""
+    locale: Union[Tuple[str, str], str] = None
+    """Global locale specification. Will default to current locale."""
 
-    encoding: str = "UTF-8"
-    """Global filetype encoding."""
+    encoding: Optional[str] = None
+    """Global filetype encoding. Will default to ``None``."""
+
+    @validator("locale", always=True)
+    def locale_set_default(cls, v):
+        if v is None:
+            v = ".".join(locale.getlocale())
+        return v

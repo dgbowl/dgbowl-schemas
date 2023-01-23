@@ -23,8 +23,7 @@
         },
         "step_defaults": {
             "locale": "en_GB.UTF-8",
-            "timezone": "Europe/Berlin",
-            "encoding": "UTF-8"
+            "timezone": "Europe/Berlin"
         },
         "steps": [
             {
