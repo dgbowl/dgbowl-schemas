@@ -30,7 +30,7 @@ class Tomato_json(FileType):
     filetype: Literal["tomato.json"]
 
 
-class FileTypeFactory:
+class FileTypeFactory(BaseModel):
     filetype: Union[
         EClab_mpr,
         EClab_mpt,
