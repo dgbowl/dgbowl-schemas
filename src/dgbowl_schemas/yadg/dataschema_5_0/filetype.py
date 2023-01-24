@@ -30,11 +30,9 @@ class Tomato_json(FileType):
     filetype: Literal["tomato.json"]
 
 
-FileTypes = Annotated[
-    Union[
-        EClab_mpt,
+class FileTypeFactory:
+    filetype: Union[
         EClab_mpr,
+        EClab_mpt,
         Tomato_json,
-    ],
-    Field(discriminator="filetype"),
-]
+    ] = Field(..., discriminator="filetype")
