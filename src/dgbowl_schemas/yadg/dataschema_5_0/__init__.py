@@ -5,6 +5,7 @@ from .step import Steps
 from .stepdefaults import StepDefaults
 from .filetype import FileTypeFactory, FileType
 
+
 class DataSchema(BaseModel, extra=Extra.forbid):
     """
     :class:`DataSchema` introduced in ``yadg-5.0``.
@@ -18,5 +19,6 @@ class DataSchema(BaseModel, extra=Extra.forbid):
 
     steps: Sequence[Steps]
     """Input commands for ``yadg``'s parsers, organised as a sequence of steps."""
+
 
 __all__ = ["DataSchema", "Metadata", "FileType", "FileTypeFactory"]

@@ -1,20 +1,31 @@
-from pydantic import BaseModel, Extra, Field
+from pydantic import BaseModel, Extra, Field, validator
 from abc import ABC
 from typing import Optional, Literal, Union
-
-try:
-    from typing import Annotated
-except ImportError:
-    from typing_extensions import Annotated
+import tzlocal
+import locale
 
 
 class FileType(BaseModel, ABC, extra=Extra.forbid):
     """Template ABC for parser classes."""
 
     filetype: str
-    timezone: Optional[str]
+    timezone: str = "localtime"
     locale: Optional[str]
     encoding: Optional[str]
+
+    @validator("timezone", always=True)
+    @classmethod
+    def timezone_resolve_localtime(cls, v):
+        if v == "localtime":
+            v = tzlocal.get_localzone_name()
+        return v
+
+    @validator("locale", always=True)
+    @classmethod
+    def locale_set_default(cls, v):
+        if v is None:
+            v = ".".join(locale.getlocale())
+        return v
 
 
 class EClab_mpr(FileType):

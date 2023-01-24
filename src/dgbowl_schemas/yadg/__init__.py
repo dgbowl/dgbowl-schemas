@@ -1,7 +1,7 @@
 from pydantic import ValidationError
 import logging
 from .dataschema_5_0 import (
-    DataSchema as DataSchema_5_0, 
+    DataSchema as DataSchema_5_0,
     Metadata as Metadata_5_0,
     FileType as FileType_5_0,
     FileTypeFactory as FileTypeFactory_5_0,
