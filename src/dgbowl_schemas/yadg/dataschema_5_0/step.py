@@ -1,10 +1,21 @@
 from pydantic import BaseModel, Extra, Field, validator
 from abc import ABC
-import tzlocal
 from typing import Optional, Literal, Mapping, Union
 from .externaldate import ExternalDate
 from .input import Input
 from .parameters import Parameters, Timestamps, Timestamp
+from .filetype import (
+    FileType,
+    NoFileType,
+    FlowDataFileTypes,
+    ElectroChemFileTypes,
+    ChromTraceFileTypes,
+    ChromDataFileTypes,
+    MassTraceFileTypes,
+    QFTraceFileTypes,
+    XPSTraceFileTypes,
+    XRDTraceFileTypes,
+)
 
 
 try:
@@ -14,24 +25,12 @@ except ImportError:
 
 
 class Parser(BaseModel, ABC, extra=Extra.forbid):
-    """Template ABC for parser classes."""
-
+    tag: Optional[str]
     parser: str
     input: Input
-    filetype: Optional[str]
+    extractor: Optional[FileType]
     parameters: Optional[Parameters]
-    tag: Optional[str]
     externaldate: Optional[ExternalDate]
-    timezone: Optional[str]
-    locale: Optional[str]
-    encoding: Optional[str]
-
-    @validator("timezone", always=True)
-    @classmethod
-    def timezone_resolve_localtime(cls, v):
-        if v == "localtime":
-            v = tzlocal.get_localzone_name()
-        return v
 
 
 class Dummy(Parser):
@@ -63,6 +62,7 @@ class BasicCSV(Parser):
 
     parser: Literal["basiccsv"]
     parameters: Parameters = Field(default_factory=Parameters)
+    extractor: NoFileType = Field(default_factory=NoFileType)
 
 
 class MeasCSV(Parser, extra=Extra.forbid):
@@ -83,13 +83,14 @@ class MeasCSV(Parser, extra=Extra.forbid):
 
     parser: Literal["meascsv"]
     parameters: Parameters = Field(default_factory=Parameters)
+    extractor: NoFileType
 
 
 class FlowData(Parser):
     """Parser for flow controller/meter data."""
 
     parser: Literal["flowdata"]
-    filetype: Literal["drycal.csv", "drycal.rtf", "drycal.txt"] = "drycal.csv"
+    extractor: FlowDataFileTypes  # = Field(..., discriminator="filetype")
 
 
 class ElectroChem(Parser):
@@ -100,9 +101,8 @@ class ElectroChem(Parser):
         """Transpose impedance data into traces (default) or keep as timesteps."""
 
     parser: Literal["electrochem"]
-    filetype: Literal["eclab.mpt", "eclab.mpr", "tomato.json"] = "eclab.mpr"
     parameters: Parameters = Field(default_factory=Parameters)
-    encoding: str = "windows-1252"
+    extractor: ElectroChemFileTypes = Field(..., discriminator="filetype")
 
 
 class ChromTrace(Parser):
@@ -117,59 +117,42 @@ class ChromTrace(Parser):
     """
 
     parser: Literal["chromtrace"]
-    filetype: Literal[
-        "ezchrom.asc",
-        "fusion.json",
-        "fusion.zip",
-        "agilent.ch",
-        "agilent.dx",
-        "agilent.csv",
-    ] = "ezchrom.asc"
+    extractor: ChromTraceFileTypes = Field(..., discriminator="filetype")
 
 
 class ChromData(Parser):
     """Parser for processed chromatography data."""
 
     parser: Literal["chromdata"]
-    filetype: Literal[
-        "fusion.json",
-        "fusion.zip",
-        "fusion.csv",
-        "empalc.csv",
-        "empalc.xlsx",
-    ] = "fusion.json"
+    extractor: ChromDataFileTypes = Field(..., discriminator="filetype")
 
 
 class MassTrace(Parser):
     """Parser for mass spectroscopy traces."""
 
     parser: Literal["masstrace"]
-    filetype: Literal["quadstar.sac"] = "quadstar.sac"
+    extractor: MassTraceFileTypes  # = Field(..., discriminator="filetype")
 
 
 class QFTrace(Parser):
     """Parser for network analyzer traces."""
 
     parser: Literal["qftrace"]
-    filetype: Literal["labview.csv"] = "labview.csv"
+    extractor: QFTraceFileTypes  # = Field(..., discriminator="filetype")
 
 
 class XPSTrace(Parser):
     """Parser for XPS traces."""
 
     parser: Literal["xpstrace"]
-    filetype: Literal["phi.spe"] = "phi.spe"
+    extractor: XPSTraceFileTypes  # = Field(..., discriminator="filetype")
 
 
 class XRDTrace(Parser):
     """Parser for XRD traces."""
 
     parser: Literal["xrdtrace"]
-    filetype: Literal[
-        "panalytical.xy",
-        "panalytical.csv",
-        "panalytical.xrdml",
-    ] = "panalytical.csv"
+    extractor: XRDTraceFileTypes  # = Field(..., discriminator="filetype")
 
 
 Steps = Annotated[

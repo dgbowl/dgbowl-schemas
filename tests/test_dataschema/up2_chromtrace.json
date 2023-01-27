@@ -9,7 +9,10 @@
             {
                 "parser": "chromtrace",
                 "input": {"files": ["file.dat"]},
-                "parameters": {"filetype": "ezchrom.asc", "calfile": "caldata.json"}
+                "parameters": {
+                    "filetype": "ezchrom.asc", 
+                    "calfile": "caldata.json"
+                }
             }
         ]
     },
@@ -29,8 +32,10 @@
             {
                 "parser": "chromtrace",
                 "input": {"files": ["file.dat"]},
-                "encoding": "UTF-8",
-                "filetype": "ezchrom.asc"
+                "extractor": {
+                    "filetype": "ezchrom.asc",
+                    "encoding": "UTF-8"
+                }
             }
         ]
     }

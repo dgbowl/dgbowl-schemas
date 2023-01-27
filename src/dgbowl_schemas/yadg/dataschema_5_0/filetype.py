@@ -8,8 +8,8 @@ import locale
 class FileType(BaseModel, ABC, extra=Extra.forbid):
     """Template ABC for parser classes."""
 
-    filetype: str
-    timezone: str = "localtime"
+    filetype: Optional[str]
+    timezone: Optional[str]
     locale: Optional[str]
     encoding: Optional[str]
 
@@ -23,9 +23,20 @@ class FileType(BaseModel, ABC, extra=Extra.forbid):
     @validator("locale", always=True)
     @classmethod
     def locale_set_default(cls, v):
-        if v is None:
+        if v == "getlocale":
             v = ".".join(locale.getlocale())
         return v
+
+
+class NoFileType(FileType):
+    filetype: Optional[None] = None
+
+
+class Drycal_any(FileType):
+    filetype: Literal["drycal.csv", "drycal.rtf", "drycal.txt"]
+
+
+FlowDataFileTypes = Drycal_any
 
 
 class EClab_mpr(FileType):
@@ -39,6 +50,102 @@ class EClab_mpt(FileType):
 
 class Tomato_json(FileType):
     filetype: Literal["tomato.json"]
+
+
+ElectroChemFileTypes = Union[
+    EClab_mpr,
+    EClab_mpt,
+    Tomato_json,
+]
+
+
+class EZChrom_asc(FileType):
+    filetype: Literal["ezchrom.asc"]
+
+
+class Fusion_json(FileType):
+    filetype: Literal["fusion.json"]
+
+
+class Fusion_zip(FileType):
+    filetype: Literal["fusion.zip"]
+
+
+class Fusion_csv(FileType):
+    filetype: Literal["fusion.csv"]
+
+
+class Agilent_ch(FileType):
+    filetype: Literal["agilent.ch"]
+
+
+class Agilent_dx(FileType):
+    filetype: Literal["agilent.dx"]
+
+
+class Agilent_csv(FileType):
+    filetype: Literal["agilent.csv"]
+
+
+class EmpaLC_any(FileType):
+    filetype: Literal["empalc.csv", "empalc.xlsx"]
+
+
+ChromTraceFileTypes = Union[
+    EZChrom_asc,
+    Fusion_json,
+    Fusion_zip,
+    Agilent_ch,
+    Agilent_dx,
+    Agilent_csv,
+]
+
+ChromDataFileTypes = Union[
+    Fusion_json,
+    Fusion_zip,
+    Fusion_csv,
+    EmpaLC_any,
+]
+
+
+class Quadstar_sac(FileType):
+    filetype: Literal["quadstar.sac"]
+
+
+MassTraceFileTypes = Quadstar_sac
+
+
+class LabView_csv(FileType):
+    filetype: Literal["labview.csv"]
+
+
+QFTraceFileTypes = LabView_csv
+
+
+class Phi_spe(FileType):
+    filetype: Literal["phi.spe"]
+
+
+XPSTraceFileTypes = Phi_spe
+
+
+class Panalytical_xrdml(FileType):
+    filetype: Literal["panalytical.xrdml"]
+
+
+class Panalytical_xy(FileType):
+    filetype: Literal["panalytical.xy"]
+
+
+class Panalytical_csv(FileType):
+    filetype: Literal["panalytical.csv"]
+
+
+XRDTraceFileTypes = Union[
+    Panalytical_xrdml,
+    Panalytical_xy,
+    Panalytical_csv,
+]
 
 
 class FileTypeFactory(BaseModel):

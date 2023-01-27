@@ -97,6 +97,7 @@ def test_dataschema_update(inpath, datadir):
         jsdata = json.load(infile)
     ref = jsdata["output"]
     ret = to_dataschema(**jsdata["input"]).update()
+    print(ret)
     assert ref == ret.dict(exclude_none=True)
 
 

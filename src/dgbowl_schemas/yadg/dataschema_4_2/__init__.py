@@ -37,8 +37,6 @@ class DataSchema(BaseModel, extra=Extra.forbid):
                 "tag": step.tag,
                 "input": step.input.dict(exclude_none=True),
             }
-            if "encoding" in nstep["input"]:
-                nstep["encoding"] = nstep["input"].pop("encoding")
             if step.externaldate is not None:
                 nstep["externaldate"] = step.externaldate.dict(exclude_none=True)
             if step.parameters is not None:
@@ -46,8 +44,13 @@ class DataSchema(BaseModel, extra=Extra.forbid):
             else:
                 nstep["parameters"] = {}
 
-            if "filetype" in nstep["parameters"]:
-                nstep["filetype"] = nstep["parameters"].pop("filetype")
+            extractor = {}
+            if nstep["parameters"].get("filetype", None) is not None:
+                extractor["filetype"] = nstep["parameters"].pop("filetype")
+            if nstep["input"].get("encoding", None) is not None:
+                extractor["encoding"] = nstep["input"].pop("encoding")
+            if len(extractor) > 0:
+                nstep["extractor"] = extractor
 
             for k in {
                 "sigma",
