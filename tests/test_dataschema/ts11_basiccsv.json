@@ -11,7 +11,11 @@
         "steps": [
             {
                 "parser": "basiccsv",
-                "input": {"files": ["measurement.csv"]}
+                "input": {"files": ["measurement.csv"]},
+                "extractor": {
+                    "locale": "de_DE.UTF-8",
+                    "timezone": "Europe/Zurich"
+                }
             }
         ]
     },
@@ -25,6 +29,12 @@
                 "contains": null,
                 "exclude": null
             },
+            "extractor": {
+                "filetype": null,
+                "encoding": null,
+                "locale": "de_DE.UTF-8",
+                "timezone": "Europe/Zurich"
+            },
             "tag": null,
             "parameters": {
                 "sep": ",",
@@ -32,11 +42,7 @@
                 "units": null,
                 "strip": null
             },
-            "filetype": null,
-            "externaldate": null,
-            "timezone": null,
-            "locale": null,
-            "encoding": null
+            "externaldate": null
         }
     ]
 }

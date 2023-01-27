@@ -16,7 +16,11 @@
                     "contains": null, 
                     "folders": ["fol"]
                 }, 
-                "filetype": "fusion.json"
+                "extractor": {
+                    "filetype": "fusion.json",
+                    "timezone": "Europe/Berlin",
+                    "locale": "en_GB.UTF-8"
+                }
             }
         ]
     },
@@ -32,11 +36,13 @@
                 "exclude": null
             }, 
             "parameters": null,
-            "filetype": "fusion.json", 
-            "externaldate": null,
-            "timezone": null,
-            "locale": null,
-            "encoding": null
+            "extractor": {
+                "filetype": "fusion.json", 
+                "timezone": "Europe/Berlin",
+                "locale": "en_GB.UTF-8",
+                "encoding": null
+            },
+            "externaldate": null
         }
     ]
 }

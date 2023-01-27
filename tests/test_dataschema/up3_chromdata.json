@@ -29,8 +29,10 @@
             {
                 "parser": "chromdata",
                 "input": {"files": ["file.dat"]},
-                "encoding": "UTF-8",
-                "filetype": "empalc.csv"
+                "extractor": {
+                    "filetype": "empalc.csv",
+                    "encoding": "UTF-8"
+                }
             }
         ]
     }
