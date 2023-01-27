@@ -32,11 +32,23 @@ class NoFileType(FileType):
     filetype: Optional[None] = None
 
 
-class Drycal_any(FileType):
-    filetype: Literal["drycal.csv", "drycal.rtf", "drycal.txt"]
+class Drycal_csv(FileType):
+    filetype: Literal["drycal.csv"]
 
 
-FlowDataFileTypes = Drycal_any
+class Drycal_rtf(FileType):
+    filetype: Literal["drycal.rtf"]
+
+
+class Drycal_txt(FileType):
+    filetype: Literal["drycal.txt"]
+
+
+FlowDataFileTypes = Union[
+    Drycal_csv,
+    Drycal_rtf,
+    Drycal_txt,
+]
 
 
 class EClab_mpr(FileType):
@@ -87,8 +99,12 @@ class Agilent_csv(FileType):
     filetype: Literal["agilent.csv"]
 
 
-class EmpaLC_any(FileType):
-    filetype: Literal["empalc.csv", "empalc.xlsx"]
+class EmpaLC_csv(FileType):
+    filetype: Literal["empalc.csv"]
+
+
+class EmpaLC_xlsx(FileType):
+    filetype: Literal["empalc.xlsx"]
 
 
 ChromTraceFileTypes = Union[
@@ -104,7 +120,8 @@ ChromDataFileTypes = Union[
     Fusion_json,
     Fusion_zip,
     Fusion_csv,
-    EmpaLC_any,
+    EmpaLC_csv,
+    EmpaLC_xlsx,
 ]
 
 
@@ -152,5 +169,4 @@ class FileTypeFactory(BaseModel):
     filetype: Union[
         EClab_mpr,
         EClab_mpt,
-        Tomato_json,
     ] = Field(..., discriminator="filetype")

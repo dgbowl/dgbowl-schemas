@@ -91,7 +91,7 @@ class FlowData(Parser):
     """Parser for flow controller/meter data."""
 
     parser: Literal["flowdata"]
-    extractor: FlowDataFileTypes  # = Field(..., discriminator="filetype")
+    extractor: FlowDataFileTypes = Field(..., discriminator="filetype")
 
 
 class ElectroChem(Parser):
