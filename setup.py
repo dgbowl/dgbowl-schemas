@@ -1,4 +1,5 @@
 import setuptools
+import versioneer
 
 with open("VERSION", "r") as infile:
     version = infile.read().strip()
@@ -10,7 +11,8 @@ packagedir = "src"
 
 setuptools.setup(
     name="dgbowl-schemas",
-    version=version,
+    version=versioneer.get_version(),
+    cmdclass=versioneer.get_cmdclass(),
     author="Peter Kraus",
     author_email="peter@tondon.de",
     description="schemas for the dgbowl suite of tools",
