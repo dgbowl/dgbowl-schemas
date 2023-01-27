@@ -6,11 +6,11 @@ from .transform import Transform
 from .plot import Plot
 from .save import Save
 
-
 class Recipe(BaseModel, extra=Extra.forbid):
-    version: Literal["v1.0"]
+    version: Literal["v1.0", "1.0", "1.1", "2.0"]
     load: Optional[Sequence[Load]]
     extract: Optional[Sequence[Extract]]
     transform: Optional[Sequence[Transform]]
     plot: Optional[Sequence[Plot]]
     save: Optional[Sequence[Save]]
+
