@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Extra, Field, validator
+from pydantic import BaseModel, Extra, Field
 from abc import ABC
 from typing import Optional, Literal, Mapping, Union
 from .externaldate import ExternalDate
@@ -41,6 +41,7 @@ class Dummy(Parser):
 
     parser: Literal["dummy"]
     parameters: Optional[Parameters]
+    extractor: NoFileType = Field(default_factory=NoFileType)
 
 
 class BasicCSV(Parser):
@@ -83,7 +84,7 @@ class MeasCSV(Parser, extra=Extra.forbid):
 
     parser: Literal["meascsv"]
     parameters: Parameters = Field(default_factory=Parameters)
-    extractor: NoFileType
+    extractor: NoFileType = Field(default_factory=NoFileType)
 
 
 class FlowData(Parser):
