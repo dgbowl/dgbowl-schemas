@@ -13,4 +13,3 @@ Subpackages
    :maxdepth: 4
 
    dgbowl_schemas.dgpost.recipe_1_0
-   dgbowl_schemas.dgpost.recipe_1_1
