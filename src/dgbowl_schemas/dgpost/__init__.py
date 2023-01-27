@@ -9,7 +9,7 @@ Recipe = Recipe_1_0
 models = {
     "1.0": Recipe_1_0,
 }
-    
+
 
 def to_recipe(**kwargs):
     firste = None
