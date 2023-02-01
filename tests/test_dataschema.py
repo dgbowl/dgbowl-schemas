@@ -2,6 +2,7 @@ import pytest
 import os
 import json
 from dgbowl_schemas import to_dataschema
+from dgbowl_schemas.yadg import ExtractorFactory
 import locale
 
 
@@ -118,3 +119,39 @@ def test_dataschema_update_chain(inpath, datadir):
     while hasattr(ret, "update"):
         ret = ret.update()
     assert ret.metadata.version == "5.0"
+
+
+@pytest.mark.parametrize(
+    "input, output",
+    [
+        (  # ts0 - mpr file, fill in global defaults
+            {
+                "filetype": "eclab.mpr",
+            },
+            {
+                "filetype": "eclab.mpr",
+                "locale": "en_GB.UTF-8",
+            },
+        ),
+        (  # ts1 - mpt file, mixture of inputs and defaults from extractor
+            {
+                "filetype": "eclab.mpt",
+                "locale": "de_DE.UTF-8",
+                "timezone": "Europe/Zurich",
+            },
+            {
+                "filetype": "eclab.mpt",
+                "locale": "de_DE.UTF-8",
+                "timezone": "Europe/Zurich",
+                "encoding": "windows-1252",
+            },
+        ),
+    ],
+)
+def test_extractor_factory(input, output):
+    locale.setlocale(locale.LC_CTYPE, "en_GB.UTF-8")
+    ret = ExtractorFactory(extractor=input).extractor
+    assert ret.filetype == output.get("filetype")
+    assert ret.locale == output.get("locale")
+    assert ret.encoding == output.get("encoding")
+    assert ret.timezone is not None

@@ -4,6 +4,8 @@ from typing import Optional, Literal, Union
 import tzlocal
 import locale
 
+from .stepdefaults import StepDefaults
+
 
 class FileType(BaseModel, ABC, extra=Extra.forbid):
     """Template ABC for parser classes."""
@@ -165,8 +167,19 @@ XRDTraceFileTypes = Union[
 ]
 
 
-class FileTypeFactory(BaseModel):
-    filetype: Union[
+class ExtractorFactory(BaseModel):
+    extractor: Union[
         EClab_mpr,
         EClab_mpt,
     ] = Field(..., discriminator="filetype")
+
+    @validator("extractor", always=True)
+    @classmethod
+    def extractor_set_defaults(cls, v):
+        defaults = StepDefaults()
+        if v.timezone is None:
+            v.timezone = defaults.timezone
+        if v.locale is None:
+            v.locale = defaults.locale
+
+        return v
