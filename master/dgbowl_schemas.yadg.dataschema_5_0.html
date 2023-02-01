@@ -1951,16 +1951,16 @@
 </dd></dl>
 
 <dl class="py class pydantic_model">
-<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.FileTypeFactory">
-<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.yadg.dataschema_5_0.</span></span><span class="sig-name descname"><span class="pre">FileTypeFactory</span></span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.FileTypeFactory" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.ExtractorFactory">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.yadg.dataschema_5_0.</span></span><span class="sig-name descname"><span class="pre">ExtractorFactory</span></span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.ExtractorFactory" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
 <p><details  class="autodoc_pydantic_collapsable_json">
 <summary>Show JSON schema</summary><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">   </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FileTypeFactory&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ExtractorFactory&quot;</span><span class="p">,</span>
 <span class="w">   </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
 <span class="w">   </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;extractor&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Extractor&quot;</span><span class="p">,</span>
 <span class="w">         </span><span class="nt">&quot;discriminator&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="nt">&quot;propertyName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;filetype&quot;</span><span class="p">,</span>
 <span class="w">            </span><span class="nt">&quot;mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -1981,7 +1981,7 @@
 <span class="w">      </span><span class="p">}</span>
 <span class="w">   </span><span class="p">},</span>
 <span class="w">   </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">      </span><span class="s2">&quot;filetype&quot;</span>
+<span class="w">      </span><span class="s2">&quot;extractor&quot;</span>
 <span class="w">   </span><span class="p">],</span>
 <span class="w">   </span><span class="nt">&quot;definitions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;EClab_mpr&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -2051,9 +2051,28 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</details></p><dl class="py attribute pydantic_field">
-<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.FileTypeFactory.filetype">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">filetype</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpr" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpr"><span class="pre">dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpr</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpt" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpt"><span class="pre">dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpt</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.FileTypeFactory.filetype" title="Permalink to this definition"></a></dt>
+</details></p><dl class="field-list simple">
+<dt class="field-odd">Validators</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.ExtractorFactory.extractor_set_defaults" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.ExtractorFactory.extractor_set_defaults"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extractor_set_defaults</span></code></a> » <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.ExtractorFactory.extractor" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.ExtractorFactory.extractor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extractor</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.ExtractorFactory.extractor">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extractor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpr" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpr"><span class="pre">dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpr</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpt" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpt"><span class="pre">dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpt</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.ExtractorFactory.extractor" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Validated by</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.ExtractorFactory.extractor_set_defaults" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.ExtractorFactory.extractor_set_defaults"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extractor_set_defaults</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method pydantic_validator">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.ExtractorFactory.extractor_set_defaults">
+<em class="property"><span class="pre">validator</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extractor_set_defaults</span></span><em class="autodoc_pydantic_validator_arrow property">&#160; <span class="pre">»</span>&#160; </em><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.ExtractorFactory.extractor" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.ExtractorFactory.extractor"><em class="xref py py-obj"><span class="pre">extractor</span></em></a><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.ExtractorFactory.extractor_set_defaults" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -3727,16 +3746,16 @@ parsed data.</p>
 </dd></dl>
 
 <dl class="py class pydantic_model">
-<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileTypeFactory">
-<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.yadg.dataschema_5_0.filetype.</span></span><span class="sig-name descname"><span class="pre">FileTypeFactory</span></span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileTypeFactory" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.ExtractorFactory">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.yadg.dataschema_5_0.filetype.</span></span><span class="sig-name descname"><span class="pre">ExtractorFactory</span></span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.ExtractorFactory" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
 <p><details  class="autodoc_pydantic_collapsable_json">
 <summary>Show JSON schema</summary><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">   </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FileTypeFactory&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ExtractorFactory&quot;</span><span class="p">,</span>
 <span class="w">   </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
 <span class="w">   </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;extractor&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Extractor&quot;</span><span class="p">,</span>
 <span class="w">         </span><span class="nt">&quot;discriminator&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="nt">&quot;propertyName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;filetype&quot;</span><span class="p">,</span>
 <span class="w">            </span><span class="nt">&quot;mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -3757,7 +3776,7 @@ parsed data.</p>
 <span class="w">      </span><span class="p">}</span>
 <span class="w">   </span><span class="p">},</span>
 <span class="w">   </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">      </span><span class="s2">&quot;filetype&quot;</span>
+<span class="w">      </span><span class="s2">&quot;extractor&quot;</span>
 <span class="w">   </span><span class="p">],</span>
 <span class="w">   </span><span class="nt">&quot;definitions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;EClab_mpr&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -3827,9 +3846,28 @@ parsed data.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</details></p><dl class="py attribute pydantic_field">
-<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileTypeFactory.filetype">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">filetype</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpr" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpr"><span class="pre">dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpr</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpt" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpt"><span class="pre">dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpt</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileTypeFactory.filetype" title="Permalink to this definition"></a></dt>
+</details></p><dl class="field-list simple">
+<dt class="field-odd">Validators</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.ExtractorFactory.extractor_set_defaults" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.ExtractorFactory.extractor_set_defaults"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extractor_set_defaults</span></code></a> » <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.ExtractorFactory.extractor" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.ExtractorFactory.extractor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extractor</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.ExtractorFactory.extractor">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extractor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpr" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpr"><span class="pre">dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpr</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpt" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpt"><span class="pre">dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpt</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.ExtractorFactory.extractor" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Validated by</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.ExtractorFactory.extractor_set_defaults" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.ExtractorFactory.extractor_set_defaults"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extractor_set_defaults</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method pydantic_validator">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.ExtractorFactory.extractor_set_defaults">
+<em class="property"><span class="pre">validator</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extractor_set_defaults</span></span><em class="autodoc_pydantic_validator_arrow property">&#160; <span class="pre">»</span>&#160; </em><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.ExtractorFactory.extractor" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.ExtractorFactory.extractor"><em class="xref py py-obj"><span class="pre">extractor</span></em></a><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.ExtractorFactory.extractor_set_defaults" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
