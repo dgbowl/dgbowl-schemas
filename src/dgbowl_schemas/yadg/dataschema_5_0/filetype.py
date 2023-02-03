@@ -34,6 +34,16 @@ class NoFileType(FileType):
     filetype: Optional[None] = None
 
 
+class Tomato_json(FileType):
+    filetype: Literal["tomato.json"]
+
+
+DummyFileTypes = Union[
+    NoFileType,
+    Tomato_json,
+]
+
+
 class Drycal_csv(FileType):
     filetype: Literal["drycal.csv"]
 
@@ -60,10 +70,6 @@ class EClab_mpr(FileType):
 class EClab_mpt(FileType):
     filetype: Literal["eclab.mpt", "marda:biologic-mpt"]
     encoding: str = "windows-1252"
-
-
-class Tomato_json(FileType):
-    filetype: Literal["tomato.json"]
 
 
 ElectroChemFileTypes = Union[

@@ -7,6 +7,7 @@ from .parameters import Parameters, Timestamps, Timestamp
 from .filetype import (
     FileType,
     NoFileType,
+    DummyFileTypes,
     FlowDataFileTypes,
     ElectroChemFileTypes,
     ChromTraceFileTypes,
@@ -41,7 +42,7 @@ class Dummy(Parser):
 
     parser: Literal["dummy"]
     parameters: Optional[Parameters]
-    extractor: NoFileType = Field(default_factory=NoFileType)
+    extractor: DummyFileTypes = Field(default_factory=NoFileType)
 
 
 class BasicCSV(Parser):
