@@ -48,6 +48,7 @@ def test_dataschema_metadata_json(inpath, success, datadir):
         ("ts9_basiccsv.json"),  # 4.2
         ("ts10_chromdata.json"),  # 5.0
         ("ts11_basiccsv.json"),  # 5.0
+        ("ts12_dummy.json"),  # 5.0
     ],
 )
 def test_dataschema_steps_json(inpath, datadir):
