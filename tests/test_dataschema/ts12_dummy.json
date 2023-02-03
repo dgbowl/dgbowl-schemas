@@ -1,0 +1,45 @@
+{
+    "input": {
+        "metadata": {
+            "version": "5.0",
+            "provenance": {"type": "manual"}
+        },
+        "steps": [
+            {
+                "parser": "dummy",
+                "tag": "test_tag",
+                "input": {"folders": ["fol"], "suffix": ".txt"},
+                "parameters": {"k": "v"},
+                "extractor": {
+                    "filetype": "tomato.json",
+                    "timezone": "Europe/Zurich"
+                },
+                "externaldate": {"using": {"filename": {"len": 10, "format": "%Y_%m_%d"}}}
+            } 
+        ]
+    },
+    "output": [
+        {
+            "parser": "dummy",
+            "input": {
+                "files": ["fol"],
+                "prefix": null,
+                "suffix": ".txt",
+                "contains": null,
+                "exclude": null
+            },
+            "tag": "test_tag",
+            "parameters": {"k": "v"},
+            "extractor": {
+                "encoding": null,
+                "filetype": "tomato.json",
+                "locale": null,
+                "timezone": "Europe/Zurich"
+            },
+            "externaldate": {
+                "using": {"filename": {"len": 10, "format": "%Y_%m_%d"}},
+                "mode": "add"
+            }
+        }
+    ]
+}
