@@ -98,12 +98,7 @@ class FlowData(Parser):
 class ElectroChem(Parser):
     """Parser for electrochemistry files."""
 
-    class Parameters(BaseModel, extra=Extra.forbid):
-        transpose: bool = True
-        """Transpose impedance data into traces (default) or keep as timesteps."""
-
     parser: Literal["electrochem"]
-    parameters: Parameters = Field(default_factory=Parameters)
     extractor: ElectroChemFileTypes = Field(..., discriminator="filetype")
 
 
