@@ -63,6 +63,7 @@ class DataSchema(BaseModel, extra=Extra.forbid):
                 "distance",
                 "cutoff",
                 "threshold",
+                "transpose",
             }:
                 if k in nstep["parameters"]:
                     logger.warning(
