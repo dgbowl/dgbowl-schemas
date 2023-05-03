@@ -96,11 +96,11 @@ class Fusion_csv(FileType):
 
 
 class Agilent_ch(FileType):
-    filetype: Literal["agilent.ch"]
+    filetype: Literal["agilent.ch", "marda:agilent-ch"]
 
 
 class Agilent_dx(FileType):
-    filetype: Literal["agilent.dx"]
+    filetype: Literal["agilent.dx", "marda:agilent-dx"]
 
 
 class Agilent_csv(FileType):
@@ -148,14 +148,14 @@ QFTraceFileTypes = LabView_csv
 
 
 class Phi_spe(FileType):
-    filetype: Literal["phi.spe"]
+    filetype: Literal["phi.spe", "marda:phi-spe"]
 
 
 XPSTraceFileTypes = Phi_spe
 
 
 class Panalytical_xrdml(FileType):
-    filetype: Literal["panalytical.xrdml"]
+    filetype: Literal["panalytical.xrdml", "marda:panalytical-xrdml"]
 
 
 class Panalytical_xy(FileType):
