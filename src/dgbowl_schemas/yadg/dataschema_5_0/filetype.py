@@ -175,10 +175,10 @@ XRDTraceFileTypes = Union[
 
 class ExtractorFactory(BaseModel):
     extractor: Union[
-        DummyFileTypes,
+        # DummyFileTypes,
         FlowDataFileTypes,
         ElectroChemFileTypes,
-        ChromDataFileTypes,
+        # ChromDataFileTypes,
         ChromTraceFileTypes,
         MassTraceFileTypes,
         QFTraceFileTypes,
