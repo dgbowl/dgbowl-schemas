@@ -41,3 +41,21 @@ def test_recipe_from_json(inpath, outdict, datadir):
         indict = json.load(infile)
     ret = to_recipe(**indict).dict(by_alias=True, exclude_none=True)
     assert outdict == ret
+
+
+@pytest.mark.parametrize(
+    "inpath",
+    [
+        ("le_1.yaml"),  # 1.0
+        ("letp_1.yaml"),  # 1.0
+    ],
+)
+def test_recipe_update_chain(inpath, datadir):
+    os.chdir(datadir)
+    with open(inpath, "r") as infile:
+        jsdata = yaml.safe_load(infile)
+    ret = to_recipe(**jsdata)
+    while hasattr(ret, "update"):
+        print("here")
+        ret = ret.update()
+    assert ret.version == "2.1"

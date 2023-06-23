@@ -1,12 +1,14 @@
 import logging
 from pydantic import ValidationError
+from .recipe_2_1 import Recipe as Recipe_2_1
 from .recipe_1_0 import Recipe as Recipe_1_0
 
 logger = logging.getLogger(__name__)
 
-Recipe = Recipe_1_0
+Recipe = Recipe_2_1
 
 models = {
+    "2.1": Recipe_2_1,
     "1.0": Recipe_1_0,
 }
 
