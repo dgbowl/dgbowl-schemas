@@ -11,7 +11,7 @@ class At(BaseModel, extra="forbid"):
     timestamps: Sequence[float] = None
 
     @root_validator(pre=True)
-    def check_one_input(cls, values):
+    def check_one_input(cls, values):  # pylint: disable=E0213
         keys = {"step", "steps", "index", "indices", "timestamp"}
         assert len(keys.intersection(set(values))) == 1, (
             "multiple keys provided: " f"{keys.intersection(values)}"
@@ -42,7 +42,7 @@ class Extract(BaseModel, extra="forbid"):
     columns: Optional[Sequence[Column]]
 
     @root_validator(pre=True)
-    def check_one_input(cls, values):
+    def check_one_input(cls, values):  # pylint: disable=E0213
         keys = {"constants", "columns"}
         if len(keys.intersection(set(values))) == 0:
             logging.info("did not provide any of '%s'", keys)
