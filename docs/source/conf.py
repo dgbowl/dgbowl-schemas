@@ -20,7 +20,7 @@ version = "master"
 # -- Project information -----------------------------------------------------
 
 project = "dgbowl-schemas"
-copyright = "2022, dgbowl authors"
+copyright = "2022 - 2023, dgbowl authors"
 author = "Peter Kraus"
 release = version
 
