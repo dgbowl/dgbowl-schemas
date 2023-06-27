@@ -30,7 +30,7 @@ def test_recipe_from_yml(inpath, outdict, datadir):
     os.chdir(datadir)
     with open(inpath, "r") as infile:
         indict = yaml.safe_load(infile)
-    ret = to_recipe(**indict).dict(by_alias=True, exclude_none=True)
+    ret = to_recipe(**indict).dict(by_alias=True)
     assert outdict == ret
 
 
@@ -42,7 +42,7 @@ def test_recipe_from_json(inpath, outdict, datadir):
     os.chdir(datadir)
     with open(inpath, "r") as infile:
         indict = json.load(infile)
-    ret = to_recipe(**indict).dict(by_alias=True, exclude_none=True)
+    ret = to_recipe(**indict).dict(by_alias=True)
     assert outdict == ret
 
 
