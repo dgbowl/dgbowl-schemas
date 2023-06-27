@@ -25,7 +25,7 @@ class Load(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
 
         The ``check`` attribute of :class:`Load` has been deprecated. The passed value
         is currently ignored, however it **will cause an error** in future versions of
-        :class:`~dgbowl_schemas.dgpost.Recipe`.
+        :class:`~dgbowl_schemas.Recipe`.
 
     """
 
