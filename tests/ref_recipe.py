@@ -12,13 +12,17 @@ ts0 = {
         {
             "into": "table 1",
             "from": "sparse",
-            "at": {"steps": ["a"]},
+            "at": {"steps": ["a"], "indices": None, "timestamps": None},
             "columns": [
                 {"key": "raw->T_f", "as": "rawT"},
                 {"key": "derived->T", "as": "derT"},
             ],
+            "constants": None,
         }
     ],
+    "transform": None,
+    "plot": None,
+    "save": None,
 }
 
 ts1 = {
@@ -41,24 +45,31 @@ ts1 = {
         {
             "into": "table 1",
             "from": "sparse",
-            "at": {"steps": ["a"]},
+            "at": {"steps": ["a"], "indices": None, "timestamps": None},
             "columns": [
                 {"key": "raw->T_f", "as": "rawT"},
                 {"key": "derived->T", "as": "derT"},
             ],
+            "constants": None,
         },
         {
             "into": "table 2",
             "from": "norm",
-            "at": {"indices": [0, 1, 2]},
+            "at": {"indices": [0, 1, 2], "steps": None, "timestamps": None},
+            "columns": None,
+            "constants": None,
         },
         {
             "into": "table 2",
             "from": "norm",
-            "at": {"steps": ["a"]},
+            "at": {"steps": ["a"], "indices": None, "timestamps": None},
             "columns": [{"key": "derived->xin->*", "as": "xin"}],
+            "constants": None,
         },
     ],
+    "transform": None,
+    "plot": None,
+    "save": None,
 }
 
 ts2 = {
@@ -81,19 +92,24 @@ ts2 = {
         {
             "into": "df",
             "from": "norm",
-            "at": {"steps": ["a"]},
+            "at": {"steps": ["a"], "indices": None, "timestamps": None},
             "columns": [
                 {"key": "raw->T_f", "as": "rawT"},
                 {"key": "derived->T", "as": "derT"},
             ],
+            "constants": None,
         },
         {
             "into": "df",
             "from": "sparse",
-            "at": {"steps": ["b1", "b2", "b3"]},
+            "at": {"steps": ["b1", "b2", "b3"], "indices": None, "timestamps": None},
             "columns": [{"key": "derived->xout->*", "as": "xout"}],
+            "constants": None,
         },
     ],
+    "transform": None,
+    "plot": None,
+    "save": None,
 }
 
 ts3 = {
@@ -116,24 +132,31 @@ ts3 = {
         {
             "into": "df",
             "from": "norm",
-            "at": {"steps": ["a"]},
+            "at": {"steps": ["a"], "indices": None, "timestamps": None},
             "columns": [
                 {"key": "raw->T_f", "as": "rawT"},
                 {"key": "derived->T", "as": "derT"},
             ],
+            "constants": None,
         },
         {
             "into": "temp",
             "from": "sparse",
-            "at": {"steps": ["b1", "b2", "b3"]},
+            "at": {"steps": ["b1", "b2", "b3"], "indices": None, "timestamps": None},
             "columns": [{"key": "derived->xout->*", "as": "xout"}],
+            "constants": None,
         },
         {
             "into": "df",
             "from": "temp",
+            "at": None,
             "columns": [{"key": "xout->*", "as": "xout"}],
+            "constants": None,
         },
     ],
+    "transform": None,
+    "plot": None,
+    "save": None,
 }
 
 ts4 = {
@@ -150,18 +173,21 @@ ts4 = {
         {
             "into": "table 1",
             "from": "sparse",
-            "at": {"steps": ["a"]},
+            "at": {"steps": ["a"], "indices": None, "timestamps": None},
             "columns": [
                 {"key": "raw->T_f", "as": "rawT"},
                 {"key": "derived->T", "as": "derT"},
             ],
+            "constants": None,
         },
     ],
+    "transform": None,
+    "plot": None,
     "save": [
-        {"table": "table 1", "as": "sparse.pkl", "sigma": True},
-        {"table": "table 1", "as": "sparse.json", "sigma": True},
-        {"table": "table 1", "as": "sparse.csv", "sigma": True},
-        {"table": "table 1", "as": "sparse.xlsx", "sigma": True},
+        {"table": "table 1", "as": "sparse.pkl", "sigma": True, "type": None},
+        {"table": "table 1", "as": "sparse.json", "sigma": True, "type": None},
+        {"table": "table 1", "as": "sparse.csv", "sigma": True, "type": None},
+        {"table": "table 1", "as": "sparse.xlsx", "sigma": True, "type": None},
     ],
 }
 
@@ -179,13 +205,16 @@ ts5 = {
         {
             "into": "table 1",
             "from": "sparse",
-            "at": {"steps": ["a"]},
+            "at": {"steps": ["a"], "indices": None, "timestamps": None},
             "columns": [
                 {"key": "raw->T_f", "as": "rawT"},
                 {"key": "derived->T", "as": "derT"},
             ],
+            "constants": None,
         },
     ],
+    "transform": None,
+    "plot": None,
     "save": [
         {
             "table": "table 1",
@@ -210,18 +239,20 @@ ts6 = {
         {
             "into": "df",
             "from": "dg",
-            "at": {"indices": [2, 3, 4]},
+            "at": {"indices": [2, 3, 4], "steps": None, "timestamps": None},
             "columns": [
                 {"key": "derived->xout->*", "as": "xout"},
             ],
+            "constants": None,
         },
         {
             "into": "df",
             "from": "dg",
-            "at": {"indices": [1]},
+            "at": {"indices": [1], "steps": None, "timestamps": None},
             "columns": [
                 {"key": "derived->xin->*", "as": "xin"},
             ],
+            "constants": None,
         },
     ],
     "transform": [
@@ -249,6 +280,8 @@ ts6 = {
             ],
         }
     ],
+    "plot": None,
+    "save": None,
 }
 
 ts7 = {
@@ -265,18 +298,20 @@ ts7 = {
         {
             "into": "df",
             "from": "dg",
-            "at": {"steps": ["b1", "b2", "b3"]},
+            "at": {"steps": ["b1", "b2", "b3"], "indices": None, "timestamps": None},
             "columns": [
                 {"key": "derived->xout->*", "as": "xout"},
             ],
+            "constants": None,
         },
         {
             "into": "df",
             "from": "dg",
-            "at": {"steps": ["a"]},
+            "at": {"steps": ["a"], "indices": None, "timestamps": None},
             "columns": [
                 {"key": "derived->xin->*", "as": "xin"},
             ],
+            "constants": None,
         },
     ],
     "transform": [
@@ -291,6 +326,8 @@ ts7 = {
             "using": [{"xin": "xin", "xout": "xout"}],
         },
     ],
+    "plot": None,
+    "save": None,
 }
 
 ts8 = {
@@ -307,18 +344,20 @@ ts8 = {
         {
             "into": "df",
             "from": "dg",
-            "at": {"steps": ["b1", "b2", "b3"]},
+            "at": {"steps": ["b1", "b2", "b3"], "indices": None, "timestamps": None},
             "columns": [
                 {"key": "derived->xout->*", "as": "xout"},
             ],
+            "constants": None,
         },
         {
             "into": "df",
             "from": "dg",
-            "at": {"steps": ["a"]},
+            "at": {"steps": ["a"], "indices": None, "timestamps": None},
             "columns": [
                 {"key": "derived->xin->*", "as": "xin"},
             ],
+            "constants": None,
         },
     ],
     "transform": [
@@ -341,30 +380,39 @@ ts8 = {
             "ax_args": [
                 {
                     "rows": (0, 1),
+                    "cols": None,
                     "series": [
                         {
+                            "x": None,
                             "y": "Sp_C->*",
-                            "index": {"from_zero": True},
+                            "index": {"from_zero": True, "to_units": None},
                             "kind": "scatter",
                         }
                     ],
                     "legend": True,
+                    "methods": None,
                 },
                 {
                     "rows": (1, 2),
+                    "cols": None,
                     "series": [
                         {
+                            "x": None,
                             "y": "xout->*",
-                            "index": {"from_zero": True},
+                            "index": {"from_zero": True, "to_units": None},
                             "kind": "line",
                         }
                     ],
                     "legend": True,
+                    "methods": None,
                 },
             ],
-            "save": {"as": "test.png"},
+            "save": {"as": "test.png", "tight_layout": None},
+            "style": None,
+            "fig_args": None,
         }
     ],
+    "save": None,
 }
 
 ts9 = {
@@ -385,48 +433,61 @@ ts9 = {
             "ax_args": [
                 {
                     "rows": (0, 2),
+                    "cols": None,
                     "series": [
                         {
+                            "x": None,
                             "y": "fe->H2",
-                            "index": {"from_zero": True},
+                            "index": {"from_zero": True, "to_units": None},
                             "kind": "scatter",
                         },
                         {
+                            "x": None,
                             "y": "fe->C2H4",
-                            "index": {"from_zero": True},
+                            "index": {"from_zero": True, "to_units": None},
                             "kind": "scatter",
                         },
                         {
+                            "x": None,
                             "y": "fe->CO",
-                            "index": {"from_zero": True},
+                            "index": {"from_zero": True, "to_units": None},
                             "kind": "scatter",
                         },
                         {
+                            "x": None,
                             "y": "fe->CH4",
-                            "index": {"from_zero": True},
+                            "index": {"from_zero": True, "to_units": None},
                             "kind": "scatter",
                         },
                     ],
+                    "methods": None,
                     "legend": True,
                     "ylabel": "$\\eta_F$",
                 },
                 {
                     "rows": (2, 3),
+                    "cols": None,
                     "series": [
                         {
+                            "x": None,
                             "y": "I",
-                            "index": {"from_zero": True},
+                            "index": {"from_zero": True, "to_units": None},
                             "kind": "scatter",
                         },
                     ],
                     "legend": False,
+                    "methods": None,
                 },
             ],
-            "save": {"as": "test.png"},
+            "fig_args": None,
+            "style": None,
+            "save": {"as": "test.png", "tight_layout": None},
         }
     ],
+    "extract": None,
+    "transform": None,
+    "save": None,
 }
-
 
 js0 = {
     "version": "v1.0",
@@ -438,15 +499,19 @@ js0 = {
         {
             "into": "t1",
             "from": "d2",
-            "at": {"indices": [4]},
+            "at": {"indices": [4], "steps": None, "timestamps": None},
+            "constants": None,
             "columns": [{"key": "raw->T_f", "as": "rawT"}],
         },
         {
             "into": "t1",
+            "from": None,
+            "at": None,
             "constants": [
                 {"value": "0.65(5)", "as": "m", "units": "kg"},
-                {"value": 0.53, "as": "x"},
+                {"value": 0.53, "as": "x", "units": None},
             ],
+            "columns": None,
         },
     ],
     "transform": [
@@ -457,4 +522,57 @@ js0 = {
         }
     ],
     "save": [{"table": "t1", "as": "sparse.csv", "type": "csv", "sigma": False}],
+    "plot": None,
+}
+
+pivot1 = {
+    "version": "2.1",
+    "load": [
+        {
+            "as": "tab",
+            "path": "table.pkl",
+            "type": "table",
+            "check": None,
+        },
+    ],
+    "extract": None,
+    "pivot": [
+        {
+            "table": "tab",
+            "using": "cycle number",
+            "as": "tab_pivot",
+            "columns": ["Ewe", "I"],
+            "timestamp": "first",
+            "timedelta": "t-t0",
+        }
+    ],
+    "transform": None,
+    "save": None,
+    "plot": None,
+}
+
+pivot2 = {
+    "version": "2.1",
+    "load": [
+        {
+            "as": "tab",
+            "path": "table.pkl",
+            "type": "table",
+            "check": None,
+        },
+    ],
+    "extract": None,
+    "pivot": [
+        {
+            "table": "tab",
+            "using": ["cycle number", "ox/red"],
+            "as": "tab_pivot",
+            "columns": None,
+            "timestamp": "mean",
+            "timedelta": None,
+        }
+    ],
+    "transform": None,
+    "save": None,
+    "plot": None,
 }

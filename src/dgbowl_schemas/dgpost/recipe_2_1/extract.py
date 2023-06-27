@@ -35,11 +35,22 @@ class Column(BaseModel, extra="forbid"):
 
 
 class Extract(BaseModel, extra="forbid"):
+    """Extract columns from loaded files into tables, interpolate as necessary."""
+
     into: str
+    """Name of a new, or existing / loaded table into which the extraction happens."""
+
     from_: Optional[str] = Field(alias="from")
+    """Name of the source object for the extracted data."""
+
     at: Optional[At]
-    constants: Optional[Sequence[Constant]]
+    """Specification of the steps (or data indices) from which data is to be extracted."""
+
     columns: Optional[Sequence[Column]]
+    """Specifications for the columns to be extracted, including new headers."""
+
+    constants: Optional[Sequence[Constant]]
+    """Specifications for additional columns containing data constants, including units."""
 
     @root_validator(pre=True)
     def check_one_input(cls, values):  # pylint: disable=E0213
