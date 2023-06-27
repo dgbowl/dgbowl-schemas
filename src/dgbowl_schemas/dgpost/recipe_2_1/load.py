@@ -30,7 +30,7 @@ class Load(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
     """
 
     @validator("check")
-    def check_is_deprecated(cls, v):
+    def check_is_deprecated(cls, v):  # pylint: disable=E0213
         if isinstance(v, bool):
             logger.warning("Recipe->Load->check has been deprecated in Recipe-2.1.")
             return None
