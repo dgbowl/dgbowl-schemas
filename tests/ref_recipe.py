@@ -458,3 +458,43 @@ js0 = {
     ],
     "save": [{"table": "t1", "as": "sparse.csv", "type": "csv", "sigma": False}],
 }
+
+
+pivot1 = {
+    "version": "2.1",
+    "load": [
+        {
+            "as": "tab",
+            "path": "table.pkl",
+            "type": "table",
+        },
+    ],
+    "pivot": [
+        {
+            "table": "tab",
+            "using": "cycle number",
+            "as": "tab_pivot",
+            "columns": ["Ewe", "I"],
+            "timestamp": "first",
+        }
+    ],
+}
+
+pivot2 = {
+    "version": "2.1",
+    "load": [
+        {
+            "as": "tab",
+            "path": "table.pkl",
+            "type": "table",
+        },
+    ],
+    "pivot": [
+        {
+            "table": "tab",
+            "using": ["cycle number", "ox/red"],
+            "as": "tab_pivot",
+            "timestamp": "mean",
+        }
+    ],
+}

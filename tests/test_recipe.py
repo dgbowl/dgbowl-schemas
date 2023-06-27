@@ -6,6 +6,7 @@ from dgbowl_schemas import to_recipe
 
 from ref_recipe import ts0, ts1, ts2, ts3, ts4, ts5, ts6, ts7, ts8, ts9
 from ref_recipe import js0
+from ref_recipe import pivot1, pivot2
 
 
 @pytest.mark.parametrize(
@@ -21,6 +22,8 @@ from ref_recipe import js0
         ("let_2.yaml", ts7),
         ("letp_1.yaml", ts8),
         ("lp_1.yaml", ts9),
+        ("pivot_1.yaml", pivot1),
+        ("pivot_2.yaml", pivot2),
     ],
 )
 def test_recipe_from_yml(inpath, outdict, datadir):
