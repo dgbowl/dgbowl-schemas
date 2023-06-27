@@ -489,7 +489,6 @@ ts9 = {
     "save": None,
 }
 
-
 js0 = {
     "version": "v1.0",
     "load": [
@@ -526,7 +525,6 @@ js0 = {
     "plot": None,
 }
 
-
 pivot1 = {
     "version": "2.1",
     "load": [
@@ -545,6 +543,7 @@ pivot1 = {
             "as": "tab_pivot",
             "columns": ["Ewe", "I"],
             "timestamp": "first",
+            "timedelta": "t-t0",
         }
     ],
     "transform": None,
@@ -570,6 +569,7 @@ pivot2 = {
             "as": "tab_pivot",
             "columns": None,
             "timestamp": "mean",
+            "timedelta": None,
         }
     ],
     "transform": None,

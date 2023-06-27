@@ -8,3 +8,4 @@ pivot:
     using: cycle number
     as: tab_pivot
     columns: ["Ewe", "I"]
+    timedelta: t-t0
