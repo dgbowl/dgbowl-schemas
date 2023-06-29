@@ -76,7 +76,6 @@ autosummary_generate = True
 autodoc_default_flags = [
     "members",
     "undoc-members",
-    "imported-members",
     "show-inheritance",
 ]
 autodoc_member_order = "bysource"

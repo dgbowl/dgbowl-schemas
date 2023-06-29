@@ -14,8 +14,6 @@ from .dataschema_4_0 import DataSchema as DataSchema_4_0, Metadata as Metadata_4
 
 logger = logging.getLogger(__name__)
 
-DataSchema = DataSchema_5_0
-
 models = {
     "5.0": (DataSchema_5_0, Metadata_5_0),
     "4.2": (DataSchema_4_2, Metadata_4_2),
@@ -50,6 +48,5 @@ def to_dataschema(**kwargs):
 
 __all__ = [
     "dataschema",
-    "DataSchema",
     "to_dataschema",
 ]
