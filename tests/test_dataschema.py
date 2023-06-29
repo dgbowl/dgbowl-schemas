@@ -1,8 +1,8 @@
 import pytest
 import os
 import json
-from dgbowl_schemas import to_dataschema
-from dgbowl_schemas.yadg import ExtractorFactory
+from dgbowl_schemas.yadg import to_dataschema
+from dgbowl_schemas.yadg.dataschema import ExtractorFactory
 import locale
 
 

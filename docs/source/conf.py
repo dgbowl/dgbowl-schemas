@@ -38,6 +38,7 @@ extensions = [
     "sphinx_autodoc_typehints",
     "sphinx_rtd_theme",
     "sphinxcontrib.autodoc_pydantic",
+    "sphinx.ext.intersphinx",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -72,7 +73,16 @@ html_theme_options = {
 # -- Extension configuration -------------------------------------------------
 
 autosummary_generate = True
-autodoc_default_flags = ["members", "undoc-members", "show-inheritance"]
+autodoc_default_flags = [
+    "members",
+    "undoc-members",
+    "show-inheritance",
+]
 autodoc_member_order = "bysource"
 autodoc_pydantic_model_show_field_summary = False
 autodoc_pydantic_model_member_order = "bysource"
+intersphinx_mapping = {
+    "dgpost": ("https://dgbowl.github.io/dgpost/master", None),
+    "yadg": ("https://dgbowl.github.io/yadg/master", None),
+    "tomato": ("https://dgbowl.github.io/tomato/master", None),
+}
