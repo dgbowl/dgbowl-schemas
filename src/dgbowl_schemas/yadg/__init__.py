@@ -1,12 +1,7 @@
 from pydantic import ValidationError
 import logging
 from . import dataschema
-from .dataschema_5_0 import (
-    DataSchema as DataSchema_5_0,
-    Metadata as Metadata_5_0,
-    FileType as FileType_5_0,
-    ExtractorFactory as ExtractorFactory_5_0,
-)
+from .dataschema_5_0 import DataSchema as DataSchema_5_0, Metadata as Metadata_5_0
 from .dataschema_4_2 import DataSchema as DataSchema_4_2, Metadata as Metadata_4_2
 from .dataschema_4_1 import DataSchema as DataSchema_4_1, Metadata as Metadata_4_1
 from .dataschema_4_0 import DataSchema as DataSchema_4_0, Metadata as Metadata_4_0
