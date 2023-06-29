@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dgbowl_schemas.yadg.dataschema_4_0 package &mdash; dgbowl-schemas master documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/autodoc_pydantic.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="dgbowl_schemas.yadg.dataschema_4_0.externaldate.html" />
+    <link rel="prev" title="dgbowl_schemas.yadg.dataschema package" href="dgbowl_schemas.yadg.dataschema.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            dgbowl-schemas
+          </a>
+              <div class="version">
+                master
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">dgbowl-schemas autodocs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="dgbowl_schemas.html">dgbowl_schemas package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="dgbowl_schemas.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.dgpost.html">dgbowl_schemas.dgpost package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.tomato.html">dgbowl_schemas.tomato package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="dgbowl_schemas.yadg.html">dgbowl_schemas.yadg package</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="dgbowl_schemas.yadg.html#dgbowl_schemas.yadg.to_dataschema"><code class="docutils literal notranslate"><span class="pre">to_dataschema()</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="dgbowl_schemas.yadg.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema.html">dgbowl_schemas.yadg.dataschema package</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">dgbowl_schemas.yadg.dataschema_4_0 package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_4_0.DataSchema"><code class="docutils literal notranslate"><span class="pre">DataSchema</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.html">dgbowl_schemas.yadg.dataschema_4_1 package</a></li>
+<li class="toctree-l5"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_2.html">dgbowl_schemas.yadg.dataschema_4_2 package</a></li>
+<li class="toctree-l5"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_5_0.html">dgbowl_schemas.yadg.dataschema_5_0 package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">dgbowl-schemas</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="dgbowl_schemas.html">dgbowl_schemas package</a></li>
+          <li class="breadcrumb-item"><a href="dgbowl_schemas.yadg.html">dgbowl_schemas.yadg package</a></li>
+      <li class="breadcrumb-item active">dgbowl_schemas.yadg.dataschema_4_0 package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/apidoc/dgbowl_schemas.yadg.dataschema_4_0.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-dgbowl_schemas.yadg.dataschema_4_0">
+<span id="dgbowl-schemas-yadg-dataschema-4-0-package"></span><h1>dgbowl_schemas.yadg.dataschema_4_0 package<a class="headerlink" href="#module-dgbowl_schemas.yadg.dataschema_4_0" title="Permalink to this heading"></a></h1>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_0.DataSchema">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.yadg.dataschema_4_0.</span></span><span class="sig-name descname"><span class="pre">DataSchema</span></span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.DataSchema" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p><details  class="autodoc_pydantic_collapsable_json">
+<summary>Show JSON schema</summary><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">   </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DataSchema&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;metadata&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/Metadata&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;steps&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Steps&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;discriminator&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;propertyName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;parser&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;dummy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/Dummy&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;basiccsv&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/BasicCSV&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;meascsv&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/MeasCSV&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;flowdata&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/FlowData&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;electrochem&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/ElectroChem&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;chromtrace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/ChromTrace&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;masstrace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/MassTrace&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;qftrace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/QFTrace&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="nt">&quot;xpstrace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/XPSTrace&quot;</span>
+<span class="w">               </span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;oneOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">               </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/Dummy&quot;</span>
+<span class="w">               </span><span class="p">},</span>
+<span class="w">               </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/BasicCSV&quot;</span>
+<span class="w">               </span><span class="p">},</span>
+<span class="w">               </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/MeasCSV&quot;</span>
+<span class="w">               </span><span class="p">},</span>
+<span class="w">               </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/FlowData&quot;</span>
+<span class="w">               </span><span class="p">},</span>
+<span class="w">               </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/ElectroChem&quot;</span>
+<span class="w">               </span><span class="p">},</span>
+<span class="w">               </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/ChromTrace&quot;</span>
+<span class="w">               </span><span class="p">},</span>
+<span class="w">               </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/MassTrace&quot;</span>
+<span class="w">               </span><span class="p">},</span>
+<span class="w">               </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/QFTrace&quot;</span>
+<span class="w">               </span><span class="p">},</span>
+<span class="w">               </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/XPSTrace&quot;</span>
+<span class="w">               </span><span class="p">}</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">         </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">   </span><span class="p">},</span>
+<span class="w">   </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="s2">&quot;metadata&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;steps&quot;</span>
+<span class="w">   </span><span class="p">],</span>
+<span class="w">   </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;definitions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;Metadata&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Metadata&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;schema_version&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Schema Version&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;4.0&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s2">&quot;4.0.0&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s2">&quot;4.0.1&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;provenance&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Provenance&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Timezone&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;localtime&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;schema_version&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;provenance&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;Input&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Input&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;files&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Files&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">               </span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;folders&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Folders&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">               </span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Prefix&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;suffix&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Suffix&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;contains&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Contains&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;exclude&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Exclude&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;encoding&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Encoding&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;UTF-8&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;dgbowl_schemas__yadg__dataschema_4_0__step__Dummy__Params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Params&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;dgbowl_schemas__yadg__dataschema_4_0__externaldate__ExternalDateFile__Content&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Content&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Path&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Type&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;match&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Match&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;path&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;type&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;ExternalDateFile&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ExternalDateFile&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;file&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/dgbowl_schemas__yadg__dataschema_4_0__externaldate__ExternalDateFile__Content&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;file&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;dgbowl_schemas__yadg__dataschema_4_0__externaldate__ExternalDateFilename__Content&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Content&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Format&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;len&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Len&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;integer&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;format&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;len&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;ExternalDateFilename&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ExternalDateFilename&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;filename&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/dgbowl_schemas__yadg__dataschema_4_0__externaldate__ExternalDateFilename__Content&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;filename&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;ExternalDateISOString&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ExternalDateISOString&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;isostring&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Isostring&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;isostring&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;ExternalDateUTSOffset&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ExternalDateUTSOffset&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;utsoffset&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Utsoffset&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;utsoffset&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;ExternalDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ExternalDate&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;from&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;From&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="p">{</span>
+<span class="w">                     </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/ExternalDateFile&quot;</span>
+<span class="w">                  </span><span class="p">},</span>
+<span class="w">                  </span><span class="p">{</span>
+<span class="w">                     </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/ExternalDateFilename&quot;</span>
+<span class="w">                  </span><span class="p">},</span>
+<span class="w">                  </span><span class="p">{</span>
+<span class="w">                     </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/ExternalDateISOString&quot;</span>
+<span class="w">                  </span><span class="p">},</span>
+<span class="w">                  </span><span class="p">{</span>
+<span class="w">                     </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/ExternalDateUTSOffset&quot;</span>
+<span class="w">                  </span><span class="p">}</span>
+<span class="w">               </span><span class="p">]</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Mode&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;add&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;add&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s2">&quot;replace&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;from&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;Dummy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Dummy&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;parser&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Parser&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;dummy&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;import&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/Input&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;parameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/dgbowl_schemas__yadg__dataschema_4_0__step__Dummy__Params&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;tag&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tag&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;externaldate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/ExternalDate&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;export&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Export&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;parser&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;import&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;Tol&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tol&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;atol&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Atol&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;rtol&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Rtol&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;TimestampSpec&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TimestampSpec&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;index&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Index&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;integer&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Format&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;Timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Timestamp&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/TimestampSpec&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;timestamp&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;TimeDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TimeDate&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/TimestampSpec&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/TimestampSpec&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;UTS&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;UTS&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;uts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/TimestampSpec&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;uts&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;dgbowl_schemas__yadg__dataschema_4_0__step__BasicCSV__Params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Params&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;sep&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sep&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;,&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;sigma&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sigma&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/Tol&quot;</span>
+<span class="w">               </span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;calfile&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Calfile&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Timestamp&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="p">{</span>
+<span class="w">                     </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/Timestamp&quot;</span>
+<span class="w">                  </span><span class="p">},</span>
+<span class="w">                  </span><span class="p">{</span>
+<span class="w">                     </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/TimeDate&quot;</span>
+<span class="w">                  </span><span class="p">},</span>
+<span class="w">                  </span><span class="p">{</span>
+<span class="w">                     </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/UTS&quot;</span>
+<span class="w">                  </span><span class="p">}</span>
+<span class="w">               </span><span class="p">]</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;convert&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Convert&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;units&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Units&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">               </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;BasicCSV&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BasicCSV&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;parser&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Parser&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;basiccsv&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;import&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/Input&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;parameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/dgbowl_schemas__yadg__dataschema_4_0__step__BasicCSV__Params&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;tag&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tag&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;externaldate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/ExternalDate&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;export&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Export&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;parser&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;import&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;dgbowl_schemas__yadg__dataschema_4_0__step__MeasCSV__Params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Params&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Timestamp&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                     </span><span class="nt">&quot;index&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                     </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;%Y-%m-%d-%H-%M-%S&quot;</span>
+<span class="w">                  </span><span class="p">}</span>
+<span class="w">               </span><span class="p">},</span>
+<span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="p">{</span>
+<span class="w">                     </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/Timestamp&quot;</span>
+<span class="w">                  </span><span class="p">},</span>
+<span class="w">                  </span><span class="p">{</span>
+<span class="w">                     </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/TimeDate&quot;</span>
+<span class="w">                  </span><span class="p">},</span>
+<span class="w">                  </span><span class="p">{</span>
+<span class="w">                     </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/UTS&quot;</span>
+<span class="w">                  </span><span class="p">}</span>
+<span class="w">               </span><span class="p">]</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;calfile&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Calfile&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;convert&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Convert&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;MeasCSV&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MeasCSV&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;parser&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Parser&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;meascsv&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;import&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/Input&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;parameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/dgbowl_schemas__yadg__dataschema_4_0__step__MeasCSV__Params&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;tag&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tag&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;externaldate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/ExternalDate&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;export&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Export&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;parser&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;import&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;dgbowl_schemas__yadg__dataschema_4_0__step__FlowData__Params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Params&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;drycal&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;drycal&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s2">&quot;drycal.csv&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s2">&quot;drycal.rtf&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s2">&quot;drycal.txt&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;convert&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Convert&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;calfile&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Calfile&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;FlowData&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FlowData&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;parser&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Parser&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;flowdata&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;import&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/Input&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;parameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/dgbowl_schemas__yadg__dataschema_4_0__step__FlowData__Params&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;tag&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tag&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;externaldate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/ExternalDate&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;export&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Export&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;parser&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;import&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;ECInput&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ECInput&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;files&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Files&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">               </span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;folders&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Folders&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">               </span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Prefix&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;suffix&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Suffix&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;contains&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Contains&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;exclude&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Exclude&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;encoding&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Encoding&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;windows-1252&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;dgbowl_schemas__yadg__dataschema_4_0__step__ElectroChem__Params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Params&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eclab.mpr&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;eclab.mpt&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s2">&quot;eclab.mpr&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;ElectroChem&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ElectroChem&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;parser&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Parser&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;electrochem&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;import&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/ECInput&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;parameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/dgbowl_schemas__yadg__dataschema_4_0__step__ElectroChem__Params&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;tag&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tag&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;externaldate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/ExternalDate&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;export&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Export&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;parser&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;import&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;dgbowl_schemas__yadg__dataschema_4_0__step__ChromTrace__Params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Params&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;tracetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tracetype&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ezchrom.asc&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;ezchrom.asc&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s2">&quot;fusion.json&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s2">&quot;fusion.zip&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s2">&quot;agilent.ch&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s2">&quot;agilent.dx&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s2">&quot;agilent.csv&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;calfile&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Calfile&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;species&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Species&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;detectors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Detectors&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;ChromTrace&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ChromTrace&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;parser&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Parser&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;chromtrace&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;import&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/Input&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;parameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/dgbowl_schemas__yadg__dataschema_4_0__step__ChromTrace__Params&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;tag&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tag&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;externaldate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/ExternalDate&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;export&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Export&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;parser&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;import&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;dgbowl_schemas__yadg__dataschema_4_0__step__MassTrace__Params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Params&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;tracetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tracetype&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;quadstar.sac&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;quadstar.sac&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;MassTrace&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MassTrace&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;parser&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Parser&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;masstrace&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;import&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/Input&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;parameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/dgbowl_schemas__yadg__dataschema_4_0__step__MassTrace__Params&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;tag&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tag&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;externaldate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/ExternalDate&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;export&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Export&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;parser&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;import&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;dgbowl_schemas__yadg__dataschema_4_0__step__QFTrace__Params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Params&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;tracetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tracetype&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;labview.csv&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;labview.csv&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;method&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Method&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kajfez&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;naive&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s2">&quot;lorentz&quot;</span><span class="p">,</span>
+<span class="w">                  </span><span class="s2">&quot;kajfez&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Height&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;distance&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Distance&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">5000.0</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;cutoff&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Cutoff&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.4</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;threshold&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Threshold&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1e-06</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;QFTrace&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;QFTrace&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;parser&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Parser&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;qftrace&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;import&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/Input&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;parameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/dgbowl_schemas__yadg__dataschema_4_0__step__QFTrace__Params&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;tag&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tag&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;externaldate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/ExternalDate&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;export&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Export&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;parser&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;import&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;dgbowl_schemas__yadg__dataschema_4_0__step__XPSTrace__Params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Params&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;tracetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tracetype&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;phi.spe&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;phi.spe&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;XPSTrace&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;XPSTrace&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;parser&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Parser&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;xpstrace&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;import&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/Input&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;parameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/dgbowl_schemas__yadg__dataschema_4_0__step__XPSTrace__Params&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;tag&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tag&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;externaldate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/ExternalDate&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;export&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Export&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;parser&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;import&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</details></p><dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_0.DataSchema.metadata">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">metadata</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.metadata.html#dgbowl_schemas.yadg.dataschema_4_0.metadata.Metadata" title="dgbowl_schemas.yadg.dataschema_4_0.metadata.Metadata"><code class="xref py py-class docutils literal notranslate"><span class="pre">Metadata</span></code></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.DataSchema.metadata" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_0.DataSchema.steps">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">steps</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code><span class="pre">[</span><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code><span class="pre">[</span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.Dummy" title="dgbowl_schemas.yadg.dataschema_4_0.step.Dummy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dummy</span></code></a><span class="pre">,</span> <a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.BasicCSV" title="dgbowl_schemas.yadg.dataschema_4_0.step.BasicCSV"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasicCSV</span></code></a><span class="pre">,</span> <a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.MeasCSV" title="dgbowl_schemas.yadg.dataschema_4_0.step.MeasCSV"><code class="xref py py-class docutils literal notranslate"><span class="pre">MeasCSV</span></code></a><span class="pre">,</span> <a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.FlowData" title="dgbowl_schemas.yadg.dataschema_4_0.step.FlowData"><code class="xref py py-class docutils literal notranslate"><span class="pre">FlowData</span></code></a><span class="pre">,</span> <a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.ElectroChem" title="dgbowl_schemas.yadg.dataschema_4_0.step.ElectroChem"><code class="xref py py-class docutils literal notranslate"><span class="pre">ElectroChem</span></code></a><span class="pre">,</span> <a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.ChromTrace" title="dgbowl_schemas.yadg.dataschema_4_0.step.ChromTrace"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChromTrace</span></code></a><span class="pre">,</span> <a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.MassTrace" title="dgbowl_schemas.yadg.dataschema_4_0.step.MassTrace"><code class="xref py py-class docutils literal notranslate"><span class="pre">MassTrace</span></code></a><span class="pre">,</span> <a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.QFTrace" title="dgbowl_schemas.yadg.dataschema_4_0.step.QFTrace"><code class="xref py py-class docutils literal notranslate"><span class="pre">QFTrace</span></code></a><span class="pre">,</span> <a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.XPSTrace" title="dgbowl_schemas.yadg.dataschema_4_0.step.XPSTrace"><code class="xref py py-class docutils literal notranslate"><span class="pre">XPSTrace</span></code></a><span class="pre">]]</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.DataSchema.steps" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_0.DataSchema.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.DataSchema.update" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.externaldate.html"><code class="docutils literal notranslate"><span class="pre">ExternalDateFile</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.externaldate.html#dgbowl_schemas.yadg.dataschema_4_0.externaldate.ExternalDateFile.Content"><code class="docutils literal notranslate"><span class="pre">ExternalDateFile.Content</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.externaldate.html#dgbowl_schemas.yadg.dataschema_4_0.externaldate.ExternalDateFile.Content.path"><code class="docutils literal notranslate"><span class="pre">ExternalDateFile.Content.path</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.externaldate.html#dgbowl_schemas.yadg.dataschema_4_0.externaldate.ExternalDateFile.Content.type"><code class="docutils literal notranslate"><span class="pre">ExternalDateFile.Content.type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.externaldate.html#dgbowl_schemas.yadg.dataschema_4_0.externaldate.ExternalDateFile.Content.match"><code class="docutils literal notranslate"><span class="pre">ExternalDateFile.Content.match</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.externaldate.html#dgbowl_schemas.yadg.dataschema_4_0.externaldate.ExternalDateFile.file"><code class="docutils literal notranslate"><span class="pre">ExternalDateFile.file</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.externaldate.html#dgbowl_schemas.yadg.dataschema_4_0.externaldate.ExternalDateFilename"><code class="docutils literal notranslate"><span class="pre">ExternalDateFilename</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.externaldate.html#dgbowl_schemas.yadg.dataschema_4_0.externaldate.ExternalDateFilename.Content"><code class="docutils literal notranslate"><span class="pre">ExternalDateFilename.Content</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.externaldate.html#dgbowl_schemas.yadg.dataschema_4_0.externaldate.ExternalDateFilename.Content.format"><code class="docutils literal notranslate"><span class="pre">ExternalDateFilename.Content.format</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.externaldate.html#dgbowl_schemas.yadg.dataschema_4_0.externaldate.ExternalDateFilename.Content.len"><code class="docutils literal notranslate"><span class="pre">ExternalDateFilename.Content.len</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.externaldate.html#dgbowl_schemas.yadg.dataschema_4_0.externaldate.ExternalDateFilename.filename"><code class="docutils literal notranslate"><span class="pre">ExternalDateFilename.filename</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.externaldate.html#dgbowl_schemas.yadg.dataschema_4_0.externaldate.ExternalDateISOString"><code class="docutils literal notranslate"><span class="pre">ExternalDateISOString</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.externaldate.html#dgbowl_schemas.yadg.dataschema_4_0.externaldate.ExternalDateISOString.isostring"><code class="docutils literal notranslate"><span class="pre">ExternalDateISOString.isostring</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.externaldate.html#dgbowl_schemas.yadg.dataschema_4_0.externaldate.ExternalDateUTSOffset"><code class="docutils literal notranslate"><span class="pre">ExternalDateUTSOffset</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.externaldate.html#dgbowl_schemas.yadg.dataschema_4_0.externaldate.ExternalDateUTSOffset.utsoffset"><code class="docutils literal notranslate"><span class="pre">ExternalDateUTSOffset.utsoffset</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.externaldate.html#dgbowl_schemas.yadg.dataschema_4_0.externaldate.ExternalDate"><code class="docutils literal notranslate"><span class="pre">ExternalDate</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.externaldate.html#dgbowl_schemas.yadg.dataschema_4_0.externaldate.ExternalDate.using"><code class="docutils literal notranslate"><span class="pre">ExternalDate.using</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.externaldate.html#dgbowl_schemas.yadg.dataschema_4_0.externaldate.ExternalDate.mode"><code class="docutils literal notranslate"><span class="pre">ExternalDate.mode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.input.html"><code class="docutils literal notranslate"><span class="pre">Input</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.input.html#dgbowl_schemas.yadg.dataschema_4_0.input.Input.files"><code class="docutils literal notranslate"><span class="pre">Input.files</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.input.html#dgbowl_schemas.yadg.dataschema_4_0.input.Input.folders"><code class="docutils literal notranslate"><span class="pre">Input.folders</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.input.html#dgbowl_schemas.yadg.dataschema_4_0.input.Input.prefix"><code class="docutils literal notranslate"><span class="pre">Input.prefix</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.input.html#dgbowl_schemas.yadg.dataschema_4_0.input.Input.suffix"><code class="docutils literal notranslate"><span class="pre">Input.suffix</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.input.html#dgbowl_schemas.yadg.dataschema_4_0.input.Input.contains"><code class="docutils literal notranslate"><span class="pre">Input.contains</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.input.html#dgbowl_schemas.yadg.dataschema_4_0.input.Input.exclude"><code class="docutils literal notranslate"><span class="pre">Input.exclude</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.input.html#dgbowl_schemas.yadg.dataschema_4_0.input.Input.encoding"><code class="docutils literal notranslate"><span class="pre">Input.encoding</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.input.html#dgbowl_schemas.yadg.dataschema_4_0.input.Input.files_or_folders"><code class="docutils literal notranslate"><span class="pre">Input.files_or_folders</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.input.html#dgbowl_schemas.yadg.dataschema_4_0.input.Input.paths"><code class="docutils literal notranslate"><span class="pre">Input.paths()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.metadata.html"><code class="docutils literal notranslate"><span class="pre">Metadata</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.metadata.html#dgbowl_schemas.yadg.dataschema_4_0.metadata.Metadata.version"><code class="docutils literal notranslate"><span class="pre">Metadata.version</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.metadata.html#dgbowl_schemas.yadg.dataschema_4_0.metadata.Metadata.provenance"><code class="docutils literal notranslate"><span class="pre">Metadata.provenance</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.metadata.html#dgbowl_schemas.yadg.dataschema_4_0.metadata.Metadata.timezone"><code class="docutils literal notranslate"><span class="pre">Metadata.timezone</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.parameters.html"><code class="docutils literal notranslate"><span class="pre">Tol</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.parameters.html#dgbowl_schemas.yadg.dataschema_4_0.parameters.Tol.atol"><code class="docutils literal notranslate"><span class="pre">Tol.atol</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.parameters.html#dgbowl_schemas.yadg.dataschema_4_0.parameters.Tol.rtol"><code class="docutils literal notranslate"><span class="pre">Tol.rtol</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html"><code class="docutils literal notranslate"><span class="pre">Dummy</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.Dummy.Params"><code class="docutils literal notranslate"><span class="pre">Dummy.Params</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.Dummy.parser"><code class="docutils literal notranslate"><span class="pre">Dummy.parser</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.Dummy.input"><code class="docutils literal notranslate"><span class="pre">Dummy.input</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.Dummy.parameters"><code class="docutils literal notranslate"><span class="pre">Dummy.parameters</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.Dummy.tag"><code class="docutils literal notranslate"><span class="pre">Dummy.tag</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.Dummy.externaldate"><code class="docutils literal notranslate"><span class="pre">Dummy.externaldate</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.Dummy.export"><code class="docutils literal notranslate"><span class="pre">Dummy.export</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.BasicCSV"><code class="docutils literal notranslate"><span class="pre">BasicCSV</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.BasicCSV.Params"><code class="docutils literal notranslate"><span class="pre">BasicCSV.Params</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.BasicCSV.Params.sep"><code class="docutils literal notranslate"><span class="pre">BasicCSV.Params.sep</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.BasicCSV.Params.sigma"><code class="docutils literal notranslate"><span class="pre">BasicCSV.Params.sigma</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.BasicCSV.Params.calfile"><code class="docutils literal notranslate"><span class="pre">BasicCSV.Params.calfile</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.BasicCSV.Params.timestamp"><code class="docutils literal notranslate"><span class="pre">BasicCSV.Params.timestamp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.BasicCSV.Params.convert"><code class="docutils literal notranslate"><span class="pre">BasicCSV.Params.convert</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.BasicCSV.Params.units"><code class="docutils literal notranslate"><span class="pre">BasicCSV.Params.units</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.BasicCSV.parser"><code class="docutils literal notranslate"><span class="pre">BasicCSV.parser</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.BasicCSV.input"><code class="docutils literal notranslate"><span class="pre">BasicCSV.input</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.BasicCSV.parameters"><code class="docutils literal notranslate"><span class="pre">BasicCSV.parameters</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.BasicCSV.tag"><code class="docutils literal notranslate"><span class="pre">BasicCSV.tag</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.BasicCSV.externaldate"><code class="docutils literal notranslate"><span class="pre">BasicCSV.externaldate</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.BasicCSV.export"><code class="docutils literal notranslate"><span class="pre">BasicCSV.export</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.MeasCSV"><code class="docutils literal notranslate"><span class="pre">MeasCSV</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.MeasCSV.Params"><code class="docutils literal notranslate"><span class="pre">MeasCSV.Params</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.MeasCSV.Params.timestamp"><code class="docutils literal notranslate"><span class="pre">MeasCSV.Params.timestamp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.MeasCSV.Params.calfile"><code class="docutils literal notranslate"><span class="pre">MeasCSV.Params.calfile</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.MeasCSV.Params.convert"><code class="docutils literal notranslate"><span class="pre">MeasCSV.Params.convert</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.MeasCSV.parser"><code class="docutils literal notranslate"><span class="pre">MeasCSV.parser</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.MeasCSV.input"><code class="docutils literal notranslate"><span class="pre">MeasCSV.input</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.MeasCSV.parameters"><code class="docutils literal notranslate"><span class="pre">MeasCSV.parameters</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.MeasCSV.tag"><code class="docutils literal notranslate"><span class="pre">MeasCSV.tag</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.MeasCSV.externaldate"><code class="docutils literal notranslate"><span class="pre">MeasCSV.externaldate</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.MeasCSV.export"><code class="docutils literal notranslate"><span class="pre">MeasCSV.export</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.FlowData"><code class="docutils literal notranslate"><span class="pre">FlowData</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.FlowData.Params"><code class="docutils literal notranslate"><span class="pre">FlowData.Params</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.FlowData.Params.filetype"><code class="docutils literal notranslate"><span class="pre">FlowData.Params.filetype</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.FlowData.Params.convert"><code class="docutils literal notranslate"><span class="pre">FlowData.Params.convert</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.FlowData.Params.calfile"><code class="docutils literal notranslate"><span class="pre">FlowData.Params.calfile</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.FlowData.parser"><code class="docutils literal notranslate"><span class="pre">FlowData.parser</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.FlowData.input"><code class="docutils literal notranslate"><span class="pre">FlowData.input</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.FlowData.parameters"><code class="docutils literal notranslate"><span class="pre">FlowData.parameters</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.FlowData.tag"><code class="docutils literal notranslate"><span class="pre">FlowData.tag</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.FlowData.externaldate"><code class="docutils literal notranslate"><span class="pre">FlowData.externaldate</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.FlowData.export"><code class="docutils literal notranslate"><span class="pre">FlowData.export</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.ElectroChem"><code class="docutils literal notranslate"><span class="pre">ElectroChem</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.ElectroChem.Params"><code class="docutils literal notranslate"><span class="pre">ElectroChem.Params</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.ElectroChem.Params.filetype"><code class="docutils literal notranslate"><span class="pre">ElectroChem.Params.filetype</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.ElectroChem.ECInput"><code class="docutils literal notranslate"><span class="pre">ElectroChem.ECInput</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.ElectroChem.ECInput.encoding"><code class="docutils literal notranslate"><span class="pre">ElectroChem.ECInput.encoding</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.ElectroChem.parser"><code class="docutils literal notranslate"><span class="pre">ElectroChem.parser</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.ElectroChem.input"><code class="docutils literal notranslate"><span class="pre">ElectroChem.input</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.ElectroChem.parameters"><code class="docutils literal notranslate"><span class="pre">ElectroChem.parameters</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.ElectroChem.tag"><code class="docutils literal notranslate"><span class="pre">ElectroChem.tag</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.ElectroChem.externaldate"><code class="docutils literal notranslate"><span class="pre">ElectroChem.externaldate</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.ElectroChem.export"><code class="docutils literal notranslate"><span class="pre">ElectroChem.export</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.ChromTrace"><code class="docutils literal notranslate"><span class="pre">ChromTrace</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.ChromTrace.Params"><code class="docutils literal notranslate"><span class="pre">ChromTrace.Params</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.ChromTrace.Params.filetype"><code class="docutils literal notranslate"><span class="pre">ChromTrace.Params.filetype</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.ChromTrace.Params.calfile"><code class="docutils literal notranslate"><span class="pre">ChromTrace.Params.calfile</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.ChromTrace.Params.species"><code class="docutils literal notranslate"><span class="pre">ChromTrace.Params.species</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.ChromTrace.Params.detectors"><code class="docutils literal notranslate"><span class="pre">ChromTrace.Params.detectors</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.ChromTrace.parser"><code class="docutils literal notranslate"><span class="pre">ChromTrace.parser</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.ChromTrace.input"><code class="docutils literal notranslate"><span class="pre">ChromTrace.input</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.ChromTrace.parameters"><code class="docutils literal notranslate"><span class="pre">ChromTrace.parameters</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.ChromTrace.tag"><code class="docutils literal notranslate"><span class="pre">ChromTrace.tag</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.ChromTrace.externaldate"><code class="docutils literal notranslate"><span class="pre">ChromTrace.externaldate</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.ChromTrace.export"><code class="docutils literal notranslate"><span class="pre">ChromTrace.export</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.MassTrace"><code class="docutils literal notranslate"><span class="pre">MassTrace</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.MassTrace.Params"><code class="docutils literal notranslate"><span class="pre">MassTrace.Params</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.MassTrace.Params.filetype"><code class="docutils literal notranslate"><span class="pre">MassTrace.Params.filetype</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.MassTrace.parser"><code class="docutils literal notranslate"><span class="pre">MassTrace.parser</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.MassTrace.input"><code class="docutils literal notranslate"><span class="pre">MassTrace.input</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.MassTrace.parameters"><code class="docutils literal notranslate"><span class="pre">MassTrace.parameters</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.MassTrace.tag"><code class="docutils literal notranslate"><span class="pre">MassTrace.tag</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.MassTrace.externaldate"><code class="docutils literal notranslate"><span class="pre">MassTrace.externaldate</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.MassTrace.export"><code class="docutils literal notranslate"><span class="pre">MassTrace.export</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.QFTrace"><code class="docutils literal notranslate"><span class="pre">QFTrace</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.QFTrace.Params"><code class="docutils literal notranslate"><span class="pre">QFTrace.Params</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.QFTrace.Params.filetype"><code class="docutils literal notranslate"><span class="pre">QFTrace.Params.filetype</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.QFTrace.Params.method"><code class="docutils literal notranslate"><span class="pre">QFTrace.Params.method</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.QFTrace.Params.height"><code class="docutils literal notranslate"><span class="pre">QFTrace.Params.height</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.QFTrace.Params.distance"><code class="docutils literal notranslate"><span class="pre">QFTrace.Params.distance</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.QFTrace.Params.cutoff"><code class="docutils literal notranslate"><span class="pre">QFTrace.Params.cutoff</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.QFTrace.Params.threshold"><code class="docutils literal notranslate"><span class="pre">QFTrace.Params.threshold</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.QFTrace.parser"><code class="docutils literal notranslate"><span class="pre">QFTrace.parser</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.QFTrace.input"><code class="docutils literal notranslate"><span class="pre">QFTrace.input</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.QFTrace.parameters"><code class="docutils literal notranslate"><span class="pre">QFTrace.parameters</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.QFTrace.tag"><code class="docutils literal notranslate"><span class="pre">QFTrace.tag</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.QFTrace.externaldate"><code class="docutils literal notranslate"><span class="pre">QFTrace.externaldate</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.QFTrace.export"><code class="docutils literal notranslate"><span class="pre">QFTrace.export</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.XPSTrace"><code class="docutils literal notranslate"><span class="pre">XPSTrace</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.XPSTrace.Params"><code class="docutils literal notranslate"><span class="pre">XPSTrace.Params</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.XPSTrace.Params.filetype"><code class="docutils literal notranslate"><span class="pre">XPSTrace.Params.filetype</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.XPSTrace.parser"><code class="docutils literal notranslate"><span class="pre">XPSTrace.parser</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.XPSTrace.input"><code class="docutils literal notranslate"><span class="pre">XPSTrace.input</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.XPSTrace.parameters"><code class="docutils literal notranslate"><span class="pre">XPSTrace.parameters</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.XPSTrace.tag"><code class="docutils literal notranslate"><span class="pre">XPSTrace.tag</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.XPSTrace.externaldate"><code class="docutils literal notranslate"><span class="pre">XPSTrace.externaldate</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.step.html#dgbowl_schemas.yadg.dataschema_4_0.step.XPSTrace.export"><code class="docutils literal notranslate"><span class="pre">XPSTrace.export</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.timestamp.html"><code class="docutils literal notranslate"><span class="pre">TimestampSpec</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.timestamp.html#dgbowl_schemas.yadg.dataschema_4_0.timestamp.TimestampSpec.index"><code class="docutils literal notranslate"><span class="pre">TimestampSpec.index</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.timestamp.html#dgbowl_schemas.yadg.dataschema_4_0.timestamp.TimestampSpec.format"><code class="docutils literal notranslate"><span class="pre">TimestampSpec.format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.timestamp.html#dgbowl_schemas.yadg.dataschema_4_0.timestamp.Timestamp"><code class="docutils literal notranslate"><span class="pre">Timestamp</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.timestamp.html#dgbowl_schemas.yadg.dataschema_4_0.timestamp.Timestamp.timestamp"><code class="docutils literal notranslate"><span class="pre">Timestamp.timestamp</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.timestamp.html#dgbowl_schemas.yadg.dataschema_4_0.timestamp.UTS"><code class="docutils literal notranslate"><span class="pre">UTS</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.timestamp.html#dgbowl_schemas.yadg.dataschema_4_0.timestamp.UTS.uts"><code class="docutils literal notranslate"><span class="pre">UTS.uts</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.timestamp.html#dgbowl_schemas.yadg.dataschema_4_0.timestamp.TimeDate"><code class="docutils literal notranslate"><span class="pre">TimeDate</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.timestamp.html#dgbowl_schemas.yadg.dataschema_4_0.timestamp.TimeDate.date"><code class="docutils literal notranslate"><span class="pre">TimeDate.date</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.timestamp.html#dgbowl_schemas.yadg.dataschema_4_0.timestamp.TimeDate.time"><code class="docutils literal notranslate"><span class="pre">TimeDate.time</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dgbowl_schemas.yadg.dataschema.html" class="btn btn-neutral float-left" title="dgbowl_schemas.yadg.dataschema package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dgbowl_schemas.yadg.dataschema_4_0.externaldate.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022 - 2023, dgbowl authors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Other Versions</span>
+      v: master
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions"> 
+      <script src="../versions.js"></script>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

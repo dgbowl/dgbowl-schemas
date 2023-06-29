@@ -1,0 +1,4 @@
+.. automodule:: dgbowl_schemas.yadg.dataschema_4_2.parameters
+   :members:
+   :undoc-members:
+   :show-inheritance:
