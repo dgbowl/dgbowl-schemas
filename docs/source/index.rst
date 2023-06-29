@@ -6,4 +6,4 @@
    :caption: dgbowl-schemas autodocs
    :hidden:
 
-   dgbowl_schemas
+   apidoc/dgbowl_schemas

@@ -6,4 +6,4 @@ dist/
 *.egg
 build/
 public/
-docs/source/dgbowl_schemas*rst
+docs/source/apidoc/
