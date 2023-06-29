@@ -9,12 +9,12 @@
 
 This repository contains the versioned archive of the schemas for the following tools:
 
-  - The :class:`~dgbowl_schemas.dgpost.Recipe` schema for :mod:`dgpost`, with its latest
-    implementation in :mod:`~dgbowl_schemas.dgpost.recipe`;
-  - The :class:`~dgbowl_schemas.yadg.DataSchema` schema for :mod:`yadg`, with its latest
-    implementation in :mod:`~dgbowl_schemas.yadg.dataschema`;
-  - The :class:`~dgbowl_schemas.tomato.Payload` schema for :mod:`tomato`, with its latest
-    implementation in :mod:`~dgbowl_schemas.tomato.payload`.
+- The :class:`~dgbowl_schemas.dgpost.recipe.Recipe` schema for :mod:`dgpost`, with its
+  latest implementation in :mod:`~dgbowl_schemas.dgpost.recipe`;
+- The :class:`~dgbowl_schemas.yadg.dataschema.DataSchema` schema for :mod:`yadg`, with
+  its latest implementation in :mod:`~dgbowl_schemas.yadg.dataschema`;
+- The :class:`~dgbowl_schemas.tomato.Payload` schema for :mod:`tomato`, with its latest
+  implementation in :mod:`~dgbowl_schemas.tomato.payload`.
 
 
 
