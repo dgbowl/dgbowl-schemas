@@ -2,7 +2,7 @@ import pytest
 import os
 import json
 import yaml
-from dgbowl_schemas import to_payload
+from dgbowl_schemas.tomato import to_payload
 
 
 @pytest.mark.parametrize(

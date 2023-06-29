@@ -38,7 +38,7 @@ setuptools.setup(
     extras_require={
         "testing": ["pytest"],
         "docs": [
-            "sphinx==4.5.0",
+            "sphinx~=6.2",
             "sphinx-rtd-theme",
             "sphinx-autodoc-typehints",
             "autodoc-pydantic",
