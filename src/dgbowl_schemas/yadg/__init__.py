@@ -1,5 +1,6 @@
 from pydantic import ValidationError
 import logging
+from . import dataschema_5_0
 from .dataschema_5_0 import (
     DataSchema as DataSchema_5_0,
     Metadata as Metadata_5_0,
@@ -13,6 +14,7 @@ from .dataschema_4_0 import DataSchema as DataSchema_4_0, Metadata as Metadata_4
 
 logger = logging.getLogger(__name__)
 
+dataschema = dataschema_5_0
 DataSchema = DataSchema_5_0
 Metadata = Metadata_5_0
 FileType = FileType_5_0
