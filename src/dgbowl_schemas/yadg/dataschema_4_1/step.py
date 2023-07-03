@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Extra, Field
+from pydantic.v1 import BaseModel, Extra, Field
 from typing import Optional, Literal, Mapping, Any, Union
 from .externaldate import ExternalDate
 from .input import Input

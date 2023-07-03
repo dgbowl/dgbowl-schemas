@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Extra
+from pydantic.v1 import BaseModel, Extra
 from typing import Optional, Union
 
 from .timestamp import Timestamp, TimeDate, UTS

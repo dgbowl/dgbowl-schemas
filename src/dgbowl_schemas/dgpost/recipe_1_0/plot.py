@@ -1,20 +1,20 @@
-from pydantic import BaseModel, Extra, Field
+from pydantic.v1 import BaseModel, Field
 from typing import Literal, Sequence, Optional, Tuple, Any, Dict
 
 
-class SeriesIndex(BaseModel, extra=Extra.forbid):
+class SeriesIndex(BaseModel, extra="forbid"):
     from_zero: bool = True
     to_units: Optional[str]
 
 
-class Series(BaseModel, extra=Extra.allow):
+class Series(BaseModel, extra="forbid"):
     y: str
     x: Optional[str]
     kind: Literal["scatter", "line", "errorbar"] = "scatter"
     index: Optional[SeriesIndex] = SeriesIndex()
 
 
-class AxArgs(BaseModel, extra=Extra.allow):
+class AxArgs(BaseModel, extra="allow"):
     cols: Optional[Tuple[int, int]]
     rows: Optional[Tuple[int, int]]
     series: Sequence[Series]
@@ -22,12 +22,12 @@ class AxArgs(BaseModel, extra=Extra.allow):
     legend: bool = False
 
 
-class PlotSave(BaseModel, extra=Extra.allow, allow_population_by_field_name=True):
+class PlotSave(BaseModel, extra="allow", allow_population_by_field_name=True):
     as_: str = Field(alias="as")
     tight_layout: Optional[Dict[str, Any]]
 
 
-class Plot(BaseModel, extra=Extra.forbid):
+class Plot(BaseModel, extra="forbid"):
     table: str
     ax_args: Sequence[AxArgs]
     fig_args: Optional[Dict[str, Any]]

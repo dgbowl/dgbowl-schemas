@@ -1,8 +1,8 @@
-from pydantic import BaseModel, Extra, Field
+from pydantic import BaseModel, Field
 from typing import Sequence, Literal, Union, Optional
 
 
-class Pivot(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
+class Pivot(BaseModel, extra="forbid", populate_by_name=True):
     """Reorder tables by grouping rows into arrays using columns as indices."""
 
     table: str
@@ -14,7 +14,7 @@ class Pivot(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
     using: Union[str, Sequence[str]]
     """A column name (or their sequence) by which the pivoting is performed."""
 
-    columns: Sequence[str] = None
+    columns: Optional[Sequence[str]] = None
     """A sequence of column names which are to be pivoted."""
 
     timestamp: Literal["first", "last", "mean"] = "first"

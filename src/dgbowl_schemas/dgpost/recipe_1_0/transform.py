@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field, Extra
+from pydantic.v1 import BaseModel, Field, Extra
 from typing import Sequence, Any, Dict
 
 

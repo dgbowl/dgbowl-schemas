@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Extra, Field, root_validator
+from pydantic.v1 import BaseModel, Extra, Field, root_validator
 from typing import Sequence, Literal
 from .tomato import Tomato
 from .sample import Sample
@@ -16,7 +16,7 @@ class Payload(BaseModel, extra=Extra.forbid):
     method: Sequence[Method]
 
     @root_validator(pre=True)
-    def extract_samplefile(cls, values):
+    def extract_samplefile(cls, values):  # pylint: disable=E0213
         if "samplefile" in values:
             sf = Path(values.pop("samplefile"))
             assert sf.exists()
@@ -32,7 +32,7 @@ class Payload(BaseModel, extra=Extra.forbid):
         return values
 
     @root_validator(pre=True)
-    def extract_methodfile(cls, values):
+    def extract_methodfile(cls, values):  # pylint: disable=E0213
         if "methodfile" in values:
             mf = Path(values.pop("methodfile"))
             assert mf.exists()

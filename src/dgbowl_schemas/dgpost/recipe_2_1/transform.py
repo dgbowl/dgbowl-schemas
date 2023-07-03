@@ -1,8 +1,8 @@
-from pydantic import BaseModel, Field, Extra
+from pydantic import BaseModel, Field
 from typing import Sequence, Any, Dict
 
 
-class Transform(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
+class Transform(BaseModel, extra="forbid", populate_by_name=True):
     """Calculate and otherwise transform the data in the tables."""
 
     table: str

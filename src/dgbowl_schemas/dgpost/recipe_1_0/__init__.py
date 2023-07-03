@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Extra
+from pydantic.v1 import BaseModel, Extra
 from typing import Optional, Literal, Sequence
 from .load import Load
 from .extract import Extract

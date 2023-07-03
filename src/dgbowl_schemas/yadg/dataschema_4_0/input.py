@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Extra, root_validator
+from pydantic.v1 import BaseModel, Extra, root_validator
 from typing import Optional, Sequence, List
 import os
 
@@ -13,7 +13,7 @@ class Input(BaseModel, extra=Extra.forbid):
     encoding: Optional[str] = "UTF-8"
 
     @root_validator
-    def files_or_folders(cls, values):
+    def files_or_folders(cls, values):  # pylint: disable=E0213
         if values.get("files") is not None and values.get("folders") is not None:
             raise ValueError("Both 'files' and 'folders' provided.")
         elif values.get("files") is None and values.get("folders") is None:
