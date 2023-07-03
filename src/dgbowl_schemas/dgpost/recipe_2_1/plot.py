@@ -11,7 +11,7 @@ class Series(BaseModel, extra="allow"):
     y: str
     x: Optional[str] = None
     kind: Literal["scatter", "line", "errorbar"] = "scatter"
-    index: Optional[SeriesIndex] = None  # SeriesIndex()
+    index: Optional[SeriesIndex] = SeriesIndex()
 
 
 class AxArgs(BaseModel, extra="allow"):

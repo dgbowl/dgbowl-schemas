@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field, root_validator
+from pydantic import BaseModel, Field, model_validator
 from typing import Optional, Sequence, Any
 import logging
 
@@ -10,7 +10,7 @@ class At(BaseModel, extra="forbid"):
     indices: Sequence[int] = None
     timestamps: Sequence[float] = None
 
-    @root_validator(pre=True)
+    @model_validator(mode="before")
     def check_one_input(cls, values):  # pylint: disable=E0213
         keys = {"step", "steps", "index", "indices", "timestamp"}
         assert len(keys.intersection(set(values))) == 1, (
@@ -52,7 +52,7 @@ class Extract(BaseModel, extra="forbid"):
     constants: Optional[Sequence[Constant]] = None
     """Specifications for additional columns containing data constants, including units."""
 
-    @root_validator(pre=True)
+    @model_validator(mode="before")
     def check_one_input(cls, values):  # pylint: disable=E0213
         keys = {"constants", "columns"}
         if len(keys.intersection(set(values))) == 0:
