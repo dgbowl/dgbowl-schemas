@@ -21,7 +21,7 @@ class Payload(BaseModel, extra=Extra.forbid):
     """A sequence of the experimental methods."""
 
     @root_validator(pre=True)
-    def extract_samplefile(cls, values):
+    def extract_samplefile(cls, values):  # pylint: disable=E0213
         """
         If ``samplefile`` is provided in ``values``, parse the file as ``sample``.
         """
@@ -40,7 +40,7 @@ class Payload(BaseModel, extra=Extra.forbid):
         return values
 
     @root_validator(pre=True)
-    def extract_methodfile(cls, values):
+    def extract_methodfile(cls, values):  # pylint: disable=E0213
         """
         If ``methodfile`` is provided in ``values``, parse the file as ``method``.
         """
