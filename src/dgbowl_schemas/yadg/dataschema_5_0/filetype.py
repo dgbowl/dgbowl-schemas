@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Extra, Field, validator
+from pydantic.v1 import BaseModel, Extra, Field, validator
 from abc import ABC
 from typing import Optional, Literal, Union
 import tzlocal

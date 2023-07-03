@@ -26,7 +26,7 @@ class At(BaseModel, extra="forbid"):
 class Constant(BaseModel, extra="forbid"):
     value: Any
     as_: str = Field(alias="as")
-    units: Optional[str]
+    units: Optional[str] = None
 
 
 class Column(BaseModel, extra="forbid"):
@@ -43,13 +43,13 @@ class Extract(BaseModel, extra="forbid"):
     from_: Optional[str] = Field(alias="from")
     """Name of the source object for the extracted data."""
 
-    at: Optional[At]
+    at: Optional[At] = None
     """Specification of the steps (or data indices) from which data is to be extracted."""
 
-    columns: Optional[Sequence[Column]]
+    columns: Optional[Sequence[Column]] = None
     """Specifications for the columns to be extracted, including new headers."""
 
-    constants: Optional[Sequence[Constant]]
+    constants: Optional[Sequence[Constant]] = None
     """Specifications for additional columns containing data constants, including units."""
 
     @root_validator(pre=True)

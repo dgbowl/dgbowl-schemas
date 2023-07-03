@@ -1,11 +1,11 @@
-from pydantic import BaseModel, Extra, Field, validator
+from pydantic import BaseModel, Field, field_validator
 from typing import Literal, Optional
 import logging
 
 logger = logging.getLogger(__name__)
 
 
-class Load(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
+class Load(BaseModel, extra="forbid", populate_by_name=True):
     """Select external files (``NetCDF`` or ``json`` datagrams, ``pkl`` tables) to load."""
 
     as_: str = Field(alias="as")
@@ -29,7 +29,7 @@ class Load(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
 
     """
 
-    @validator("check")
+    @field_validator("check")
     def check_is_deprecated(cls, v):  # pylint: disable=E0213
         if isinstance(v, bool):
             logger.warning("Recipe->Load->check has been deprecated in Recipe-2.1.")

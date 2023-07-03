@@ -1,4 +1,5 @@
 from pydantic import ValidationError
+from pydantic.v1 import ValidationError as ValidationError_v1
 import logging
 from . import dataschema
 from .dataschema_5_0 import DataSchema as DataSchema_5_0, Metadata as Metadata_5_0
@@ -25,7 +26,7 @@ def to_dataschema(**kwargs):
         try:
             Metadata(**kwargs["metadata"])
             break
-        except ValidationError as e:
+        except (ValidationError, ValidationError_v1) as e:
             errors.append(
                 f"Could not parse 'kwargs['metadata']' using Metadata v{ver}:"
             )

@@ -31,7 +31,7 @@ setuptools.setup(
     packages=setuptools.find_packages(where=packagedir),
     python_requires=">=3.8",
     install_requires=[
-        "pydantic>=1.8",
+        "pydantic~=2.0",
         "pyyaml>=5.0",
         "tzlocal",
     ],

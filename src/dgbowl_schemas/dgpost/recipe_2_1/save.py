@@ -2,7 +2,7 @@ from pydantic import BaseModel, Extra, Field
 from typing import Literal
 
 
-class Save(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
+class Save(BaseModel, extra="forbid", populate_by_name=True):
     """Save a table into an external (``pkl``, ``xlsx``) file."""
 
     table: str

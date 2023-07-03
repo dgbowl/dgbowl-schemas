@@ -1,4 +1,5 @@
 from pydantic import ValidationError
+from pydantic.v1 import ValidationError as ValidationError_v1
 import logging
 from .payload_0_1 import Payload as Payload_0_1
 from .payload_0_2 import Payload as Payload_0_2
@@ -18,7 +19,7 @@ def to_payload(**kwargs):
         try:
             payload = Model(**kwargs)
             return payload
-        except ValidationError as e:
+        except (ValidationError, ValidationError_v1) as e:
             logger.info("Could not parse 'kwargs' using Payload v%s.", ver)
             logger.info(e)
             if firste is None:

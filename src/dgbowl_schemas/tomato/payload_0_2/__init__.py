@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Extra, Field, root_validator
+from pydantic.v1 import BaseModel, Extra, Field, root_validator
 from typing import Sequence, Literal
 from .tomato import Tomato
 from .sample import Sample
