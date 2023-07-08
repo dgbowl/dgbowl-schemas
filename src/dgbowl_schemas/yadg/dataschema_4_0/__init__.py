@@ -1,4 +1,4 @@
-from pydantic.v1 import BaseModel, Extra
+from pydantic.v1 import BaseModel
 from typing import Sequence
 from .metadata import Metadata
 from .step import Steps
@@ -9,7 +9,7 @@ from ..dataschema_4_1 import DataSchema as NewDataSchema
 logger = logging.getLogger(__name__)
 
 
-class DataSchema(BaseModel, extra=Extra.forbid):
+class DataSchema(BaseModel, extra="forbid"):
     metadata: Metadata
     steps: Sequence[Steps]
 
