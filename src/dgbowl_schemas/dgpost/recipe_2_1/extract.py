@@ -40,7 +40,7 @@ class Extract(BaseModel, extra="forbid"):
     into: str
     """Name of a new, or existing / loaded table into which the extraction happens."""
 
-    from_: Optional[str] = Field(alias="from")
+    from_: Optional[str] = Field(None, alias="from")
     """Name of the source object for the extracted data."""
 
     at: Optional[At] = None
