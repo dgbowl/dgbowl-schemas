@@ -7,7 +7,7 @@ class SeriesIndex(BaseModel, extra="forbid"):
     to_units: Optional[str]
 
 
-class Series(BaseModel, extra="forbid"):
+class Series(BaseModel, extra="allow"):
     y: str
     x: Optional[str]
     kind: Literal["scatter", "line", "errorbar"] = "scatter"
