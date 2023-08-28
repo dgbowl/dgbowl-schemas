@@ -13,7 +13,7 @@ class StepDefaults(BaseModel, extra=Extra.forbid):
     .. note::
 
         This should be set to the timezone where the measurements have been
-        performed, as opposed to the timezone where ``yadg`` is being executed.
+        performed, as opposed to the timezone where :mod:`yadg` is being executed.
         Otherwise timezone offsets may not be accounted for correctly.
 
     """

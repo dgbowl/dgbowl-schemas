@@ -10,7 +10,7 @@ from .save import Save
 
 class Recipe(BaseModel, extra="forbid"):
     """
-    A Pydantic Class implementing version 2.1 of the **Recipe** model for **dgpost**.
+    A :class:`pydantic.BaseModel` implementing ``Recipe-2.1`` model for :mod:`dgpost`.
     """
 
     version: Literal["2.1"]
