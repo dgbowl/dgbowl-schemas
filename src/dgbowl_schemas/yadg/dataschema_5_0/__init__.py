@@ -4,8 +4,8 @@ from .metadata import Metadata
 from .step import Steps
 from .stepdefaults import StepDefaults
 from .filetype import (
-    ExtractorFactory as ExtractorFactory,  # noqa: E401
-    FileType as FileType,  # noqa: E401
+    ExtractorFactory as ExtractorFactory,  # noqa: F401
+    FileType as FileType,  # noqa: F401
 )
 
 
