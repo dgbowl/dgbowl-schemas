@@ -3,7 +3,10 @@ from typing import Sequence
 from .metadata import Metadata
 from .step import Steps
 from .stepdefaults import StepDefaults
-from .filetype import ExtractorFactory as ExtractorFactory, FileType as FileType
+from .filetype import (
+    ExtractorFactory as ExtractorFactory,  # noqa: E401
+    FileType as FileType,  # noqa: E401
+)
 
 
 class DataSchema(BaseModel, extra=Extra.forbid):
