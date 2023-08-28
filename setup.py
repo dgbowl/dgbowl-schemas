@@ -41,7 +41,7 @@ setuptools.setup(
             "sphinx~=6.2",
             "sphinx-rtd-theme",
             "sphinx-autodoc-typehints",
-            "autodoc-pydantic",
+            "autodoc-pydantic>=2.0.0",
         ],
     },
 )
