@@ -1,11 +1,11 @@
 {
     "input": {
         "metadata": {
-            "provenance": {"type": "manual"}, 
+            "provenance": {"type": "manual"},
             "version": "5.0",
             "timezone": "UTC"
-        }, 
+        },
         "steps": []
     },
-    "exception": "validation error for Metadata\n timezone\n   extra fields not permitted"
+    "exception": "Extra inputs are not permitted [type=extra_forbidden, input_value='UTC', input_type=str]"
 }

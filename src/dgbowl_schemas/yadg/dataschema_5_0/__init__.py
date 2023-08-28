@@ -1,4 +1,4 @@
-from pydantic.v1 import BaseModel, Extra, Field
+from pydantic import BaseModel, Field
 from typing import Sequence
 from .metadata import Metadata
 from .step import Steps
@@ -9,7 +9,7 @@ from .filetype import (  # noqa: F401
 )
 
 
-class DataSchema(BaseModel, extra=Extra.forbid):
+class DataSchema(BaseModel, extra="forbid"):
     """
     A :class:`pydantic.BaseModel` implementing ``DataSchema-5.0`` model introduced in
     ``yadg-5.0``.

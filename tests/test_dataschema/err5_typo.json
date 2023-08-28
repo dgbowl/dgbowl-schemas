@@ -1,20 +1,20 @@
 {
     "input": {
         "metadata": {
-            "provenance": {"type": "manual"}, 
+            "provenance": {"type": "manual"},
             "version": "5.0"
-        }, 
+        },
         "steps": [
             {
-                "parser": "typo", 
+                "parser": "typo",
                 "input": {
-                    "prefix": null, 
-                    "suffix": "txt", 
+                    "prefix": null,
+                    "suffix": "txt",
                     "contains": null,
                     "folders": ["fol"]
-                } 
+                }
             }
         ]
     },
-    "exception": "No match for discriminator 'parser' and value 'typo'"
+    "exception": "Input tag 'typo' found using 'parser' does not match any of the expected tags:"
 }

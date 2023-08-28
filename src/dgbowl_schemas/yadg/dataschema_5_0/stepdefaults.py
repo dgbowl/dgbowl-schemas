@@ -1,13 +1,13 @@
-from pydantic.v1 import BaseModel, Extra, validator
+from pydantic import BaseModel, Field, field_validator
 from typing import Optional, Tuple, Union
 import locale
 import tzlocal
 
 
-class StepDefaults(BaseModel, extra=Extra.forbid):
+class StepDefaults(BaseModel, extra="forbid"):
     """Configuration of defaults applicable for all steps."""
 
-    timezone: str = "localtime"
+    timezone: str = Field("localtime", validate_default=True)
     """Global timezone specification.
 
     .. note::
@@ -18,20 +18,20 @@ class StepDefaults(BaseModel, extra=Extra.forbid):
 
     """
 
-    locale: Union[Tuple[str, str], str] = None
+    locale: Union[Tuple[str, str], str, None] = Field(None, validate_default=True)
     """Global locale specification. Will default to current locale."""
 
     encoding: Optional[str] = None
     """Global filetype encoding. Will default to ``None``."""
 
-    @validator("timezone", always=True)
+    @field_validator("timezone")
     @classmethod
     def timezone_resolve_localtime(cls, v):
         if v == "localtime":
             v = tzlocal.get_localzone_name()
         return v
 
-    @validator("locale", always=True)
+    @field_validator("locale")
     @classmethod
     def locale_set_default(cls, v):
         if v is None:

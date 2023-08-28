@@ -1,4 +1,4 @@
-from pydantic.v1 import BaseModel, Extra, Field, validator
+from pydantic import BaseModel, Field, field_validator
 from abc import ABC
 from typing import Optional, Literal, Union
 import tzlocal
@@ -7,22 +7,22 @@ import locale
 from .stepdefaults import StepDefaults
 
 
-class FileType(BaseModel, ABC, extra=Extra.forbid):
+class FileType(BaseModel, ABC, extra="forbid"):
     """Template abstract base class for parser classes."""
 
-    filetype: Optional[str]
-    timezone: Optional[str]
-    locale: Optional[str]
-    encoding: Optional[str]
+    filetype: Optional[str] = None
+    timezone: Optional[str] = None
+    locale: Optional[str] = None
+    encoding: Optional[str] = None
 
-    @validator("timezone", always=True)
+    @field_validator("timezone")
     @classmethod
     def timezone_resolve_localtime(cls, v):
         if v == "localtime":
             v = tzlocal.get_localzone_name()
         return v
 
-    @validator("locale", always=True)
+    @field_validator("locale")
     @classmethod
     def locale_set_default(cls, v):
         if v == "getlocale":
@@ -31,7 +31,8 @@ class FileType(BaseModel, ABC, extra=Extra.forbid):
 
 
 class NoFileType(FileType):
-    filetype: Optional[None] = None
+    filetype: Literal["None"] = "None"
+    # filetype: Literal["none"]
 
 
 class Tomato_json(FileType):
@@ -192,10 +193,10 @@ class ExtractorFactory(BaseModel):
     """
 
     extractor: Union[
-        # DummyFileTypes,
+        DummyFileTypes,
         FlowDataFileTypes,
         ElectroChemFileTypes,
-        # ChromDataFileTypes,
+        ChromDataFileTypes,
         ChromTraceFileTypes,
         MassTraceFileTypes,
         QFTraceFileTypes,
@@ -203,7 +204,7 @@ class ExtractorFactory(BaseModel):
         XRDTraceFileTypes,
     ] = Field(..., discriminator="filetype")
 
-    @validator("extractor", always=True)
+    @field_validator("extractor")
     @classmethod
     def extractor_set_defaults(cls, v):
         defaults = StepDefaults()
@@ -211,5 +212,6 @@ class ExtractorFactory(BaseModel):
             v.timezone = defaults.timezone
         if v.locale is None:
             v.locale = defaults.locale
-
+        if v.encoding is None:
+            v.encoding = defaults.encoding
         return v
