@@ -18,4 +18,3 @@ class Metadata(BaseModel, extra=Extra.forbid):
     version: Literal["5.0"]
 
     provenance: Provenance
-    """Provenance of the :class:`DataSchema`."""

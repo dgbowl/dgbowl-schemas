@@ -15,7 +15,7 @@ class Load(BaseModel, extra="forbid", populate_by_name=True):
     """Path to the file containing the object to be loaded."""
 
     type: Literal["netcdf", "datagram", "table"] = "datagram"
-    """Type of the loaded object. Can be either a ``netcdf`` file created e.g. using
+    """Type of the loaded object. Can be either a ``NetCDF`` file created e.g. using
     ``yadg~5.0``, a ``datagram`` file in JSON format created using ``yadg~4.0``, or a
     ``table`` stored in a ``pkl`` file as created by Pandas."""
 
@@ -30,9 +30,17 @@ class Load(BaseModel, extra="forbid", populate_by_name=True):
     """
 
     @field_validator("check")
+    @classmethod
     def check_is_deprecated(cls, v):  # pylint: disable=E0213
         if isinstance(v, bool):
             logger.warning("Recipe->Load->check has been deprecated in Recipe-2.1.")
             return None
         else:
             return v
+
+    @field_validator("type")
+    @classmethod
+    def lowercase_type(cls, v):  # pylint: disable=E0213
+        if isinstance(v, str):
+            return v.lower()
+        return v

@@ -8,17 +8,18 @@ from .filetype import ExtractorFactory, FileType
 
 class DataSchema(BaseModel, extra=Extra.forbid):
     """
-    :class:`DataSchema` introduced in ``yadg-5.0``.
+    A :class:`pydantic.BaseModel` implementing ``DataSchema-5.0`` model introduced in
+    ``yadg-5.0``.
     """
 
     metadata: Metadata
-    """Input metadata for ``yadg``."""
+    """Input metadata for :mod:`yadg`."""
 
     step_defaults: StepDefaults = Field(StepDefaults())
-    """Default values for configuration of ``yadg``'s parsers."""
+    """Default values for configuration of :mod:`yadg`'s parsers."""
 
     steps: Sequence[Steps]
-    """Input commands for ``yadg``'s parsers, organised as a sequence of steps."""
+    """Input commands for :mod:`yadg`'s parsers, organised as a sequence of steps."""
 
 
 __all__ = ["DataSchema", "Metadata", "FileType", "ExtractorFactory"]

@@ -85,4 +85,5 @@ intersphinx_mapping = {
     "dgpost": ("https://dgbowl.github.io/dgpost/master", None),
     "yadg": ("https://dgbowl.github.io/yadg/master", None),
     "tomato": ("https://dgbowl.github.io/tomato/master", None),
+    "pydantic": ("https://docs.pydantic.dev/latest/", None),
 }

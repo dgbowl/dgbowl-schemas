@@ -8,7 +8,7 @@ from .stepdefaults import StepDefaults
 
 
 class FileType(BaseModel, ABC, extra=Extra.forbid):
-    """Template ABC for parser classes."""
+    """Template abstract base class for parser classes."""
 
     filetype: Optional[str]
     timezone: Optional[str]
@@ -174,6 +174,23 @@ XRDTraceFileTypes = Union[
 
 
 class ExtractorFactory(BaseModel):
+    """
+    Extractor factory class.
+
+    Given an ``extractor=dict(filetype=k, ...)`` argument, attempts to determine the
+    correct :class:`FileType`, parses any additionally supplied parameters for that
+    :class:`FileType`, and back-fills defaults such as ``timezone``, ``locale``, and
+    ``encoding``.
+
+    The following is the current usage pattern in :mod:`yadg`:
+
+    .. code-block::
+
+        ftype = ExtractorFactory(extractor={"filetype": k}).extractor
+
+
+    """
+
     extractor: Union[
         # DummyFileTypes,
         FlowDataFileTypes,
