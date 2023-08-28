@@ -101,142 +101,48 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <span class="target" id="module-dgbowl_schemas.yadg.dataschema_4_0.input"></span><dl class="py class pydantic_model">
+  <span class="target" id="module-dgbowl_schemas.yadg.dataschema_4_0.input"></span><dl class="py class">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_0.input.Input">
-<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.yadg.dataschema_4_0.input.</span></span><span class="sig-name descname"><span class="pre">Input</span></span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.input.Input" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.yadg.dataschema_4_0.input.</span></span><span class="sig-name descname"><span class="pre">Input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.input.Input" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
-<p><details  class="autodoc_pydantic_collapsable_json">
-<summary>Show JSON schema</summary><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">   </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Input&quot;</span><span class="p">,</span>
-<span class="w">   </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
-<span class="w">   </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;files&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Files&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">         </span><span class="p">}</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;folders&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Folders&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">         </span><span class="p">}</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Prefix&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;suffix&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Suffix&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;contains&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Contains&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;exclude&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Exclude&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;encoding&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Encoding&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;UTF-8&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">   </span><span class="p">},</span>
-<span class="w">   </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</details></p><dl class="py attribute pydantic_field">
+<dl class="py attribute">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_0.input.Input.files">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">files</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]]</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.input.Input.files" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Validated by<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_4_0.input.Input.files_or_folders" title="dgbowl_schemas.yadg.dataschema_4_0.input.Input.files_or_folders"><code class="xref py py-obj docutils literal notranslate"><span class="pre">files_or_folders</span></code></a></p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">files</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.input.Input.files" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
-<dl class="py attribute pydantic_field">
+<dl class="py attribute">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_0.input.Input.folders">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">folders</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]]</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.input.Input.folders" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Validated by<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_4_0.input.Input.files_or_folders" title="dgbowl_schemas.yadg.dataschema_4_0.input.Input.files_or_folders"><code class="xref py py-obj docutils literal notranslate"><span class="pre">files_or_folders</span></code></a></p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">folders</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.input.Input.folders" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
-<dl class="py attribute pydantic_field">
+<dl class="py attribute">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_0.input.Input.prefix">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prefix</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.input.Input.prefix" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Validated by<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_4_0.input.Input.files_or_folders" title="dgbowl_schemas.yadg.dataschema_4_0.input.Input.files_or_folders"><code class="xref py py-obj docutils literal notranslate"><span class="pre">files_or_folders</span></code></a></p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">prefix</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.input.Input.prefix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
-<dl class="py attribute pydantic_field">
+<dl class="py attribute">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_0.input.Input.suffix">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">suffix</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.input.Input.suffix" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Validated by<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_4_0.input.Input.files_or_folders" title="dgbowl_schemas.yadg.dataschema_4_0.input.Input.files_or_folders"><code class="xref py py-obj docutils literal notranslate"><span class="pre">files_or_folders</span></code></a></p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">suffix</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.input.Input.suffix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
-<dl class="py attribute pydantic_field">
+<dl class="py attribute">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_0.input.Input.contains">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">contains</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.input.Input.contains" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Validated by<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_4_0.input.Input.files_or_folders" title="dgbowl_schemas.yadg.dataschema_4_0.input.Input.files_or_folders"><code class="xref py py-obj docutils literal notranslate"><span class="pre">files_or_folders</span></code></a></p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">contains</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.input.Input.contains" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
-<dl class="py attribute pydantic_field">
+<dl class="py attribute">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_0.input.Input.exclude">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">exclude</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.input.Input.exclude" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Validated by<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_4_0.input.Input.files_or_folders" title="dgbowl_schemas.yadg.dataschema_4_0.input.Input.files_or_folders"><code class="xref py py-obj docutils literal notranslate"><span class="pre">files_or_folders</span></code></a></p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">exclude</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.input.Input.exclude" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
-<dl class="py attribute pydantic_field">
+<dl class="py attribute">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_0.input.Input.encoding">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encoding</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UTF-8'</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.input.Input.encoding" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Validated by<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_4_0.input.Input.files_or_folders" title="dgbowl_schemas.yadg.dataschema_4_0.input.Input.files_or_folders"><code class="xref py py-obj docutils literal notranslate"><span class="pre">files_or_folders</span></code></a></p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">encoding</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.input.Input.encoding" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
-<dl class="py method pydantic_validator">
+<dl class="py method">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_0.input.Input.files_or_folders">
-<em class="property"><span class="pre">validator</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">files_or_folders</span></span><em class="autodoc_pydantic_validator_arrow property">&#160; <span class="pre">»</span>&#160; </em><em class="xref py py-obj"><span class="pre">all</span> <span class="pre">fields</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.input.Input.files_or_folders" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">files_or_folders</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.input.Input.files_or_folders" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">

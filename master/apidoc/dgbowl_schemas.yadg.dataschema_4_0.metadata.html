@@ -101,55 +101,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <span class="target" id="module-dgbowl_schemas.yadg.dataschema_4_0.metadata"></span><dl class="py class pydantic_model">
+  <span class="target" id="module-dgbowl_schemas.yadg.dataschema_4_0.metadata"></span><dl class="py class">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_0.metadata.Metadata">
-<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.yadg.dataschema_4_0.metadata.</span></span><span class="sig-name descname"><span class="pre">Metadata</span></span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.metadata.Metadata" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.yadg.dataschema_4_0.metadata.</span></span><span class="sig-name descname"><span class="pre">Metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.metadata.Metadata" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
-<p><details  class="autodoc_pydantic_collapsable_json">
-<summary>Show JSON schema</summary><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">   </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Metadata&quot;</span><span class="p">,</span>
-<span class="w">   </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
-<span class="w">   </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;schema_version&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Schema Version&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">            </span><span class="s2">&quot;4.0&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;4.0.0&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;4.0.1&quot;</span>
-<span class="w">         </span><span class="p">],</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;provenance&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Provenance&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Timezone&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;localtime&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">   </span><span class="p">},</span>
-<span class="w">   </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">      </span><span class="s2">&quot;schema_version&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="s2">&quot;provenance&quot;</span>
-<span class="w">   </span><span class="p">],</span>
-<span class="w">   </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</details></p><dl class="py attribute pydantic_field">
+<dl class="py attribute">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_0.metadata.Metadata.version">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code><span class="pre">[</span><code class="docutils literal notranslate"><span class="pre">'4.0'</span></code><span class="pre">,</span> <code class="docutils literal notranslate"><span class="pre">'4.0.0'</span></code><span class="pre">,</span> <code class="docutils literal notranslate"><span class="pre">'4.0.1'</span></code><span class="pre">]</span></em><em class="property"> <span class="pre">[Required]</span></em><em class="property"> <span class="pre">(alias</span> <span class="pre">'schema_version')</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.metadata.Metadata.version" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code><span class="pre">[</span><code class="docutils literal notranslate"><span class="pre">'4.0'</span></code><span class="pre">,</span> <code class="docutils literal notranslate"><span class="pre">'4.0.0'</span></code><span class="pre">,</span> <code class="docutils literal notranslate"><span class="pre">'4.0.1'</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.metadata.Metadata.version" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="py attribute pydantic_field">
+<dl class="py attribute">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_0.metadata.Metadata.provenance">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">provenance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.metadata.Metadata.provenance" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">provenance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.metadata.Metadata.provenance" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="py attribute pydantic_field">
+<dl class="py attribute">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_0.metadata.Metadata.timezone">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">timezone</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'localtime'</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.metadata.Metadata.timezone" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">timezone</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_0.metadata.Metadata.timezone" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>

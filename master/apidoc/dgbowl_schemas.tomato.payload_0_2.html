@@ -99,212 +99,42 @@
              
   <section id="module-dgbowl_schemas.tomato.payload_0_2">
 <span id="dgbowl-schemas-tomato-payload-0-2-package"></span><h1>dgbowl_schemas.tomato.payload_0_2 package<a class="headerlink" href="#module-dgbowl_schemas.tomato.payload_0_2" title="Permalink to this heading"></a></h1>
-<dl class="py class pydantic_model">
+<dl class="py class">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload_0_2.Payload">
-<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.tomato.payload_0_2.</span></span><span class="sig-name descname"><span class="pre">Payload</span></span><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_2.Payload" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.tomato.payload_0_2.</span></span><span class="sig-name descname"><span class="pre">Payload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_2.Payload" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
-<p><details  class="autodoc_pydantic_collapsable_json">
-<summary>Show JSON schema</summary><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">   </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Payload&quot;</span><span class="p">,</span>
-<span class="w">   </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
-<span class="w">   </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Version&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">            </span><span class="s2">&quot;0.2&quot;</span>
-<span class="w">         </span><span class="p">],</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;tomato&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/Tomato&quot;</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;sample&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/Sample&quot;</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;method&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Method&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/Method&quot;</span>
-<span class="w">         </span><span class="p">}</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">   </span><span class="p">},</span>
-<span class="w">   </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">      </span><span class="s2">&quot;version&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="s2">&quot;sample&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="s2">&quot;method&quot;</span>
-<span class="w">   </span><span class="p">],</span>
-<span class="w">   </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">   </span><span class="nt">&quot;definitions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;Output&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Output&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Provide the ``path`` and ``prefix`` for the final FAIR-data archive of the *job*.&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Path&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Prefix&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">         </span><span class="p">},</span>
-<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;Snapshot&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Snapshot&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Provide the ``frequency``, ``path`` and ``prefix`` to configure the snapshotting\nfunctionality of tomato.&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Path&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Prefix&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;frequency&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Frequency&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3600</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;integer&quot;</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">         </span><span class="p">},</span>
-<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;Tomato&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tomato&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Specification of *job* configuration for tomato.&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;unlock_when_done&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Unlock When Done&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;boolean&quot;</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;verbosity&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Verbosity&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;WARNING&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                  </span><span class="s2">&quot;DEBUG&quot;</span><span class="p">,</span>
-<span class="w">                  </span><span class="s2">&quot;INFO&quot;</span><span class="p">,</span>
-<span class="w">                  </span><span class="s2">&quot;WARNING&quot;</span><span class="p">,</span>
-<span class="w">                  </span><span class="s2">&quot;ERROR&quot;</span><span class="p">,</span>
-<span class="w">                  </span><span class="s2">&quot;CRITICAL&quot;</span>
-<span class="w">               </span><span class="p">],</span>
-<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;output&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/Output&quot;</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;snapshot&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/Snapshot&quot;</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">         </span><span class="p">},</span>
-<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;Sample&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sample&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Additional attributes for each :class:`Sample` may be required, depending on the\n:class:`Method` type.&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Name&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">         </span><span class="p">},</span>
-<span class="w">         </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">            </span><span class="s2">&quot;name&quot;</span>
-<span class="w">         </span><span class="p">]</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;Method&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Method&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The :class:`Method` schema is completely *device*- and ``technique``- dependent,\nwith extra arguments required by each ``technique`` defined by each device driver.&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;device&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Device&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;technique&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Technique&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">         </span><span class="p">},</span>
-<span class="w">         </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">            </span><span class="s2">&quot;device&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;technique&quot;</span>
-<span class="w">         </span><span class="p">]</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">   </span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</details></p><dl class="py attribute pydantic_field">
+<dl class="py attribute">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload_0_2.Payload.version">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code><span class="pre">[</span><code class="docutils literal notranslate"><span class="pre">'0.2'</span></code><span class="pre">]</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_2.Payload.version" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Validated by<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.tomato.payload_0_2.Payload.extract_methodfile" title="dgbowl_schemas.tomato.payload_0_2.Payload.extract_methodfile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_methodfile</span></code></a></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.tomato.payload_0_2.Payload.extract_samplefile" title="dgbowl_schemas.tomato.payload_0_2.Payload.extract_samplefile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_samplefile</span></code></a></p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code><span class="pre">[</span><code class="docutils literal notranslate"><span class="pre">'0.2'</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_2.Payload.version" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
-<dl class="py attribute pydantic_field">
+<dl class="py attribute">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload_0_2.Payload.tomato">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tomato</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="dgbowl_schemas.tomato.payload_0_2.tomato.html#dgbowl_schemas.tomato.payload_0_2.tomato.Tomato" title="dgbowl_schemas.tomato.payload_0_2.tomato.Tomato"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tomato</span></code></a></em><em class="property"> <span class="pre">[Optional]</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_2.Payload.tomato" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">tomato</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="dgbowl_schemas.tomato.payload_0_2.tomato.html#dgbowl_schemas.tomato.payload_0_2.tomato.Tomato" title="dgbowl_schemas.tomato.payload_0_2.tomato.Tomato"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tomato</span></code></a></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_2.Payload.tomato" title="Permalink to this definition"></a></dt>
 <dd><p>Additional configuration options for tomato.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Validated by<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.tomato.payload_0_2.Payload.extract_methodfile" title="dgbowl_schemas.tomato.payload_0_2.Payload.extract_methodfile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_methodfile</span></code></a></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.tomato.payload_0_2.Payload.extract_samplefile" title="dgbowl_schemas.tomato.payload_0_2.Payload.extract_samplefile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_samplefile</span></code></a></p></li>
-</ul>
-</dd>
-</dl>
 </dd></dl>
 
-<dl class="py attribute pydantic_field">
+<dl class="py attribute">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload_0_2.Payload.sample">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sample</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="dgbowl_schemas.tomato.payload_0_2.sample.html#dgbowl_schemas.tomato.payload_0_2.sample.Sample" title="dgbowl_schemas.tomato.payload_0_2.sample.Sample"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sample</span></code></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_2.Payload.sample" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">sample</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="dgbowl_schemas.tomato.payload_0_2.sample.html#dgbowl_schemas.tomato.payload_0_2.sample.Sample" title="dgbowl_schemas.tomato.payload_0_2.sample.Sample"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sample</span></code></a></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_2.Payload.sample" title="Permalink to this definition"></a></dt>
 <dd><p>Specification of the experimental sample.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Validated by<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.tomato.payload_0_2.Payload.extract_methodfile" title="dgbowl_schemas.tomato.payload_0_2.Payload.extract_methodfile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_methodfile</span></code></a></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.tomato.payload_0_2.Payload.extract_samplefile" title="dgbowl_schemas.tomato.payload_0_2.Payload.extract_samplefile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_samplefile</span></code></a></p></li>
-</ul>
-</dd>
-</dl>
 </dd></dl>
 
-<dl class="py attribute pydantic_field">
+<dl class="py attribute">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload_0_2.Payload.method">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">method</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code><span class="pre">[</span><a class="reference internal" href="dgbowl_schemas.tomato.payload_0_2.method.html#dgbowl_schemas.tomato.payload_0_2.method.Method" title="dgbowl_schemas.tomato.payload_0_2.method.Method"><code class="xref py py-class docutils literal notranslate"><span class="pre">Method</span></code></a><span class="pre">]</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_2.Payload.method" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">method</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code><span class="pre">[</span><a class="reference internal" href="dgbowl_schemas.tomato.payload_0_2.method.html#dgbowl_schemas.tomato.payload_0_2.method.Method" title="dgbowl_schemas.tomato.payload_0_2.method.Method"><code class="xref py py-class docutils literal notranslate"><span class="pre">Method</span></code></a><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_2.Payload.method" title="Permalink to this definition"></a></dt>
 <dd><p>A sequence of the experimental methods.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Validated by<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.tomato.payload_0_2.Payload.extract_methodfile" title="dgbowl_schemas.tomato.payload_0_2.Payload.extract_methodfile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_methodfile</span></code></a></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.tomato.payload_0_2.Payload.extract_samplefile" title="dgbowl_schemas.tomato.payload_0_2.Payload.extract_samplefile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_samplefile</span></code></a></p></li>
-</ul>
-</dd>
-</dl>
 </dd></dl>
 
-<dl class="py method pydantic_validator">
+<dl class="py method">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload_0_2.Payload.extract_samplefile">
-<em class="property"><span class="pre">validator</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extract_samplefile</span></span><em class="autodoc_pydantic_validator_arrow property">&#160; <span class="pre">»</span>&#160; </em><em class="xref py py-obj"><span class="pre">all</span> <span class="pre">fields</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_2.Payload.extract_samplefile" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extract_samplefile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_2.Payload.extract_samplefile" title="Permalink to this definition"></a></dt>
 <dd><p>If <code class="docutils literal notranslate"><span class="pre">samplefile</span></code> is provided in <code class="docutils literal notranslate"><span class="pre">values</span></code>, parse the file as <code class="docutils literal notranslate"><span class="pre">sample</span></code>.</p>
 </dd></dl>
 
-<dl class="py method pydantic_validator">
+<dl class="py method">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload_0_2.Payload.extract_methodfile">
-<em class="property"><span class="pre">validator</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extract_methodfile</span></span><em class="autodoc_pydantic_validator_arrow property">&#160; <span class="pre">»</span>&#160; </em><em class="xref py py-obj"><span class="pre">all</span> <span class="pre">fields</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_2.Payload.extract_methodfile" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extract_methodfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_2.Payload.extract_methodfile" title="Permalink to this definition"></a></dt>
 <dd><p>If <code class="docutils literal notranslate"><span class="pre">methodfile</span></code> is provided in <code class="docutils literal notranslate"><span class="pre">values</span></code>, parse the file as <code class="docutils literal notranslate"><span class="pre">method</span></code>.</p>
 </dd></dl>
 

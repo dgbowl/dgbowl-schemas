@@ -98,104 +98,39 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <span class="target" id="module-dgbowl_schemas.tomato.payload_0_1.tomato"></span><dl class="py class pydantic_model">
+  <span class="target" id="module-dgbowl_schemas.tomato.payload_0_1.tomato"></span><dl class="py class">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload_0_1.tomato.Tomato">
-<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.tomato.payload_0_1.tomato.</span></span><span class="sig-name descname"><span class="pre">Tomato</span></span><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_1.tomato.Tomato" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.tomato.payload_0_1.tomato.</span></span><span class="sig-name descname"><span class="pre">Tomato</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_1.tomato.Tomato" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
-<p><details  class="autodoc_pydantic_collapsable_json">
-<summary>Show JSON schema</summary><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">   </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tomato&quot;</span><span class="p">,</span>
-<span class="w">   </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
-<span class="w">   </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;unlock_when_done&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Unlock When Done&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;boolean&quot;</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;verbosity&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Verbosity&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;WARNING&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">            </span><span class="s2">&quot;DEBUG&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;INFO&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;WARNING&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;ERROR&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;CRITICAL&quot;</span>
-<span class="w">         </span><span class="p">],</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;output&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/Output&quot;</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">   </span><span class="p">},</span>
-<span class="w">   </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">   </span><span class="nt">&quot;definitions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;Output&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Output&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Path&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Prefix&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">         </span><span class="p">},</span>
-<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">   </span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</details></p><dl class="py class pydantic_model">
+<dl class="py class">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload_0_1.tomato.Tomato.Output">
-<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Output</span></span><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_1.tomato.Tomato.Output" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_1.tomato.Tomato.Output" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
-<p><details  class="autodoc_pydantic_collapsable_json">
-<summary>Show JSON schema</summary><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">   </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Output&quot;</span><span class="p">,</span>
-<span class="w">   </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
-<span class="w">   </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Path&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Prefix&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">   </span><span class="p">},</span>
-<span class="w">   </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</details></p><dl class="py attribute pydantic_field">
+<dl class="py attribute">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload_0_1.tomato.Tomato.Output.path">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_1.tomato.Tomato.Output.path" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_1.tomato.Tomato.Output.path" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="py attribute pydantic_field">
+<dl class="py attribute">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload_0_1.tomato.Tomato.Output.prefix">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prefix</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_1.tomato.Tomato.Output.prefix" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">prefix</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_1.tomato.Tomato.Output.prefix" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="py attribute pydantic_field">
+<dl class="py attribute">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload_0_1.tomato.Tomato.unlock_when_done">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unlock_when_done</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_1.tomato.Tomato.unlock_when_done" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">unlock_when_done</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_1.tomato.Tomato.unlock_when_done" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="py attribute pydantic_field">
+<dl class="py attribute">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload_0_1.tomato.Tomato.verbosity">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">verbosity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code><span class="pre">[</span><code class="docutils literal notranslate"><span class="pre">'DEBUG'</span></code><span class="pre">,</span> <code class="docutils literal notranslate"><span class="pre">'INFO'</span></code><span class="pre">,</span> <code class="docutils literal notranslate"><span class="pre">'WARNING'</span></code><span class="pre">,</span> <code class="docutils literal notranslate"><span class="pre">'ERROR'</span></code><span class="pre">,</span> <code class="docutils literal notranslate"><span class="pre">'CRITICAL'</span></code><span class="pre">]</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'WARNING'</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_1.tomato.Tomato.verbosity" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">verbosity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code><span class="pre">[</span><code class="docutils literal notranslate"><span class="pre">'DEBUG'</span></code><span class="pre">,</span> <code class="docutils literal notranslate"><span class="pre">'INFO'</span></code><span class="pre">,</span> <code class="docutils literal notranslate"><span class="pre">'WARNING'</span></code><span class="pre">,</span> <code class="docutils literal notranslate"><span class="pre">'ERROR'</span></code><span class="pre">,</span> <code class="docutils literal notranslate"><span class="pre">'CRITICAL'</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_1.tomato.Tomato.verbosity" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="py attribute pydantic_field">
+<dl class="py attribute">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload_0_1.tomato.Tomato.output">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">output</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.tomato.payload_0_1.tomato.Tomato.Output" title="dgbowl_schemas.tomato.payload_0_1.tomato.Tomato.Output"><code class="xref py py-class docutils literal notranslate"><span class="pre">Output</span></code></a></em><em class="property"> <span class="pre">[Optional]</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_1.tomato.Tomato.output" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">output</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.tomato.payload_0_1.tomato.Tomato.Output" title="dgbowl_schemas.tomato.payload_0_1.tomato.Tomato.Output"><code class="xref py py-class docutils literal notranslate"><span class="pre">Output</span></code></a></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_1.tomato.Tomato.output" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>

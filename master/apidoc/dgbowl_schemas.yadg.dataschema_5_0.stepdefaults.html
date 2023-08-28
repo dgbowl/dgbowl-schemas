@@ -61,9 +61,6 @@
 <li class="toctree-l5"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_2.html">dgbowl_schemas.yadg.dataschema_4_2 package</a></li>
 <li class="toctree-l5 current"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_5_0.html">dgbowl_schemas.yadg.dataschema_5_0 package</a><ul class="current">
 <li class="toctree-l6"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_5_0.html#dgbowl_schemas.yadg.dataschema_5_0.DataSchema"><code class="docutils literal notranslate"><span class="pre">DataSchema</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_5_0.html#dgbowl_schemas.yadg.dataschema_5_0.Metadata"><code class="docutils literal notranslate"><span class="pre">Metadata</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_5_0.html#dgbowl_schemas.yadg.dataschema_5_0.FileType"><code class="docutils literal notranslate"><span class="pre">FileType</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_5_0.html#dgbowl_schemas.yadg.dataschema_5_0.ExtractorFactory"><code class="docutils literal notranslate"><span class="pre">ExtractorFactory</span></code></a></li>
 <li class="toctree-l6 current"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_5_0.html#submodules">Submodules</a></li>
 </ul>
 </li>
@@ -104,106 +101,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <span class="target" id="module-dgbowl_schemas.yadg.dataschema_5_0.stepdefaults"></span><dl class="py class pydantic_model">
+  <span class="target" id="module-dgbowl_schemas.yadg.dataschema_5_0.stepdefaults"></span><dl class="py class">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults">
-<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.</span></span><span class="sig-name descname"><span class="pre">StepDefaults</span></span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.</span></span><span class="sig-name descname"><span class="pre">StepDefaults</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
 <p>Configuration of defaults applicable for all steps.</p>
-<p><details  class="autodoc_pydantic_collapsable_json">
-<summary>Show JSON schema</summary><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">   </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;StepDefaults&quot;</span><span class="p">,</span>
-<span class="w">   </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Configuration of defaults applicable for all steps.&quot;</span><span class="p">,</span>
-<span class="w">   </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
-<span class="w">   </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Timezone&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;localtime&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;locale&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Locale&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;minItems&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;maxItems&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                  </span><span class="p">{</span>
-<span class="w">                     </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">                  </span><span class="p">},</span>
-<span class="w">                  </span><span class="p">{</span>
-<span class="w">                     </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">                  </span><span class="p">}</span>
-<span class="w">               </span><span class="p">]</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">         </span><span class="p">]</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;encoding&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Encoding&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">   </span><span class="p">},</span>
-<span class="w">   </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</details></p><dl class="field-list simple">
-<dt class="field-odd">Validators<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.locale_set_default" title="dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.locale_set_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale_set_default</span></code></a> » <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.locale" title="dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.locale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale</span></code></a></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.timezone_resolve_localtime" title="dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.timezone_resolve_localtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone_resolve_localtime</span></code></a> » <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.timezone" title="dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.timezone"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone</span></code></a></p></li>
-</ul>
-</dd>
-</dl>
-<dl class="py attribute pydantic_field">
+<dl class="py attribute">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.timezone">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">timezone</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'localtime'</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.timezone" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">timezone</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.timezone" title="Permalink to this definition"></a></dt>
 <dd><p>Global timezone specification.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This should be set to the timezone where the measurements have been
-performed, as opposed to the timezone where <code class="docutils literal notranslate"><span class="pre">yadg</span></code> is being executed.
+performed, as opposed to the timezone where <a class="reference external" href="https://dgbowl.github.io/yadg/master/apidoc/yadg.html#module-yadg" title="(in yadg vmaster)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">yadg</span></code></a> is being executed.
 Otherwise timezone offsets may not be accounted for correctly.</p>
 </div>
-<dl class="field-list simple">
-<dt class="field-odd">Validated by<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.timezone_resolve_localtime" title="dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.timezone_resolve_localtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone_resolve_localtime</span></code></a></p></li>
-</ul>
-</dd>
-</dl>
 </dd></dl>
 
-<dl class="py attribute pydantic_field">
+<dl class="py attribute">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.locale">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">locale</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code><span class="pre">[</span><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">,</span> <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">],</span> <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.locale" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">locale</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code><span class="pre">[</span><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">,</span> <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">],</span> <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.locale" title="Permalink to this definition"></a></dt>
 <dd><p>Global locale specification. Will default to current locale.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Validated by<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.locale_set_default" title="dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.locale_set_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale_set_default</span></code></a></p></li>
-</ul>
-</dd>
-</dl>
 </dd></dl>
 
-<dl class="py attribute pydantic_field">
+<dl class="py attribute">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.encoding">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encoding</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.encoding" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">encoding</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.encoding" title="Permalink to this definition"></a></dt>
 <dd><p>Global filetype encoding. Will default to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 </dd></dl>
 
-<dl class="py method pydantic_validator">
+<dl class="py method">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.timezone_resolve_localtime">
-<em class="property"><span class="pre">validator</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">timezone_resolve_localtime</span></span><em class="autodoc_pydantic_validator_arrow property">&#160; <span class="pre">»</span>&#160; </em><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.timezone" title="dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.timezone"><em class="xref py py-obj"><span class="pre">timezone</span></em></a><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.timezone_resolve_localtime" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">timezone_resolve_localtime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.timezone_resolve_localtime" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="py method pydantic_validator">
+<dl class="py method">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.locale_set_default">
-<em class="property"><span class="pre">validator</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">locale_set_default</span></span><em class="autodoc_pydantic_validator_arrow property">&#160; <span class="pre">»</span>&#160; </em><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.locale" title="dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.locale"><em class="xref py py-obj"><span class="pre">locale</span></em></a><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.locale_set_default" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">locale_set_default</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults.locale_set_default" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
