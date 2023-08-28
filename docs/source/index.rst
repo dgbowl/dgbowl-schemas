@@ -18,9 +18,8 @@ This repository contains the versioned archive of the schemas for the following 
 
 
 
-
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: dgbowl-schemas autodocs
    :hidden:
 
