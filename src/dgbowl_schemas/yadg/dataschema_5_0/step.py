@@ -1,4 +1,4 @@
-from pydantic.v1 import BaseModel, Extra, Field
+from pydantic import BaseModel, Field
 from abc import ABC
 from typing import Optional, Literal, Mapping, Union
 from .externaldate import ExternalDate
@@ -25,40 +25,40 @@ except ImportError:
     from typing_extensions import Annotated
 
 
-class Parser(BaseModel, ABC, extra=Extra.forbid):
-    tag: Optional[str]
+class Parser(BaseModel, ABC, extra="forbid"):
+    tag: Optional[str] = None
     parser: str
     input: Input
-    extractor: Optional[FileType]
-    parameters: Optional[Parameters]
-    externaldate: Optional[ExternalDate]
+    extractor: Optional[FileType] = None
+    parameters: Optional[Parameters] = None
+    externaldate: Optional[ExternalDate] = None
 
 
 class Dummy(Parser):
     """Dummy parser type, useful for testing."""
 
-    class Parameters(BaseModel, extra=Extra.allow):
+    class Parameters(BaseModel, extra="allow"):
         pass
 
     parser: Literal["dummy"]
-    parameters: Optional[Parameters]
+    parameters: Optional[Parameters] = None
     extractor: DummyFileTypes = Field(default_factory=NoFileType)
 
 
 class BasicCSV(Parser):
     """Customisable tabulated file parser."""
 
-    class Parameters(BaseModel, extra=Extra.forbid):
+    class Parameters(BaseModel, extra="forbid"):
         sep: str = ","
         """Separator of table columns."""
 
         strip: Optional[str] = None
         """A :class:`str` of characters to strip from headers & data."""
 
-        units: Optional[Mapping[str, str]]
+        units: Optional[Mapping[str, str]] = None
         """A :class:`dict` containing ``column: unit`` keypairs."""
 
-        timestamp: Optional[Timestamps]
+        timestamp: Optional[Timestamps] = None
         """Timestamp specification allowing calculation of Unix timestamp for
         each table row."""
 
@@ -67,7 +67,7 @@ class BasicCSV(Parser):
     extractor: NoFileType = Field(default_factory=NoFileType)
 
 
-class MeasCSV(Parser, extra=Extra.forbid):
+class MeasCSV(Parser, extra="forbid"):
     """
     Legacy file parser for ``measurement.csv`` files from FHI.
 
@@ -78,7 +78,7 @@ class MeasCSV(Parser, extra=Extra.forbid):
 
     """
 
-    class Parameters(BaseModel, extra=Extra.forbid):
+    class Parameters(BaseModel, extra="forbid"):
         timestamp: Timestamps = Field(
             Timestamp(timestamp={"index": 0, "format": "%Y-%m-%d-%H-%M-%S"})
         )

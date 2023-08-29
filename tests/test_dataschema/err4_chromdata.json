@@ -1,22 +1,22 @@
 {
     "input": {
         "metadata": {
-            "provenance": {"type": "manual"}, 
+            "provenance": {"type": "manual"},
             "version": "5.0"
-        }, 
+        },
         "steps": [
             {
-                "parser": "chromdata", 
+                "parser": "chromdata",
                 "input": {
-                    "prefix": null, 
-                    "suffix": "txt", 
-                    "contains": null, 
+                    "prefix": null,
+                    "suffix": "txt",
+                    "contains": null,
                     "folders": ["fol"]
-                }, 
-                "parameters": {"filetype": "fusion.json"}, 
+                },
+                "parameters": {"filetype": "fusion.json"},
                 "externaldate": null
             }
         ]
     },
-    "exception": "steps -> 0 -> ChromData -> parameters -> filetype\n  extra fields not permitted"
+    "exception": "Extra inputs are not permitted [type=extra_forbidden, input_value='fusion.json', input_type=str]"
 }

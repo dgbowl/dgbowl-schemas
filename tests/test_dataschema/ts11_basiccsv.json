@@ -1,9 +1,9 @@
 {
     "input": {
         "metadata": {
-            "provenance": {"type": "datagram_from_input"}, 
+            "provenance": {"type": "datagram_from_input"},
             "version": "5.0"
-        }, 
+        },
         "step_defaults": {
             "timezone": "UTC",
             "locale": "en_GB.UTF-8"
@@ -30,7 +30,7 @@
                 "exclude": null
             },
             "extractor": {
-                "filetype": null,
+                "filetype": "None",
                 "encoding": null,
                 "locale": "de_DE.UTF-8",
                 "timezone": "Europe/Zurich"

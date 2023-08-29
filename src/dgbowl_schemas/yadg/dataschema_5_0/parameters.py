@@ -1,10 +1,10 @@
-from pydantic.v1 import BaseModel, Extra
+from pydantic import BaseModel
 from typing import Union
 
 from .timestamp import Timestamp, TimeDate, UTS
 
 
-class Parameters(BaseModel, extra=Extra.forbid):
+class Parameters(BaseModel, extra="forbid"):
     """Empty parameters specification with no extras allowed."""
 
     pass
