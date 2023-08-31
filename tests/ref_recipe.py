@@ -1,4 +1,4 @@
-ts0 = {
+le_1 = {
     "version": "v1.0",
     "load": [
         {
@@ -25,7 +25,7 @@ ts0 = {
     "save": None,
 }
 
-ts1 = {
+le_2 = {
     "version": "v1.0",
     "load": [
         {
@@ -72,7 +72,7 @@ ts1 = {
     "save": None,
 }
 
-ts2 = {
+lee_1 = {
     "version": "v1.0",
     "load": [
         {
@@ -112,7 +112,7 @@ ts2 = {
     "save": None,
 }
 
-ts3 = {
+lee_2 = {
     "version": "v1.0",
     "load": [
         {
@@ -159,7 +159,7 @@ ts3 = {
     "save": None,
 }
 
-ts4 = {
+les_1 = {
     "version": "v1.0",
     "load": [
         {
@@ -191,7 +191,7 @@ ts4 = {
     ],
 }
 
-ts5 = {
+les_2 = {
     "version": "v1.0",
     "load": [
         {
@@ -225,7 +225,44 @@ ts5 = {
     ],
 }
 
-ts6 = {
+
+les_3 = {
+    "version": "2.1",
+    "load": [
+        {
+            "as": "sparse",
+            "path": "sparse.dg.json",
+            "check": None,
+            "type": "datagram",
+        },
+    ],
+    "extract": [
+        {
+            "into": "table 1",
+            "from": "sparse",
+            "at": {"steps": ["a"], "indices": None, "timestamps": None},
+            "columns": [
+                {"key": "raw->T_f", "as": "rawT"},
+                {"key": "derived->T", "as": "derT"},
+            ],
+            "constants": None,
+        },
+    ],
+    "transform": None,
+    "plot": None,
+    "pivot": None,
+    "save": [
+        {
+            "table": "table 1",
+            "as": "sparse.extension",
+            "type": "nc",
+            "columns": ["rawT"],
+            "sigma": False,
+        },
+    ],
+}
+
+let_1 = {
     "version": "v1.0",
     "load": [
         {
@@ -284,7 +321,7 @@ ts6 = {
     "save": None,
 }
 
-ts7 = {
+let_2 = {
     "version": "v1.0",
     "load": [
         {
@@ -330,7 +367,7 @@ ts7 = {
     "save": None,
 }
 
-ts8 = {
+letp_1 = {
     "version": "v1.0",
     "load": [
         {
@@ -415,7 +452,7 @@ ts8 = {
     "save": None,
 }
 
-ts9 = {
+lp_1 = {
     "version": "v1.0",
     "load": [
         {
@@ -489,7 +526,7 @@ ts9 = {
     "save": None,
 }
 
-js0 = {
+lets = {
     "version": "v1.0",
     "load": [
         {"as": "d1", "path": "table.pkl", "type": "table", "check": True},
@@ -525,7 +562,7 @@ js0 = {
     "plot": None,
 }
 
-pivot1 = {
+pivot_1 = {
     "version": "2.1",
     "load": [
         {
@@ -551,7 +588,7 @@ pivot1 = {
     "plot": None,
 }
 
-pivot2 = {
+pivot_2 = {
     "version": "2.1",
     "load": [
         {
