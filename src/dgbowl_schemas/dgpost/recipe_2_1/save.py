@@ -11,16 +11,16 @@ class Save(BaseModel, extra="forbid", populate_by_name=True):
     as_: str = Field(alias="as")
     """Path to which the table is stored."""
 
-    type: Literal["pkl", "json", "xlsx", "csv"] = None
+    type: Literal["pkl", "json", "xlsx", "csv", "nc"] = None
     """
     Type of the output file.
 
     .. note::
 
-        Round-tripping of **dgpost** data is only possible using the ``pkl`` format. The
-        ``json`` format may however be better suited for long-term storage. The other
-        formats (``xlsx`` and ``csv``) are provided for convenience only and should not
-        be used for chaining of **dgpost** runs.
+        Round-tripping of :mod:`dgpost` data is only possible using the ``pkl`` and ``nc``
+        formats. For long-term storage, the ``json`` and ``nc`` formats may be better suited.
+        The other formats (``xlsx`` and ``csv``) are provided for convenience only and should
+        not be used for chaining of :mod:`dgpost` runs.
     """
 
     sigma: bool = True
