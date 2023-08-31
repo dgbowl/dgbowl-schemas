@@ -4,26 +4,25 @@ import yaml
 import json
 from dgbowl_schemas.dgpost import to_recipe
 
-from ref_recipe import ts0, ts1, ts2, ts3, ts4, ts5, ts6, ts7, ts8, ts9
-from ref_recipe import js0
-from ref_recipe import pivot1, pivot2
+from ref_recipe import *
 
 
 @pytest.mark.parametrize(
     "inpath, outdict",
     [
-        ("le_1.yaml", ts0),
-        ("le_2.yaml", ts1),
-        ("lee_1.yaml", ts2),
-        ("lee_2.yaml", ts3),
-        ("les_1.yaml", ts4),
-        ("les_2.yaml", ts5),
-        ("let_1.yaml", ts6),
-        ("let_2.yaml", ts7),
-        ("letp_1.yaml", ts8),
-        ("lp_1.yaml", ts9),
-        ("pivot_1.yaml", pivot1),
-        ("pivot_2.yaml", pivot2),
+        ("le_1.yaml", le_1),
+        ("le_2.yaml", le_2),
+        ("lee_1.yaml", lee_1),
+        ("lee_2.yaml", lee_2),
+        ("les_1.yaml", les_1),
+        ("les_2.yaml", les_2),
+        ("les_3.yaml", les_3),
+        ("let_1.yaml", let_1),
+        ("let_2.yaml", let_2),
+        ("letp_1.yaml", letp_1),
+        ("lp_1.yaml", lp_1),
+        ("pivot_1.yaml", pivot_1),
+        ("pivot_2.yaml", pivot_2),
     ],
 )
 def test_recipe_from_yml(inpath, outdict, datadir):
@@ -36,7 +35,7 @@ def test_recipe_from_yml(inpath, outdict, datadir):
 
 @pytest.mark.parametrize(
     "inpath, outdict",
-    [("lets.json", js0)],
+    [("lets.json", lets)],
 )
 def test_recipe_from_json(inpath, outdict, datadir):
     os.chdir(datadir)

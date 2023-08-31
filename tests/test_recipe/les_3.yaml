@@ -1,0 +1,21 @@
+version: '2.1'
+load:
+  - as: sparse
+    path: sparse.dg.json
+    check: True
+extract:
+  - into: table 1
+    from: sparse
+    at:
+      step: "a"
+    columns:
+      - key: raw->T_f
+        as: rawT
+      - key: derived->T
+        as: derT
+save:
+  - table: table 1
+    as: sparse.extension
+    type: nc
+    columns: ["rawT"]
+    sigma: false

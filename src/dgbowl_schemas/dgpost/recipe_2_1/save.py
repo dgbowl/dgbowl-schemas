@@ -35,7 +35,6 @@ class Save(BaseModel, extra="forbid", populate_by_name=True):
 
     """
 
-
     sigma: bool = True
     """Whether uncertainties/error estimates in the data should be stripped. Particularly
     useful when exporting into ``xlsx`` or ``csv``."""
