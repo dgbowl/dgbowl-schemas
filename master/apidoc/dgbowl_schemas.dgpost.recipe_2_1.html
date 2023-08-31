@@ -654,15 +654,38 @@
 <span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                  </span><span class="s2">&quot;pkl&quot;</span><span class="p">,</span>
-<span class="w">                  </span><span class="s2">&quot;json&quot;</span><span class="p">,</span>
-<span class="w">                  </span><span class="s2">&quot;xlsx&quot;</span><span class="p">,</span>
-<span class="w">                  </span><span class="s2">&quot;csv&quot;</span>
+<span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="p">{</span>
+<span class="w">                     </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                        </span><span class="s2">&quot;pkl&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="s2">&quot;json&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="s2">&quot;xlsx&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="s2">&quot;csv&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="s2">&quot;nc&quot;</span>
+<span class="w">                     </span><span class="p">],</span>
+<span class="w">                     </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">                  </span><span class="p">},</span>
+<span class="w">                  </span><span class="p">{</span>
+<span class="w">                     </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;null&quot;</span>
+<span class="w">                  </span><span class="p">}</span>
 <span class="w">               </span><span class="p">],</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Type&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Type&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;columns&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="p">{</span>
+<span class="w">                     </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">                     </span><span class="p">},</span>
+<span class="w">                     </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span>
+<span class="w">                  </span><span class="p">},</span>
+<span class="w">                  </span><span class="p">{</span>
+<span class="w">                     </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;null&quot;</span>
+<span class="w">                  </span><span class="p">}</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Columns&quot;</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;sigma&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
@@ -925,6 +948,7 @@
 <li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.dgpost.recipe_2_1.save.html#dgbowl_schemas.dgpost.recipe_2_1.save.Save.table"><code class="docutils literal notranslate"><span class="pre">Save.table</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.dgpost.recipe_2_1.save.html#dgbowl_schemas.dgpost.recipe_2_1.save.Save.as_"><code class="docutils literal notranslate"><span class="pre">Save.as_</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.dgpost.recipe_2_1.save.html#dgbowl_schemas.dgpost.recipe_2_1.save.Save.type"><code class="docutils literal notranslate"><span class="pre">Save.type</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.dgpost.recipe_2_1.save.html#dgbowl_schemas.dgpost.recipe_2_1.save.Save.columns"><code class="docutils literal notranslate"><span class="pre">Save.columns</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.dgpost.recipe_2_1.save.html#dgbowl_schemas.dgpost.recipe_2_1.save.Save.sigma"><code class="docutils literal notranslate"><span class="pre">Save.sigma</span></code></a></li>
 </ul>
 </li>
