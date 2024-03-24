@@ -122,7 +122,7 @@ def test_dataschema_update_chain(inpath, datadir):
     ret = to_dataschema(**jsdata)
     while hasattr(ret, "update"):
         ret = ret.update()
-    assert ret.metadata.version == "5.0"
+    assert ret.version == "5.1"
 
 
 @pytest.mark.parametrize(
