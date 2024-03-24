@@ -7,7 +7,7 @@ import tzlocal
 import locale
 
 from .stepdefaults import StepDefaults
-from .parameters import Parameters, Timestamps, Timestamp
+from .parameters import Timestamps, Timestamp
 
 
 class FileType(BaseModel, ABC, extra="forbid"):
