@@ -2,19 +2,19 @@ from pydantic.v1 import BaseModel, Extra
 from typing import Optional
 
 
-class TimestampSpec(BaseModel, extra=Extra.forbid):
-    index: Optional[int]
-    format: Optional[str]
+class TimestampSpec(BaseModel, extra="forbid"):
+    index: Optional[int] = None
+    format: Optional[str] = None
 
 
-class Timestamp(BaseModel, extra=Extra.forbid):
+class Timestamp(BaseModel, extra="forbid"):
     timestamp: TimestampSpec
 
 
-class UTS(BaseModel, extra=Extra.forbid):
+class UTS(BaseModel, extra="forbid"):
     uts: TimestampSpec
 
 
-class TimeDate(BaseModel, extra=Extra.forbid):
-    date: Optional[TimestampSpec]
-    time: Optional[TimestampSpec]
+class TimeDate(BaseModel, extra="forbid"):
+    date: Optional[TimestampSpec] = None
+    time: Optional[TimestampSpec] = None
