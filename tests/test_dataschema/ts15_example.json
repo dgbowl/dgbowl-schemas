@@ -1,0 +1,43 @@
+{
+    "input": {
+        "version": "5.1",
+        "metadata": {
+            "provenance": {"type": "manual"}
+        },
+        "steps": [
+            {
+                "tag": "test_tag",
+                "input": {"folders": ["fol"], "suffix": ".txt"},
+                "extractor": {
+                    "filetype": "example",
+                    "timezone": "Europe/Zurich",
+                    "parameters": {"k": "v"}
+                },
+                "externaldate": {"using": {"filename": {"len": 10, "format": "%Y_%m_%d"}}}
+            }
+        ]
+    },
+    "output": [
+        {
+            "input": {
+                "files": ["fol"],
+                "prefix": null,
+                "suffix": ".txt",
+                "contains": null,
+                "exclude": null
+            },
+            "tag": "test_tag",
+            "extractor": {
+                "encoding": null,
+                "filetype": "example",
+                "locale": null,
+                "timezone": "Europe/Zurich",
+                "parameters": {"k": "v"}
+            },
+            "externaldate": {
+                "using": {"filename": {"len": 10, "format": "%Y_%m_%d"}},
+                "mode": "add"
+            }
+        }
+    ]
+}
