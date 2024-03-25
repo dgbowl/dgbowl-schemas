@@ -21,8 +21,8 @@ class StepDefaults(BaseModel, extra="forbid"):
     locale: Union[Tuple[str, str], str, None] = Field(None, validate_default=True)
     """Global locale specification. Will default to current locale."""
 
-    encoding: Optional[str] = None
-    """Global filetype encoding. Will default to ``None``."""
+    encoding: Optional[str] = "utf-8"
+    """Global filetype encoding. Will default to ``utf-8``."""
 
     @field_validator("timezone")
     @classmethod

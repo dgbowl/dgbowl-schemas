@@ -135,6 +135,7 @@ def test_dataschema_update_chain(inpath, datadir):
             {
                 "filetype": "eclab.mpr",
                 "locale": "en_GB.UTF-8",
+                "encoding": "utf-8",
             },
         ),
         (  # ts1 - mpt file, mixture of inputs and defaults from extractor

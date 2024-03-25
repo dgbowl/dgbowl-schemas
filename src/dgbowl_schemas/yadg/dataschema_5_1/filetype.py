@@ -2,7 +2,7 @@ import sys
 import inspect
 from pydantic import BaseModel, Field, field_validator
 from abc import ABC
-from typing import Optional, Literal, Union, Mapping
+from typing import Optional, Literal, Union, Mapping, Any
 import tzlocal
 import locale
 
@@ -17,6 +17,7 @@ class FileType(BaseModel, ABC, extra="forbid"):
     timezone: Optional[str] = None
     locale: Optional[str] = None
     encoding: Optional[str] = None
+    parameters: Optional[Any] = None
 
     @field_validator("timezone")
     @classmethod
