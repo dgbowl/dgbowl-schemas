@@ -44,18 +44,18 @@ class DataSchema(BaseModel, extra="forbid"):
             nstep = {
                 "tag": step.tag,
                 "input": step.input.model_dump(exclude_none=True),
+
             }
+            extractor = step.extractor.model_dump(exclude_none=True)
             if step.parser == "dummy":
                 if step.extractor.filetype == "tomato.json":
-                    extractor = {"filetype": "tomato.json"}
+                    extractor["filetype"] = "tomato.json"
                 else:
-                    extractor = {"filetype": "example"}
+                    extractor["filetype"] = "example"
             elif step.parser == "basiccsv":
-                extractor = {"filetype": "basic.csv"}
+                extractor["filetype"] = "basic.csv"
             elif step.parser == "meascsv":
-                extractor = {"filetype": "FHI.csv"}
-            else:
-                extractor = step.extractor.model_dump(exclude_none=True)
+                extractor["filetype"] = "FHI.csv"
             if step.parameters is not None:
                 extractor["parameters"] = step.parameters.model_dump(exclude_none=True)
             if step.externaldate is not None:
