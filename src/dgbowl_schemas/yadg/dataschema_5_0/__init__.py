@@ -44,7 +44,6 @@ class DataSchema(BaseModel, extra="forbid"):
             nstep = {
                 "tag": step.tag,
                 "input": step.input.model_dump(exclude_none=True),
-
             }
             extractor = step.extractor.model_dump(exclude_none=True)
             if step.parser == "dummy":
