@@ -111,6 +111,7 @@ def test_dataschema_update(inpath, datadir):
     [
         ("chain_vna_4.0.json"),  # 4.0
         ("chain_gc_4.0.json"),  # 4.0
+        ("chain_externaldate_4.0.json"),  # 4.0
         ("chain_basiccsv_4.1.json"),  # 4.1
     ],
 )

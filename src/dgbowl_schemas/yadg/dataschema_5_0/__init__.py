@@ -58,6 +58,8 @@ class DataSchema(BaseModel, extra="forbid"):
                 extractor = step.extractor.model_dump(exclude_none=True)
             if step.parameters is not None:
                 extractor["parameters"] = step.parameters.model_dump(exclude_none=True)
+            if step.externaldate is not None:
+                nstep["externaldate"] = step.externaldate.model_dump(exclude_none=True)
             nstep["extractor"] = extractor
             nsch["steps"].append(nstep)
 
