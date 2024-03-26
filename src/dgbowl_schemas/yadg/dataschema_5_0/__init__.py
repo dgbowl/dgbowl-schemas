@@ -54,7 +54,7 @@ class DataSchema(BaseModel, extra="forbid"):
             elif step.parser == "basiccsv":
                 extractor["filetype"] = "basic.csv"
             elif step.parser == "meascsv":
-                extractor["filetype"] = "FHI.csv"
+                extractor["filetype"] = "fhi.csv"
             if step.parameters is not None:
                 extractor["parameters"] = step.parameters.model_dump(exclude_none=True)
             if step.externaldate is not None:
