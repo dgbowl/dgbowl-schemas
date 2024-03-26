@@ -5,6 +5,7 @@ from .stepdefaults import StepDefaults
 from .filetype import (  # noqa: F401
     ExtractorFactory as ExtractorFactory,
     FileType as FileType,
+    FileTypes as FileTypes,
 )
 
 

@@ -160,7 +160,7 @@ classlist = []
 for name, obj in inspect.getmembers(sys.modules[__name__]):
     if inspect.isclass(obj) and issubclass(obj, FileType) and obj is not FileType:
         classlist.append(obj)
-FileTypes = Union[tuple(classlist)]
+FileTypes = tuple(classlist)
 
 
 class ExtractorFactory(BaseModel):
@@ -179,7 +179,7 @@ class ExtractorFactory(BaseModel):
         ftype = ExtractorFactory(extractor={"filetype": k}).extractor
     """
 
-    extractor: FileTypes = Field(..., discriminator="filetype")
+    extractor: Union[FileTypes] = Field(..., discriminator="filetype")
 
     @field_validator("extractor")
     @classmethod
