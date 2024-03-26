@@ -68,7 +68,11 @@ class FHI_csv(FileType):
         )
 
     parameters: Parameters = Field(default_factory=Parameters)
-    filetype: Literal["fhi.csv"]
+    filetype: Literal["fhimcpt.csv"]
+
+
+class FHI_vna(FileType):
+    filetype: Literal["fhimcpt.vna"]
 
 
 class Tomato_json(FileType):
@@ -134,10 +138,6 @@ class EmpaLC_xlsx(FileType):
 
 class Quadstar_sac(FileType):
     filetype: Literal["quadstar.sac"]
-
-
-class LabView_csv(FileType):
-    filetype: Literal["labview.csv"]
 
 
 class Phi_spe(FileType):
