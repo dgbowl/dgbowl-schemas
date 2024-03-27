@@ -99,7 +99,9 @@ class EClab_mpr(FileType):
 
     @field_validator("filetype")
     @classmethod
-    def warn_deprecated(cls, v, dep="biologic-mpr", ok="eclab.mpr"):
+    def warn_deprecated(cls, v):
+        dep = "biologic-mpr"
+        ok = "eclab.mpr"
         if v == dep:
             logger.warning(
                 f"Using {dep!r} as a filetype alias for {ok!r}"
@@ -115,7 +117,9 @@ class EClab_mpt(FileType):
 
     @field_validator("filetype")
     @classmethod
-    def warn_deprecated(cls, v, dep="biologic-mpt", ok="eclab.mpt"):
+    def warn_deprecated(cls, v):
+        dep = "biologic-mpt"
+        ok = "eclab.mpt"
         if v == dep:
             logger.warning(
                 f"Using {dep!r} as a filetype alias for {ok!r}"
@@ -146,7 +150,9 @@ class Agilent_ch(FileType):
 
     @field_validator("filetype")
     @classmethod
-    def warn_deprecated(cls, v, dep="agilent-ch", ok="agilent.ch"):
+    def warn_deprecated(cls, v):
+        dep = "agilent-ch"
+        ok = "agilent.ch"
         if v == dep:
             logger.warning(
                 f"Using {dep!r} as a filetype alias for {ok!r}"
@@ -161,7 +167,9 @@ class Agilent_dx(FileType):
 
     @field_validator("filetype")
     @classmethod
-    def warn_deprecated(cls, v, dep="agilent-dx", ok="agilent.dx"):
+    def warn_deprecated(cls, v):
+        dep = "agilent-dx"
+        ok = "agilent.dx"
         if v == dep:
             logger.warning(
                 f"Using {dep!r} as a filetype alias for {ok!r}"
@@ -192,7 +200,9 @@ class Phi_spe(FileType):
 
     @field_validator("filetype")
     @classmethod
-    def warn_deprecated(cls, v, dep="phi-spe", ok="phi.spe"):
+    def warn_deprecated(cls, v):
+        dep = "phi-spe"
+        ok = "phi.spe"
         if v == dep:
             logger.warning(
                 f"Using {dep!r} as a filetype alias for {ok!r}"
@@ -207,7 +217,9 @@ class Panalytical_xrdml(FileType):
 
     @field_validator("filetype")
     @classmethod
-    def warn_deprecated(cls, v, dep="panalytical-xrdml", ok="panalytical.xrdml"):
+    def warn_deprecated(cls, v):
+        dep = "panalytical-xrdml"
+        ok = "panalytical.xrdml"
         if v == dep:
             logger.warning(
                 f"Using {dep!r} as a filetype alias for {ok!r}"
