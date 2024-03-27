@@ -5,9 +5,12 @@ from abc import ABC
 from typing import Optional, Literal, Union, Mapping, Any
 import tzlocal
 import locale
+import logging
 
 from .stepdefaults import StepDefaults
 from .parameters import Timestamps, Timestamp
+
+logger = logging.getLogger(__name__)
 
 
 class FileType(BaseModel, ABC, extra="forbid"):
@@ -92,12 +95,34 @@ class Drycal_txt(FileType):
 
 
 class EClab_mpr(FileType):
-    filetype: Literal["eclab.mpr"]
+    filetype: Literal["eclab.mpr", "biologic-mpr"]
+
+    @field_validator("filetype")
+    @classmethod
+    def warn_deprecated(cls, v, dep="biologic-mpr", ok="eclab.mpr"):
+        if v == dep:
+            logger.warning(
+                f"Using {dep!r} as a filetype alias for {ok!r}"
+                "is deprecated and will stop working in DataSchema-6.0"
+            )
+            v = ok
+        return v
 
 
 class EClab_mpt(FileType):
-    filetype: Literal["eclab.mpt"]
+    filetype: Literal["eclab.mpt", "biologic-mpt"]
     encoding: str = "windows-1252"
+
+    @field_validator("filetype")
+    @classmethod
+    def warn_deprecated(cls, v, dep="biologic-mpt", ok="eclab.mpt"):
+        if v == dep:
+            logger.warning(
+                f"Using {dep!r} as a filetype alias for {ok!r}"
+                "is deprecated and will stop working in DataSchema-6.0"
+            )
+            v = ok
+        return v
 
 
 class EZChrom_asc(FileType):
@@ -117,11 +142,33 @@ class Fusion_csv(FileType):
 
 
 class Agilent_ch(FileType):
-    filetype: Literal["agilent.ch"]
+    filetype: Literal["agilent.ch", "agilent-ch"]
+
+    @field_validator("filetype")
+    @classmethod
+    def warn_deprecated(cls, v, dep="agilent-ch", ok="agilent.ch"):
+        if v == dep:
+            logger.warning(
+                f"Using {dep!r} as a filetype alias for {ok!r}"
+                "is deprecated and will stop working in DataSchema-6.0"
+            )
+            v = ok
+        return v
 
 
 class Agilent_dx(FileType):
-    filetype: Literal["agilent.dx"]
+    filetype: Literal["agilent.dx", "agilent-dx"]
+
+    @field_validator("filetype")
+    @classmethod
+    def warn_deprecated(cls, v, dep="agilent-dx", ok="agilent.dx"):
+        if v == dep:
+            logger.warning(
+                f"Using {dep!r} as a filetype alias for {ok!r}"
+                "is deprecated and will stop working in DataSchema-6.0"
+            )
+            v = ok
+        return v
 
 
 class Agilent_csv(FileType):
@@ -141,11 +188,33 @@ class Quadstar_sac(FileType):
 
 
 class Phi_spe(FileType):
-    filetype: Literal["phi.spe"]
+    filetype: Literal["phi.spe", "phi-spe"]
+
+    @field_validator("filetype")
+    @classmethod
+    def warn_deprecated(cls, v, dep="phi-spe", ok="phi.spe"):
+        if v == dep:
+            logger.warning(
+                f"Using {dep!r} as a filetype alias for {ok!r}"
+                "is deprecated and will stop working in DataSchema-6.0"
+            )
+            v = ok
+        return v
 
 
 class Panalytical_xrdml(FileType):
-    filetype: Literal["panalytical.xrdml"]
+    filetype: Literal["panalytical.xrdml", "panalytical-xrdml"]
+
+    @field_validator("filetype")
+    @classmethod
+    def warn_deprecated(cls, v, dep="panalytical-xrdml", ok="panalytical.xrdml"):
+        if v == dep:
+            logger.warning(
+                f"Using {dep!r} as a filetype alias for {ok!r}"
+                "is deprecated and will stop working in DataSchema-6.0"
+            )
+            v = ok
+        return v
 
 
 class Panalytical_xy(FileType):
