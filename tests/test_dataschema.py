@@ -49,6 +49,9 @@ def test_dataschema_metadata_json(inpath, success, datadir):
         ("ts10_chromdata.json"),  # 5.0
         ("ts11_basiccsv.json"),  # 5.0
         ("ts12_dummy.json"),  # 5.0
+        ("ts13_fusion_json.json"),  # 5.1
+        ("ts14_basic_csv.json"),  # 5.1
+        ("ts15_example.json"),  # 5.1
     ],
 )
 def test_dataschema_steps_json(inpath, datadir):
@@ -108,6 +111,7 @@ def test_dataschema_update(inpath, datadir):
     [
         ("chain_vna_4.0.json"),  # 4.0
         ("chain_gc_4.0.json"),  # 4.0
+        ("chain_externaldate_4.0.json"),  # 4.0
         ("chain_basiccsv_4.1.json"),  # 4.1
     ],
 )
@@ -119,7 +123,7 @@ def test_dataschema_update_chain(inpath, datadir):
     ret = to_dataschema(**jsdata)
     while hasattr(ret, "update"):
         ret = ret.update()
-    assert ret.metadata.version == "5.0"
+    assert ret.version == "5.1"
 
 
 @pytest.mark.parametrize(
@@ -132,6 +136,7 @@ def test_dataschema_update_chain(inpath, datadir):
             {
                 "filetype": "eclab.mpr",
                 "locale": "en_GB.UTF-8",
+                "encoding": "utf-8",
             },
         ),
         (  # ts1 - mpt file, mixture of inputs and defaults from extractor

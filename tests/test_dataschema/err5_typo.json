@@ -16,5 +16,5 @@
             }
         ]
     },
-    "exception": "Input tag 'typo' found using 'parser' does not match any of the expected tags:"
+    "exception": "type=literal_error, input_value='typo'"
 }

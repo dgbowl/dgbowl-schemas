@@ -1,0 +1,22 @@
+{
+    "metadata": {
+        "provenance": "manual",
+        "schema_version": "4.0",
+        "timezone": "UTC"
+    },
+    "steps": [
+        {
+            "parser": "basiccsv",
+            "import": {
+                "files": ["case_time_custom.csv"],
+                "encoding": "utf-8"
+            },
+            "parameters": {
+                "sep": ",",
+                "sigma": {"col": {"atol": 1e-4}}
+            },
+            "externaldate": {"from": {"isostring": "2021-01-01"}}
+        }
+
+    ]
+}
