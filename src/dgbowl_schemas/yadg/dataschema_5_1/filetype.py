@@ -265,6 +265,10 @@ class Touchstone_snp(FileType):
     filetype: Literal["touchstone.snp"]
 
 
+class Touchstone_snp(FileType):
+    filetype: Literal["touchstone.snp"]
+
+
 classlist = []
 for name, obj in inspect.getmembers(sys.modules[__name__]):
     if inspect.isclass(obj) and issubclass(obj, FileType) and obj is not FileType:
