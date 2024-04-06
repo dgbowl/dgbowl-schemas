@@ -129,6 +129,10 @@ class EClab_mpt(FileType):
         return v
 
 
+class EZChrom_dat(FileType):
+    filetype: Literal["ezchrom.dat"]
+
+
 class EZChrom_asc(FileType):
     filetype: Literal["ezchrom.asc"]
 
