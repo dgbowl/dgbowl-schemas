@@ -135,6 +135,7 @@ class EZChrom_dat(FileType):
 
 class EZChrom_asc(FileType):
     filetype: Literal["ezchrom.asc"]
+    encoding: str = "windows-1252"
 
 
 class Fusion_json(FileType):
