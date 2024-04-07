@@ -45,6 +45,44 @@ class Example(FileType):
     filetype: Literal["example"]
 
 
+class Agilent_ch(FileType):
+    filetype: Literal["agilent.ch", "agilent-ch"]
+
+    @field_validator("filetype")
+    @classmethod
+    def warn_deprecated(cls, v):
+        dep = "agilent-ch"
+        ok = "agilent.ch"
+        if v == dep:
+            logger.warning(
+                f"Using {dep!r} as a filetype alias for {ok!r}"
+                "is deprecated and will stop working in DataSchema-6.0"
+            )
+            v = ok
+        return v
+
+
+class Agilent_dx(FileType):
+    filetype: Literal["agilent.dx", "agilent-dx"]
+
+    @field_validator("filetype")
+    @classmethod
+    def warn_deprecated(cls, v):
+        dep = "agilent-dx"
+        ok = "agilent.dx"
+        if v == dep:
+            logger.warning(
+                f"Using {dep!r} as a filetype alias for {ok!r}"
+                "is deprecated and will stop working in DataSchema-6.0"
+            )
+            v = ok
+        return v
+
+
+class Agilent_csv(FileType):
+    filetype: Literal["agilent.csv"]
+
+
 class Basic_csv(FileType):
     class Parameters(BaseModel, extra="forbid"):
         sep: str = ","
@@ -62,24 +100,6 @@ class Basic_csv(FileType):
 
     parameters: Parameters = Field(default_factory=Parameters)
     filetype: Literal["basic.csv"]
-
-
-class FHI_csv(FileType):
-    class Parameters(BaseModel, extra="forbid"):
-        timestamp: Timestamps = Field(
-            Timestamp(timestamp={"index": 0, "format": "%Y-%m-%d-%H-%M-%S"})
-        )
-
-    parameters: Parameters = Field(default_factory=Parameters)
-    filetype: Literal["fhimcpt.csv"]
-
-
-class FHI_vna(FileType):
-    filetype: Literal["fhimcpt.vna"]
-
-
-class Tomato_json(FileType):
-    filetype: Literal["tomato.json"]
 
 
 class Drycal_csv(FileType):
@@ -129,6 +149,14 @@ class EClab_mpt(FileType):
         return v
 
 
+class EmpaLC_csv(FileType):
+    filetype: Literal["empalc.csv"]
+
+
+class EmpaLC_xlsx(FileType):
+    filetype: Literal["empalc.xlsx"]
+
+
 class EZChrom_dat(FileType):
     filetype: Literal["ezchrom.dat"]
 
@@ -136,6 +164,20 @@ class EZChrom_dat(FileType):
 class EZChrom_asc(FileType):
     filetype: Literal["ezchrom.asc"]
     encoding: str = "windows-1252"
+
+
+class FHI_csv(FileType):
+    class Parameters(BaseModel, extra="forbid"):
+        timestamp: Timestamps = Field(
+            Timestamp(timestamp={"index": 0, "format": "%Y-%m-%d-%H-%M-%S"})
+        )
+
+    parameters: Parameters = Field(default_factory=Parameters)
+    filetype: Literal["fhimcpt.csv"]
+
+
+class FHI_vna(FileType):
+    filetype: Literal["fhimcpt.vna"]
 
 
 class Fusion_json(FileType):
@@ -150,71 +192,16 @@ class Fusion_csv(FileType):
     filetype: Literal["fusion.csv"]
 
 
-class Agilent_ch(FileType):
-    filetype: Literal["agilent.ch", "agilent-ch"]
-
-    @field_validator("filetype")
-    @classmethod
-    def warn_deprecated(cls, v):
-        dep = "agilent-ch"
-        ok = "agilent.ch"
-        if v == dep:
-            logger.warning(
-                f"Using {dep!r} as a filetype alias for {ok!r}"
-                "is deprecated and will stop working in DataSchema-6.0"
-            )
-            v = ok
-        return v
+class Panalytical_xy(FileType):
+    filetype: Literal["panalytical.xy"]
 
 
-class Agilent_dx(FileType):
-    filetype: Literal["agilent.dx", "agilent-dx"]
-
-    @field_validator("filetype")
-    @classmethod
-    def warn_deprecated(cls, v):
-        dep = "agilent-dx"
-        ok = "agilent.dx"
-        if v == dep:
-            logger.warning(
-                f"Using {dep!r} as a filetype alias for {ok!r}"
-                "is deprecated and will stop working in DataSchema-6.0"
-            )
-            v = ok
-        return v
+class Panalytical_csv(FileType):
+    filetype: Literal["panalytical.csv"]
 
 
-class Agilent_csv(FileType):
-    filetype: Literal["agilent.csv"]
-
-
-class EmpaLC_csv(FileType):
-    filetype: Literal["empalc.csv"]
-
-
-class EmpaLC_xlsx(FileType):
-    filetype: Literal["empalc.xlsx"]
-
-
-class Quadstar_sac(FileType):
-    filetype: Literal["quadstar.sac"]
-
-
-class Phi_spe(FileType):
-    filetype: Literal["phi.spe", "phi-spe"]
-
-    @field_validator("filetype")
-    @classmethod
-    def warn_deprecated(cls, v):
-        dep = "phi-spe"
-        ok = "phi.spe"
-        if v == dep:
-            logger.warning(
-                f"Using {dep!r} as a filetype alias for {ok!r}"
-                "is deprecated and will stop working in DataSchema-6.0"
-            )
-            v = ok
-        return v
+class PicoLog_tc08(FileType):
+    filetype: Literal["picolog.tc08"]
 
 
 class Panalytical_xrdml(FileType):
@@ -234,12 +221,29 @@ class Panalytical_xrdml(FileType):
         return v
 
 
-class Panalytical_xy(FileType):
-    filetype: Literal["panalytical.xy"]
+class Phi_spe(FileType):
+    filetype: Literal["phi.spe", "phi-spe"]
+
+    @field_validator("filetype")
+    @classmethod
+    def warn_deprecated(cls, v):
+        dep = "phi-spe"
+        ok = "phi.spe"
+        if v == dep:
+            logger.warning(
+                f"Using {dep!r} as a filetype alias for {ok!r}"
+                "is deprecated and will stop working in DataSchema-6.0"
+            )
+            v = ok
+        return v
 
 
-class Panalytical_csv(FileType):
-    filetype: Literal["panalytical.csv"]
+class Quadstar_sac(FileType):
+    filetype: Literal["quadstar.sac"]
+
+
+class Tomato_json(FileType):
+    filetype: Literal["tomato.json"]
 
 
 class Touchstone_snp(FileType):
