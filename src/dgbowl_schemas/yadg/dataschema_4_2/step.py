@@ -164,7 +164,6 @@ class ElectroChem(BaseModel, extra=Extra.forbid):
     """Parser for electrochemistry files."""
 
     class Params(BaseModel, extra=Extra.forbid):
-
         filetype: Literal["eclab.mpt", "eclab.mpr", "tomato.json"] = "eclab.mpr"
 
         transpose: bool = True

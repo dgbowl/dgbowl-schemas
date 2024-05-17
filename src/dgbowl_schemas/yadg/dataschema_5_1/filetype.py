@@ -133,7 +133,7 @@ class EClab_mpr(FileType):
 
 class EClab_mpt(FileType):
     filetype: Literal["eclab.mpt", "biologic-mpt"]
-    encoding: str = "windows-1252"
+    encoding: Optional[str] = "windows-1252"
 
     @field_validator("filetype")
     @classmethod
@@ -147,6 +147,11 @@ class EClab_mpt(FileType):
             )
             v = ok
         return v
+
+    @field_validator("encoding")
+    @classmethod
+    def set_encoding(cls, encoding):
+        return encoding or "windows-1252"
 
 
 class EmpaLC_csv(FileType):
