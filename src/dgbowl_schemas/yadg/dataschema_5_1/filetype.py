@@ -168,8 +168,12 @@ class EZChrom_dat(FileType):
 
 class EZChrom_asc(FileType):
     filetype: Literal["ezchrom.asc"]
-    encoding: str = "windows-1252"
+    encoding: Optional[str] = "windows-1252"
 
+    @field_validator("encoding")
+    @classmethod
+    def set_encoding(cls, encoding):
+        return encoding or "windows-1252"
 
 class FHI_csv(FileType):
     class Parameters(BaseModel, extra="forbid"):
