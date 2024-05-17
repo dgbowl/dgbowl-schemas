@@ -175,6 +175,7 @@ class EZChrom_asc(FileType):
     def set_encoding(cls, encoding):
         return encoding or "windows-1252"
 
+
 class FHI_csv(FileType):
     class Parameters(BaseModel, extra="forbid"):
         timestamp: Timestamps = Field(

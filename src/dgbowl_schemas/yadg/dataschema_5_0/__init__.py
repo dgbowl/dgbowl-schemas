@@ -38,7 +38,9 @@ class DataSchema(BaseModel, extra="forbid"):
             else:
                 nsch["metadata"][k] = v
 
-        nsch["step_defaults"] = self.step_defaults.model_dump(exclude_none=True)
+        nsch["step_defaults"] = self.step_defaults.model_dump(
+            exclude_none=True, exclude_defaults=True
+        )
 
         for step in self.steps:
             nstep = {

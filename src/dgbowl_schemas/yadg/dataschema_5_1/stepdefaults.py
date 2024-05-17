@@ -1,6 +1,7 @@
 from pydantic import BaseModel, Field, field_validator
 from typing import Optional, Tuple, Union
 import locale
+from babel import Locale, UnknownLocaleError
 import tzlocal
 
 
@@ -35,5 +36,9 @@ class StepDefaults(BaseModel, extra="forbid"):
     @classmethod
     def locale_set_default(cls, v):
         if v is None:
-            v = ".".join(locale.getlocale())
+            v = locale.getlocale(locale.LC_NUMERIC)
+        try:
+            v = Locale.parse(v)
+        except (TypeError, UnknownLocaleError):
+            v = "en_GB"
         return v
