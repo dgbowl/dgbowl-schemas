@@ -32,6 +32,7 @@ setuptools.setup(
     python_requires=">=3.8",
     install_requires=[
         "pydantic~=2.0",
+        "babel >= 2.15",
         "pyyaml>=5.0",
         "tzlocal",
     ],
