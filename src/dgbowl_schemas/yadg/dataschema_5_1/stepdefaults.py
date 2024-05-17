@@ -19,7 +19,7 @@ class StepDefaults(BaseModel, extra="forbid"):
 
     """
 
-    locale: Union[Tuple[str, str], str, None] = Field(None, validate_default=True)
+    locale: Optional[str] = Field(None, validate_default=True)
     """Global locale specification. Will default to current locale."""
 
     encoding: Optional[str] = "utf-8"
@@ -36,9 +36,9 @@ class StepDefaults(BaseModel, extra="forbid"):
     @classmethod
     def locale_set_default(cls, v):
         if v is None:
-            v = locale.getlocale(locale.LC_NUMERIC)
+            v = locale.getlocale(locale.LC_NUMERIC)[0]
         try:
-            v = Locale.parse(v)
+            v = str(Locale.parse(v))
         except (TypeError, UnknownLocaleError):
             v = "en_GB"
         return v

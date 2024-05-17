@@ -36,7 +36,7 @@
             "extractor": {
                 "filetype": "fusion.json",
                 "timezone": "Europe/Berlin",
-                "locale": "en_GB.UTF-8",
+                "locale": "en_GB",
                 "encoding": null,
                 "parameters": null
             },

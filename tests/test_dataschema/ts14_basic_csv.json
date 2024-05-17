@@ -31,7 +31,7 @@
             "extractor": {
                 "filetype": "basic.csv",
                 "encoding": null,
-                "locale": "de_DE.UTF-8",
+                "locale": "de_DE",
                 "timezone": "Europe/Zurich",
                 "parameters": {
                     "sep": ",",

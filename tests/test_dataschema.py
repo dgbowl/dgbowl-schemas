@@ -135,7 +135,7 @@ def test_dataschema_update_chain(inpath, datadir):
             },
             {
                 "filetype": "eclab.mpr",
-                "locale": "en_GB.UTF-8",
+                "locale": "en_GB",
                 "encoding": "utf-8",
             },
         ),
@@ -147,7 +147,7 @@ def test_dataschema_update_chain(inpath, datadir):
             },
             {
                 "filetype": "eclab.mpt",
-                "locale": "de_DE.UTF-8",
+                "locale": "de_DE",
                 "timezone": "Europe/Zurich",
                 "encoding": "windows-1252",
             },
@@ -155,8 +155,9 @@ def test_dataschema_update_chain(inpath, datadir):
     ],
 )
 def test_extractor_factory(input, output):
-    locale.setlocale(locale.LC_CTYPE, "en_GB.UTF-8")
+    locale.setlocale(locale.LC_NUMERIC, "en_GB.UTF-8")
     ret = ExtractorFactory(extractor=input).extractor
+    print(f"{ret=}")
     assert ret.filetype == output.get("filetype")
     assert ret.locale == output.get("locale")
     assert ret.encoding == output.get("encoding")

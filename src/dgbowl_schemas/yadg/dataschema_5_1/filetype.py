@@ -5,6 +5,7 @@ from abc import ABC
 from typing import Optional, Literal, Union, Mapping, Any
 import tzlocal
 import locale
+from babel import Locale, UnknownLocaleError
 import logging
 
 from .stepdefaults import StepDefaults
@@ -32,8 +33,12 @@ class FileType(BaseModel, ABC, extra="forbid"):
     @field_validator("locale")
     @classmethod
     def locale_set_default(cls, v):
-        if v == "getlocale":
-            v = ".".join(locale.getlocale())
+        if v is None:
+            v = locale.getlocale(locale.LC_NUMERIC)[0]
+        try:
+            v = str(Locale.parse(v))
+        except (TypeError, UnknownLocaleError):
+            v = "en_GB"
         return v
 
 
@@ -288,7 +293,9 @@ class ExtractorFactory(BaseModel):
     @field_validator("extractor")
     @classmethod
     def extractor_set_defaults(cls, v):
+        print(f"{v=}")
         defaults = StepDefaults()
+        print(f"{defaults=}")
         if v.timezone is None:
             v.timezone = defaults.timezone
         if v.locale is None:
