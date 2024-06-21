@@ -301,9 +301,7 @@ class ExtractorFactory(BaseModel):
     @field_validator("extractor")
     @classmethod
     def extractor_set_defaults(cls, v):
-        print(f"{v=}")
         defaults = StepDefaults()
-        print(f"{defaults=}")
         if v.timezone is None:
             v.timezone = defaults.timezone
         if v.locale is None:
