@@ -2,7 +2,7 @@ import sys
 import inspect
 from pydantic import BaseModel, Field, field_validator
 from abc import ABC
-from typing import Optional, Literal, Union, Mapping, Any
+from typing import Optional, Literal, Mapping, Any, TypeVar
 import tzlocal
 import locale
 from babel import Locale, UnknownLocaleError
@@ -269,7 +269,7 @@ classlist = []
 for name, obj in inspect.getmembers(sys.modules[__name__]):
     if inspect.isclass(obj) and issubclass(obj, FileType) and obj is not FileType:
         classlist.append(obj)
-FileTypes = tuple(classlist)
+FileTypes = TypeVar('FileTypes', *classlist)
 
 
 class ExtractorFactory(BaseModel):
@@ -288,7 +288,7 @@ class ExtractorFactory(BaseModel):
         ftype = ExtractorFactory(extractor={"filetype": k}).extractor
     """
 
-    extractor: Union[FileTypes] = Field(..., discriminator="filetype")
+    extractor: FileTypes = Field(..., discriminator="filetype")
 
     @field_validator("extractor")
     @classmethod
