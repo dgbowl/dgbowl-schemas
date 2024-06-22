@@ -1,0 +1,46 @@
+{
+    "input": {
+        "version": "5.1",
+        "metadata": {
+            "provenance": {"type": "datagram_from_input"}
+        },
+        "step_defaults": {
+            "timezone": "UTC"
+        },
+        "steps": [
+            {
+                "input": {
+                    "prefix": null,
+                    "suffix": "txt",
+                    "contains": null,
+                    "folders": ["fol"]
+                },
+                "extractor": {
+                    "filetype": "fusion.json",
+                    "timezone": "Europe/Berlin",
+                    "locale": "en_GB.UTF-8"
+                }
+            }
+        ]
+    },
+    "output": [
+        {
+            "tag": null,
+            "input": {
+                "prefix": null,
+                "suffix": "txt",
+                "contains": null,
+                "files": ["fol"],
+                "exclude": null
+            },
+            "extractor": {
+                "filetype": "fusion.json",
+                "timezone": "Europe/Berlin",
+                "locale": "en_GB",
+                "encoding": null,
+                "parameters": null
+            },
+            "externaldate": null
+        }
+    ]
+}

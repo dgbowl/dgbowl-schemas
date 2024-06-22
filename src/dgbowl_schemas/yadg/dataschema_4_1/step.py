@@ -141,7 +141,9 @@ class XPSTrace(BaseModel, extra=Extra.forbid):
 class XRDTrace(BaseModel, extra=Extra.forbid):
     class Params(BaseModel, extra=Extra.forbid):
         filetype: Literal[
-            "panalytical.xy", "panalytical.csv", "panalytical.xrdml"
+            "panalytical.xy",
+            "panalytical.csv",
+            "panalytical.xrdml",
         ] = "panalytical.csv"
 
     parser: Literal["xrdtrace"]

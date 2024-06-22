@@ -4,6 +4,7 @@ import json
 from dgbowl_schemas.yadg import to_dataschema
 from dgbowl_schemas.yadg.dataschema import ExtractorFactory
 import locale
+from pydantic import BaseModel
 
 
 @pytest.mark.parametrize(
@@ -49,6 +50,9 @@ def test_dataschema_metadata_json(inpath, success, datadir):
         ("ts10_chromdata.json"),  # 5.0
         ("ts11_basiccsv.json"),  # 5.0
         ("ts12_dummy.json"),  # 5.0
+        ("ts13_fusion_json.json"),  # 5.1
+        ("ts14_basic_csv.json"),  # 5.1
+        ("ts15_example.json"),  # 5.1
     ],
 )
 def test_dataschema_steps_json(inpath, datadir):
@@ -56,8 +60,12 @@ def test_dataschema_steps_json(inpath, datadir):
     with open(inpath, "r") as infile:
         jsdata = json.load(infile)
     ref = jsdata["output"]
-    ret = to_dataschema(**jsdata["input"])
-    assert ret.dict()["steps"] == ref
+    ret: BaseModel = to_dataschema(**jsdata["input"])
+    if hasattr(ret, "model_dump"):
+        ret = ret.model_dump()
+    else:
+        ret = ret.dict()
+    assert ret["steps"] == ref
 
 
 @pytest.mark.parametrize(
@@ -99,8 +107,11 @@ def test_dataschema_update(inpath, datadir):
         jsdata = json.load(infile)
     ref = jsdata["output"]
     ret = to_dataschema(**jsdata["input"]).update()
-    print(ret)
-    assert ref == ret.dict(exclude_none=True)
+    if hasattr(ret, "model_dump"):
+        ret = ret.model_dump(exclude_none=True)
+    else:
+        ret = ret.dict(exclude_none=True)
+    assert ret == ref
 
 
 @pytest.mark.parametrize(
@@ -108,6 +119,7 @@ def test_dataschema_update(inpath, datadir):
     [
         ("chain_vna_4.0.json"),  # 4.0
         ("chain_gc_4.0.json"),  # 4.0
+        ("chain_externaldate_4.0.json"),  # 4.0
         ("chain_basiccsv_4.1.json"),  # 4.1
     ],
 )
@@ -119,7 +131,7 @@ def test_dataschema_update_chain(inpath, datadir):
     ret = to_dataschema(**jsdata)
     while hasattr(ret, "update"):
         ret = ret.update()
-    assert ret.metadata.version == "5.0"
+    assert ret.version == "5.1"
 
 
 @pytest.mark.parametrize(
@@ -131,7 +143,8 @@ def test_dataschema_update_chain(inpath, datadir):
             },
             {
                 "filetype": "eclab.mpr",
-                "locale": "en_GB.UTF-8",
+                "locale": "en_GB",
+                "encoding": "utf-8",
             },
         ),
         (  # ts1 - mpt file, mixture of inputs and defaults from extractor
@@ -142,7 +155,7 @@ def test_dataschema_update_chain(inpath, datadir):
             },
             {
                 "filetype": "eclab.mpt",
-                "locale": "de_DE.UTF-8",
+                "locale": "de_DE",
                 "timezone": "Europe/Zurich",
                 "encoding": "windows-1252",
             },
@@ -150,8 +163,9 @@ def test_dataschema_update_chain(inpath, datadir):
     ],
 )
 def test_extractor_factory(input, output):
-    locale.setlocale(locale.LC_CTYPE, "en_GB.UTF-8")
+    locale.setlocale(locale.LC_NUMERIC, "en_GB.UTF-8")
     ret = ExtractorFactory(extractor=input).extractor
+    print(f"{ret=}")
     assert ret.filetype == output.get("filetype")
     assert ret.locale == output.get("locale")
     assert ret.encoding == output.get("encoding")
