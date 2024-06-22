@@ -64,6 +64,7 @@
 <li class="toctree-l6 current"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_5_0.html#submodules">Submodules</a></li>
 </ul>
 </li>
+<li class="toctree-l5"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_5_1.html">dgbowl_schemas.yadg.dataschema_5_1 package</a></li>
 </ul>
 </li>
 </ul>
@@ -104,7 +105,7 @@
   <span class="target" id="module-dgbowl_schemas.yadg.dataschema_5_0.filetype"></span><dl class="py class pydantic_model">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType">
 <em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.yadg.dataschema_5_0.filetype.</span></span><span class="sig-name descname"><span class="pre">FileType</span></span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.pydantic.dev/latest/api/base_model/#pydantic.BaseModel" title="(in Pydantic v0.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
 <p>Template abstract base class for parser classes.</p>
 <p><details  class="autodoc_pydantic_collapsable_json">
 <summary>Show JSON schema</summary><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -236,7 +237,11 @@
 <span class="w">      </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;None&quot;</span><span class="p">,</span>
 <span class="w">         </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;None&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">         </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;None&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -286,11 +291,7 @@
 </ul>
 </dd>
 <dt class="field-even">Validators<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale_set_default</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">locale</span></code></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone_resolve_localtime</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone</span></code></p></li>
-</ul>
-</dd>
+<dd class="field-even"><p></p></dd>
 </dl>
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.NoFileType.filetype">
@@ -310,7 +311,11 @@
 <span class="w">   </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tomato.json&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">         </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;tomato.json&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -363,11 +368,7 @@
 </ul>
 </dd>
 <dt class="field-even">Validators<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale_set_default</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">locale</span></code></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone_resolve_localtime</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone</span></code></p></li>
-</ul>
-</dd>
+<dd class="field-even"><p></p></dd>
 </dl>
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.Tomato_json.filetype">
@@ -387,7 +388,11 @@
 <span class="w">   </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;drycal.csv&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">         </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;drycal.csv&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -440,11 +445,7 @@
 </ul>
 </dd>
 <dt class="field-even">Validators<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale_set_default</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">locale</span></code></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone_resolve_localtime</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone</span></code></p></li>
-</ul>
-</dd>
+<dd class="field-even"><p></p></dd>
 </dl>
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.Drycal_csv.filetype">
@@ -464,7 +465,11 @@
 <span class="w">   </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;drycal.rtf&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">         </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;drycal.rtf&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -517,11 +522,7 @@
 </ul>
 </dd>
 <dt class="field-even">Validators<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale_set_default</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">locale</span></code></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone_resolve_localtime</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone</span></code></p></li>
-</ul>
-</dd>
+<dd class="field-even"><p></p></dd>
 </dl>
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.Drycal_rtf.filetype">
@@ -541,7 +542,11 @@
 <span class="w">   </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;drycal.txt&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">         </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;drycal.txt&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -594,11 +599,7 @@
 </ul>
 </dd>
 <dt class="field-even">Validators<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale_set_default</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">locale</span></code></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone_resolve_localtime</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone</span></code></p></li>
-</ul>
-</dd>
+<dd class="field-even"><p></p></dd>
 </dl>
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.Drycal_txt.filetype">
@@ -675,11 +676,7 @@
 </ul>
 </dd>
 <dt class="field-even">Validators<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale_set_default</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">locale</span></code></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone_resolve_localtime</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone</span></code></p></li>
-</ul>
-</dd>
+<dd class="field-even"><p></p></dd>
 </dl>
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpr.filetype">
@@ -749,11 +746,7 @@
 </ul>
 </dd>
 <dt class="field-even">Validators<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale_set_default</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">locale</span></code></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone_resolve_localtime</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone</span></code></p></li>
-</ul>
-</dd>
+<dd class="field-even"><p></p></dd>
 </dl>
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.EClab_mpt.filetype">
@@ -778,7 +771,11 @@
 <span class="w">   </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ezchrom.asc&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">         </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;ezchrom.asc&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -831,11 +828,7 @@
 </ul>
 </dd>
 <dt class="field-even">Validators<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale_set_default</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">locale</span></code></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone_resolve_localtime</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone</span></code></p></li>
-</ul>
-</dd>
+<dd class="field-even"><p></p></dd>
 </dl>
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.EZChrom_asc.filetype">
@@ -855,7 +848,11 @@
 <span class="w">   </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;fusion.json&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">         </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;fusion.json&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -908,11 +905,7 @@
 </ul>
 </dd>
 <dt class="field-even">Validators<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale_set_default</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">locale</span></code></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone_resolve_localtime</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone</span></code></p></li>
-</ul>
-</dd>
+<dd class="field-even"><p></p></dd>
 </dl>
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.Fusion_json.filetype">
@@ -932,7 +925,11 @@
 <span class="w">   </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;fusion.zip&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">         </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;fusion.zip&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -985,11 +982,7 @@
 </ul>
 </dd>
 <dt class="field-even">Validators<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale_set_default</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">locale</span></code></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone_resolve_localtime</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone</span></code></p></li>
-</ul>
-</dd>
+<dd class="field-even"><p></p></dd>
 </dl>
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.Fusion_zip.filetype">
@@ -1009,7 +1002,11 @@
 <span class="w">   </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;fusion.csv&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">         </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;fusion.csv&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -1062,11 +1059,7 @@
 </ul>
 </dd>
 <dt class="field-even">Validators<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale_set_default</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">locale</span></code></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone_resolve_localtime</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone</span></code></p></li>
-</ul>
-</dd>
+<dd class="field-even"><p></p></dd>
 </dl>
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.Fusion_csv.filetype">
@@ -1143,11 +1136,7 @@
 </ul>
 </dd>
 <dt class="field-even">Validators<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale_set_default</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">locale</span></code></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone_resolve_localtime</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone</span></code></p></li>
-</ul>
-</dd>
+<dd class="field-even"><p></p></dd>
 </dl>
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.Agilent_ch.filetype">
@@ -1224,11 +1213,7 @@
 </ul>
 </dd>
 <dt class="field-even">Validators<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale_set_default</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">locale</span></code></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone_resolve_localtime</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone</span></code></p></li>
-</ul>
-</dd>
+<dd class="field-even"><p></p></dd>
 </dl>
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.Agilent_dx.filetype">
@@ -1248,7 +1233,11 @@
 <span class="w">   </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;agilent.csv&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">         </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;agilent.csv&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -1301,11 +1290,7 @@
 </ul>
 </dd>
 <dt class="field-even">Validators<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale_set_default</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">locale</span></code></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone_resolve_localtime</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone</span></code></p></li>
-</ul>
-</dd>
+<dd class="field-even"><p></p></dd>
 </dl>
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.Agilent_csv.filetype">
@@ -1325,7 +1310,11 @@
 <span class="w">   </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;empalc.csv&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">         </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;empalc.csv&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -1378,11 +1367,7 @@
 </ul>
 </dd>
 <dt class="field-even">Validators<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale_set_default</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">locale</span></code></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone_resolve_localtime</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone</span></code></p></li>
-</ul>
-</dd>
+<dd class="field-even"><p></p></dd>
 </dl>
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.EmpaLC_csv.filetype">
@@ -1402,7 +1387,11 @@
 <span class="w">   </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;empalc.xlsx&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">         </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;empalc.xlsx&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -1455,11 +1444,7 @@
 </ul>
 </dd>
 <dt class="field-even">Validators<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale_set_default</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">locale</span></code></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone_resolve_localtime</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone</span></code></p></li>
-</ul>
-</dd>
+<dd class="field-even"><p></p></dd>
 </dl>
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.EmpaLC_xlsx.filetype">
@@ -1479,7 +1464,11 @@
 <span class="w">   </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;quadstar.sac&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">         </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;quadstar.sac&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -1532,11 +1521,7 @@
 </ul>
 </dd>
 <dt class="field-even">Validators<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale_set_default</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">locale</span></code></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone_resolve_localtime</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone</span></code></p></li>
-</ul>
-</dd>
+<dd class="field-even"><p></p></dd>
 </dl>
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.Quadstar_sac.filetype">
@@ -1562,7 +1547,11 @@
 <span class="w">   </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;labview.csv&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">         </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;labview.csv&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -1615,11 +1604,7 @@
 </ul>
 </dd>
 <dt class="field-even">Validators<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale_set_default</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">locale</span></code></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone_resolve_localtime</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone</span></code></p></li>
-</ul>
-</dd>
+<dd class="field-even"><p></p></dd>
 </dl>
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.LabView_csv.filetype">
@@ -1702,11 +1687,7 @@
 </ul>
 </dd>
 <dt class="field-even">Validators<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale_set_default</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">locale</span></code></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone_resolve_localtime</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone</span></code></p></li>
-</ul>
-</dd>
+<dd class="field-even"><p></p></dd>
 </dl>
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.Phi_spe.filetype">
@@ -1789,11 +1770,7 @@
 </ul>
 </dd>
 <dt class="field-even">Validators<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale_set_default</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">locale</span></code></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone_resolve_localtime</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone</span></code></p></li>
-</ul>
-</dd>
+<dd class="field-even"><p></p></dd>
 </dl>
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.Panalytical_xrdml.filetype">
@@ -1813,7 +1790,11 @@
 <span class="w">   </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;panalytical.xy&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">         </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;panalytical.xy&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -1866,11 +1847,7 @@
 </ul>
 </dd>
 <dt class="field-even">Validators<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale_set_default</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">locale</span></code></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone_resolve_localtime</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone</span></code></p></li>
-</ul>
-</dd>
+<dd class="field-even"><p></p></dd>
 </dl>
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.Panalytical_xy.filetype">
@@ -1890,7 +1867,11 @@
 <span class="w">   </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;panalytical.csv&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">         </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;panalytical.csv&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -1943,11 +1924,7 @@
 </ul>
 </dd>
 <dt class="field-even">Validators<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.locale_set_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale_set_default</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">locale</span></code></p></li>
-<li><p><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType.timezone_resolve_localtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone_resolve_localtime</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">timezone</span></code></p></li>
-</ul>
-</dd>
+<dd class="field-even"><p></p></dd>
 </dl>
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.Panalytical_csv.filetype">
@@ -1959,7 +1936,7 @@
 <dl class="py class pydantic_model">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.filetype.ExtractorFactory">
 <em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.yadg.dataschema_5_0.filetype.</span></span><span class="sig-name descname"><span class="pre">ExtractorFactory</span></span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.ExtractorFactory" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.pydantic.dev/latest/api/base_model/#pydantic.BaseModel" title="(in Pydantic v0.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></a></p>
 <p>Extractor factory class.</p>
 <p>Given an <code class="docutils literal notranslate"><span class="pre">extractor=dict(filetype=k,</span> <span class="pre">...)</span></code> argument, attempts to determine the
 correct <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType"><code class="xref py py-class docutils literal notranslate"><span class="pre">FileType</span></code></a>, parses any additionally supplied parameters for that
@@ -2140,7 +2117,11 @@ correct <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.
 <span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;agilent.csv&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;agilent.csv&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -2244,7 +2225,11 @@ correct <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.
 <span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;drycal.csv&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;drycal.csv&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -2294,7 +2279,11 @@ correct <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.
 <span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;drycal.rtf&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;drycal.rtf&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -2344,7 +2333,11 @@ correct <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.
 <span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;drycal.txt&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;drycal.txt&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -2495,7 +2488,11 @@ correct <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.
 <span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ezchrom.asc&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;ezchrom.asc&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -2545,7 +2542,11 @@ correct <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.
 <span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;empalc.csv&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;empalc.csv&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -2595,7 +2596,11 @@ correct <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.
 <span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;empalc.xlsx&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;empalc.xlsx&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -2645,7 +2650,11 @@ correct <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.
 <span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;fusion.csv&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;fusion.csv&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -2695,7 +2704,11 @@ correct <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.
 <span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;fusion.json&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;fusion.json&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -2745,7 +2758,11 @@ correct <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.
 <span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;fusion.zip&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;fusion.zip&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -2795,7 +2812,11 @@ correct <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.
 <span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;labview.csv&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;labview.csv&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -2846,7 +2867,11 @@ correct <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.
 <span class="w">            </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;None&quot;</span><span class="p">,</span>
 <span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;None&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;None&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -2893,7 +2918,11 @@ correct <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.
 <span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;panalytical.csv&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;panalytical.csv&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -2997,7 +3026,11 @@ correct <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.
 <span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;panalytical.xy&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;panalytical.xy&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -3101,7 +3134,11 @@ correct <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.
 <span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;quadstar.sac&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;quadstar.sac&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -3151,7 +3188,11 @@ correct <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.
 <span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="nt">&quot;filetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tomato.json&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span>
+<span class="w">               </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="s2">&quot;tomato.json&quot;</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Filetype&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;timezone&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
