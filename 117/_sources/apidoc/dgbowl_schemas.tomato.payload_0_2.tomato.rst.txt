@@ -1,0 +1,4 @@
+.. automodule:: dgbowl_schemas.tomato.payload_0_2.tomato
+   :members:
+   :undoc-members:
+   :show-inheritance:

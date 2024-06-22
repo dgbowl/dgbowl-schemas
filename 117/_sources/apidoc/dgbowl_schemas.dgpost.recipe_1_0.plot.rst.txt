@@ -1,0 +1,4 @@
+.. automodule:: dgbowl_schemas.dgpost.recipe_1_0.plot
+   :members:
+   :undoc-members:
+   :show-inheritance:

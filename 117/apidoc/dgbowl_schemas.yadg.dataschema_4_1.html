@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dgbowl_schemas.yadg.dataschema_4_1 package &mdash; dgbowl-schemas 117 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/autodoc_pydantic.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="dgbowl_schemas.yadg.dataschema_4_0.timestamp.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            dgbowl-schemas
+          </a>
+              <div class="version">
+                117
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">dgbowl-schemas autodocs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="dgbowl_schemas.html">dgbowl_schemas package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="dgbowl_schemas.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.dgpost.html">dgbowl_schemas.dgpost package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.tomato.html">dgbowl_schemas.tomato package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="dgbowl_schemas.yadg.html">dgbowl_schemas.yadg package</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="dgbowl_schemas.yadg.html#dgbowl_schemas.yadg.to_dataschema"><code class="docutils literal notranslate"><span class="pre">to_dataschema()</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="dgbowl_schemas.yadg.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema.html">dgbowl_schemas.yadg.dataschema package</a></li>
+<li class="toctree-l5"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.html">dgbowl_schemas.yadg.dataschema_4_0 package</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">dgbowl_schemas.yadg.dataschema_4_1 package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_4_1.DataSchema"><code class="docutils literal notranslate"><span class="pre">DataSchema</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_2.html">dgbowl_schemas.yadg.dataschema_4_2 package</a></li>
+<li class="toctree-l5"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_5_0.html">dgbowl_schemas.yadg.dataschema_5_0 package</a></li>
+<li class="toctree-l5"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_5_1.html">dgbowl_schemas.yadg.dataschema_5_1 package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">dgbowl-schemas</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="dgbowl_schemas.html">dgbowl_schemas package</a></li>
+          <li class="breadcrumb-item"><a href="dgbowl_schemas.yadg.html">dgbowl_schemas.yadg package</a></li>
+      <li class="breadcrumb-item active">dgbowl_schemas.yadg.dataschema_4_1 package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/apidoc/dgbowl_schemas.yadg.dataschema_4_1.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-dgbowl_schemas.yadg.dataschema_4_1">
+<span id="dgbowl-schemas-yadg-dataschema-4-1-package"></span><h1>dgbowl_schemas.yadg.dataschema_4_1 package<a class="headerlink" href="#module-dgbowl_schemas.yadg.dataschema_4_1" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.DataSchema">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.yadg.dataschema_4_1.</span></span><span class="sig-name descname"><span class="pre">DataSchema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.DataSchema" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.DataSchema.metadata">
+<span class="sig-name descname"><span class="pre">metadata</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.metadata.html#dgbowl_schemas.yadg.dataschema_4_1.metadata.Metadata" title="dgbowl_schemas.yadg.dataschema_4_1.metadata.Metadata"><code class="xref py py-class docutils literal notranslate"><span class="pre">Metadata</span></code></a></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.DataSchema.metadata" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.DataSchema.steps">
+<span class="sig-name descname"><span class="pre">steps</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">Annotated</span></code><span class="pre">[</span><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code><span class="pre">[</span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.Dummy" title="dgbowl_schemas.yadg.dataschema_4_1.step.Dummy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dummy</span></code></a><span class="pre">,</span> <a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV" title="dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasicCSV</span></code></a><span class="pre">,</span> <a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV" title="dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV"><code class="xref py py-class docutils literal notranslate"><span class="pre">MeasCSV</span></code></a><span class="pre">,</span> <a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.FlowData" title="dgbowl_schemas.yadg.dataschema_4_1.step.FlowData"><code class="xref py py-class docutils literal notranslate"><span class="pre">FlowData</span></code></a><span class="pre">,</span> <a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem" title="dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem"><code class="xref py py-class docutils literal notranslate"><span class="pre">ElectroChem</span></code></a><span class="pre">,</span> <a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace" title="dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChromTrace</span></code></a><span class="pre">,</span> <a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace" title="dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace"><code class="xref py py-class docutils literal notranslate"><span class="pre">MassTrace</span></code></a><span class="pre">,</span> <a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace" title="dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace"><code class="xref py py-class docutils literal notranslate"><span class="pre">QFTrace</span></code></a><span class="pre">,</span> <a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace" title="dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace"><code class="xref py py-class docutils literal notranslate"><span class="pre">XPSTrace</span></code></a><span class="pre">,</span> <a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace" title="dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace"><code class="xref py py-class docutils literal notranslate"><span class="pre">XRDTrace</span></code></a><span class="pre">]]]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.DataSchema.steps" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.DataSchema.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.DataSchema.update" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html"><code class="docutils literal notranslate"><span class="pre">ExternalDateFile</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDateFile.Content"><code class="docutils literal notranslate"><span class="pre">ExternalDateFile.Content</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDateFile.Content.path"><code class="docutils literal notranslate"><span class="pre">ExternalDateFile.Content.path</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDateFile.Content.type"><code class="docutils literal notranslate"><span class="pre">ExternalDateFile.Content.type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDateFile.Content.match"><code class="docutils literal notranslate"><span class="pre">ExternalDateFile.Content.match</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDateFile.file"><code class="docutils literal notranslate"><span class="pre">ExternalDateFile.file</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDateFilename"><code class="docutils literal notranslate"><span class="pre">ExternalDateFilename</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDateFilename.Content"><code class="docutils literal notranslate"><span class="pre">ExternalDateFilename.Content</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDateFilename.Content.format"><code class="docutils literal notranslate"><span class="pre">ExternalDateFilename.Content.format</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDateFilename.Content.len"><code class="docutils literal notranslate"><span class="pre">ExternalDateFilename.Content.len</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDateFilename.filename"><code class="docutils literal notranslate"><span class="pre">ExternalDateFilename.filename</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDateISOString"><code class="docutils literal notranslate"><span class="pre">ExternalDateISOString</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDateISOString.isostring"><code class="docutils literal notranslate"><span class="pre">ExternalDateISOString.isostring</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDateUTSOffset"><code class="docutils literal notranslate"><span class="pre">ExternalDateUTSOffset</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDateUTSOffset.utsoffset"><code class="docutils literal notranslate"><span class="pre">ExternalDateUTSOffset.utsoffset</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDate"><code class="docutils literal notranslate"><span class="pre">ExternalDate</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDate.using"><code class="docutils literal notranslate"><span class="pre">ExternalDate.using</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDate.mode"><code class="docutils literal notranslate"><span class="pre">ExternalDate.mode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.input.html"><code class="docutils literal notranslate"><span class="pre">Input</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.input.html#dgbowl_schemas.yadg.dataschema_4_1.input.Input.files"><code class="docutils literal notranslate"><span class="pre">Input.files</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.input.html#dgbowl_schemas.yadg.dataschema_4_1.input.Input.prefix"><code class="docutils literal notranslate"><span class="pre">Input.prefix</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.input.html#dgbowl_schemas.yadg.dataschema_4_1.input.Input.suffix"><code class="docutils literal notranslate"><span class="pre">Input.suffix</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.input.html#dgbowl_schemas.yadg.dataschema_4_1.input.Input.contains"><code class="docutils literal notranslate"><span class="pre">Input.contains</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.input.html#dgbowl_schemas.yadg.dataschema_4_1.input.Input.exclude"><code class="docutils literal notranslate"><span class="pre">Input.exclude</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.input.html#dgbowl_schemas.yadg.dataschema_4_1.input.Input.encoding"><code class="docutils literal notranslate"><span class="pre">Input.encoding</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.input.html#dgbowl_schemas.yadg.dataschema_4_1.input.Input.paths"><code class="docutils literal notranslate"><span class="pre">Input.paths()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.metadata.html"><code class="docutils literal notranslate"><span class="pre">Metadata</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.metadata.html#dgbowl_schemas.yadg.dataschema_4_1.metadata.Metadata.Provenance"><code class="docutils literal notranslate"><span class="pre">Metadata.Provenance</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.metadata.html#dgbowl_schemas.yadg.dataschema_4_1.metadata.Metadata.Provenance.type"><code class="docutils literal notranslate"><span class="pre">Metadata.Provenance.type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.metadata.html#dgbowl_schemas.yadg.dataschema_4_1.metadata.Metadata.Provenance.metadata"><code class="docutils literal notranslate"><span class="pre">Metadata.Provenance.metadata</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.metadata.html#dgbowl_schemas.yadg.dataschema_4_1.metadata.Metadata.provenance"><code class="docutils literal notranslate"><span class="pre">Metadata.provenance</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.metadata.html#dgbowl_schemas.yadg.dataschema_4_1.metadata.Metadata.version"><code class="docutils literal notranslate"><span class="pre">Metadata.version</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.metadata.html#dgbowl_schemas.yadg.dataschema_4_1.metadata.Metadata.timezone"><code class="docutils literal notranslate"><span class="pre">Metadata.timezone</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.parameters.html"><code class="docutils literal notranslate"><span class="pre">Tol</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.parameters.html#dgbowl_schemas.yadg.dataschema_4_1.parameters.Tol.atol"><code class="docutils literal notranslate"><span class="pre">Tol.atol</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.parameters.html#dgbowl_schemas.yadg.dataschema_4_1.parameters.Tol.rtol"><code class="docutils literal notranslate"><span class="pre">Tol.rtol</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html"><code class="docutils literal notranslate"><span class="pre">Dummy</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.Dummy.Params"><code class="docutils literal notranslate"><span class="pre">Dummy.Params</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.Dummy.parser"><code class="docutils literal notranslate"><span class="pre">Dummy.parser</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.Dummy.input"><code class="docutils literal notranslate"><span class="pre">Dummy.input</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.Dummy.parameters"><code class="docutils literal notranslate"><span class="pre">Dummy.parameters</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.Dummy.tag"><code class="docutils literal notranslate"><span class="pre">Dummy.tag</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.Dummy.externaldate"><code class="docutils literal notranslate"><span class="pre">Dummy.externaldate</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV"><code class="docutils literal notranslate"><span class="pre">BasicCSV</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.Params"><code class="docutils literal notranslate"><span class="pre">BasicCSV.Params</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.Params.sep"><code class="docutils literal notranslate"><span class="pre">BasicCSV.Params.sep</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.Params.sigma"><code class="docutils literal notranslate"><span class="pre">BasicCSV.Params.sigma</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.Params.calfile"><code class="docutils literal notranslate"><span class="pre">BasicCSV.Params.calfile</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.Params.timestamp"><code class="docutils literal notranslate"><span class="pre">BasicCSV.Params.timestamp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.Params.convert"><code class="docutils literal notranslate"><span class="pre">BasicCSV.Params.convert</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.Params.units"><code class="docutils literal notranslate"><span class="pre">BasicCSV.Params.units</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.parser"><code class="docutils literal notranslate"><span class="pre">BasicCSV.parser</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.input"><code class="docutils literal notranslate"><span class="pre">BasicCSV.input</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.parameters"><code class="docutils literal notranslate"><span class="pre">BasicCSV.parameters</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.tag"><code class="docutils literal notranslate"><span class="pre">BasicCSV.tag</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.externaldate"><code class="docutils literal notranslate"><span class="pre">BasicCSV.externaldate</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV"><code class="docutils literal notranslate"><span class="pre">MeasCSV</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.Params"><code class="docutils literal notranslate"><span class="pre">MeasCSV.Params</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.Params.timestamp"><code class="docutils literal notranslate"><span class="pre">MeasCSV.Params.timestamp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.Params.calfile"><code class="docutils literal notranslate"><span class="pre">MeasCSV.Params.calfile</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.Params.convert"><code class="docutils literal notranslate"><span class="pre">MeasCSV.Params.convert</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.parser"><code class="docutils literal notranslate"><span class="pre">MeasCSV.parser</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.input"><code class="docutils literal notranslate"><span class="pre">MeasCSV.input</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.parameters"><code class="docutils literal notranslate"><span class="pre">MeasCSV.parameters</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.tag"><code class="docutils literal notranslate"><span class="pre">MeasCSV.tag</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.externaldate"><code class="docutils literal notranslate"><span class="pre">MeasCSV.externaldate</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.FlowData"><code class="docutils literal notranslate"><span class="pre">FlowData</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.Params"><code class="docutils literal notranslate"><span class="pre">FlowData.Params</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.Params.filetype"><code class="docutils literal notranslate"><span class="pre">FlowData.Params.filetype</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.Params.convert"><code class="docutils literal notranslate"><span class="pre">FlowData.Params.convert</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.Params.calfile"><code class="docutils literal notranslate"><span class="pre">FlowData.Params.calfile</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.parser"><code class="docutils literal notranslate"><span class="pre">FlowData.parser</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.input"><code class="docutils literal notranslate"><span class="pre">FlowData.input</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.parameters"><code class="docutils literal notranslate"><span class="pre">FlowData.parameters</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.tag"><code class="docutils literal notranslate"><span class="pre">FlowData.tag</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.externaldate"><code class="docutils literal notranslate"><span class="pre">FlowData.externaldate</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem"><code class="docutils literal notranslate"><span class="pre">ElectroChem</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.Params"><code class="docutils literal notranslate"><span class="pre">ElectroChem.Params</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.Params.filetype"><code class="docutils literal notranslate"><span class="pre">ElectroChem.Params.filetype</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.Input"><code class="docutils literal notranslate"><span class="pre">ElectroChem.Input</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.Input.encoding"><code class="docutils literal notranslate"><span class="pre">ElectroChem.Input.encoding</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.parser"><code class="docutils literal notranslate"><span class="pre">ElectroChem.parser</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.input"><code class="docutils literal notranslate"><span class="pre">ElectroChem.input</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.parameters"><code class="docutils literal notranslate"><span class="pre">ElectroChem.parameters</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.tag"><code class="docutils literal notranslate"><span class="pre">ElectroChem.tag</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.externaldate"><code class="docutils literal notranslate"><span class="pre">ElectroChem.externaldate</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace"><code class="docutils literal notranslate"><span class="pre">ChromTrace</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.Params"><code class="docutils literal notranslate"><span class="pre">ChromTrace.Params</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.Params.filetype"><code class="docutils literal notranslate"><span class="pre">ChromTrace.Params.filetype</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.Params.calfile"><code class="docutils literal notranslate"><span class="pre">ChromTrace.Params.calfile</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.Params.species"><code class="docutils literal notranslate"><span class="pre">ChromTrace.Params.species</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.Params.detectors"><code class="docutils literal notranslate"><span class="pre">ChromTrace.Params.detectors</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.parser"><code class="docutils literal notranslate"><span class="pre">ChromTrace.parser</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.input"><code class="docutils literal notranslate"><span class="pre">ChromTrace.input</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.parameters"><code class="docutils literal notranslate"><span class="pre">ChromTrace.parameters</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.tag"><code class="docutils literal notranslate"><span class="pre">ChromTrace.tag</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.externaldate"><code class="docutils literal notranslate"><span class="pre">ChromTrace.externaldate</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace"><code class="docutils literal notranslate"><span class="pre">MassTrace</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace.Params"><code class="docutils literal notranslate"><span class="pre">MassTrace.Params</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace.Params.filetype"><code class="docutils literal notranslate"><span class="pre">MassTrace.Params.filetype</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace.parser"><code class="docutils literal notranslate"><span class="pre">MassTrace.parser</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace.input"><code class="docutils literal notranslate"><span class="pre">MassTrace.input</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace.parameters"><code class="docutils literal notranslate"><span class="pre">MassTrace.parameters</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace.tag"><code class="docutils literal notranslate"><span class="pre">MassTrace.tag</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace.externaldate"><code class="docutils literal notranslate"><span class="pre">MassTrace.externaldate</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace"><code class="docutils literal notranslate"><span class="pre">QFTrace</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.Params"><code class="docutils literal notranslate"><span class="pre">QFTrace.Params</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.Params.filetype"><code class="docutils literal notranslate"><span class="pre">QFTrace.Params.filetype</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.Params.method"><code class="docutils literal notranslate"><span class="pre">QFTrace.Params.method</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.Params.height"><code class="docutils literal notranslate"><span class="pre">QFTrace.Params.height</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.Params.distance"><code class="docutils literal notranslate"><span class="pre">QFTrace.Params.distance</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.Params.cutoff"><code class="docutils literal notranslate"><span class="pre">QFTrace.Params.cutoff</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.Params.threshold"><code class="docutils literal notranslate"><span class="pre">QFTrace.Params.threshold</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.parser"><code class="docutils literal notranslate"><span class="pre">QFTrace.parser</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.input"><code class="docutils literal notranslate"><span class="pre">QFTrace.input</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.parameters"><code class="docutils literal notranslate"><span class="pre">QFTrace.parameters</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.tag"><code class="docutils literal notranslate"><span class="pre">QFTrace.tag</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.externaldate"><code class="docutils literal notranslate"><span class="pre">QFTrace.externaldate</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace"><code class="docutils literal notranslate"><span class="pre">XPSTrace</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace.Params"><code class="docutils literal notranslate"><span class="pre">XPSTrace.Params</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace.Params.filetype"><code class="docutils literal notranslate"><span class="pre">XPSTrace.Params.filetype</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace.parser"><code class="docutils literal notranslate"><span class="pre">XPSTrace.parser</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace.input"><code class="docutils literal notranslate"><span class="pre">XPSTrace.input</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace.parameters"><code class="docutils literal notranslate"><span class="pre">XPSTrace.parameters</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace.tag"><code class="docutils literal notranslate"><span class="pre">XPSTrace.tag</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace.externaldate"><code class="docutils literal notranslate"><span class="pre">XPSTrace.externaldate</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace"><code class="docutils literal notranslate"><span class="pre">XRDTrace</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace.Params"><code class="docutils literal notranslate"><span class="pre">XRDTrace.Params</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace.Params.filetype"><code class="docutils literal notranslate"><span class="pre">XRDTrace.Params.filetype</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace.parser"><code class="docutils literal notranslate"><span class="pre">XRDTrace.parser</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace.input"><code class="docutils literal notranslate"><span class="pre">XRDTrace.input</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace.parameters"><code class="docutils literal notranslate"><span class="pre">XRDTrace.parameters</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace.tag"><code class="docutils literal notranslate"><span class="pre">XRDTrace.tag</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.step.html#dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace.externaldate"><code class="docutils literal notranslate"><span class="pre">XRDTrace.externaldate</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.timestamp.html"><code class="docutils literal notranslate"><span class="pre">TimestampSpec</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.timestamp.html#dgbowl_schemas.yadg.dataschema_4_1.timestamp.TimestampSpec.index"><code class="docutils literal notranslate"><span class="pre">TimestampSpec.index</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.timestamp.html#dgbowl_schemas.yadg.dataschema_4_1.timestamp.TimestampSpec.format"><code class="docutils literal notranslate"><span class="pre">TimestampSpec.format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.timestamp.html#dgbowl_schemas.yadg.dataschema_4_1.timestamp.Timestamp"><code class="docutils literal notranslate"><span class="pre">Timestamp</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.timestamp.html#dgbowl_schemas.yadg.dataschema_4_1.timestamp.Timestamp.timestamp"><code class="docutils literal notranslate"><span class="pre">Timestamp.timestamp</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.timestamp.html#dgbowl_schemas.yadg.dataschema_4_1.timestamp.UTS"><code class="docutils literal notranslate"><span class="pre">UTS</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.timestamp.html#dgbowl_schemas.yadg.dataschema_4_1.timestamp.UTS.uts"><code class="docutils literal notranslate"><span class="pre">UTS.uts</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.timestamp.html#dgbowl_schemas.yadg.dataschema_4_1.timestamp.TimeDate"><code class="docutils literal notranslate"><span class="pre">TimeDate</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.timestamp.html#dgbowl_schemas.yadg.dataschema_4_1.timestamp.TimeDate.date"><code class="docutils literal notranslate"><span class="pre">TimeDate.date</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.timestamp.html#dgbowl_schemas.yadg.dataschema_4_1.timestamp.TimeDate.time"><code class="docutils literal notranslate"><span class="pre">TimeDate.time</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dgbowl_schemas.yadg.dataschema_4_0.timestamp.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022 - 2023, dgbowl authors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Other Versions</span>
+      v: 117
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions"> 
+      <script src="../versions.js"></script>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

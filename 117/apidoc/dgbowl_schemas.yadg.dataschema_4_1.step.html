@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>&lt;no title&gt; &mdash; dgbowl-schemas 117 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/autodoc_pydantic.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="dgbowl_schemas.yadg.dataschema_4_1.timestamp.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="dgbowl_schemas.yadg.dataschema_4_1.parameters.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            dgbowl-schemas
+          </a>
+              <div class="version">
+                117
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">dgbowl-schemas autodocs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="dgbowl_schemas.html">dgbowl_schemas package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="dgbowl_schemas.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.dgpost.html">dgbowl_schemas.dgpost package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dgbowl_schemas.tomato.html">dgbowl_schemas.tomato package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="dgbowl_schemas.yadg.html">dgbowl_schemas.yadg package</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="dgbowl_schemas.yadg.html#dgbowl_schemas.yadg.to_dataschema"><code class="docutils literal notranslate"><span class="pre">to_dataschema()</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="dgbowl_schemas.yadg.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema.html">dgbowl_schemas.yadg.dataschema package</a></li>
+<li class="toctree-l5"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_0.html">dgbowl_schemas.yadg.dataschema_4_0 package</a></li>
+<li class="toctree-l5 current"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.html">dgbowl_schemas.yadg.dataschema_4_1 package</a><ul class="current">
+<li class="toctree-l6"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.html#dgbowl_schemas.yadg.dataschema_4_1.DataSchema"><code class="docutils literal notranslate"><span class="pre">DataSchema</span></code></a></li>
+<li class="toctree-l6 current"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_2.html">dgbowl_schemas.yadg.dataschema_4_2 package</a></li>
+<li class="toctree-l5"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_5_0.html">dgbowl_schemas.yadg.dataschema_5_0 package</a></li>
+<li class="toctree-l5"><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_5_1.html">dgbowl_schemas.yadg.dataschema_5_1 package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">dgbowl-schemas</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="dgbowl_schemas.html">dgbowl_schemas package</a></li>
+          <li class="breadcrumb-item"><a href="dgbowl_schemas.yadg.html">dgbowl_schemas.yadg package</a></li>
+          <li class="breadcrumb-item"><a href="dgbowl_schemas.yadg.dataschema_4_1.html">dgbowl_schemas.yadg.dataschema_4_1 package</a></li>
+      <li class="breadcrumb-item active">&lt;no title&gt;</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/apidoc/dgbowl_schemas.yadg.dataschema_4_1.step.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <span class="target" id="module-dgbowl_schemas.yadg.dataschema_4_1.step"></span><dl class="py class">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.Dummy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.yadg.dataschema_4_1.step.</span></span><span class="sig-name descname"><span class="pre">Dummy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.Dummy" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.Dummy.Params">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.Dummy.Params" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.Dummy.parser">
+<span class="sig-name descname"><span class="pre">parser</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code><span class="pre">[</span><code class="docutils literal notranslate"><span class="pre">'dummy'</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.Dummy.parser" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.Dummy.input">
+<span class="sig-name descname"><span class="pre">input</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.input.html#dgbowl_schemas.yadg.dataschema_4_1.input.Input" title="dgbowl_schemas.yadg.dataschema_4_1.input.Input"><code class="xref py py-class docutils literal notranslate"><span class="pre">Input</span></code></a></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.Dummy.input" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.Dummy.parameters">
+<span class="sig-name descname"><span class="pre">parameters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_4_1.step.Dummy.Params" title="dgbowl_schemas.yadg.dataschema_4_1.step.Dummy.Params"><code class="xref py py-class docutils literal notranslate"><span class="pre">Params</span></code></a><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.Dummy.parameters" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.Dummy.tag">
+<span class="sig-name descname"><span class="pre">tag</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.Dummy.tag" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.Dummy.externaldate">
+<span class="sig-name descname"><span class="pre">externaldate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDate" title="dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDate"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExternalDate</span></code></a><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.Dummy.externaldate" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.yadg.dataschema_4_1.step.</span></span><span class="sig-name descname"><span class="pre">BasicCSV</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.Params">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.Params" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.Params.sep">
+<span class="sig-name descname"><span class="pre">sep</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.Params.sep" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.Params.sigma">
+<span class="sig-name descname"><span class="pre">sigma</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">,</span> <a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.parameters.html#dgbowl_schemas.yadg.dataschema_4_1.parameters.Tol" title="dgbowl_schemas.yadg.dataschema_4_1.parameters.Tol"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tol</span></code></a><span class="pre">]]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.Params.sigma" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.Params.calfile">
+<span class="sig-name descname"><span class="pre">calfile</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.Params.calfile" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.Params.timestamp">
+<span class="sig-name descname"><span class="pre">timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code><span class="pre">[</span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.timestamp.html#dgbowl_schemas.yadg.dataschema_4_1.timestamp.Timestamp" title="dgbowl_schemas.yadg.dataschema_4_1.timestamp.Timestamp"><code class="xref py py-class docutils literal notranslate"><span class="pre">Timestamp</span></code></a><span class="pre">,</span> <a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.timestamp.html#dgbowl_schemas.yadg.dataschema_4_1.timestamp.TimeDate" title="dgbowl_schemas.yadg.dataschema_4_1.timestamp.TimeDate"><code class="xref py py-class docutils literal notranslate"><span class="pre">TimeDate</span></code></a><span class="pre">,</span> <a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.timestamp.html#dgbowl_schemas.yadg.dataschema_4_1.timestamp.UTS" title="dgbowl_schemas.yadg.dataschema_4_1.timestamp.UTS"><code class="xref py py-class docutils literal notranslate"><span class="pre">UTS</span></code></a><span class="pre">,</span> <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.Params.timestamp" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.Params.convert">
+<span class="sig-name descname"><span class="pre">convert</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.Params.convert" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.Params.units">
+<span class="sig-name descname"><span class="pre">units</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">,</span> <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.Params.units" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.parser">
+<span class="sig-name descname"><span class="pre">parser</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code><span class="pre">[</span><code class="docutils literal notranslate"><span class="pre">'basiccsv'</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.parser" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.input">
+<span class="sig-name descname"><span class="pre">input</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.input.html#dgbowl_schemas.yadg.dataschema_4_1.input.Input" title="dgbowl_schemas.yadg.dataschema_4_1.input.Input"><code class="xref py py-class docutils literal notranslate"><span class="pre">Input</span></code></a></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.input" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.parameters">
+<span class="sig-name descname"><span class="pre">parameters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.Params" title="dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.Params"><code class="xref py py-class docutils literal notranslate"><span class="pre">Params</span></code></a></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.parameters" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.tag">
+<span class="sig-name descname"><span class="pre">tag</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.tag" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.externaldate">
+<span class="sig-name descname"><span class="pre">externaldate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDate" title="dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDate"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExternalDate</span></code></a><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.BasicCSV.externaldate" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.yadg.dataschema_4_1.step.</span></span><span class="sig-name descname"><span class="pre">MeasCSV</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.Params">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.Params" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.Params.timestamp">
+<span class="sig-name descname"><span class="pre">timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code><span class="pre">[</span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.timestamp.html#dgbowl_schemas.yadg.dataschema_4_1.timestamp.Timestamp" title="dgbowl_schemas.yadg.dataschema_4_1.timestamp.Timestamp"><code class="xref py py-class docutils literal notranslate"><span class="pre">Timestamp</span></code></a><span class="pre">,</span> <a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.timestamp.html#dgbowl_schemas.yadg.dataschema_4_1.timestamp.TimeDate" title="dgbowl_schemas.yadg.dataschema_4_1.timestamp.TimeDate"><code class="xref py py-class docutils literal notranslate"><span class="pre">TimeDate</span></code></a><span class="pre">,</span> <a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.timestamp.html#dgbowl_schemas.yadg.dataschema_4_1.timestamp.UTS" title="dgbowl_schemas.yadg.dataschema_4_1.timestamp.UTS"><code class="xref py py-class docutils literal notranslate"><span class="pre">UTS</span></code></a><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.Params.timestamp" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.Params.calfile">
+<span class="sig-name descname"><span class="pre">calfile</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.Params.calfile" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.Params.convert">
+<span class="sig-name descname"><span class="pre">convert</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.Params.convert" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.parser">
+<span class="sig-name descname"><span class="pre">parser</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code><span class="pre">[</span><code class="docutils literal notranslate"><span class="pre">'meascsv'</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.parser" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.input">
+<span class="sig-name descname"><span class="pre">input</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.input.html#dgbowl_schemas.yadg.dataschema_4_1.input.Input" title="dgbowl_schemas.yadg.dataschema_4_1.input.Input"><code class="xref py py-class docutils literal notranslate"><span class="pre">Input</span></code></a></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.input" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.parameters">
+<span class="sig-name descname"><span class="pre">parameters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.Params" title="dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.Params"><code class="xref py py-class docutils literal notranslate"><span class="pre">Params</span></code></a></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.parameters" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.tag">
+<span class="sig-name descname"><span class="pre">tag</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.tag" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.externaldate">
+<span class="sig-name descname"><span class="pre">externaldate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDate" title="dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDate"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExternalDate</span></code></a><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.MeasCSV.externaldate" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.FlowData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.yadg.dataschema_4_1.step.</span></span><span class="sig-name descname"><span class="pre">FlowData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.FlowData" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.Params">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.Params" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.Params.filetype">
+<span class="sig-name descname"><span class="pre">filetype</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code><span class="pre">[</span><code class="docutils literal notranslate"><span class="pre">'drycal.csv'</span></code><span class="pre">,</span> <code class="docutils literal notranslate"><span class="pre">'drycal.rtf'</span></code><span class="pre">,</span> <code class="docutils literal notranslate"><span class="pre">'drycal.txt'</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.Params.filetype" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.Params.convert">
+<span class="sig-name descname"><span class="pre">convert</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.Params.convert" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.Params.calfile">
+<span class="sig-name descname"><span class="pre">calfile</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.Params.calfile" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.parser">
+<span class="sig-name descname"><span class="pre">parser</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code><span class="pre">[</span><code class="docutils literal notranslate"><span class="pre">'flowdata'</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.parser" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.input">
+<span class="sig-name descname"><span class="pre">input</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.input.html#dgbowl_schemas.yadg.dataschema_4_1.input.Input" title="dgbowl_schemas.yadg.dataschema_4_1.input.Input"><code class="xref py py-class docutils literal notranslate"><span class="pre">Input</span></code></a></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.input" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.parameters">
+<span class="sig-name descname"><span class="pre">parameters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.Params" title="dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.Params"><code class="xref py py-class docutils literal notranslate"><span class="pre">Params</span></code></a></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.parameters" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.tag">
+<span class="sig-name descname"><span class="pre">tag</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.tag" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.externaldate">
+<span class="sig-name descname"><span class="pre">externaldate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDate" title="dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDate"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExternalDate</span></code></a><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.FlowData.externaldate" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.yadg.dataschema_4_1.step.</span></span><span class="sig-name descname"><span class="pre">ElectroChem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.Params">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.Params" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.Params.filetype">
+<span class="sig-name descname"><span class="pre">filetype</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code><span class="pre">[</span><code class="docutils literal notranslate"><span class="pre">'eclab.mpt'</span></code><span class="pre">,</span> <code class="docutils literal notranslate"><span class="pre">'eclab.mpr'</span></code><span class="pre">,</span> <code class="docutils literal notranslate"><span class="pre">'tomato.json'</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.Params.filetype" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.Input">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.Input" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.input.html#dgbowl_schemas.yadg.dataschema_4_1.input.Input" title="dgbowl_schemas.yadg.dataschema_4_1.input.Input"><code class="xref py py-class docutils literal notranslate"><span class="pre">Input</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.Input.encoding">
+<span class="sig-name descname"><span class="pre">encoding</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.Input.encoding" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.parser">
+<span class="sig-name descname"><span class="pre">parser</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code><span class="pre">[</span><code class="docutils literal notranslate"><span class="pre">'electrochem'</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.parser" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.input">
+<span class="sig-name descname"><span class="pre">input</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.Input" title="dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.Input"><code class="xref py py-class docutils literal notranslate"><span class="pre">Input</span></code></a></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.input" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.parameters">
+<span class="sig-name descname"><span class="pre">parameters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.Params" title="dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.Params"><code class="xref py py-class docutils literal notranslate"><span class="pre">Params</span></code></a></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.parameters" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.tag">
+<span class="sig-name descname"><span class="pre">tag</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.tag" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.externaldate">
+<span class="sig-name descname"><span class="pre">externaldate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDate" title="dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDate"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExternalDate</span></code></a><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.ElectroChem.externaldate" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.yadg.dataschema_4_1.step.</span></span><span class="sig-name descname"><span class="pre">ChromTrace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.Params">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.Params" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.Params.filetype">
+<span class="sig-name descname"><span class="pre">filetype</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code><span class="pre">[</span><code class="docutils literal notranslate"><span class="pre">'ezchrom.asc'</span></code><span class="pre">,</span> <code class="docutils literal notranslate"><span class="pre">'fusion.json'</span></code><span class="pre">,</span> <code class="docutils literal notranslate"><span class="pre">'fusion.zip'</span></code><span class="pre">,</span> <code class="docutils literal notranslate"><span class="pre">'agilent.ch'</span></code><span class="pre">,</span> <code class="docutils literal notranslate"><span class="pre">'agilent.dx'</span></code><span class="pre">,</span> <code class="docutils literal notranslate"><span class="pre">'agilent.csv'</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.Params.filetype" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.Params.calfile">
+<span class="sig-name descname"><span class="pre">calfile</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.Params.calfile" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.Params.species">
+<span class="sig-name descname"><span class="pre">species</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.Params.species" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.Params.detectors">
+<span class="sig-name descname"><span class="pre">detectors</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.Params.detectors" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.parser">
+<span class="sig-name descname"><span class="pre">parser</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code><span class="pre">[</span><code class="docutils literal notranslate"><span class="pre">'chromtrace'</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.parser" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.input">
+<span class="sig-name descname"><span class="pre">input</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.input.html#dgbowl_schemas.yadg.dataschema_4_1.input.Input" title="dgbowl_schemas.yadg.dataschema_4_1.input.Input"><code class="xref py py-class docutils literal notranslate"><span class="pre">Input</span></code></a></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.input" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.parameters">
+<span class="sig-name descname"><span class="pre">parameters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.Params" title="dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.Params"><code class="xref py py-class docutils literal notranslate"><span class="pre">Params</span></code></a></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.parameters" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.tag">
+<span class="sig-name descname"><span class="pre">tag</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.tag" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.externaldate">
+<span class="sig-name descname"><span class="pre">externaldate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDate" title="dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDate"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExternalDate</span></code></a><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.ChromTrace.externaldate" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.yadg.dataschema_4_1.step.</span></span><span class="sig-name descname"><span class="pre">MassTrace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace.Params">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace.Params" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace.Params.filetype">
+<span class="sig-name descname"><span class="pre">filetype</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code><span class="pre">[</span><code class="docutils literal notranslate"><span class="pre">'quadstar.sac'</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace.Params.filetype" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace.parser">
+<span class="sig-name descname"><span class="pre">parser</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code><span class="pre">[</span><code class="docutils literal notranslate"><span class="pre">'masstrace'</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace.parser" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace.input">
+<span class="sig-name descname"><span class="pre">input</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.input.html#dgbowl_schemas.yadg.dataschema_4_1.input.Input" title="dgbowl_schemas.yadg.dataschema_4_1.input.Input"><code class="xref py py-class docutils literal notranslate"><span class="pre">Input</span></code></a></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace.input" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace.parameters">
+<span class="sig-name descname"><span class="pre">parameters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace.Params" title="dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace.Params"><code class="xref py py-class docutils literal notranslate"><span class="pre">Params</span></code></a></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace.parameters" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace.tag">
+<span class="sig-name descname"><span class="pre">tag</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace.tag" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace.externaldate">
+<span class="sig-name descname"><span class="pre">externaldate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDate" title="dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDate"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExternalDate</span></code></a><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.MassTrace.externaldate" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.yadg.dataschema_4_1.step.</span></span><span class="sig-name descname"><span class="pre">QFTrace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.Params">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.Params" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.Params.filetype">
+<span class="sig-name descname"><span class="pre">filetype</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code><span class="pre">[</span><code class="docutils literal notranslate"><span class="pre">'labview.csv'</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.Params.filetype" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.Params.method">
+<span class="sig-name descname"><span class="pre">method</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code><span class="pre">[</span><code class="docutils literal notranslate"><span class="pre">'naive'</span></code><span class="pre">,</span> <code class="docutils literal notranslate"><span class="pre">'lorentz'</span></code><span class="pre">,</span> <code class="docutils literal notranslate"><span class="pre">'kajfez'</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.Params.method" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.Params.height">
+<span class="sig-name descname"><span class="pre">height</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.Params.height" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.Params.distance">
+<span class="sig-name descname"><span class="pre">distance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.Params.distance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.Params.cutoff">
+<span class="sig-name descname"><span class="pre">cutoff</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.Params.cutoff" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.Params.threshold">
+<span class="sig-name descname"><span class="pre">threshold</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.Params.threshold" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.parser">
+<span class="sig-name descname"><span class="pre">parser</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code><span class="pre">[</span><code class="docutils literal notranslate"><span class="pre">'qftrace'</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.parser" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.input">
+<span class="sig-name descname"><span class="pre">input</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.input.html#dgbowl_schemas.yadg.dataschema_4_1.input.Input" title="dgbowl_schemas.yadg.dataschema_4_1.input.Input"><code class="xref py py-class docutils literal notranslate"><span class="pre">Input</span></code></a></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.input" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.parameters">
+<span class="sig-name descname"><span class="pre">parameters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.Params" title="dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.Params"><code class="xref py py-class docutils literal notranslate"><span class="pre">Params</span></code></a></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.parameters" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.tag">
+<span class="sig-name descname"><span class="pre">tag</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.tag" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.externaldate">
+<span class="sig-name descname"><span class="pre">externaldate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDate" title="dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDate"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExternalDate</span></code></a><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.QFTrace.externaldate" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.yadg.dataschema_4_1.step.</span></span><span class="sig-name descname"><span class="pre">XPSTrace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace.Params">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace.Params" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace.Params.filetype">
+<span class="sig-name descname"><span class="pre">filetype</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code><span class="pre">[</span><code class="docutils literal notranslate"><span class="pre">'phi.spe'</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace.Params.filetype" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace.parser">
+<span class="sig-name descname"><span class="pre">parser</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code><span class="pre">[</span><code class="docutils literal notranslate"><span class="pre">'xpstrace'</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace.parser" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace.input">
+<span class="sig-name descname"><span class="pre">input</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.input.html#dgbowl_schemas.yadg.dataschema_4_1.input.Input" title="dgbowl_schemas.yadg.dataschema_4_1.input.Input"><code class="xref py py-class docutils literal notranslate"><span class="pre">Input</span></code></a></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace.input" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace.parameters">
+<span class="sig-name descname"><span class="pre">parameters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace.Params" title="dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace.Params"><code class="xref py py-class docutils literal notranslate"><span class="pre">Params</span></code></a></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace.parameters" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace.tag">
+<span class="sig-name descname"><span class="pre">tag</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace.tag" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace.externaldate">
+<span class="sig-name descname"><span class="pre">externaldate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDate" title="dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDate"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExternalDate</span></code></a><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.XPSTrace.externaldate" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.yadg.dataschema_4_1.step.</span></span><span class="sig-name descname"><span class="pre">XRDTrace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace.Params">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace.Params" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace.Params.filetype">
+<span class="sig-name descname"><span class="pre">filetype</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code><span class="pre">[</span><code class="docutils literal notranslate"><span class="pre">'panalytical.xy'</span></code><span class="pre">,</span> <code class="docutils literal notranslate"><span class="pre">'panalytical.csv'</span></code><span class="pre">,</span> <code class="docutils literal notranslate"><span class="pre">'panalytical.xrdml'</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace.Params.filetype" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace.parser">
+<span class="sig-name descname"><span class="pre">parser</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code><span class="pre">[</span><code class="docutils literal notranslate"><span class="pre">'xrdtrace'</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace.parser" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace.input">
+<span class="sig-name descname"><span class="pre">input</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.input.html#dgbowl_schemas.yadg.dataschema_4_1.input.Input" title="dgbowl_schemas.yadg.dataschema_4_1.input.Input"><code class="xref py py-class docutils literal notranslate"><span class="pre">Input</span></code></a></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace.input" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace.parameters">
+<span class="sig-name descname"><span class="pre">parameters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace.Params" title="dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace.Params"><code class="xref py py-class docutils literal notranslate"><span class="pre">Params</span></code></a></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace.parameters" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace.tag">
+<span class="sig-name descname"><span class="pre">tag</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace.tag" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace.externaldate">
+<span class="sig-name descname"><span class="pre">externaldate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_4_1.externaldate.html#dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDate" title="dgbowl_schemas.yadg.dataschema_4_1.externaldate.ExternalDate"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExternalDate</span></code></a><span class="pre">]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_4_1.step.XRDTrace.externaldate" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dgbowl_schemas.yadg.dataschema_4_1.parameters.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dgbowl_schemas.yadg.dataschema_4_1.timestamp.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022 - 2023, dgbowl authors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Other Versions</span>
+      v: 117
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions"> 
+      <script src="../versions.js"></script>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
