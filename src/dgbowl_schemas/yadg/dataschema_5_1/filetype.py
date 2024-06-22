@@ -60,7 +60,7 @@ class Agilent_ch(FileType):
         ok = "agilent.ch"
         if v == dep:
             logger.warning(
-                f"Using {dep!r} as a filetype alias for {ok!r}"
+                f"Using {dep!r} as a filetype alias for {ok!r} "
                 "is deprecated and will stop working in DataSchema-6.0"
             )
             v = ok
@@ -77,7 +77,7 @@ class Agilent_dx(FileType):
         ok = "agilent.dx"
         if v == dep:
             logger.warning(
-                f"Using {dep!r} as a filetype alias for {ok!r}"
+                f"Using {dep!r} as a filetype alias for {ok!r} "
                 "is deprecated and will stop working in DataSchema-6.0"
             )
             v = ok
@@ -129,7 +129,7 @@ class EClab_mpr(FileType):
         ok = "eclab.mpr"
         if v == dep:
             logger.warning(
-                f"Using {dep!r} as a filetype alias for {ok!r}"
+                f"Using {dep!r} as a filetype alias for {ok!r} "
                 "is deprecated and will stop working in DataSchema-6.0"
             )
             v = ok
@@ -147,7 +147,7 @@ class EClab_mpt(FileType):
         ok = "eclab.mpt"
         if v == dep:
             logger.warning(
-                f"Using {dep!r} as a filetype alias for {ok!r}"
+                f"Using {dep!r} as a filetype alias for {ok!r} "
                 "is deprecated and will stop working in DataSchema-6.0"
             )
             v = ok
@@ -229,7 +229,7 @@ class Panalytical_xrdml(FileType):
         ok = "panalytical.xrdml"
         if v == dep:
             logger.warning(
-                f"Using {dep!r} as a filetype alias for {ok!r}"
+                f"Using {dep!r} as a filetype alias for {ok!r} "
                 "is deprecated and will stop working in DataSchema-6.0"
             )
             v = ok
@@ -246,7 +246,7 @@ class Phi_spe(FileType):
         ok = "phi.spe"
         if v == dep:
             logger.warning(
-                f"Using {dep!r} as a filetype alias for {ok!r}"
+                f"Using {dep!r} as a filetype alias for {ok!r} "
                 "is deprecated and will stop working in DataSchema-6.0"
             )
             v = ok

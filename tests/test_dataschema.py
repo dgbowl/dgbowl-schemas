@@ -60,7 +60,11 @@ def test_dataschema_steps_json(inpath, datadir):
         jsdata = json.load(infile)
     ref = jsdata["output"]
     ret = to_dataschema(**jsdata["input"])
-    assert ret.dict()["steps"] == ref
+    if hasattr(ret, "model_dump"):
+        ret = ret.model_dump(exclude_none=True)
+    else:
+        ret = ret.dict(exclude_none=True)
+    assert ret["steps"] == ref
 
 
 @pytest.mark.parametrize(
@@ -102,8 +106,11 @@ def test_dataschema_update(inpath, datadir):
         jsdata = json.load(infile)
     ref = jsdata["output"]
     ret = to_dataschema(**jsdata["input"]).update()
-    print(ret)
-    assert ref == ret.dict(exclude_none=True)
+    if hasattr(ret, "model_dump"):
+        ret = ret.model_dump(exclude_none=True)
+    else:
+        ret = ret.dict(exclude_none=True)
+    assert ret == ref
 
 
 @pytest.mark.parametrize(
