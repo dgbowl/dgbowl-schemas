@@ -269,7 +269,7 @@ classlist = []
 for name, obj in inspect.getmembers(sys.modules[__name__]):
     if inspect.isclass(obj) and issubclass(obj, FileType) and obj is not FileType:
         classlist.append(obj)
-FileTypes = TypeVar('FileTypes', *classlist)
+FileTypes = TypeVar("FileTypes", *classlist)
 
 
 class ExtractorFactory(BaseModel):
