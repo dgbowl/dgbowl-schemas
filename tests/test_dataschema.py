@@ -4,6 +4,7 @@ import json
 from dgbowl_schemas.yadg import to_dataschema
 from dgbowl_schemas.yadg.dataschema import ExtractorFactory
 import locale
+from pydantic import BaseModel
 
 
 @pytest.mark.parametrize(
@@ -59,11 +60,11 @@ def test_dataschema_steps_json(inpath, datadir):
     with open(inpath, "r") as infile:
         jsdata = json.load(infile)
     ref = jsdata["output"]
-    ret = to_dataschema(**jsdata["input"])
+    ret: BaseModel = to_dataschema(**jsdata["input"])
     if hasattr(ret, "model_dump"):
-        ret = ret.model_dump(exclude_none=True)
+        ret = ret.model_dump()
     else:
-        ret = ret.dict(exclude_none=True)
+        ret = ret.dict()
     assert ret["steps"] == ref
 
 

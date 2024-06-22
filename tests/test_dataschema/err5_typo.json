@@ -16,5 +16,5 @@
             }
         ]
     },
-    "exception": "Input tag 'typo' found using 'parser'"
+    "exception": "input_value='typo'"
 }
