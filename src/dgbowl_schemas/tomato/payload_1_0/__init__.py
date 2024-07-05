@@ -1,20 +1,16 @@
-from pydantic.v1 import BaseModel, Extra, Field, root_validator
+from pydantic import BaseModel, Field, model_validator
 from typing import Sequence, Literal
 from .tomato import Tomato
 from .sample import Sample
 from .method import Method
-from ..payload_1_0 import Payload as NewPayload
 
 from pathlib import Path
 import yaml
 import json
-import logging
-
-logger = logging.getLogger(__name__)
 
 
-class Payload(BaseModel, extra=Extra.forbid):
-    version: Literal["0.2"]
+class Payload(BaseModel, extra="forbid"):
+    version: Literal["1.0"]
     tomato: Tomato = Field(default_factory=Tomato)
     """Additional configuration options for tomato."""
 
@@ -24,8 +20,9 @@ class Payload(BaseModel, extra=Extra.forbid):
     method: Sequence[Method]
     """A sequence of the experimental methods."""
 
-    @root_validator(pre=True)
-    def extract_samplefile(cls, values):  # pylint: disable=E0213
+    @model_validator(mode="before")
+    @classmethod
+    def extract_samplefile(cls, values):
         """
         If ``samplefile`` is provided in ``values``, parse the file as ``sample``.
         """
@@ -43,8 +40,9 @@ class Payload(BaseModel, extra=Extra.forbid):
             values["sample"] = sample["sample"]
         return values
 
-    @root_validator(pre=True)
-    def extract_methodfile(cls, values):  # pylint: disable=E0213
+    @model_validator(mode="before")
+    @classmethod
+    def extract_methodfile(cls, values):
         """
         If ``methodfile`` is provided in ``values``, parse the file as ``method``.
         """
@@ -61,10 +59,3 @@ class Payload(BaseModel, extra=Extra.forbid):
             assert "method" in method
             values["method"] = method["method"]
         return values
-
-    def update(self):
-        logger.info("Updating from Payload-0.2 to Payload-1.0")
-        md = self.dict(exclude_defaults=True, exclude_none=True)
-        md["version"] = "1.0"
-
-        return NewPayload(**md)

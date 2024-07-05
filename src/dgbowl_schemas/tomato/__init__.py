@@ -3,17 +3,18 @@ from pydantic.v1 import ValidationError as ValidationError_v1
 import logging
 from .payload_0_1 import Payload as Payload_0_1
 from .payload_0_2 import Payload as Payload_0_2
+from .payload_1_0 import Payload as Payload_1_0
 
 logger = logging.getLogger(__name__)
 
-latest_version = "0.2"
+models = {
+    "1.0": Payload_1_0,
+    "0.2": Payload_0_2,
+    "0.1": Payload_0_1,
+}
 
 
 def to_payload(**kwargs):
-    models = {
-        "0.2": Payload_0_2,
-        "0.1": Payload_0_1,
-    }
     firste = None
     for ver, Model in models.items():
         try:

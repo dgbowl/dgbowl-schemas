@@ -37,6 +37,8 @@ def test_payload_yml(inpath, datadir):
         "ts2.yml",  # 0.1
         "ts3.yml",  # 0.1
         "ts4.yml",  # 0.1
+        "ts5.yml",  # 0.2
+        "ts6.yml",  # 0.2
     ],
 )
 def test_payload_update_chain(inpath, datadir):
@@ -46,5 +48,5 @@ def test_payload_update_chain(inpath, datadir):
     ret = to_payload(**indict)
     while hasattr(ret, "update"):
         ret = ret.update()
-    print(f"{ret=}")
-    assert ret.version == "0.2"
+        print(f"{ret=}")
+    assert ret.version == "1.0"
