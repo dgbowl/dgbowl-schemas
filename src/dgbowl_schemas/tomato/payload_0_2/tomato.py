@@ -1,5 +1,5 @@
 from pydantic.v1 import BaseModel, Extra, Field
-from typing import Literal
+from typing import Literal, Optional
 
 
 class Tomato(BaseModel, extra=Extra.forbid):
@@ -33,5 +33,5 @@ class Tomato(BaseModel, extra=Extra.forbid):
     output: Output = Field(default_factory=Output)
     """Options for final FAIR data output."""
 
-    snapshot: Snapshot = None
+    snapshot: Optional[Snapshot] = None
     """Options for periodic snapshotting."""

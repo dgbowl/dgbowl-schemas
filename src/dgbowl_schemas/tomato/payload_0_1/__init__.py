@@ -3,10 +3,14 @@ from typing import Sequence, Literal
 from .tomato import Tomato
 from .sample import Sample
 from .method import Method
+from ..payload_0_2 import Payload as NewPayload
 
+import logging
 from pathlib import Path
 import yaml
 import json
+
+logger = logging.getLogger(__name__)
 
 
 class Payload(BaseModel, extra=Extra.forbid):
@@ -46,3 +50,10 @@ class Payload(BaseModel, extra=Extra.forbid):
             assert "method" in method
             values["method"] = method["method"]
         return values
+
+    def update(self):
+        logger.info("Updating from Payload-0.1 to Payload-0.2")
+        md = self.dict(exclude_defaults=True, exclude_none=True)
+        md["version"] = "0.2"
+
+        return NewPayload(**md)
