@@ -171,10 +171,6 @@ class EZChrom_dat(FileType):
     filetype: Literal["ezchrom.dat"]
 
 
-class EZChrom_dat(FileType):
-    filetype: Literal["ezchrom.dat"]
-
-
 class EZChrom_asc(FileType):
     filetype: Literal["ezchrom.asc"]
     encoding: Optional[str] = "windows-1252"
@@ -263,10 +259,6 @@ class Quadstar_sac(FileType):
 
 class Tomato_json(FileType):
     filetype: Literal["tomato.json"]
-
-
-class Touchstone_snp(FileType):
-    filetype: Literal["touchstone.snp"]
 
 
 class Touchstone_snp(FileType):
