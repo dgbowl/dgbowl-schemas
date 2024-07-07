@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import Optional, Any
+from typing import Optional, Any, Dict
 
 
 class Step(BaseModel, extra="forbid"):
@@ -21,5 +21,5 @@ class Step(BaseModel, extra="forbid"):
     polling_interval: Optional[int] = None
     """the interval between polling for data, in seconds; defaults to the value in driver settings"""
 
-    technique: Optional[dict[str, Any]] = None
+    technique: Optional[Dict[str, Any]] = None
     """a :class:`dict` of additional parameters required to specify the experimental technique"""
