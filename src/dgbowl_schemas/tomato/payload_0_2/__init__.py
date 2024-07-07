@@ -66,5 +66,27 @@ class Payload(BaseModel, extra=Extra.forbid):
         logger.info("Updating from Payload-0.2 to Payload-1.0")
         md = self.dict(exclude_defaults=True, exclude_none=True)
         md["version"] = "1.0"
+        md["settings"] = md.pop("tomato")
+        for step in md["method"]:
+            step["component_tag"] = step.pop("device")
+
+            # max_duration is time in biologic and dummy
+            if "time" in step:
+                step["max_duration"] = step.pop("time")
+
+            # sampling_interval is delay in dummy and record_every_dt in biologic
+            if "delay" in step:
+                step["sampling_interval"] = step.pop("delay")
+            elif "record_every_dt" in step:
+                step["sampling_interval"] = step.get("record_every_dt")
+
+            technique = {}
+            for k in tuple(step.keys()):
+                if k in {"component_tag", "max_duration", "sampling_interval"}:
+                    continue
+                elif k in {"technique"}:
+                    technique["technique_name"] = step.pop(k)
+                else:
+                    technique[k] = step.pop(k)
 
         return NewPayload(**md)

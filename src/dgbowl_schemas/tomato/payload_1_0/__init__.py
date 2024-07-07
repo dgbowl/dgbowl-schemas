@@ -1,8 +1,8 @@
 from pydantic import BaseModel, Field, model_validator
 from typing import Sequence, Literal
-from .tomato import Tomato
+from .settings import Settings
 from .sample import Sample
-from .method import Method
+from .step import Step
 
 from pathlib import Path
 import yaml
@@ -11,14 +11,14 @@ import json
 
 class Payload(BaseModel, extra="forbid"):
     version: Literal["1.0"]
-    tomato: Tomato = Field(default_factory=Tomato)
+    settings: Settings = Field(default_factory=Settings)
     """Additional configuration options for tomato."""
 
     sample: Sample
     """Specification of the experimental sample."""
 
-    method: Sequence[Method]
-    """A sequence of the experimental methods."""
+    method: Sequence[Step]
+    """A sequence of the experimental :class:`Steps`."""
 
     @model_validator(mode="before")
     @classmethod

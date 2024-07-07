@@ -2,7 +2,7 @@ from pydantic import BaseModel, Field
 from typing import Literal, Optional
 
 
-class Tomato(BaseModel, extra="forbid"):
+class Settings(BaseModel, extra="forbid"):
     """
     Specification of *job* configuration for tomato.
     """

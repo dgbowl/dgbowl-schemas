@@ -4,7 +4,7 @@ from pydantic import BaseModel
 class Sample(BaseModel, extra="allow"):
     """
     Additional attributes for each :class:`Sample` may be required, depending on the
-    :class:`Method` type.
+    method within the payload.
     """
 
     name: str
