@@ -85,8 +85,8 @@ class Payload(BaseModel, extra=Extra.forbid):
                 if k in {"component_tag", "max_duration", "sampling_interval"}:
                     continue
                 elif k in {"technique"}:
-                    technique["technique_name"] = step.pop(k)
+                    step["technique_name"] = step.pop(k)
                 else:
                     technique[k] = step.pop(k)
-
+            step["technique_params"] = technique
         return NewPayload(**md)

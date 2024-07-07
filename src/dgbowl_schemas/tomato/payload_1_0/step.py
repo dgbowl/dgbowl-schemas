@@ -21,5 +21,7 @@ class Step(BaseModel, extra="forbid"):
     polling_interval: Optional[int] = None
     """the interval between polling for data, in seconds; defaults to the value in driver settings"""
 
-    technique: Optional[Dict[str, Any]] = None
+    technique_name: str
+
+    technique_params: Optional[Dict[str, Any]] = None
     """a :class:`dict` of additional parameters required to specify the experimental technique"""
