@@ -78,7 +78,7 @@ class Payload(BaseModel, extra=Extra.forbid):
             if "delay" in step:
                 step["sampling_interval"] = step.pop("delay")
             elif "record_every_dt" in step:
-                step["sampling_interval"] = step.get("record_every_dt")
+                step["sampling_interval"] = step.pop("record_every_dt")
 
             technique = {}
             for k in tuple(step.keys()):

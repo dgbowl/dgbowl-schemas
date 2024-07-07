@@ -12,8 +12,8 @@ class Settings(BaseModel, extra="forbid"):
         Provide the ``path`` and ``prefix`` for the final FAIR-data archive of the *job*.
         """
 
-        path: str = None
-        prefix: str = None
+        path: Optional[str] = None
+        prefix: Optional[str] = None
 
     class Snapshot(BaseModel, extra="forbid"):
         """
@@ -21,9 +21,9 @@ class Settings(BaseModel, extra="forbid"):
         functionality of tomato.
         """
 
-        path: str = None
-        prefix: str = None
-        frequency: int = 3600
+        path: Optional[str] = None
+        prefix: Optional[str] = None
+        frequency: float = 3600.0
 
     unlock_when_done: bool = False
     """set *pipeline* as ready when *job* finishes successfully"""

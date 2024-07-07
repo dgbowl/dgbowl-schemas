@@ -2,7 +2,7 @@ from pydantic import BaseModel, Field, model_validator
 from typing import Sequence, Literal
 from .settings import Settings
 from .sample import Sample
-from .step import Step
+from .task import Task
 
 from pathlib import Path
 import yaml
@@ -17,8 +17,8 @@ class Payload(BaseModel, extra="forbid"):
     sample: Sample
     """Specification of the experimental sample."""
 
-    method: Sequence[Step]
-    """A sequence of the experimental :class:`Steps`."""
+    method: Sequence[Task]
+    """A sequence of the experimental :class:`Tasks`."""
 
     @model_validator(mode="before")
     @classmethod

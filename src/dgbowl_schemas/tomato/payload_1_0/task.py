@@ -2,10 +2,10 @@ from pydantic import BaseModel
 from typing import Optional, Any, Dict
 
 
-class Step(BaseModel, extra="forbid"):
+class Task(BaseModel, extra="forbid"):
     """
-    The :class:`Step` is a driver/device-independent abstraction describing the
-    measurement steps. The driver-specific information for the :class:`Step` can be
+    The :class:`Task` is a driver/device-independent abstraction describing the
+    measurement steps. The driver-specific information for the :class:`Task` can be
     provided via the ``technique`` parameter.
     """
 
@@ -13,7 +13,7 @@ class Step(BaseModel, extra="forbid"):
     """tag of the pipeline component on which this :class:`Method` should run"""
 
     max_duration: float
-    """the maximum duration of this :class:`Step`, in seconds"""
+    """the maximum duration of this :class:`Task`, in seconds"""
 
     sampling_interval: float
     """the interval between measurements, in seconds"""
