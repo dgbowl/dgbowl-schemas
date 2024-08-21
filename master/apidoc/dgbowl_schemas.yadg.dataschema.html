@@ -2440,7 +2440,7 @@ introduced in <code class="docutils literal notranslate"><span class="pre">yadg-
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema.DataSchema.metadata">
 <em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">metadata</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code><span class="pre">[</span><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code><span class="pre">,</span> <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code><span class="pre">]]</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema.DataSchema.metadata" title="Permalink to this definition"></a></dt>
-<dd><p>Input metadata for <a class="reference external" href="https://dgbowl.github.io/yadg/master/apidoc/yadg.html#module-yadg" title="(in yadg vmaster)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">yadg</span></code></a>.</p>
+<dd><p>Input metadata for <code class="xref py py-mod docutils literal notranslate"><span class="pre">yadg</span></code>.</p>
 </dd></dl>
 
 <dl class="py attribute pydantic_field">
@@ -2452,7 +2452,7 @@ introduced in <code class="docutils literal notranslate"><span class="pre">yadg-
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema.DataSchema.steps">
 <em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">steps</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code><span class="pre">[</span><a class="reference internal" href="dgbowl_schemas.yadg.dataschema_5_1.step.html#dgbowl_schemas.yadg.dataschema_5_1.step.Step" title="dgbowl_schemas.yadg.dataschema_5_1.step.Step"><code class="xref py py-class docutils literal notranslate"><span class="pre">Step</span></code></a><span class="pre">]</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema.DataSchema.steps" title="Permalink to this definition"></a></dt>
-<dd><p>Input commands for <a class="reference external" href="https://dgbowl.github.io/yadg/master/apidoc/yadg.html#module-yadg" title="(in yadg vmaster)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">yadg</span></code></a>’s extractors, organised as a <code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>
+<dd><p>Input commands for <code class="xref py py-mod docutils literal notranslate"><span class="pre">yadg</span></code>’s extractors, organised as a <code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>
 of <code class="xref py py-class docutils literal notranslate"><span class="pre">Steps</span></code>.</p>
 </dd></dl>
 
@@ -2523,7 +2523,7 @@ of <code class="xref py py-class docutils literal notranslate"><span class="pre"
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This should be set to the timezone where the measurements have been
-performed, as opposed to the timezone where <a class="reference external" href="https://dgbowl.github.io/yadg/master/apidoc/yadg.html#module-yadg" title="(in yadg vmaster)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">yadg</span></code></a> is being executed.
+performed, as opposed to the timezone where <code class="xref py py-mod docutils literal notranslate"><span class="pre">yadg</span></code> is being executed.
 Otherwise timezone offsets may not be accounted for correctly.</p>
 </div>
 <dl class="field-list simple">
@@ -2713,7 +2713,7 @@ Otherwise timezone offsets may not be accounted for correctly.</p>
 correct <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema.FileType" title="dgbowl_schemas.yadg.dataschema.FileType"><code class="xref py py-class docutils literal notranslate"><span class="pre">FileType</span></code></a>, parses any additionally supplied parameters for that
 <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema.FileType" title="dgbowl_schemas.yadg.dataschema.FileType"><code class="xref py py-class docutils literal notranslate"><span class="pre">FileType</span></code></a>, and back-fills defaults such as <code class="docutils literal notranslate"><span class="pre">timezone</span></code>, <code class="docutils literal notranslate"><span class="pre">locale</span></code>, and
 <code class="docutils literal notranslate"><span class="pre">encoding</span></code>.</p>
-<p>The following is the current usage pattern in <a class="reference external" href="https://dgbowl.github.io/yadg/master/apidoc/yadg.html#module-yadg" title="(in yadg vmaster)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">yadg</span></code></a>:</p>
+<p>The following is the current usage pattern in <code class="xref py py-mod docutils literal notranslate"><span class="pre">yadg</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ftype</span> <span class="o">=</span> <span class="n">ExtractorFactory</span><span class="p">(</span><span class="n">extractor</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;filetype&quot;</span><span class="p">:</span> <span class="n">k</span><span class="p">})</span><span class="o">.</span><span class="n">extractor</span>
 </pre></div>
 </div>
