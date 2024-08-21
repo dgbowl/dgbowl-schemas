@@ -35,10 +35,12 @@ class StepDefaults(BaseModel, extra="forbid"):
     @field_validator("locale")
     @classmethod
     def locale_set_default(cls, v):
-        if v is None:
-            v = locale.getlocale(locale.LC_NUMERIC)[0]
-        try:
-            v = str(Locale.parse(v))
-        except (TypeError, UnknownLocaleError):
+        for loc in (v, locale.getlocale(locale.LC_NUMERIC)[0], locale.getlocale()[0]):
+            try:
+                v = str(Locale.parse(loc))
+                break
+            except (TypeError, UnknownLocaleError):
+                pass
+        else:
             v = "en_GB"
         return v

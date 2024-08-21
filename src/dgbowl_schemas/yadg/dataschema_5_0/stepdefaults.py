@@ -35,5 +35,12 @@ class StepDefaults(BaseModel, extra="forbid"):
     @classmethod
     def locale_set_default(cls, v):
         if v is None:
-            v = ".".join(locale.getlocale())
+            for loc in (locale.getlocale(), locale.getlocale(locale.LC_NUMERIC)):
+                try:
+                    v = ".".join(loc)
+                    break
+                except TypeError:
+                    pass
+            else:
+                v = "en_GB.UTF-8"
         return v
