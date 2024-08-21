@@ -36,12 +36,14 @@ class StepDefaults(BaseModel, extra="forbid"):
     @classmethod
     def locale_set_default(cls, v):
         if v is None:
-            for loc in (locale.getlocale(locale.LC_NUMERIC), locale.getlocale()):
+            for loc in (locale.getlocale(locale.LC_NUMERIC)[0], locale.getlocale()[0]):
                 try:
-                    v = str(Locale.parse(loc[0]))
+                    v = str(Locale.parse(loc))
                     break
                 except (TypeError, UnknownLocaleError):
                     pass
             else:
                 v = "en_GB"
+        else:
+            v = str(Locale.parse(v))
         return v
