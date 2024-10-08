@@ -82,8 +82,8 @@ autodoc_member_order = "bysource"
 autodoc_pydantic_model_show_field_summary = False
 autodoc_pydantic_model_member_order = "bysource"
 intersphinx_mapping = {
-    "dgpost": ("https://dgbowl.github.io/dgpost/master", None),
-    "yadg": ("https://dgbowl.github.io/yadg/master", None),
-    "tomato": ("https://dgbowl.github.io/tomato/master", None),
+    "dgpost": ("https://dgbowl.github.io/dgpost/main", None),
+    "yadg": ("https://dgbowl.github.io/yadg/main", None),
+    "tomato": ("https://dgbowl.github.io/tomato/main", None),
     "pydantic": ("https://docs.pydantic.dev/latest/", None),
 }
