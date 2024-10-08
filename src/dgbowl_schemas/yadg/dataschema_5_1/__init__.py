@@ -20,7 +20,7 @@ class DataSchema(BaseModel, extra="forbid"):
     metadata: Optional[Mapping[str, Any]]
     """Input metadata for :mod:`yadg`."""
 
-    step_defaults: StepDefaults = Field(StepDefaults())
+    step_defaults: StepDefaults = Field(..., default_factory=StepDefaults)
     """Default values for configuration of each :class:`Step`."""
 
     steps: Sequence[Step]

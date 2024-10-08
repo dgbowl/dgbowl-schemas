@@ -3,6 +3,9 @@ from typing import Optional
 import locale
 from babel import Locale, UnknownLocaleError
 import tzlocal
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class StepDefaults(BaseModel, extra="forbid"):
@@ -39,8 +42,9 @@ class StepDefaults(BaseModel, extra="forbid"):
             try:
                 v = str(Locale.parse(loc))
                 break
-            except (TypeError, UnknownLocaleError):
-                pass
+            except (TypeError, UnknownLocaleError, ValueError) as e:
+                logger.debug("Could not process locale '%s': %s", loc, e)
         else:
+            logger.debug("No valid locale string provided. Defaulting to 'en_GB'.")
             v = "en_GB"
         return v
