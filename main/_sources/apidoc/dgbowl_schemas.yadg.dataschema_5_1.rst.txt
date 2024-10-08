@@ -1,0 +1,66 @@
+dgbowl\_schemas.yadg.dataschema\_5\_1 package
+=============================================
+
+.. automodule:: dgbowl_schemas.yadg.dataschema_5_1
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+dgbowl\_schemas.yadg.dataschema\_5\_1.externaldate module
+---------------------------------------------------------
+
+.. automodule:: dgbowl_schemas.yadg.dataschema_5_1.externaldate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dgbowl\_schemas.yadg.dataschema\_5\_1.filetype module
+-----------------------------------------------------
+
+.. automodule:: dgbowl_schemas.yadg.dataschema_5_1.filetype
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dgbowl\_schemas.yadg.dataschema\_5\_1.input module
+--------------------------------------------------
+
+.. automodule:: dgbowl_schemas.yadg.dataschema_5_1.input
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dgbowl\_schemas.yadg.dataschema\_5\_1.parameters module
+-------------------------------------------------------
+
+.. automodule:: dgbowl_schemas.yadg.dataschema_5_1.parameters
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dgbowl\_schemas.yadg.dataschema\_5\_1.step module
+-------------------------------------------------
+
+.. automodule:: dgbowl_schemas.yadg.dataschema_5_1.step
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dgbowl\_schemas.yadg.dataschema\_5\_1.stepdefaults module
+---------------------------------------------------------
+
+.. automodule:: dgbowl_schemas.yadg.dataschema_5_1.stepdefaults
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dgbowl\_schemas.yadg.dataschema\_5\_1.timestamp module
+------------------------------------------------------
+
+.. automodule:: dgbowl_schemas.yadg.dataschema_5_1.timestamp
+   :members:
+   :undoc-members:
+   :show-inheritance:
