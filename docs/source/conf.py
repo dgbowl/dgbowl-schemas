@@ -16,7 +16,7 @@ from importlib.metadata import version as get_version
 
 sys.path.insert(0, os.path.abspath(os.path.join("..", "..", "src")))
 
-version = get_version("yadg")
+version = get_version("dgbowl_schemas")
 
 # -- Project information -----------------------------------------------------
 
