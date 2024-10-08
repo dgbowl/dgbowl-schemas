@@ -16,5 +16,5 @@
             }
         ]
     },
-    "exception": "input_value='typo'"
+    "exception": "input_value={'parser': 'typo',"
 }
