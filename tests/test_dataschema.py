@@ -170,3 +170,24 @@ def test_extractor_factory(input, output):
     assert ret.locale == output.get("locale")
     assert ret.encoding == output.get("encoding")
     assert ret.timezone is not None
+
+
+@pytest.mark.parametrize(
+    "input, output",
+    [
+        ("en_GB", "en_GB"),
+        ("en_US", "en_US"),
+        ("en_US.UTF-8", "en_US"),  # check parsing with .UTF-8 suffix
+        ("de_DE.windows-1252", "de_DE"),  # check parsing with .windows-1252 suffix
+        # Failures defaulting to en_GB below here
+        ("en-US", "en_GB"),  # check that parsing with "-" fails
+        ("no_NO", "en_GB"),  # no_NO is not a valid locale, nb_NO is
+        ("English_United States", "en_GB"),  # English_United States is a language
+        ("English (United States)", "en_GB"),  # English (United States) is a language
+        ("Norwegian (Bokmål)", "en_GB"),  # Norwegian (Bokmål) is a language
+        (None, "en_GB"),  # Full fallback.
+    ],
+)
+def test_stepdefaults_locale(input, output):
+    ret = ExtractorFactory(extractor=dict(filetype="example", locale=input)).extractor
+    assert ret.locale == output

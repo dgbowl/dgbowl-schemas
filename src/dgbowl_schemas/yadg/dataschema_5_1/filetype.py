@@ -33,11 +33,14 @@ class FileType(BaseModel, ABC, extra="forbid"):
     @field_validator("locale")
     @classmethod
     def locale_set_default(cls, v):
-        if v is None:
-            v = locale.getlocale(locale.LC_NUMERIC)[0]
-        try:
-            v = str(Locale.parse(v))
-        except (TypeError, UnknownLocaleError):
+        for loc in (v, locale.getlocale(locale.LC_NUMERIC)[0], locale.getlocale()[0]):
+            try:
+                v = str(Locale.parse(loc))
+                break
+            except (TypeError, UnknownLocaleError, ValueError) as e:
+                logger.debug("Could not process locale '%s': %s", loc, e)
+        else:
+            logger.debug("No valid locale string provided. Defaulting to 'en_GB'.")
             v = "en_GB"
         return v
 
