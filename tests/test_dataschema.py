@@ -185,7 +185,7 @@ def test_extractor_factory(input, output):
         ("English_United States", "en_GB"),  # English_United States is a language
         ("English (United States)", "en_GB"),  # English (United States) is a language
         ("Norwegian (Bokmål)", "en_GB"),  # Norwegian (Bokmål) is a language
-        (None, "en_GB"), # Full fallback.
+        (None, "en_GB"),  # Full fallback.
     ],
 )
 def test_stepdefaults_locale(input, output):
