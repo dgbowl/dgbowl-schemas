@@ -1,5 +1,5 @@
 from . import dgpost, yadg, tomato
-from . import _version
+from importlib.metadata import version
 
-__version__ = _version.get_versions()["version"]
+__version__ = version("dgbowl_schemas")
 __all__ = ["dgpost", "yadg", "tomato"]
