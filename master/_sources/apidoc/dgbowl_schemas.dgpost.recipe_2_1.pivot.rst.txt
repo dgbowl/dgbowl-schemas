@@ -1,4 +1,0 @@
-.. automodule:: dgbowl_schemas.dgpost.recipe_2_1.pivot
-   :members:
-   :undoc-members:
-   :show-inheritance:

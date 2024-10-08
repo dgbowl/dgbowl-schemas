@@ -3,7 +3,7 @@ page = arr[arr.length - 1];
 document.write('\
 <dl>\
     <dt>Versions</dt> \
-    <dd><a href="../master/' + page + '">master</a></dd>\
+    <dd><a href="../main/' + page + '">main</a></dd>\
     <dd><a href="../117/' + page + '">117</a></dd>\
     <dd><a href="../113/' + page + '">113</a></dd>\
     <dd><a href="../111/' + page + '">111</a></dd>\

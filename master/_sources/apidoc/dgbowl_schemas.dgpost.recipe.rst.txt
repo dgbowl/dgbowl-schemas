@@ -1,7 +1,0 @@
-dgbowl\_schemas.dgpost.recipe package
-=====================================
-
-.. automodule:: dgbowl_schemas.dgpost.recipe
-   :members:
-   :undoc-members:
-   :show-inheritance:
