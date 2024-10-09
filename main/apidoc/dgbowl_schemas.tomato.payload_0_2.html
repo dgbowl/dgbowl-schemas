@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>dgbowl_schemas.tomato.payload_0_2 package &mdash; dgbowl-schemas 118.dev5 documentation</title>
+  <title>dgbowl_schemas.tomato.payload_0_2 package &mdash; dgbowl-schemas 118.dev6 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/autodoc_pydantic.css" type="text/css" />
@@ -20,7 +20,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="dgbowl_schemas.yadg package" href="dgbowl_schemas.yadg.html" />
+    <link rel="next" title="dgbowl_schemas.tomato.payload_1_0 package" href="dgbowl_schemas.tomato.payload_1_0.html" />
     <link rel="prev" title="dgbowl_schemas.tomato.payload_0_1 package" href="dgbowl_schemas.tomato.payload_0_1.html" /> 
 </head>
 
@@ -36,7 +36,7 @@
             dgbowl-schemas
           </a>
               <div class="version">
-                118.dev5
+                118.dev6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -54,6 +54,7 @@
 <li class="toctree-l3 current"><a class="reference internal" href="dgbowl_schemas.tomato.html">dgbowl_schemas.tomato package</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="dgbowl_schemas.tomato.html#dgbowl_schemas.tomato.to_payload"><code class="docutils literal notranslate"><span class="pre">to_payload()</span></code></a></li>
 <li class="toctree-l4 current"><a class="reference internal" href="dgbowl_schemas.tomato.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="dgbowl_schemas.tomato.payload.html">dgbowl_schemas.tomato.payload package</a></li>
 <li class="toctree-l5"><a class="reference internal" href="dgbowl_schemas.tomato.payload_0_1.html">dgbowl_schemas.tomato.payload_0_1 package</a></li>
 <li class="toctree-l5 current"><a class="current reference internal" href="#">dgbowl_schemas.tomato.payload_0_2 package</a><ul>
 <li class="toctree-l6"><a class="reference internal" href="#dgbowl_schemas.tomato.payload_0_2.Payload"><code class="docutils literal notranslate"><span class="pre">Payload</span></code></a></li>
@@ -63,6 +64,7 @@
 <li class="toctree-l6"><a class="reference internal" href="#module-dgbowl_schemas.tomato.payload_0_2.tomato">dgbowl_schemas.tomato.payload_0_2.tomato module</a></li>
 </ul>
 </li>
+<li class="toctree-l5"><a class="reference internal" href="dgbowl_schemas.tomato.payload_1_0.html">dgbowl_schemas.tomato.payload_1_0 package</a></li>
 </ul>
 </li>
 </ul>
@@ -141,6 +143,11 @@
 <dd><p>If <code class="docutils literal notranslate"><span class="pre">methodfile</span></code> is provided in <code class="docutils literal notranslate"><span class="pre">values</span></code>, parse the file as <code class="docutils literal notranslate"><span class="pre">method</span></code>.</p>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload_0_2.Payload.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_2.Payload.update" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <section id="submodules">
@@ -190,7 +197,7 @@ with extra arguments required by each <code class="docutils literal notranslate"
 <span id="dgbowl-schemas-tomato-payload-0-2-tomato-module"></span><h2>dgbowl_schemas.tomato.payload_0_2.tomato module<a class="headerlink" href="#module-dgbowl_schemas.tomato.payload_0_2.tomato" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload_0_2.tomato.Tomato">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.tomato.payload_0_2.tomato.</span></span><span class="sig-name descname"><span class="pre">Tomato</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unlock_when_done</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbosity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'DEBUG'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'INFO'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'WARNING'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'ERROR'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'CRITICAL'</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'WARNING'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#dgbowl_schemas.tomato.payload_0_2.tomato.Tomato.Output" title="dgbowl_schemas.tomato.payload_0_2.tomato.Tomato.Output"><span class="pre">Output</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">snapshot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#dgbowl_schemas.tomato.payload_0_2.tomato.Tomato.Snapshot" title="dgbowl_schemas.tomato.payload_0_2.tomato.Tomato.Snapshot"><span class="pre">Snapshot</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_2.tomato.Tomato" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.tomato.payload_0_2.tomato.</span></span><span class="sig-name descname"><span class="pre">Tomato</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unlock_when_done</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbosity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'DEBUG'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'INFO'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'WARNING'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'ERROR'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'CRITICAL'</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'WARNING'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#dgbowl_schemas.tomato.payload_0_2.tomato.Tomato.Output" title="dgbowl_schemas.tomato.payload_0_2.tomato.Tomato.Output"><span class="pre">Output</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">snapshot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#dgbowl_schemas.tomato.payload_0_2.tomato.Tomato.Snapshot" title="dgbowl_schemas.tomato.payload_0_2.tomato.Tomato.Snapshot"><span class="pre">Snapshot</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_2.tomato.Tomato" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
 <p>Specification of <em>job</em> configuration for tomato.</p>
 <dl class="py class">
@@ -252,7 +259,7 @@ functionality of tomato.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload_0_2.tomato.Tomato.snapshot">
-<span class="sig-name descname"><span class="pre">snapshot</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.tomato.payload_0_2.tomato.Tomato.Snapshot" title="dgbowl_schemas.tomato.payload_0_2.tomato.Tomato.Snapshot"><span class="pre">Snapshot</span></a></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_2.tomato.Tomato.snapshot" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">snapshot</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.tomato.payload_0_2.tomato.Tomato.Snapshot" title="dgbowl_schemas.tomato.payload_0_2.tomato.Tomato.Snapshot"><span class="pre">Snapshot</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload_0_2.tomato.Tomato.snapshot" title="Permalink to this definition"></a></dt>
 <dd><p>Options for periodic snapshotting.</p>
 </dd></dl>
 
@@ -266,7 +273,7 @@ functionality of tomato.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="dgbowl_schemas.tomato.payload_0_1.html" class="btn btn-neutral float-left" title="dgbowl_schemas.tomato.payload_0_1 package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="dgbowl_schemas.yadg.html" class="btn btn-neutral float-right" title="dgbowl_schemas.yadg package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="dgbowl_schemas.tomato.payload_1_0.html" class="btn btn-neutral float-right" title="dgbowl_schemas.tomato.payload_1_0 package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -288,7 +295,7 @@ functionality of tomato.</p>
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       <span class="fa fa-book"> Other Versions</span>
-      v: 118.dev5
+      v: 118.dev6
       <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions"> 

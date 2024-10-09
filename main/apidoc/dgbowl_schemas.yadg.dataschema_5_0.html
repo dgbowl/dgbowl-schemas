@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>dgbowl_schemas.yadg.dataschema_5_0 package &mdash; dgbowl-schemas 118.dev5 documentation</title>
+  <title>dgbowl_schemas.yadg.dataschema_5_0 package &mdash; dgbowl-schemas 118.dev6 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/autodoc_pydantic.css" type="text/css" />
@@ -36,7 +36,7 @@
             dgbowl-schemas
           </a>
               <div class="version">
-                118.dev5
+                118.dev6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -2659,19 +2659,19 @@
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.DataSchema.metadata">
 <em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">metadata</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.metadata.Metadata" title="dgbowl_schemas.yadg.dataschema_5_0.metadata.Metadata"><span class="pre">Metadata</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.DataSchema.metadata" title="Permalink to this definition"></a></dt>
-<dd><p>Input metadata for <a class="reference external" href="https://dgbowl.github.io/yadg/main/apidoc/yadg.html#module-yadg" title="(in yadg v5.1.dev6)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">yadg</span></code></a>.</p>
+<dd><p>Input metadata for <a class="reference external" href="https://dgbowl.github.io/yadg/main/apidoc/yadg.html#module-yadg" title="(in yadg v5.1.dev7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">yadg</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.DataSchema.step_defaults">
 <em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">step_defaults</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults" title="dgbowl_schemas.yadg.dataschema_5_0.stepdefaults.StepDefaults"><span class="pre">StepDefaults</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">StepDefaults(timezone='Etc/UTC',</span> <span class="pre">locale='en_US.UTF-8',</span> <span class="pre">encoding=None)</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.DataSchema.step_defaults" title="Permalink to this definition"></a></dt>
-<dd><p>Default values for configuration of <a class="reference external" href="https://dgbowl.github.io/yadg/main/apidoc/yadg.html#module-yadg" title="(in yadg v5.1.dev6)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">yadg</span></code></a>’s parsers.</p>
+<dd><p>Default values for configuration of <a class="reference external" href="https://dgbowl.github.io/yadg/main/apidoc/yadg.html#module-yadg" title="(in yadg v5.1.dev7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">yadg</span></code></a>’s parsers.</p>
 </dd></dl>
 
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_0.DataSchema.steps">
 <em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">steps</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.step.Dummy" title="dgbowl_schemas.yadg.dataschema_5_0.step.Dummy"><span class="pre">Dummy</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.step.BasicCSV" title="dgbowl_schemas.yadg.dataschema_5_0.step.BasicCSV"><span class="pre">BasicCSV</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.step.MeasCSV" title="dgbowl_schemas.yadg.dataschema_5_0.step.MeasCSV"><span class="pre">MeasCSV</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.step.FlowData" title="dgbowl_schemas.yadg.dataschema_5_0.step.FlowData"><span class="pre">FlowData</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.step.ElectroChem" title="dgbowl_schemas.yadg.dataschema_5_0.step.ElectroChem"><span class="pre">ElectroChem</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.step.ChromTrace" title="dgbowl_schemas.yadg.dataschema_5_0.step.ChromTrace"><span class="pre">ChromTrace</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.step.ChromData" title="dgbowl_schemas.yadg.dataschema_5_0.step.ChromData"><span class="pre">ChromData</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.step.MassTrace" title="dgbowl_schemas.yadg.dataschema_5_0.step.MassTrace"><span class="pre">MassTrace</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.step.QFTrace" title="dgbowl_schemas.yadg.dataschema_5_0.step.QFTrace"><span class="pre">QFTrace</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.step.XPSTrace" title="dgbowl_schemas.yadg.dataschema_5_0.step.XPSTrace"><span class="pre">XPSTrace</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.step.XRDTrace" title="dgbowl_schemas.yadg.dataschema_5_0.step.XRDTrace"><span class="pre">XRDTrace</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_0.DataSchema.steps" title="Permalink to this definition"></a></dt>
-<dd><p>Input commands for <a class="reference external" href="https://dgbowl.github.io/yadg/main/apidoc/yadg.html#module-yadg" title="(in yadg v5.1.dev6)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">yadg</span></code></a>’s parsers, organised as a sequence of steps.</p>
+<dd><p>Input commands for <a class="reference external" href="https://dgbowl.github.io/yadg/main/apidoc/yadg.html#module-yadg" title="(in yadg v5.1.dev7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">yadg</span></code></a>’s parsers, organised as a sequence of steps.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5018,7 +5018,7 @@ parsed data.</p>
 correct <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType"><code class="xref py py-class docutils literal notranslate"><span class="pre">FileType</span></code></a>, parses any additionally supplied parameters for that
 <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType" title="dgbowl_schemas.yadg.dataschema_5_0.filetype.FileType"><code class="xref py py-class docutils literal notranslate"><span class="pre">FileType</span></code></a>, and back-fills defaults such as <code class="docutils literal notranslate"><span class="pre">timezone</span></code>, <code class="docutils literal notranslate"><span class="pre">locale</span></code>, and
 <code class="docutils literal notranslate"><span class="pre">encoding</span></code>.</p>
-<p>The following is the current usage pattern in <a class="reference external" href="https://dgbowl.github.io/yadg/main/apidoc/yadg.html#module-yadg" title="(in yadg v5.1.dev6)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">yadg</span></code></a>:</p>
+<p>The following is the current usage pattern in <a class="reference external" href="https://dgbowl.github.io/yadg/main/apidoc/yadg.html#module-yadg" title="(in yadg v5.1.dev7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">yadg</span></code></a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ftype</span> <span class="o">=</span> <span class="n">ExtractorFactory</span><span class="p">(</span><span class="n">extractor</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;filetype&quot;</span><span class="p">:</span> <span class="n">k</span><span class="p">})</span><span class="o">.</span><span class="n">extractor</span>
 </pre></div>
 </div>
@@ -12659,7 +12659,7 @@ used instead.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This should be set to the timezone where the measurements have been
-performed, as opposed to the timezone where <a class="reference external" href="https://dgbowl.github.io/yadg/main/apidoc/yadg.html#module-yadg" title="(in yadg v5.1.dev6)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">yadg</span></code></a> is being executed.
+performed, as opposed to the timezone where <a class="reference external" href="https://dgbowl.github.io/yadg/main/apidoc/yadg.html#module-yadg" title="(in yadg v5.1.dev7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">yadg</span></code></a> is being executed.
 Otherwise timezone offsets may not be accounted for correctly.</p>
 </div>
 <dl class="field-list simple">
@@ -13025,7 +13025,7 @@ Otherwise timezone offsets may not be accounted for correctly.</p>
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       <span class="fa fa-book"> Other Versions</span>
-      v: 118.dev5
+      v: 118.dev6
       <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions"> 
