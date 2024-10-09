@@ -13,7 +13,7 @@ This repository contains the versioned archive of the schemas for the following 
   latest implementation in :mod:`~dgbowl_schemas.dgpost.recipe`;
 - The :class:`~dgbowl_schemas.yadg.dataschema.DataSchema` schema for :mod:`yadg`, with
   its latest implementation in :mod:`~dgbowl_schemas.yadg.dataschema`;
-- The :class:`~dgbowl_schemas.tomato.Payload` schema for :mod:`tomato`, with its latest
+- The :class:`~dgbowl_schemas.tomato.payload.Payload` schema for :mod:`tomato`, with its latest
   implementation in :mod:`~dgbowl_schemas.tomato.payload`.
 
 

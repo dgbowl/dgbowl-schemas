@@ -1,26 +1,31 @@
-from pydantic.v1 import BaseModel, Extra, Field, root_validator
+from pydantic import BaseModel, Field, model_validator
 from typing import Sequence, Literal
-from .tomato import Tomato
+from .settings import Settings
 from .sample import Sample
-from .method import Method
-from ..payload_0_2 import Payload as NewPayload
+from .task import Task
 
-import logging
 from pathlib import Path
 import yaml
 import json
 
-logger = logging.getLogger(__name__)
 
+class Payload(BaseModel, extra="forbid"):
+    version: Literal["1.0"]
+    settings: Settings = Field(default_factory=Settings)
+    """Additional configuration options for tomato."""
 
-class Payload(BaseModel, extra=Extra.forbid):
-    version: Literal["0.1"]
-    tomato: Tomato = Field(default_factory=Tomato)
     sample: Sample
-    method: Sequence[Method]
+    """Specification of the experimental sample."""
 
-    @root_validator(pre=True)
-    def extract_samplefile(cls, values):  # pylint: disable=E0213
+    method: Sequence[Task]
+    """A sequence of the experimental :class:`Tasks`."""
+
+    @model_validator(mode="before")
+    @classmethod
+    def extract_samplefile(cls, values):
+        """
+        If ``samplefile`` is provided in ``values``, parse the file as ``sample``.
+        """
         if "samplefile" in values:
             sf = Path(values.pop("samplefile"))
             assert sf.exists()
@@ -35,8 +40,12 @@ class Payload(BaseModel, extra=Extra.forbid):
             values["sample"] = sample["sample"]
         return values
 
-    @root_validator(pre=True)
-    def extract_methodfile(cls, values):  # pylint: disable=E0213
+    @model_validator(mode="before")
+    @classmethod
+    def extract_methodfile(cls, values):
+        """
+        If ``methodfile`` is provided in ``values``, parse the file as ``method``.
+        """
         if "methodfile" in values:
             mf = Path(values.pop("methodfile"))
             assert mf.exists()
@@ -50,10 +59,3 @@ class Payload(BaseModel, extra=Extra.forbid):
             assert "method" in method
             values["method"] = method["method"]
         return values
-
-    def update(self):
-        logger.info("Updating from Payload-0.1 to Payload-0.2")
-        md = self.dict(exclude_defaults=True, exclude_none=True)
-        md["version"] = "0.2"
-
-        return NewPayload(**md)
