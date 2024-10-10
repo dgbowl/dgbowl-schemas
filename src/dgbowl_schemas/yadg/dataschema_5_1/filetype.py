@@ -4,8 +4,7 @@ from pydantic import BaseModel, Field, field_validator
 from abc import ABC
 from typing import Optional, Literal, Mapping, Any, TypeVar
 import tzlocal
-import locale
-from babel import Locale, UnknownLocaleError
+from babel import Locale
 import logging
 
 from .stepdefaults import StepDefaults
@@ -32,16 +31,9 @@ class FileType(BaseModel, ABC, extra="forbid"):
 
     @field_validator("locale")
     @classmethod
-    def locale_set_default(cls, v):
-        for loc in (v, locale.getlocale(locale.LC_NUMERIC)[0], locale.getlocale()[0]):
-            try:
-                v = str(Locale.parse(loc))
-                break
-            except (TypeError, UnknownLocaleError, ValueError) as e:
-                logger.debug("Could not process locale '%s': %s", loc, e)
-        else:
-            logger.debug("No valid locale string provided. Defaulting to 'en_GB'.")
-            v = "en_GB"
+    def locale_validate_default(cls, v):
+        if v is not None:
+            v = str(Locale.parse(v))
         return v
 
 

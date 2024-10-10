@@ -1,5 +1,6 @@
 from pydantic import BaseModel, Field
 from typing import Sequence
+from babel import Locale, UnknownLocaleError
 import logging
 from .metadata import Metadata
 from .step import Steps
@@ -41,6 +42,13 @@ class DataSchema(BaseModel, extra="forbid"):
         nsch["step_defaults"] = self.step_defaults.model_dump(
             exclude_none=True, exclude_defaults=True
         )
+
+        # Make sure we only pass locales that are valid
+        if nsch["step_defaults"].get("locale") is not None:
+            try:
+                v = str(Locale.parse(nsch["step_defaults"]["locale"]))
+            except (TypeError, UnknownLocaleError, ValueError):
+                del nsch["step_defaults"]["locale"]
 
         for step in self.steps:
             nstep = {
