@@ -1,0 +1,93 @@
+{
+    "input": {
+        "version": "5.1",
+        "metadata": {
+            "provenance": {"type": "manual"}
+        },
+        "step_defaults": {
+            "timezone": "Europe/Berlin",
+            "locale": "de_DE"
+        },
+        "steps": [
+            {
+                "tag": "defaults",
+                "input": {"files": ["test"]},
+                "extractor": {
+                    "filetype": "example"
+                }
+            },
+            {
+                "tag": "locale-en_US",
+                "input": {"files": ["test"]},
+                "extractor": {
+                    "filetype": "example",
+                    "locale": "en_US"
+                }
+            },
+            {
+                "tag": "timezone-Zurich",
+                "input": {"files": ["test"]},
+                "extractor": {
+                    "filetype": "example",
+                    "timezone": "Europe/Zurich"
+                }
+            }
+        ]
+    },
+    "output": [
+        {
+            "tag": "defaults",
+            "input": {
+                "files": ["test"],
+                "prefix": null,
+                "suffix": null,
+                "contains": null,
+                "exclude": null
+            },
+            "extractor": {
+                "encoding": null,
+                "filetype": "example",
+                "locale": null,
+                "timezone": null,
+                "parameters": {}
+            },
+            "externaldate": null
+        },
+        {
+            "tag": "locale-en_US",
+            "input": {
+                "files": ["test"],
+                "prefix": null,
+                "suffix": null,
+                "contains": null,
+                "exclude": null
+            },
+            "extractor": {
+                "encoding": null,
+                "filetype": "example",
+                "locale": "en_US",
+                "timezone": null,
+                "parameters": {}
+            },
+            "externaldate": null
+        },
+        {
+            "tag": "timezone-Zurich",
+            "input": {
+                "files": ["test"],
+                "prefix": null,
+                "suffix": null,
+                "contains": null,
+                "exclude": null
+            },
+            "extractor": {
+                "encoding": null,
+                "filetype": "example",
+                "locale": null,
+                "timezone": "Europe/Zurich",
+                "parameters": {}
+            },
+            "externaldate": null
+        }
+    ]
+}

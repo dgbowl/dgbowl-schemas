@@ -1,0 +1,22 @@
+{
+    "input": {
+        "version": "5.1",
+        "metadata": {
+            "provenance": {"type": "manual"}
+        },
+        "step_defaults": {
+            "timezone": "Europe/Berlin",
+            "locale": "wrong"
+        },
+        "steps": [
+            {
+                "tag": "locale-wrong",
+                "input": {"files": ["test"]},
+                "extractor": {
+                    "filetype": "example"
+                }
+            }
+        ]
+    },
+    "exception": "unknown locale 'wrong'"
+}

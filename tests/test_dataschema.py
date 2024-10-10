@@ -5,6 +5,8 @@ from dgbowl_schemas.yadg import to_dataschema
 from dgbowl_schemas.yadg.dataschema import ExtractorFactory
 import locale
 from pydantic import BaseModel
+from babel import UnknownLocaleError
+from pydantic import ValidationError
 
 
 @pytest.mark.parametrize(
@@ -53,6 +55,7 @@ def test_dataschema_metadata_json(inpath, success, datadir):
         ("ts13_fusion_json.json"),  # 5.1
         ("ts14_basic_csv.json"),  # 5.1
         ("ts15_example.json"),  # 5.1
+        ("ts16_locales.json"),  # 5.1
     ],
 )
 def test_dataschema_steps_json(inpath, datadir):
@@ -80,13 +83,15 @@ def test_dataschema_steps_json(inpath, datadir):
         ("err6_chromtrace.json"),  # 4.0
         ("err7_typo.json"),  # 4.0
         ("err8_metadata.json"),  # 5.0
+        ("err9_locale_step.json"),  # 5.1, check crash on wrong locale
+        ("err10_locale_sd.json"),  # 5.1, check crash on wrong locale in stepdefaults
     ],
 )
 def test_dataschema_err(inpath, datadir):
     os.chdir(datadir)
     with open(inpath, "r") as infile:
         jsdata = json.load(infile)
-    with pytest.raises(ValueError) as e:
+    with pytest.raises((ValueError, UnknownLocaleError)) as e:
         to_dataschema(**jsdata["input"])
     assert jsdata["exception"] in str(e.value)
 
@@ -179,15 +184,24 @@ def test_extractor_factory(input, output):
         ("en_US", "en_US"),
         ("en_US.UTF-8", "en_US"),  # check parsing with .UTF-8 suffix
         ("de_DE.windows-1252", "de_DE"),  # check parsing with .windows-1252 suffix
-        # Failures defaulting to en_GB below here
-        ("en-US", "en_GB"),  # check that parsing with "-" fails
-        ("no_NO", "en_GB"),  # no_NO is not a valid locale, nb_NO is
-        ("English_United States", "en_GB"),  # English_United States is a language
-        ("English (United States)", "en_GB"),  # English (United States) is a language
-        ("Norwegian (Bokmål)", "en_GB"),  # Norwegian (Bokmål) is a language
-        (None, "en_GB"),  # Full fallback.
+        (None, "en_GB"),
     ],
 )
 def test_stepdefaults_locale(input, output):
     ret = ExtractorFactory(extractor=dict(filetype="example", locale=input)).extractor
     assert ret.locale == output
+
+
+@pytest.mark.parametrize(
+    "input",
+    [
+        "en-US",  # check that parsing with "-" fails
+        "no_NO",  # no_NO is not a valid locale, nb_NO is
+        "English_United States",  # English_United States is a language
+        "English (United States)",  # English (United States) is a language
+        "Norwegian (Bokmål)",  # Norwegian (Bokmål) is a language
+    ],
+)
+def test_stepdefaults_locale_fail(input):
+    with pytest.raises((ValidationError, UnknownLocaleError)):
+        ExtractorFactory(extractor=dict(filetype="example", locale=input))
