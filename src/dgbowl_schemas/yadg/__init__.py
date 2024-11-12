@@ -2,6 +2,7 @@ import logging
 from . import dataschema
 from pydantic import ValidationError
 from pydantic.v1 import ValidationError as ValidationError_v1
+from .dataschema_6_0 import DataSchema as DataSchema_6_0
 from .dataschema_5_1 import DataSchema as DataSchema_5_1
 from .dataschema_5_0 import DataSchema as DataSchema_5_0, Metadata as Metadata_5_0
 from .dataschema_4_2 import DataSchema as DataSchema_4_2, Metadata as Metadata_4_2
@@ -11,6 +12,7 @@ from .dataschema_4_0 import DataSchema as DataSchema_4_0, Metadata as Metadata_4
 logger = logging.getLogger(__name__)
 
 models = {
+    "6.0": (DataSchema_6_0, None),
     "5.1": (DataSchema_5_1, None),
     "5.0": (DataSchema_5_0, Metadata_5_0),
     "4.2": (DataSchema_4_2, Metadata_4_2),
