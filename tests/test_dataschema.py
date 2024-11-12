@@ -136,7 +136,7 @@ def test_dataschema_update_chain(inpath, datadir):
     ret = to_dataschema(**jsdata)
     while hasattr(ret, "update"):
         ret = ret.update()
-    assert ret.version == "5.1"
+    assert ret.version == "6.0"
 
 
 @pytest.mark.parametrize(
