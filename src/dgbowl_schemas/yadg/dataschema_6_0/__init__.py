@@ -7,16 +7,15 @@ from .filetype import (  # noqa: F401
     FileType as FileType,
     FileTypes as FileTypes,
 )
-from ..dataschema_6_0 import DataSchema as NewDataSchema
 
 
 class DataSchema(BaseModel, extra="forbid"):
     """
-    A :class:`pydantic.BaseModel` implementing ``DataSchema-5.1`` model
-    introduced in ``yadg-5.1``.
+    A :class:`pydantic.BaseModel` implementing ``DataSchema-6.0`` model
+    introduced in ``yadg-6.0``.
     """
 
-    version: Literal["5.1"]
+    version: Literal["6.0"]
 
     metadata: Optional[Mapping[str, Any]]
     """Input metadata for :mod:`yadg`."""
@@ -27,9 +26,3 @@ class DataSchema(BaseModel, extra="forbid"):
     steps: Sequence[Step]
     """Input commands for :mod:`yadg`'s extractors, organised as a :class:`Sequence`
     of :class:`Steps`."""
-
-    def update(self):
-        nsch = self.model_dump(exclude_none=True, exclude_defaults=True)
-
-        nsch["version"] = "6.0"
-        return NewDataSchema(**nsch)

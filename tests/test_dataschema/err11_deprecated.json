@@ -1,0 +1,19 @@
+{
+    "input": {
+        "version": "6.0",
+        "metadata": {
+            "provenance": {"type": "manual"}
+        },
+        "step_defaults": {},
+        "steps": [
+            {
+                "tag": "deprecated",
+                "input": {"files": ["test"]},
+                "extractor": {
+                    "filetype": "biologic-mpr"
+                }
+            }
+        ]
+    },
+    "exception": "Input should be 'eclab.mpr'"
+}
