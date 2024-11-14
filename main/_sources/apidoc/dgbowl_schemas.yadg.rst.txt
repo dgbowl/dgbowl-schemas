@@ -18,3 +18,4 @@ Subpackages
    dgbowl_schemas.yadg.dataschema_4_2
    dgbowl_schemas.yadg.dataschema_5_0
    dgbowl_schemas.yadg.dataschema_5_1
+   dgbowl_schemas.yadg.dataschema_6_0
