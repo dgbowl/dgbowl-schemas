@@ -1,0 +1,47 @@
+{
+    "input": {
+        "version": "6.0",
+        "metadata": {
+            "provenance": {"type": "manual"}
+        },
+        "step_defaults": {
+            "timezone": "UTC",
+            "locale": "en_GB.UTF-8"
+        },
+        "steps": [
+            {
+                "input": {"files": ["measurement.csv"]},
+                "extractor": {
+                    "filetype": "basic.csv",
+                    "locale": "de_DE.UTF-8",
+                    "timezone": "Europe/Zurich"
+                }
+            }
+        ]
+    },
+    "output": [
+        {
+            "input": {
+                "files": ["measurement.csv"],
+                "prefix": null,
+                "suffix": null,
+                "contains": null,
+                "exclude": null
+            },
+            "extractor": {
+                "filetype": "basic.csv",
+                "encoding": null,
+                "locale": "de_DE",
+                "timezone": "Europe/Zurich",
+                "parameters": {
+                    "sep": ",",
+                    "strip": null,
+                    "timestamp": null,
+                    "units": null
+                }
+            },
+            "tag": null,
+            "externaldate": null
+        }
+    ]
+}

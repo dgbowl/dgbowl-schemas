@@ -56,6 +56,7 @@ def test_dataschema_metadata_json(inpath, success, datadir):
         ("ts14_basic_csv.json"),  # 5.1
         ("ts15_example.json"),  # 5.1
         ("ts16_locales.json"),  # 5.1
+        ("ts17_basic_csv.json"),  # 6.0
     ],
 )
 def test_dataschema_steps_json(inpath, datadir):
@@ -85,6 +86,7 @@ def test_dataschema_steps_json(inpath, datadir):
         ("err8_metadata.json"),  # 5.0
         ("err9_locale_step.json"),  # 5.1, check crash on wrong locale
         ("err10_locale_sd.json"),  # 5.1, check crash on wrong locale in stepdefaults
+        ("err11_deprecated.json"),  # 6.0, check crash with deprecated
     ],
 )
 def test_dataschema_err(inpath, datadir):
