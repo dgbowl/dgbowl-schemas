@@ -15,3 +15,4 @@ Subpackages
    dgbowl_schemas.dgpost.recipe
    dgbowl_schemas.dgpost.recipe_1_0
    dgbowl_schemas.dgpost.recipe_2_1
+   dgbowl_schemas.dgpost.recipe_2_2
