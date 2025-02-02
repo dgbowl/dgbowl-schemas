@@ -28,7 +28,11 @@ def test_recipe_from_yml(inpath, outdict, datadir):
     os.chdir(datadir)
     with open(inpath, "r") as infile:
         indict = yaml.safe_load(infile)
-    ret = to_recipe(**indict).dict(by_alias=True)
+    obj = to_recipe(**indict)
+    if hasattr(obj, "model_dump"):
+        ret = obj.model_dump(by_alias=True)
+    else:
+        ret = obj.dict(by_alias=True)
     assert outdict == ret
 
 
@@ -57,6 +61,5 @@ def test_recipe_update_chain(inpath, datadir):
         jsdata = yaml.safe_load(infile)
     ret = to_recipe(**jsdata)
     while hasattr(ret, "update"):
-        print("here")
         ret = ret.update()
     assert ret.version == "2.1"

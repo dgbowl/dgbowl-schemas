@@ -21,7 +21,7 @@ version = get_version("dgbowl_schemas")
 # -- Project information -----------------------------------------------------
 
 project = "dgbowl-schemas"
-copyright = "2022 - 2023, dgbowl authors"
+copyright = "2022 - 2025, dgbowl authors"
 author = "Peter Kraus"
 release = version
 
