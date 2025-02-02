@@ -589,7 +589,7 @@ pivot_1 = {
 }
 
 pivot_2 = {
-    "version": "2.1",
+    "version": "2.2",
     "load": [
         {
             "as": "tab",
