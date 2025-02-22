@@ -3,18 +3,14 @@ from typing import Sequence, Literal
 from .settings import Settings
 from .sample import Sample
 from .task import Task
-from ..payload_2_0 import Payload as NewPayload
 
 from pathlib import Path
 import yaml
 import json
-import logging
-
-logger = logging.getLogger(__name__)
 
 
 class Payload(BaseModel, extra="forbid"):
-    version: Literal["1.0"]
+    version: Literal["2.0"]
     settings: Settings = Field(default_factory=Settings)
     """Additional configuration options for tomato."""
 
@@ -63,9 +59,3 @@ class Payload(BaseModel, extra="forbid"):
             assert "method" in method
             values["method"] = method["method"]
         return values
-
-    def update(self):
-        logger.info("Updating from Payload-1.0 to Payload-2.0")
-        md = self.dict(exclude_defaults=True, exclude_none=True)
-        md["version"] = "2.0"
-        return NewPayload(**md)

@@ -17,6 +17,10 @@ from dgbowl_schemas.tomato import to_payload
         # v0.2
         "ts5.yml",
         "ts6.yml",
+        # v1.0
+        "ts7.yml",
+        # v2.0
+        "ts8.yml",
     ],
 )
 def test_payload_yml(inpath, datadir):
@@ -24,7 +28,11 @@ def test_payload_yml(inpath, datadir):
     with open(inpath, "r") as infile:
         indict = yaml.safe_load(infile)
     ret = to_payload(**indict)
-    with open(f"ref.{inpath.replace('yml','json')}", "r") as ofile:
+    if hasattr(ret, "model_dump"):
+        ret = ret.model_dump()
+    else:
+        ret = ret.dict()
+    with open(f"ref.{inpath.replace('yml', 'json')}", "r") as ofile:
         ref = json.load(ofile)
     assert ret == ref
 
@@ -39,6 +47,7 @@ def test_payload_yml(inpath, datadir):
         "ts4.yml",  # 0.1
         "ts5.yml",  # 0.2
         "ts6.yml",  # 0.2
+        "ts7.yml",  # 1.0
     ],
 )
 def test_payload_update_chain(inpath, datadir):
@@ -49,4 +58,4 @@ def test_payload_update_chain(inpath, datadir):
     while hasattr(ret, "update"):
         ret = ret.update()
         print(f"{ret=}")
-    assert ret.version == "1.0"
+    assert ret.version == "2.0"
