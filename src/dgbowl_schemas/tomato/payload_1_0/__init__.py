@@ -66,6 +66,6 @@ class Payload(BaseModel, extra="forbid"):
 
     def update(self):
         logger.info("Updating from Payload-1.0 to Payload-2.0")
-        md = self.dict(exclude_defaults=True, exclude_none=True)
+        md = self.model_dump(exclude_defaults=True, exclude_none=True)
         md["version"] = "2.0"
         return NewPayload(**md)
