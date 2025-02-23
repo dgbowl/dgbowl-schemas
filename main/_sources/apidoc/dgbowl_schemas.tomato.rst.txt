@@ -16,3 +16,4 @@ Subpackages
    dgbowl_schemas.tomato.payload_0_1
    dgbowl_schemas.tomato.payload_0_2
    dgbowl_schemas.tomato.payload_1_0
+   dgbowl_schemas.tomato.payload_2_0
