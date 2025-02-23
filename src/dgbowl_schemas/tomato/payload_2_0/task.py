@@ -6,7 +6,7 @@ class Task(BaseModel, extra="forbid"):
     """
     The :class:`Task` is a driver/device-independent abstraction describing the
     measurement steps. The driver-specific information for the :class:`Task` can be
-    provided via the ``technique`` parameter.
+    provided via the :obj:`technique_name` and :obj:`task_params` parameters.
     """
 
     component_tag: str
@@ -23,5 +23,5 @@ class Task(BaseModel, extra="forbid"):
 
     technique_name: str
 
-    technique_params: Optional[Dict[str, Any]] = Field(default_factory=dict)
+    task_params: Optional[Dict[str, Any]] = Field(default_factory=dict)
     """a :class:`dict` of additional parameters required to specify the experimental technique"""

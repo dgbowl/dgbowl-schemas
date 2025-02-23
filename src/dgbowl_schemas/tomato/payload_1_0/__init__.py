@@ -68,4 +68,8 @@ class Payload(BaseModel, extra="forbid"):
         logger.info("Updating from Payload-1.0 to Payload-2.0")
         md = self.model_dump(exclude_defaults=True, exclude_none=True)
         md["version"] = "2.0"
+        for step in md["method"]:
+            if "technique_params" in step:
+                step["task_params"] = step.pop("technique_params")
+
         return NewPayload(**md)
