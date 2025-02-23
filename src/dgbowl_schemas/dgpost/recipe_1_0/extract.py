@@ -14,7 +14,7 @@ class At(BaseModel, extra="forbid"):
     def check_one_input(cls, values):  # pylint: disable=E0213
         keys = {"step", "steps", "index", "indices", "timestamp"}
         assert len(keys.intersection(set(values))) == 1, (
-            "multiple keys provided: " f"{keys.intersection(values)}"
+            f"multiple keys provided: {keys.intersection(values)}"
         )
         if "step" in values:
             values["steps"] = [values.pop("step")]
