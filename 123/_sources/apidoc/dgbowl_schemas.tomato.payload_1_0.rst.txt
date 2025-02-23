@@ -1,0 +1,34 @@
+dgbowl\_schemas.tomato.payload\_1\_0 package
+============================================
+
+.. automodule:: dgbowl_schemas.tomato.payload_1_0
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+dgbowl\_schemas.tomato.payload\_1\_0.sample module
+--------------------------------------------------
+
+.. automodule:: dgbowl_schemas.tomato.payload_1_0.sample
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dgbowl\_schemas.tomato.payload\_1\_0.settings module
+----------------------------------------------------
+
+.. automodule:: dgbowl_schemas.tomato.payload_1_0.settings
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dgbowl\_schemas.tomato.payload\_1\_0.task module
+------------------------------------------------
+
+.. automodule:: dgbowl_schemas.tomato.payload_1_0.task
+   :members:
+   :undoc-members:
+   :show-inheritance:
