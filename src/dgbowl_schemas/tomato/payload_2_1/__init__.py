@@ -62,19 +62,18 @@ class Payload(BaseModel, extra="forbid"):
 
     @field_validator("method", mode="after")
     @classmethod
-    def validate_task_names(cls, value):
-        """
-        If any task
-        """
+    def validate_task_names(cls, method):
         req_names = set()
         prov_names = set()
-        for task in value:
+        for task in method:
             if task.task_name is not None:
                 prov_names.add(task.task_name)
             if task.start_with_task_name is not None:
                 req_names.add(task.start_with_task_name)
+            if task.stop_with_task_name is not None:
+                req_names.add(task.stop_with_task_name)
         if prov_names.intersection(req_names) == req_names:
-            return value
+            return method
         else:
             raise ValueError(
                 "Not all required task_names were provided: "

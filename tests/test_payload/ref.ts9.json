@@ -23,7 +23,8 @@
                 "param": "4 seconds"
             },
             "task_name": "count for 0.2",
-            "start_with_task_name": null
+            "start_with_task_name": null,
+            "stop_with_task_name": null
         },
         {
             "component_role": "counter-2",
@@ -36,7 +37,8 @@
                 "max": 100
             },
             "task_name": null,
-            "start_with_task_name": "count for 0.2"
+            "start_with_task_name": "count for 0.2",
+            "stop_with_task_name": null
         }
     ]
 }

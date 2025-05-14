@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, model_validator
 from typing import Optional, Any, Dict
 
 
@@ -49,3 +49,28 @@ class Task(BaseModel, extra="forbid"):
     started in parallel with; when set, this :class:`Task` will wait for execution until
     a :class:`Task` with the matching :obj:`task_name` is started
     """
+
+    stop_with_task_name: Optional[str] = None
+    """
+    the :obj:`task_name` of the :class:`Task` that, when started, will stop the execution
+    of this :class:`Task`; when set, this :class:`Task` will execute normally, but if a
+    a :class:`Task` with the matching :obj:`task_name` is started, this :class:`Task`
+    will be stopped
+    """
+
+    @model_validator(mode="after")
+    @classmethod
+    def task_names_cannot_be_same(cls, task):
+        if task.task_name is not None and task.task_name == task.start_with_task_name:
+            raise ValueError(
+                "A task cannot trigger the start of itself: "
+                f"provided task_name={task.task_name!r}, "
+                f"provided start_with_task_name={task.start_with_task_name!r}."
+            )
+        if task.task_name is not None and task.task_name == task.stop_with_task_name:
+            raise ValueError(
+                "A task cannot trigger the stop of itself: "
+                f"provided task_name={task.task_name!r}, "
+                f"provided start_with_task_name={task.stop_with_task_name!r}."
+            )
+        return task
