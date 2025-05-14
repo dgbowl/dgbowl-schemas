@@ -21,6 +21,8 @@ from dgbowl_schemas.tomato import to_payload
         "ts7.yml",
         # v2.0
         "ts8.yml",
+        # v2.1
+        "ts9.yml",
     ],
 )
 def test_payload_yml(inpath, datadir):
@@ -48,6 +50,7 @@ def test_payload_yml(inpath, datadir):
         "ts5.yml",  # 0.2
         "ts6.yml",  # 0.2
         "ts7.yml",  # 1.0
+        "ts8.yml",  # 2.0
     ],
 )
 def test_payload_update_chain(inpath, datadir):
@@ -58,4 +61,4 @@ def test_payload_update_chain(inpath, datadir):
     while hasattr(ret, "update"):
         ret = ret.update()
         print(f"{ret=}")
-    assert ret.version == "2.0"
+    assert ret.version == "2.1"

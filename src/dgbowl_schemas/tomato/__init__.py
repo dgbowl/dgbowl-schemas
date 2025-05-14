@@ -6,10 +6,12 @@ from .payload_0_1 import Payload as Payload_0_1
 from .payload_0_2 import Payload as Payload_0_2
 from .payload_1_0 import Payload as Payload_1_0
 from .payload_2_0 import Payload as Payload_2_0
+from .payload_2_1 import Payload as Payload_2_1
 
 logger = logging.getLogger(__name__)
 
 models = {
+    "2.1": Payload_2_1,
     "2.0": Payload_2_0,
     "1.0": Payload_1_0,
     "0.2": Payload_0_2,
