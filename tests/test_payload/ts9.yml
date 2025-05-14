@@ -2,12 +2,21 @@ version: "2.1"
 sample:
     name: counter_stresstest
 method:
-  - component_role: "counter"
+  - component_role: "counter-1"
     technique_name: "count"
     max_duration: 0.2
     sampling_interval: 0.1
+    task_name: "count for 0.2"
     task_params:
       param: "4 seconds"
+  - component_role: "counter-2"
+    technique_name: "random"
+    max_duration: 0.2
+    sampling_interval: 0.1
+    task_params:
+      min: 10
+      max: 100
+    start_with_task_name: "count for 0.2"
 settings:
     unlock_when_done: true
     verbosity: DEBUG
