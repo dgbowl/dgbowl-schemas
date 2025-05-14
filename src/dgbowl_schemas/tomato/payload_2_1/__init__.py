@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field, model_validator
+from pydantic import BaseModel, Field, model_validator, field_validator
 from typing import Sequence, Literal
 from .settings import Settings
 from .sample import Sample
@@ -59,3 +59,23 @@ class Payload(BaseModel, extra="forbid"):
             assert "method" in method
             values["method"] = method["method"]
         return values
+
+    @field_validator("method", mode="after")
+    @classmethod
+    def validate_task_names(cls, method):
+        req_names = set()
+        prov_names = set()
+        for task in method:
+            if task.task_name is not None:
+                prov_names.add(task.task_name)
+            if task.start_with_task_name is not None:
+                req_names.add(task.start_with_task_name)
+            if task.stop_with_task_name is not None:
+                req_names.add(task.stop_with_task_name)
+        if prov_names.intersection(req_names) == req_names:
+            return method
+        else:
+            raise ValueError(
+                "Not all required task_names were provided: "
+                f"required = {req_names}, provided = {prov_names}"
+            )
