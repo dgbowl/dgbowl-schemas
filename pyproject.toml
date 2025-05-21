@@ -28,6 +28,7 @@ dependencies = [
     "babel >= 2.15",
     "pyyaml >= 5.0",
     "tzlocal >= 5.0",
+    "pint",
 ]
 
 [project.optional-dependencies]

@@ -1,5 +1,6 @@
-from pydantic import BaseModel, Field, model_validator
-from typing import Optional, Any, Dict
+from pydantic import BaseModel, Field, model_validator, field_validator
+from typing import Optional, Any, Dict, Union
+import pint
 
 
 class Task(BaseModel, extra="forbid"):
@@ -12,13 +13,13 @@ class Task(BaseModel, extra="forbid"):
     component_role: str
     """role of the pipeline *component* on which this :class:`Task` should run"""
 
-    max_duration: float
+    max_duration: Union[float, str]
     """the maximum duration of this :class:`Task`, in seconds"""
 
-    sampling_interval: float
+    sampling_interval: Union[float, str]
     """the interval between measurements, in seconds"""
 
-    polling_interval: Optional[float] = None
+    polling_interval: Optional[Union[float, str]] = None
     """
     the interval between polling for data by the ``tomato-job`` process, in seconds;
     defaults to the value in driver settings
@@ -74,3 +75,15 @@ class Task(BaseModel, extra="forbid"):
                 f"provided start_with_task_name={task.stop_with_task_name!r}."
             )
         return task
+
+    @field_validator(
+        "max_duration", "sampling_interval", "polling_interval", mode="after"
+    )
+    @classmethod
+    def convert_str_to_seconds(cls, v: Union[str, float]) -> float:
+        if v is None:
+            return v
+        elif isinstance(v, str):
+            return pint.Quantity(v).to("seconds").m
+        else:
+            return v
