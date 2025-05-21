@@ -23,6 +23,7 @@ from dgbowl_schemas.tomato import to_payload
         "ts8.yml",
         # v2.1
         "ts9.yml",
+        "tsa.yml",
     ],
 )
 def test_payload_yml(inpath, datadir):
