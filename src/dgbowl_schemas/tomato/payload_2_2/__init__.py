@@ -3,18 +3,14 @@ from typing import Sequence, Literal
 from .settings import Settings
 from .sample import Sample
 from .task import Task
-from ..payload_2_2 import Payload as NewPayload
 
 from pathlib import Path
 import yaml
 import json
-import logging
-
-logger = logging.getLogger(__name__)
 
 
 class Payload(BaseModel, extra="forbid"):
-    version: Literal["2.1"]
+    version: Literal["2.2"]
     settings: Settings = Field(default_factory=Settings)
     """Additional configuration options for tomato."""
 
@@ -83,13 +79,3 @@ class Payload(BaseModel, extra="forbid"):
                 "Not all required task_names were provided: "
                 f"required = {req_names}, provided = {prov_names}"
             )
-
-    def update(self):
-        logger.info("Updating from Payload-2.1 to Payload-2.2")
-        md = self.model_dump(exclude_defaults=True, exclude_none=True)
-        md["version"] = "2.2"
-        if "settings" in md and "snapshot" in md["settings"]:
-            interval = md["settings"]["snapshot"].pop("frequency")
-            md["settings"]["snapshot"]["snapshot_interval"] = interval
-
-        return NewPayload(**md)
