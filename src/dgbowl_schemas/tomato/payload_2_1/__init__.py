@@ -13,6 +13,7 @@ from ..payload_2_2 import Payload as NewPayload
 
 logger = logging.getLogger(__name__)
 
+
 class Payload(BaseModel, extra="forbid"):
     version: Literal["2.1"]
     settings: Settings = Field(default_factory=Settings)

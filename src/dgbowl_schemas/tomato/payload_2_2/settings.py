@@ -36,4 +36,3 @@ class Settings(BaseModel, extra="forbid"):
 
     snapshot: Optional[Snapshot] = None
     """Options for periodic snapshotting."""
-
