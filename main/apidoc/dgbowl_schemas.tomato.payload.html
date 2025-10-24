@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>dgbowl_schemas.tomato.payload package &mdash; dgbowl-schemas 124rc2.dev1 documentation</title>
+  <title>dgbowl_schemas.tomato.payload package &mdash; dgbowl-schemas 124.dev1 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/autodoc_pydantic.css" type="text/css" />
@@ -36,7 +36,7 @@
             dgbowl-schemas
           </a>
               <div class="version">
-                124rc2.dev1
+                124.dev1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -64,6 +64,7 @@
 <li class="toctree-l5"><a class="reference internal" href="dgbowl_schemas.tomato.payload_1_0.html">dgbowl_schemas.tomato.payload_1_0 package</a></li>
 <li class="toctree-l5"><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_0.html">dgbowl_schemas.tomato.payload_2_0 package</a></li>
 <li class="toctree-l5"><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html">dgbowl_schemas.tomato.payload_2_1 package</a></li>
+<li class="toctree-l5"><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html">dgbowl_schemas.tomato.payload_2_2 package</a></li>
 </ul>
 </li>
 </ul>
@@ -106,19 +107,22 @@
 <dl class="py class pydantic_model">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload.Payload">
 <em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.tomato.payload.</span></span><span class="sig-name descname"><span class="pre">Payload</span></span><a class="headerlink" href="#dgbowl_schemas.tomato.payload.Payload" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.pydantic.dev/latest/api/base_model/#pydantic.BaseModel" title="(in Pydantic v0.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.pydantic.dev/latest/api/base_model/#pydantic.BaseModel" title="(in Pydantic Validation v0.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></a></p>
 <p><details  class="autodoc_pydantic_collapsable_json">
 <summary>Show JSON schema</summary><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">   </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Payload&quot;</span><span class="p">,</span>
 <span class="w">   </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
 <span class="w">   </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.1&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;const&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.2&quot;</span><span class="p">,</span>
 <span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Version&quot;</span><span class="p">,</span>
 <span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;settings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/$defs/Settings&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/$defs/User&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;sample&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/$defs/Sample&quot;</span>
@@ -159,6 +163,18 @@
 <span class="w">               </span><span class="p">],</span>
 <span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
 <span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Prefix&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="p">{</span>
+<span class="w">                     </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">                  </span><span class="p">},</span>
+<span class="w">                  </span><span class="p">{</span>
+<span class="w">                     </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;null&quot;</span>
+<span class="w">                  </span><span class="p">}</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Endpoint&quot;</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">         </span><span class="p">},</span>
 <span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Output&quot;</span><span class="p">,</span>
@@ -168,13 +184,18 @@
 <span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="w">         </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Additional attributes for each :class:`Sample` may be required, depending on the\nmethod within the payload.&quot;</span><span class="p">,</span>
 <span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Name&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Identifier&quot;</span><span class="p">,</span>
 <span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;sample_is_parent&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sample Is Parent&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;boolean&quot;</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">         </span><span class="p">},</span>
 <span class="w">         </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">            </span><span class="s2">&quot;name&quot;</span>
+<span class="w">            </span><span class="s2">&quot;identifier&quot;</span>
 <span class="w">         </span><span class="p">],</span>
 <span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sample&quot;</span><span class="p">,</span>
 <span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span>
@@ -220,7 +241,7 @@
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;Snapshot&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Provide the ``frequency``, ``path`` and ``prefix`` to configure the snapshotting\nfunctionality of tomato.&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Provide the ``interval``, ``path`` and ``prefix`` to configure\nthe snapshotting functionality of tomato.&quot;</span><span class="p">,</span>
 <span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -246,9 +267,9 @@
 <span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
 <span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Prefix&quot;</span>
 <span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;frequency&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;interval&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">3600.0</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Frequency&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Interval&quot;</span><span class="p">,</span>
 <span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">         </span><span class="p">},</span>
@@ -264,34 +285,17 @@
 <span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;max_duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                  </span><span class="p">{</span>
-<span class="w">                     </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span>
-<span class="w">                  </span><span class="p">},</span>
-<span class="w">                  </span><span class="p">{</span>
-<span class="w">                     </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">                  </span><span class="p">}</span>
-<span class="w">               </span><span class="p">],</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Max Duration&quot;</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Max Duration&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;sampling_interval&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                  </span><span class="p">{</span>
-<span class="w">                     </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span>
-<span class="w">                  </span><span class="p">},</span>
-<span class="w">                  </span><span class="p">{</span>
-<span class="w">                     </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">                  </span><span class="p">}</span>
-<span class="w">               </span><span class="p">],</span>
-<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sampling Interval&quot;</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sampling Interval&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;polling_interval&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">                  </span><span class="p">{</span>
 <span class="w">                     </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span>
-<span class="w">                  </span><span class="p">},</span>
-<span class="w">                  </span><span class="p">{</span>
-<span class="w">                     </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">                  </span><span class="p">},</span>
 <span class="w">                  </span><span class="p">{</span>
 <span class="w">                     </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;null&quot;</span>
@@ -361,11 +365,39 @@
 <span class="w">         </span><span class="p">],</span>
 <span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Task&quot;</span><span class="p">,</span>
 <span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;User&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Additional attributes for each :class:`Sample` may be required, depending on the\nmethod within the payload.&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;identifier&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Identifier&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;api_key&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">               </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="p">{</span>
+<span class="w">                     </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">                  </span><span class="p">},</span>
+<span class="w">                  </span><span class="p">{</span>
+<span class="w">                     </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;null&quot;</span>
+<span class="w">                  </span><span class="p">}</span>
+<span class="w">               </span><span class="p">],</span>
+<span class="w">               </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Api Key&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">         </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;identifier&quot;</span>
+<span class="w">         </span><span class="p">],</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span>
 <span class="w">      </span><span class="p">}</span>
 <span class="w">   </span><span class="p">},</span>
 <span class="w">   </span><span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
 <span class="w">   </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">      </span><span class="s2">&quot;version&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="s2">&quot;sample&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="s2">&quot;method&quot;</span>
 <span class="w">   </span><span class="p">]</span>
@@ -380,20 +412,20 @@
 </dd>
 <dt class="field-even">Validators<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.Payload.extract_methodfile" title="dgbowl_schemas.tomato.payload_2_1.Payload.extract_methodfile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_methodfile</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">all</span> <span class="pre">fields</span></code></p></li>
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.Payload.extract_samplefile" title="dgbowl_schemas.tomato.payload_2_1.Payload.extract_samplefile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_samplefile</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">all</span> <span class="pre">fields</span></code></p></li>
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.Payload.validate_task_names" title="dgbowl_schemas.tomato.payload_2_1.Payload.validate_task_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_task_names</span></code></a> » <a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.Payload.method" title="dgbowl_schemas.tomato.payload_2_1.Payload.method"><code class="xref py py-obj docutils literal notranslate"><span class="pre">method</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.Payload.extract_methodfile" title="dgbowl_schemas.tomato.payload_2_2.Payload.extract_methodfile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_methodfile</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">all</span> <span class="pre">fields</span></code></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.Payload.extract_samplefile" title="dgbowl_schemas.tomato.payload_2_2.Payload.extract_samplefile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_samplefile</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">all</span> <span class="pre">fields</span></code></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.Payload.validate_task_names" title="dgbowl_schemas.tomato.payload_2_2.Payload.validate_task_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_task_names</span></code></a> » <a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.Payload.method" title="dgbowl_schemas.tomato.payload_2_2.Payload.method"><code class="xref py py-obj docutils literal notranslate"><span class="pre">method</span></code></a></p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload.Payload.version">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'2.1'</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload.Payload.version" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'2.2'</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload.Payload.version" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Validated by<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.Payload.extract_methodfile" title="dgbowl_schemas.tomato.payload_2_1.Payload.extract_methodfile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_methodfile</span></code></a></p></li>
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.Payload.extract_samplefile" title="dgbowl_schemas.tomato.payload_2_1.Payload.extract_samplefile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_samplefile</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.Payload.extract_methodfile" title="dgbowl_schemas.tomato.payload_2_2.Payload.extract_methodfile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_methodfile</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.Payload.extract_samplefile" title="dgbowl_schemas.tomato.payload_2_2.Payload.extract_samplefile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_samplefile</span></code></a></p></li>
 </ul>
 </dd>
 </dl>
@@ -401,13 +433,27 @@
 
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload.Payload.settings">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">settings</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.settings.Settings" title="dgbowl_schemas.tomato.payload_2_1.settings.Settings"><span class="pre">Settings</span></a></em><em class="property"> <span class="pre">[Optional]</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload.Payload.settings" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">settings</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.settings.Settings" title="dgbowl_schemas.tomato.payload_2_2.settings.Settings"><span class="pre">Settings</span></a></em><em class="property"> <span class="pre">[Optional]</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload.Payload.settings" title="Permalink to this definition"></a></dt>
 <dd><p>Additional configuration options for tomato.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Validated by<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.Payload.extract_methodfile" title="dgbowl_schemas.tomato.payload_2_1.Payload.extract_methodfile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_methodfile</span></code></a></p></li>
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.Payload.extract_samplefile" title="dgbowl_schemas.tomato.payload_2_1.Payload.extract_samplefile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_samplefile</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.Payload.extract_methodfile" title="dgbowl_schemas.tomato.payload_2_2.Payload.extract_methodfile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_methodfile</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.Payload.extract_samplefile" title="dgbowl_schemas.tomato.payload_2_2.Payload.extract_samplefile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_samplefile</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload.Payload.user">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">user</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.user.User" title="dgbowl_schemas.tomato.payload_2_2.user.User"><span class="pre">User</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload.Payload.user" title="Permalink to this definition"></a></dt>
+<dd><p>Specification of the user running the payload.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Validated by<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.Payload.extract_methodfile" title="dgbowl_schemas.tomato.payload_2_2.Payload.extract_methodfile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_methodfile</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.Payload.extract_samplefile" title="dgbowl_schemas.tomato.payload_2_2.Payload.extract_samplefile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_samplefile</span></code></a></p></li>
 </ul>
 </dd>
 </dl>
@@ -415,13 +461,13 @@
 
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload.Payload.sample">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sample</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.sample.Sample" title="dgbowl_schemas.tomato.payload_2_1.sample.Sample"><span class="pre">Sample</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload.Payload.sample" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sample</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.sample.Sample" title="dgbowl_schemas.tomato.payload_2_2.sample.Sample"><span class="pre">Sample</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload.Payload.sample" title="Permalink to this definition"></a></dt>
 <dd><p>Specification of the experimental sample.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Validated by<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.Payload.extract_methodfile" title="dgbowl_schemas.tomato.payload_2_1.Payload.extract_methodfile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_methodfile</span></code></a></p></li>
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.Payload.extract_samplefile" title="dgbowl_schemas.tomato.payload_2_1.Payload.extract_samplefile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_samplefile</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.Payload.extract_methodfile" title="dgbowl_schemas.tomato.payload_2_2.Payload.extract_methodfile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_methodfile</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.Payload.extract_samplefile" title="dgbowl_schemas.tomato.payload_2_2.Payload.extract_samplefile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_samplefile</span></code></a></p></li>
 </ul>
 </dd>
 </dl>
@@ -429,14 +475,14 @@
 
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload.Payload.method">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">method</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.task.Task" title="dgbowl_schemas.tomato.payload_2_1.task.Task"><span class="pre">Task</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload.Payload.method" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">method</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.task.Task" title="dgbowl_schemas.tomato.payload_2_2.task.Task"><span class="pre">Task</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload.Payload.method" title="Permalink to this definition"></a></dt>
 <dd><p>A sequence of the experimental <code class="xref py py-class docutils literal notranslate"><span class="pre">Tasks</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Validated by<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.Payload.extract_methodfile" title="dgbowl_schemas.tomato.payload_2_1.Payload.extract_methodfile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_methodfile</span></code></a></p></li>
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.Payload.extract_samplefile" title="dgbowl_schemas.tomato.payload_2_1.Payload.extract_samplefile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_samplefile</span></code></a></p></li>
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.Payload.validate_task_names" title="dgbowl_schemas.tomato.payload_2_1.Payload.validate_task_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_task_names</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.Payload.extract_methodfile" title="dgbowl_schemas.tomato.payload_2_2.Payload.extract_methodfile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_methodfile</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.Payload.extract_samplefile" title="dgbowl_schemas.tomato.payload_2_2.Payload.extract_samplefile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_samplefile</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.Payload.validate_task_names" title="dgbowl_schemas.tomato.payload_2_2.Payload.validate_task_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_task_names</span></code></a></p></li>
 </ul>
 </dd>
 </dl>
@@ -456,7 +502,7 @@
 
 <dl class="py method pydantic_validator">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload.Payload.validate_task_names">
-<em class="property"><span class="pre">validator</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_task_names</span></span><em class="autodoc_pydantic_validator_arrow property">&#160; <span class="pre">»</span>&#160; </em><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.Payload.method" title="dgbowl_schemas.tomato.payload_2_1.Payload.method"><em class="xref py py-obj"><span class="pre">method</span></em></a><a class="headerlink" href="#dgbowl_schemas.tomato.payload.Payload.validate_task_names" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">validator</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_task_names</span></span><em class="autodoc_pydantic_validator_arrow property">&#160; <span class="pre">»</span>&#160; </em><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.Payload.method" title="dgbowl_schemas.tomato.payload_2_2.Payload.method"><em class="xref py py-obj"><span class="pre">method</span></em></a><a class="headerlink" href="#dgbowl_schemas.tomato.payload.Payload.validate_task_names" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -464,7 +510,7 @@
 <dl class="py class pydantic_model">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload.Task">
 <em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dgbowl_schemas.tomato.payload.</span></span><span class="sig-name descname"><span class="pre">Task</span></span><a class="headerlink" href="#dgbowl_schemas.tomato.payload.Task" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.pydantic.dev/latest/api/base_model/#pydantic.BaseModel" title="(in Pydantic v0.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.pydantic.dev/latest/api/base_model/#pydantic.BaseModel" title="(in Pydantic Validation v0.0.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></a></p>
 <p>The <a class="reference internal" href="#dgbowl_schemas.tomato.payload.Task" title="dgbowl_schemas.tomato.payload.Task"><code class="xref py py-class docutils literal notranslate"><span class="pre">Task</span></code></a> is a driver/device-independent abstraction describing the
 measurement steps. The driver-specific information for the <a class="reference internal" href="#dgbowl_schemas.tomato.payload.Task" title="dgbowl_schemas.tomato.payload.Task"><code class="xref py py-class docutils literal notranslate"><span class="pre">Task</span></code></a> can be
 provided via the <a class="reference internal" href="#dgbowl_schemas.tomato.payload.Task.technique_name" title="dgbowl_schemas.tomato.payload.Task.technique_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">technique_name</span></code></a> and <a class="reference internal" href="#dgbowl_schemas.tomato.payload.Task.task_params" title="dgbowl_schemas.tomato.payload.Task.task_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_params</span></code></a> parameters.</p>
@@ -479,34 +525,17 @@ provided via the <a class="reference internal" href="#dgbowl_schemas.tomato.payl
 <span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;max_duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">         </span><span class="p">],</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Max Duration&quot;</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Max Duration&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;sampling_interval&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">         </span><span class="p">],</span>
-<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sampling Interval&quot;</span>
+<span class="w">         </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sampling Interval&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">&quot;polling_interval&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">&quot;anyOf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">            </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;null&quot;</span>
@@ -586,10 +615,10 @@ provided via the <a class="reference internal" href="#dgbowl_schemas.tomato.payl
 </dd>
 <dt class="field-even">Validators<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.task.Task.convert_str_to_seconds" title="dgbowl_schemas.tomato.payload_2_1.task.Task.convert_str_to_seconds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_str_to_seconds</span></code></a> » <a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.task.Task.max_duration" title="dgbowl_schemas.tomato.payload_2_1.task.Task.max_duration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">max_duration</span></code></a></p></li>
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.task.Task.convert_str_to_seconds" title="dgbowl_schemas.tomato.payload_2_1.task.Task.convert_str_to_seconds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_str_to_seconds</span></code></a> » <a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.task.Task.polling_interval" title="dgbowl_schemas.tomato.payload_2_1.task.Task.polling_interval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">polling_interval</span></code></a></p></li>
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.task.Task.convert_str_to_seconds" title="dgbowl_schemas.tomato.payload_2_1.task.Task.convert_str_to_seconds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_str_to_seconds</span></code></a> » <a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.task.Task.sampling_interval" title="dgbowl_schemas.tomato.payload_2_1.task.Task.sampling_interval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sampling_interval</span></code></a></p></li>
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.task.Task.task_names_cannot_be_same" title="dgbowl_schemas.tomato.payload_2_1.task.Task.task_names_cannot_be_same"><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_names_cannot_be_same</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">all</span> <span class="pre">fields</span></code></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.task.Task.convert_str_to_seconds" title="dgbowl_schemas.tomato.payload_2_2.task.Task.convert_str_to_seconds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_str_to_seconds</span></code></a> » <a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.task.Task.max_duration" title="dgbowl_schemas.tomato.payload_2_2.task.Task.max_duration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">max_duration</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.task.Task.convert_str_to_seconds" title="dgbowl_schemas.tomato.payload_2_2.task.Task.convert_str_to_seconds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_str_to_seconds</span></code></a> » <a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.task.Task.polling_interval" title="dgbowl_schemas.tomato.payload_2_2.task.Task.polling_interval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">polling_interval</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.task.Task.convert_str_to_seconds" title="dgbowl_schemas.tomato.payload_2_2.task.Task.convert_str_to_seconds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_str_to_seconds</span></code></a> » <a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.task.Task.sampling_interval" title="dgbowl_schemas.tomato.payload_2_2.task.Task.sampling_interval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sampling_interval</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.task.Task.task_names_cannot_be_same" title="dgbowl_schemas.tomato.payload_2_2.task.Task.task_names_cannot_be_same"><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_names_cannot_be_same</span></code></a> » <code class="xref py py-obj docutils literal notranslate"><span class="pre">all</span> <span class="pre">fields</span></code></p></li>
 </ul>
 </dd>
 </dl>
@@ -600,7 +629,7 @@ provided via the <a class="reference internal" href="#dgbowl_schemas.tomato.payl
 <dl class="field-list simple">
 <dt class="field-odd">Validated by<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.task.Task.task_names_cannot_be_same" title="dgbowl_schemas.tomato.payload_2_1.task.Task.task_names_cannot_be_same"><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_names_cannot_be_same</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.task.Task.task_names_cannot_be_same" title="dgbowl_schemas.tomato.payload_2_2.task.Task.task_names_cannot_be_same"><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_names_cannot_be_same</span></code></a></p></li>
 </ul>
 </dd>
 </dl>
@@ -608,13 +637,13 @@ provided via the <a class="reference internal" href="#dgbowl_schemas.tomato.payl
 
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload.Task.max_duration">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_duration</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload.Task.max_duration" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_duration</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload.Task.max_duration" title="Permalink to this definition"></a></dt>
 <dd><p>the maximum duration of this <a class="reference internal" href="#dgbowl_schemas.tomato.payload.Task" title="dgbowl_schemas.tomato.payload.Task"><code class="xref py py-class docutils literal notranslate"><span class="pre">Task</span></code></a>, in seconds</p>
 <dl class="field-list simple">
 <dt class="field-odd">Validated by<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.task.Task.convert_str_to_seconds" title="dgbowl_schemas.tomato.payload_2_1.task.Task.convert_str_to_seconds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_str_to_seconds</span></code></a></p></li>
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.task.Task.task_names_cannot_be_same" title="dgbowl_schemas.tomato.payload_2_1.task.Task.task_names_cannot_be_same"><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_names_cannot_be_same</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.task.Task.convert_str_to_seconds" title="dgbowl_schemas.tomato.payload_2_2.task.Task.convert_str_to_seconds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_str_to_seconds</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.task.Task.task_names_cannot_be_same" title="dgbowl_schemas.tomato.payload_2_2.task.Task.task_names_cannot_be_same"><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_names_cannot_be_same</span></code></a></p></li>
 </ul>
 </dd>
 </dl>
@@ -622,13 +651,13 @@ provided via the <a class="reference internal" href="#dgbowl_schemas.tomato.payl
 
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload.Task.sampling_interval">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sampling_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload.Task.sampling_interval" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sampling_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload.Task.sampling_interval" title="Permalink to this definition"></a></dt>
 <dd><p>the interval between measurements, in seconds</p>
 <dl class="field-list simple">
 <dt class="field-odd">Validated by<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.task.Task.convert_str_to_seconds" title="dgbowl_schemas.tomato.payload_2_1.task.Task.convert_str_to_seconds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_str_to_seconds</span></code></a></p></li>
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.task.Task.task_names_cannot_be_same" title="dgbowl_schemas.tomato.payload_2_1.task.Task.task_names_cannot_be_same"><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_names_cannot_be_same</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.task.Task.convert_str_to_seconds" title="dgbowl_schemas.tomato.payload_2_2.task.Task.convert_str_to_seconds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_str_to_seconds</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.task.Task.task_names_cannot_be_same" title="dgbowl_schemas.tomato.payload_2_2.task.Task.task_names_cannot_be_same"><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_names_cannot_be_same</span></code></a></p></li>
 </ul>
 </dd>
 </dl>
@@ -636,14 +665,14 @@ provided via the <a class="reference internal" href="#dgbowl_schemas.tomato.payl
 
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload.Task.polling_interval">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">polling_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload.Task.polling_interval" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">polling_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dgbowl_schemas.tomato.payload.Task.polling_interval" title="Permalink to this definition"></a></dt>
 <dd><p>the interval between polling for data by the <code class="docutils literal notranslate"><span class="pre">tomato-job</span></code> process, in seconds;
 defaults to the value in driver settings</p>
 <dl class="field-list simple">
 <dt class="field-odd">Validated by<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.task.Task.convert_str_to_seconds" title="dgbowl_schemas.tomato.payload_2_1.task.Task.convert_str_to_seconds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_str_to_seconds</span></code></a></p></li>
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.task.Task.task_names_cannot_be_same" title="dgbowl_schemas.tomato.payload_2_1.task.Task.task_names_cannot_be_same"><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_names_cannot_be_same</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.task.Task.convert_str_to_seconds" title="dgbowl_schemas.tomato.payload_2_2.task.Task.convert_str_to_seconds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_str_to_seconds</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.task.Task.task_names_cannot_be_same" title="dgbowl_schemas.tomato.payload_2_2.task.Task.task_names_cannot_be_same"><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_names_cannot_be_same</span></code></a></p></li>
 </ul>
 </dd>
 </dl>
@@ -657,7 +686,7 @@ on which this <a class="reference internal" href="#dgbowl_schemas.tomato.payload
 <dl class="field-list simple">
 <dt class="field-odd">Validated by<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.task.Task.task_names_cannot_be_same" title="dgbowl_schemas.tomato.payload_2_1.task.Task.task_names_cannot_be_same"><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_names_cannot_be_same</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.task.Task.task_names_cannot_be_same" title="dgbowl_schemas.tomato.payload_2_2.task.Task.task_names_cannot_be_same"><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_names_cannot_be_same</span></code></a></p></li>
 </ul>
 </dd>
 </dl>
@@ -671,7 +700,7 @@ on which this <a class="reference internal" href="#dgbowl_schemas.tomato.payload
 <dl class="field-list simple">
 <dt class="field-odd">Validated by<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.task.Task.task_names_cannot_be_same" title="dgbowl_schemas.tomato.payload_2_1.task.Task.task_names_cannot_be_same"><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_names_cannot_be_same</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.task.Task.task_names_cannot_be_same" title="dgbowl_schemas.tomato.payload_2_2.task.Task.task_names_cannot_be_same"><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_names_cannot_be_same</span></code></a></p></li>
 </ul>
 </dd>
 </dl>
@@ -686,7 +715,7 @@ pairs by the <code class="xref py py-func docutils literal notranslate"><span cl
 <dl class="field-list simple">
 <dt class="field-odd">Validated by<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.task.Task.task_names_cannot_be_same" title="dgbowl_schemas.tomato.payload_2_1.task.Task.task_names_cannot_be_same"><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_names_cannot_be_same</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.task.Task.task_names_cannot_be_same" title="dgbowl_schemas.tomato.payload_2_2.task.Task.task_names_cannot_be_same"><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_names_cannot_be_same</span></code></a></p></li>
 </ul>
 </dd>
 </dl>
@@ -701,7 +730,7 @@ a <a class="reference internal" href="#dgbowl_schemas.tomato.payload.Task" title
 <dl class="field-list simple">
 <dt class="field-odd">Validated by<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.task.Task.task_names_cannot_be_same" title="dgbowl_schemas.tomato.payload_2_1.task.Task.task_names_cannot_be_same"><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_names_cannot_be_same</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.task.Task.task_names_cannot_be_same" title="dgbowl_schemas.tomato.payload_2_2.task.Task.task_names_cannot_be_same"><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_names_cannot_be_same</span></code></a></p></li>
 </ul>
 </dd>
 </dl>
@@ -717,7 +746,7 @@ will be stopped</p>
 <dl class="field-list simple">
 <dt class="field-odd">Validated by<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.task.Task.task_names_cannot_be_same" title="dgbowl_schemas.tomato.payload_2_1.task.Task.task_names_cannot_be_same"><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_names_cannot_be_same</span></code></a></p></li>
+<li><p><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.task.Task.task_names_cannot_be_same" title="dgbowl_schemas.tomato.payload_2_2.task.Task.task_names_cannot_be_same"><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_names_cannot_be_same</span></code></a></p></li>
 </ul>
 </dd>
 </dl>
@@ -730,7 +759,7 @@ will be stopped</p>
 
 <dl class="py method pydantic_validator">
 <dt class="sig sig-object py" id="dgbowl_schemas.tomato.payload.Task.convert_str_to_seconds">
-<em class="property"><span class="pre">validator</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convert_str_to_seconds</span></span><em class="autodoc_pydantic_validator_arrow property">&#160; <span class="pre">»</span>&#160; </em><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.task.Task.max_duration" title="dgbowl_schemas.tomato.payload_2_1.task.Task.max_duration"><em class="xref py py-obj"><span class="pre">max_duration</span></em></a><em class="property"><span class="pre">,</span> </em><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.task.Task.sampling_interval" title="dgbowl_schemas.tomato.payload_2_1.task.Task.sampling_interval"><em class="xref py py-obj"><span class="pre">sampling_interval</span></em></a><em class="property"><span class="pre">,</span> </em><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_1.html#dgbowl_schemas.tomato.payload_2_1.task.Task.polling_interval" title="dgbowl_schemas.tomato.payload_2_1.task.Task.polling_interval"><em class="xref py py-obj"><span class="pre">polling_interval</span></em></a><a class="headerlink" href="#dgbowl_schemas.tomato.payload.Task.convert_str_to_seconds" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">validator</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convert_str_to_seconds</span></span><em class="autodoc_pydantic_validator_arrow property">&#160; <span class="pre">»</span>&#160; </em><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.task.Task.max_duration" title="dgbowl_schemas.tomato.payload_2_2.task.Task.max_duration"><em class="xref py py-obj"><span class="pre">max_duration</span></em></a><em class="property"><span class="pre">,</span> </em><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.task.Task.sampling_interval" title="dgbowl_schemas.tomato.payload_2_2.task.Task.sampling_interval"><em class="xref py py-obj"><span class="pre">sampling_interval</span></em></a><em class="property"><span class="pre">,</span> </em><a class="reference internal" href="dgbowl_schemas.tomato.payload_2_2.html#dgbowl_schemas.tomato.payload_2_2.task.Task.polling_interval" title="dgbowl_schemas.tomato.payload_2_2.task.Task.polling_interval"><em class="xref py py-obj"><span class="pre">polling_interval</span></em></a><a class="headerlink" href="#dgbowl_schemas.tomato.payload.Task.convert_str_to_seconds" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -764,7 +793,7 @@ will be stopped</p>
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       <span class="fa fa-book"> Other Versions</span>
-      v: 124rc2.dev1
+      v: 124.dev1
       <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions"> 
