@@ -18,13 +18,13 @@ class Settings(BaseModel, extra="forbid"):
 
     class Snapshot(BaseModel, extra="forbid"):
         """
-        Provide the ``frequency``, ``path`` and ``prefix`` to configure the snapshotting
-        functionality of tomato.
+        Provide the ``interval``, ``path`` and ``prefix`` to configure
+        the snapshotting functionality of tomato.
         """
 
         path: Optional[str] = None
         prefix: Optional[str] = None
-        frequency: float = 3600.0
+        interval: float = 3600.0
 
     unlock_when_done: bool = False
     """set *pipeline* as ready when *job* finishes successfully"""

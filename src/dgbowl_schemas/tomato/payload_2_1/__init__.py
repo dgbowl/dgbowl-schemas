@@ -90,4 +90,7 @@ class Payload(BaseModel, extra="forbid"):
         md["version"] = "2.2"
         md["sample"]["identifier"] = md["sample"].pop("name")
         md["user"] = {"identifier": os.getlogin()}
+        if "settings" in md and "snapshot" in md["settings"]:
+            interval = md["settings"]["snapshot"].pop("frequency")
+            md["settings"]["snapshot"]["interval"] = interval
         return NewPayload(**md)
