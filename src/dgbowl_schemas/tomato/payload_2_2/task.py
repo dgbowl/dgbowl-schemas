@@ -13,13 +13,13 @@ class Task(BaseModel, extra="forbid"):
     component_role: str
     """role of the pipeline *component* on which this :class:`Task` should run"""
 
-    max_duration: Union[float, str]
+    max_duration: float
     """the maximum duration of this :class:`Task`, in seconds"""
 
-    sampling_interval: Union[float, str]
+    sampling_interval: float
     """the interval between measurements, in seconds"""
 
-    polling_interval: Optional[Union[float, str]] = None
+    polling_interval: Optional[float] = None
     """
     the interval between polling for data by the ``tomato-job`` process, in seconds;
     defaults to the value in driver settings
@@ -60,26 +60,24 @@ class Task(BaseModel, extra="forbid"):
     """
 
     @model_validator(mode="after")
-    @classmethod
-    def task_names_cannot_be_same(cls, task):
-        if task.task_name is not None and task.task_name == task.start_with_task_name:
+    def task_names_cannot_be_same(self):
+        if self.task_name is not None and self.task_name == self.start_with_task_name:
             raise ValueError(
                 "A task cannot trigger the start of itself: "
-                f"provided task_name={task.task_name!r}, "
-                f"provided start_with_task_name={task.start_with_task_name!r}."
+                f"provided task_name={self.task_name!r}, "
+                f"provided start_with_task_name={self.start_with_task_name!r}."
             )
-        if task.task_name is not None and task.task_name == task.stop_with_task_name:
+        if self.task_name is not None and self.task_name == self.stop_with_task_name:
             raise ValueError(
                 "A task cannot trigger the stop of itself: "
-                f"provided task_name={task.task_name!r}, "
-                f"provided start_with_task_name={task.stop_with_task_name!r}."
+                f"provided task_name={self.task_name!r}, "
+                f"provided start_with_task_name={self.stop_with_task_name!r}."
             )
-        return task
+        return self
 
     @field_validator(
-        "max_duration", "sampling_interval", "polling_interval", mode="after"
+        "max_duration", "sampling_interval", "polling_interval", mode="before"
     )
-    @classmethod
     def convert_str_to_seconds(cls, v: Union[str, float]) -> float:
         if v is None:
             return v

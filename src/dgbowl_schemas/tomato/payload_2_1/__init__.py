@@ -1,5 +1,6 @@
 import json
 import logging
+import os
 import yaml
 from pathlib import Path
 from pydantic import BaseModel, Field, model_validator, field_validator
@@ -87,5 +88,6 @@ class Payload(BaseModel, extra="forbid"):
         logger.info("Updating from Payload-2.1 to Payload-2.2")
         md = self.model_dump(exclude_defaults=True, exclude_none=True)
         md["version"] = "2.2"
-        md["sample"]["identifier"] = md["sample"].pop("user")
+        md["sample"]["identifier"] = md["sample"].pop("name")
+        md["user"] = {"identifier": os.getlogin()}
         return NewPayload(**md)

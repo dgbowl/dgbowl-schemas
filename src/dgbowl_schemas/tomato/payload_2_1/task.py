@@ -60,26 +60,24 @@ class Task(BaseModel, extra="forbid"):
     """
 
     @model_validator(mode="after")
-    @classmethod
-    def task_names_cannot_be_same(cls, task):
-        if task.task_name is not None and task.task_name == task.start_with_task_name:
+    def task_names_cannot_be_same(self):
+        if self.task_name is not None and self.task_name == self.start_with_task_name:
             raise ValueError(
                 "A task cannot trigger the start of itself: "
-                f"provided task_name={task.task_name!r}, "
-                f"provided start_with_task_name={task.start_with_task_name!r}."
+                f"provided task_name={self.task_name!r}, "
+                f"provided start_with_task_name={self.start_with_task_name!r}."
             )
-        if task.task_name is not None and task.task_name == task.stop_with_task_name:
+        if self.task_name is not None and self.task_name == self.stop_with_task_name:
             raise ValueError(
                 "A task cannot trigger the stop of itself: "
-                f"provided task_name={task.task_name!r}, "
-                f"provided start_with_task_name={task.stop_with_task_name!r}."
+                f"provided task_name={self.task_name!r}, "
+                f"provided start_with_task_name={self.stop_with_task_name!r}."
             )
-        return task
+        return self
 
     @field_validator(
-        "max_duration", "sampling_interval", "polling_interval", mode="after"
+        "max_duration", "sampling_interval", "polling_interval", mode="before"
     )
-    @classmethod
     def convert_str_to_seconds(cls, v: Union[str, float]) -> float:
         if v is None:
             return v

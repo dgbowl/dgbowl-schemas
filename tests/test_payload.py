@@ -62,4 +62,4 @@ def test_payload_update_chain(inpath, datadir):
     while hasattr(ret, "update"):
         ret = ret.update()
         print(f"{ret=}")
-    assert ret.version == "2.1"
+    assert ret.version == "2.2"
