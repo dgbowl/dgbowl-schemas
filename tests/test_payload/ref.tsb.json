@@ -5,7 +5,7 @@
         "output": {
             "path": null,
             "prefix": null,
-            "endpoint": "https://random.address"
+            "repository": ["concat-datalab"]
         },
         "verbosity": "DEBUG",
         "snapshot": null
@@ -15,7 +15,6 @@
         "sample_is_parent": true
     },
     "user": {
-        "api_key": null,
         "identifier": "https://orcid.org/0000-0000-1234-1234"
     },
     "method": [
