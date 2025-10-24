@@ -14,7 +14,7 @@ class Settings(BaseModel, extra="forbid"):
 
         path: Optional[str] = None
         prefix: Optional[str] = None
-        endpoint: Optional[str] = None
+        repository: Optional[list[str]] = Field(default=["default"])
 
     class Snapshot(BaseModel, extra="forbid"):
         """

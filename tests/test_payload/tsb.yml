@@ -15,4 +15,5 @@ settings:
     unlock_when_done: true
     verbosity: DEBUG
     output:
-        endpoint: https://random.address
+        repository:
+        - concat-datalab
