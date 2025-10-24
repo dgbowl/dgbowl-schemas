@@ -1,28 +1,22 @@
-import json
-import logging
-import os
-import yaml
-from pathlib import Path
 from pydantic import BaseModel, Field, model_validator, field_validator
 from typing import Sequence, Literal
 from .settings import Settings
 from .sample import Sample
 from .task import Task
-from ..payload_2_2 import Payload as NewPayload
+from .user import User
 
-try:
-    import pwd
-except ImportError:
-    pass
-
-
-logger = logging.getLogger(__name__)
+from pathlib import Path
+import yaml
+import json
 
 
 class Payload(BaseModel, extra="forbid"):
-    version: Literal["2.1"]
+    version: Literal["2.2"]
     settings: Settings = Field(default_factory=Settings)
     """Additional configuration options for tomato."""
+
+    user: User
+    """Specification of the user running the payload."""
 
     sample: Sample
     """Specification of the experimental sample."""
@@ -89,20 +83,3 @@ class Payload(BaseModel, extra="forbid"):
                 "Not all required task_names were provided: "
                 f"required = {req_names}, provided = {prov_names}"
             )
-
-    def update(self):
-        logger.info("Updating from Payload-2.1 to Payload-2.2")
-        md = self.model_dump(exclude_defaults=True, exclude_none=True)
-        md["version"] = "2.2"
-        md["sample"]["identifier"] = md["sample"].pop("name")
-
-        if os.name == "posix":
-            username = pwd.getpwuid(os.geteuid()).pw_name
-        else:
-            username = os.getlogin()
-        md["user"] = {"identifier": username}
-
-        if "settings" in md and "snapshot" in md["settings"]:
-            interval = md["settings"]["snapshot"].pop("frequency")
-            md["settings"]["snapshot"]["interval"] = interval
-        return NewPayload(**md)

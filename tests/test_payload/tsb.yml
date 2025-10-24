@@ -1,0 +1,18 @@
+version: "2.2"
+sample:
+    identifier: concat:ABCDEF
+user:
+    identifier: https://orcid.org/0000-0000-1234-1234
+method:
+  - component_role: "counter-1"
+    technique_name: "count"
+    max_duration: "3 hours"
+    sampling_interval: 0.1 min
+    task_name: "count for 0.2"
+    task_params:
+        param: "4 seconds"
+settings:
+    unlock_when_done: true
+    verbosity: DEBUG
+    output:
+        endpoint: https://random.address

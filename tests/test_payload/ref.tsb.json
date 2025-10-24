@@ -1,0 +1,36 @@
+{
+    "version": "2.2",
+    "settings": {
+        "unlock_when_done": true,
+        "output": {
+            "path": null,
+            "prefix": null,
+            "endpoint": "https://random.address"
+        },
+        "verbosity": "DEBUG",
+        "snapshot": null
+    },
+    "sample": {
+        "identifier": "concat:ABCDEF",
+        "sample_is_parent": true
+    },
+    "user": {
+        "api_key": null,
+        "identifier": "https://orcid.org/0000-0000-1234-1234"
+    },
+    "method": [
+        {
+            "component_role": "counter-1",
+            "technique_name": "count",
+            "max_duration": 10800.0,
+            "sampling_interval": 6.0,
+            "polling_interval": null,
+            "task_params": {
+                "param": "4 seconds"
+            },
+            "task_name": "count for 0.2",
+            "start_with_task_name": null,
+            "stop_with_task_name": null
+        }
+    ]
+}

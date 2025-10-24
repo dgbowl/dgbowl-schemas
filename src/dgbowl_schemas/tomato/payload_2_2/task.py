@@ -13,13 +13,13 @@ class Task(BaseModel, extra="forbid"):
     component_role: str
     """role of the pipeline *component* on which this :class:`Task` should run"""
 
-    max_duration: Union[float, str]
+    max_duration: float
     """the maximum duration of this :class:`Task`, in seconds"""
 
-    sampling_interval: Union[float, str]
+    sampling_interval: float
     """the interval between measurements, in seconds"""
 
-    polling_interval: Optional[Union[float, str]] = None
+    polling_interval: Optional[float] = None
     """
     the interval between polling for data by the ``tomato-job`` process, in seconds;
     defaults to the value in driver settings
