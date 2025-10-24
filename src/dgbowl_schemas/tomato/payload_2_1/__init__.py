@@ -99,7 +99,7 @@ class Payload(BaseModel, extra="forbid"):
         if os.name == "posix":
             username = pwd.getpwuid(os.geteuid()).pw_name
         else:
-	        username = os.getlogin()
+            username = os.getlogin()
         md["user"] = {"identifier": username}
 
         if "settings" in md and "snapshot" in md["settings"]:
