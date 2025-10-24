@@ -10,6 +10,11 @@ from .sample import Sample
 from .task import Task
 from ..payload_2_2 import Payload as NewPayload
 
+try:
+    import pwd
+except ImportError:
+    pass
+
 
 logger = logging.getLogger(__name__)
 
@@ -90,7 +95,13 @@ class Payload(BaseModel, extra="forbid"):
         md = self.model_dump(exclude_defaults=True, exclude_none=True)
         md["version"] = "2.2"
         md["sample"]["identifier"] = md["sample"].pop("name")
-        md["user"] = {"identifier": os.getlogin()}
+
+        if os.name == "posix":
+            username = pwd.getpwuid(os.geteuid()).pw_name
+        else:
+	        username = os.getlogin()
+        md["user"] = {"identifier": username}
+
         if "settings" in md and "snapshot" in md["settings"]:
             interval = md["settings"]["snapshot"].pop("frequency")
             md["settings"]["snapshot"]["interval"] = interval
