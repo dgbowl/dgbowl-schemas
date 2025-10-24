@@ -1,21 +1,22 @@
-import json
-import logging
-import yaml
-from pathlib import Path
 from pydantic import BaseModel, Field, model_validator, field_validator
 from typing import Sequence, Literal
 from .settings import Settings
 from .sample import Sample
 from .task import Task
-from ..payload_2_2 import Payload as NewPayload
+from .user import User
 
+from pathlib import Path
+import yaml
+import json
 
-logger = logging.getLogger(__name__)
 
 class Payload(BaseModel, extra="forbid"):
-    version: Literal["2.1"]
+    version: Literal["2.2"]
     settings: Settings = Field(default_factory=Settings)
     """Additional configuration options for tomato."""
+
+    user: User
+    """Specification of the user running the payload."""
 
     sample: Sample
     """Specification of the experimental sample."""
@@ -82,10 +83,3 @@ class Payload(BaseModel, extra="forbid"):
                 "Not all required task_names were provided: "
                 f"required = {req_names}, provided = {prov_names}"
             )
-
-    def update(self):
-        logger.info("Updating from Payload-2.1 to Payload-2.2")
-        md = self.model_dump(exclude_defaults=True, exclude_none=True)
-        md["version"] = "2.2"
-        md["sample"]["identifier"] = md["sample"].pop("user")
-        return NewPayload(**md)
