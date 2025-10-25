@@ -5,7 +5,7 @@
         "output": {
             "path": null,
             "prefix": null,
-            "repository": ["concat-datalab"]
+            "repositories": ["concat-datalab"]
         },
         "verbosity": "DEBUG",
         "snapshot": null

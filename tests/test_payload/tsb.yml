@@ -15,5 +15,5 @@ settings:
     unlock_when_done: true
     verbosity: DEBUG
     output:
-        repository:
-        - concat-datalab
+        repositories:
+          - concat-datalab

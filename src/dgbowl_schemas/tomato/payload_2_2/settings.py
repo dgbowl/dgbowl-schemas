@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import Literal, Optional
+from typing import Literal, Optional, Union
 
 
 class Settings(BaseModel, extra="forbid"):
@@ -14,7 +14,7 @@ class Settings(BaseModel, extra="forbid"):
 
         path: Optional[str] = None
         prefix: Optional[str] = None
-        repository: Optional[list[str]] = Field(default=["default"])
+        repositories: list[Union[str, None]] = Field(default=["default"])
 
     class Snapshot(BaseModel, extra="forbid"):
         """
