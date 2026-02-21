@@ -33,10 +33,7 @@ def test_payload_yml(inpath, datadir):
     with open(inpath, "r") as infile:
         indict = yaml.safe_load(infile)
     ret = to_payload(**indict)
-    if hasattr(ret, "model_dump"):
-        ret = ret.model_dump()
-    else:
-        ret = ret.dict()
+    ret = ret.model_dump()
     with open(f"ref.{inpath.replace('yml', 'json')}", "r") as ofile:
         ref = json.load(ofile)
     assert ret == ref

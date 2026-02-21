@@ -1,4 +1,4 @@
-from pydantic.v1 import BaseModel, Field, root_validator
+from pydantic import BaseModel, Field, model_validator
 from typing import Optional, Sequence, Any
 import logging
 
@@ -10,7 +10,7 @@ class At(BaseModel, extra="forbid"):
     indices: Sequence[int] = None
     timestamps: Sequence[float] = None
 
-    @root_validator(pre=True)
+    @model_validator(mode="before")
     def check_one_input(cls, values):  # pylint: disable=E0213
         keys = {"step", "steps", "index", "indices", "timestamp"}
         assert len(keys.intersection(set(values))) == 1, (
@@ -26,7 +26,7 @@ class At(BaseModel, extra="forbid"):
 class Constant(BaseModel, extra="forbid"):
     value: Any
     as_: str = Field(alias="as")
-    units: Optional[str]
+    units: Optional[str] = None
 
 
 class Column(BaseModel, extra="forbid"):
@@ -34,14 +34,14 @@ class Column(BaseModel, extra="forbid"):
     as_: str = Field(alias="as")
 
 
-class Extract(BaseModel, extra="forbid"):
+class Extract(BaseModel, extra="forbid", populate_by_name=True):
     into: str
-    from_: Optional[str] = Field(alias="from")
-    at: Optional[At]
-    constants: Optional[Sequence[Constant]]
-    columns: Optional[Sequence[Column]]
+    from_: Optional[str] = Field(None, alias="from")
+    at: Optional[At] = None
+    constants: Optional[Sequence[Constant]] = None
+    columns: Optional[Sequence[Column]] = None
 
-    @root_validator(pre=True)
+    @model_validator(mode="before")
     def check_one_input(cls, values):  # pylint: disable=E0213
         keys = {"constants", "columns"}
         if len(keys.intersection(set(values))) == 0:

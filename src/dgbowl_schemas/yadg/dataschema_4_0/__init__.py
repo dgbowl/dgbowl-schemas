@@ -32,12 +32,12 @@ class DataSchema(BaseModel, extra="forbid"):
             nstep = {
                 "parser": step.parser,
                 "tag": step.tag,
-                "input": step.input.dict(exclude_none=True),
+                "input": step.input.model_dump(exclude_none=True),
             }
             if step.externaldate is not None:
-                nstep["externaldate"] = step.externaldate.dict(exclude_none=True)
+                nstep["externaldate"] = step.externaldate.model_dump(exclude_none=True)
             if step.parameters is not None:
-                nstep["parameters"] = step.parameters.dict(exclude_none=True)
+                nstep["parameters"] = step.parameters.model_dump(exclude_none=True)
                 if "tracetype" in nstep["parameters"]:
                     nstep["parameters"]["filetype"] = nstep["parameters"]["tracetype"]
                     del nstep["parameters"]["tracetype"]

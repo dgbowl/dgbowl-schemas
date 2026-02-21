@@ -20,7 +20,7 @@ class DataSchema(BaseModel, extra="forbid"):
         nsch["metadata"] = {
             "version": "4.2",
             "timezone": self.metadata.timezone,
-            "provenance": self.metadata.provenance.dict(exclude_none=True),
+            "provenance": self.metadata.provenance.model_dump(exclude_none=True),
         }
         if "metadata" not in nsch["metadata"]["provenance"]:
             nsch["metadata"]["provenance"]["metadata"] = {
