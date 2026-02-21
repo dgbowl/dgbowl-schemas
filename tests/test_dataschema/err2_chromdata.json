@@ -1,24 +1,24 @@
 {
     "input": {
         "metadata": {
-            "provenance": "datagram_from_input", 
+            "provenance": "datagram_from_input",
             "version": "4.2",
             "timezone": "UTC"
-        }, 
+        },
         "steps": [
             {
-                "parser": "chromdata", 
+                "parser": "chromdata",
                 "input": {
-                    "prefix": null, 
-                    "suffix": "txt", 
-                    "contains": null, 
-                    "encoding": "UTF-8", 
+                    "prefix": null,
+                    "suffix": "txt",
+                    "contains": null,
+                    "encoding": "UTF-8",
                     "folders": ["fol"]
-                }, 
-                "parameters": {"filetype": "fusion.json"}, 
+                },
+                "parameters": {"filetype": "fusion.json"},
                 "externaldate": null
             }
         ]
     },
-    "exception": "value is not a valid dict (type=type_error.dict)"
+    "exception": "Could not parse 'kwargs['metadata']'"
 }

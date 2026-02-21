@@ -15,5 +15,5 @@
             }
         ]
     },
-    "exception": "No match for discriminator 'parser' and value 'typo'"
+    "exception": "Input tag 'typo' found using 'parser'"
 }

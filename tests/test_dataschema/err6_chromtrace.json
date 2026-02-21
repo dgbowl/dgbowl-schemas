@@ -1,20 +1,20 @@
 {
     "input": {
         "metadata": {
-            "provenance": "manual", 
+            "provenance": "manual",
             "version": "4.0"
-        }, 
+        },
         "steps": [
             {
-                "parser": "chromtrace", 
+                "parser": "chromtrace",
                 "input": {
-                    "suffix": "txt", 
-                    "encoding": "UTF-8", 
+                    "suffix": "txt",
+                    "encoding": "UTF-8",
                     "folders": ["fol"]
-                }, 
+                },
                 "parameters": {"tracetype": "wrong.filetype"}
             }
         ]
     },
-    "exception": "steps -> 0 -> ChromTrace -> parameters -> tracetype\n  unexpected value; permitted: 'ezchrom.asc'"
+    "exception": "Input should be 'ezchrom.asc'"
 }
