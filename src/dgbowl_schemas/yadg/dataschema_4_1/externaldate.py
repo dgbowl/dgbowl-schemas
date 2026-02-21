@@ -1,33 +1,33 @@
-from pydantic.v1 import BaseModel, Extra
+from pydantic import BaseModel
 from typing import Literal, Optional, Union
 
 
-class ExternalDateFile(BaseModel, extra=Extra.forbid):
-    class Content(BaseModel, extra=Extra.forbid):
+class ExternalDateFile(BaseModel, extra="forbid"):
+    class Content(BaseModel, extra="forbid"):
         path: str
         type: str
-        match: Optional[str]
+        match: Optional[str] = None
 
     file: Content
 
 
-class ExternalDateFilename(BaseModel, extra=Extra.forbid):
-    class Content(BaseModel, extra=Extra.forbid):
+class ExternalDateFilename(BaseModel, extra="forbid"):
+    class Content(BaseModel, extra="forbid"):
         format: str
         len: int
 
     filename: Content
 
 
-class ExternalDateISOString(BaseModel, extra=Extra.forbid):
+class ExternalDateISOString(BaseModel, extra="forbid"):
     isostring: str
 
 
-class ExternalDateUTSOffset(BaseModel, extra=Extra.forbid):
+class ExternalDateUTSOffset(BaseModel, extra="forbid"):
     utsoffset: float
 
 
-class ExternalDate(BaseModel, extra=Extra.forbid):
+class ExternalDate(BaseModel, extra="forbid"):
     using: Union[
         ExternalDateFile,
         ExternalDateFilename,

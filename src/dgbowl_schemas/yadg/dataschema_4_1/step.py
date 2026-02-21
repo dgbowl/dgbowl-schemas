@@ -1,4 +1,4 @@
-from pydantic.v1 import BaseModel, Extra, Field
+from pydantic import BaseModel, Field
 from typing import Optional, Literal, Mapping, Any, Union
 from .externaldate import ExternalDate
 from .input import Input
@@ -10,63 +10,63 @@ except ImportError:
     from typing_extensions import Annotated
 
 
-class Dummy(BaseModel, extra=Extra.forbid):
-    class Params(BaseModel, extra=Extra.allow):
+class Dummy(BaseModel, extra="forbid"):
+    class Params(BaseModel, extra="allow"):
         pass
 
     parser: Literal["dummy"]
     input: Input
-    parameters: Optional[Params]
-    tag: Optional[str]
-    externaldate: Optional[ExternalDate]
+    parameters: Optional[Params] = None
+    tag: Optional[str] = None
+    externaldate: Optional[ExternalDate] = None
 
 
-class BasicCSV(BaseModel, extra=Extra.forbid):
-    class Params(BaseModel, extra=Extra.forbid):
+class BasicCSV(BaseModel, extra="forbid"):
+    class Params(BaseModel, extra="forbid"):
         sep: str = ","
-        sigma: Optional[Mapping[str, Tol]]
-        calfile: Optional[str]
-        timestamp: Optional[Timestamps]
-        convert: Optional[Any]
-        units: Optional[Mapping[str, str]]
+        sigma: Optional[Mapping[str, Tol]] = None
+        calfile: Optional[str] = None
+        timestamp: Optional[Timestamps] = None
+        convert: Optional[Any] = None
+        units: Optional[Mapping[str, str]] = None
 
     parser: Literal["basiccsv"]
     input: Input
     parameters: Params = Field(default_factory=Params)
-    tag: Optional[str]
-    externaldate: Optional[ExternalDate]
+    tag: Optional[str] = None
+    externaldate: Optional[ExternalDate] = None
 
 
-class MeasCSV(BaseModel, extra=Extra.forbid):
-    class Params(BaseModel, extra=Extra.forbid):
+class MeasCSV(BaseModel, extra="forbid"):
+    class Params(BaseModel, extra="forbid"):
         timestamp: Timestamps = Field(
             Timestamp(timestamp={"index": 0, "format": "%Y-%m-%d-%H-%M-%S"})
         )
-        calfile: Optional[str]
-        convert: Optional[Any]
+        calfile: Optional[str] = None
+        convert: Optional[Any] = None
 
     parser: Literal["meascsv"]
     input: Input
     parameters: Params = Field(default_factory=Params)
-    tag: Optional[str]
-    externaldate: Optional[ExternalDate]
+    tag: Optional[str] = None
+    externaldate: Optional[ExternalDate] = None
 
 
-class FlowData(BaseModel, extra=Extra.forbid):
-    class Params(BaseModel, extra=Extra.forbid):
+class FlowData(BaseModel, extra="forbid"):
+    class Params(BaseModel, extra="forbid"):
         filetype: Literal["drycal.csv", "drycal.rtf", "drycal.txt"] = "drycal.csv"
-        convert: Optional[Any]
-        calfile: Optional[str]
+        convert: Optional[Any] = None
+        calfile: Optional[str] = None
 
     parser: Literal["flowdata"]
     input: Input
     parameters: Params = Field(default_factory=Params)
-    tag: Optional[str]
-    externaldate: Optional[ExternalDate]
+    tag: Optional[str] = None
+    externaldate: Optional[ExternalDate] = None
 
 
-class ElectroChem(BaseModel, extra=Extra.forbid):
-    class Params(BaseModel, extra=Extra.forbid):
+class ElectroChem(BaseModel, extra="forbid"):
+    class Params(BaseModel, extra="forbid"):
         filetype: Literal["eclab.mpt", "eclab.mpr", "tomato.json"] = "eclab.mpr"
 
     class Input(Input):
@@ -75,12 +75,12 @@ class ElectroChem(BaseModel, extra=Extra.forbid):
     parser: Literal["electrochem"]
     input: Input
     parameters: Params = Field(default_factory=Params)
-    tag: Optional[str]
-    externaldate: Optional[ExternalDate]
+    tag: Optional[str] = None
+    externaldate: Optional[ExternalDate] = None
 
 
-class ChromTrace(BaseModel, extra=Extra.forbid):
-    class Params(BaseModel, extra=Extra.forbid):
+class ChromTrace(BaseModel, extra="forbid"):
+    class Params(BaseModel, extra="forbid"):
         filetype: Literal[
             "ezchrom.asc",
             "fusion.json",
@@ -89,30 +89,30 @@ class ChromTrace(BaseModel, extra=Extra.forbid):
             "agilent.dx",
             "agilent.csv",
         ] = "ezchrom.asc"
-        calfile: Optional[str]
-        species: Optional[Any]
-        detectors: Optional[Any]
+        calfile: Optional[str] = None
+        species: Optional[Any] = None
+        detectors: Optional[Any] = None
 
     parser: Literal["chromtrace"]
     input: Input
     parameters: Params = Field(default_factory=Params)
-    tag: Optional[str]
-    externaldate: Optional[ExternalDate]
+    tag: Optional[str] = None
+    externaldate: Optional[ExternalDate] = None
 
 
-class MassTrace(BaseModel, extra=Extra.forbid):
-    class Params(BaseModel, extra=Extra.forbid):
+class MassTrace(BaseModel, extra="forbid"):
+    class Params(BaseModel, extra="forbid"):
         filetype: Literal["quadstar.sac"] = "quadstar.sac"
 
     parser: Literal["masstrace"]
     input: Input
     parameters: Params = Field(default_factory=Params)
-    tag: Optional[str]
-    externaldate: Optional[ExternalDate]
+    tag: Optional[str] = None
+    externaldate: Optional[ExternalDate] = None
 
 
-class QFTrace(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
-    class Params(BaseModel, extra=Extra.forbid):
+class QFTrace(BaseModel, extra="forbid", populate_by_name=True):
+    class Params(BaseModel, extra="forbid"):
         filetype: Literal["labview.csv"] = "labview.csv"
         method: Literal["naive", "lorentz", "kajfez"] = "kajfez"
         height: float = 1.0
@@ -123,23 +123,23 @@ class QFTrace(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True
     parser: Literal["qftrace"]
     input: Input
     parameters: Params = Field(default_factory=Params)
-    tag: Optional[str]
-    externaldate: Optional[ExternalDate]
+    tag: Optional[str] = None
+    externaldate: Optional[ExternalDate] = None
 
 
-class XPSTrace(BaseModel, extra=Extra.forbid):
-    class Params(BaseModel, extra=Extra.forbid):
+class XPSTrace(BaseModel, extra="forbid"):
+    class Params(BaseModel, extra="forbid"):
         filetype: Literal["phi.spe"] = "phi.spe"
 
     parser: Literal["xpstrace"]
     input: Input
     parameters: Params = Field(default_factory=Params)
-    tag: Optional[str]
-    externaldate: Optional[ExternalDate]
+    tag: Optional[str] = None
+    externaldate: Optional[ExternalDate] = None
 
 
-class XRDTrace(BaseModel, extra=Extra.forbid):
-    class Params(BaseModel, extra=Extra.forbid):
+class XRDTrace(BaseModel, extra="forbid"):
+    class Params(BaseModel, extra="forbid"):
         filetype: Literal[
             "panalytical.xy",
             "panalytical.csv",
@@ -149,8 +149,8 @@ class XRDTrace(BaseModel, extra=Extra.forbid):
     parser: Literal["xrdtrace"]
     input: Input
     parameters: Params = Field(default_factory=Params)
-    tag: Optional[str]
-    externaldate: Optional[ExternalDate]
+    tag: Optional[str] = None
+    externaldate: Optional[ExternalDate] = None
 
 
 Steps = Annotated[

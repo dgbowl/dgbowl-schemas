@@ -65,10 +65,7 @@ def test_dataschema_steps_json(inpath, datadir):
         jsdata = json.load(infile)
     ref = jsdata["output"]
     ret: BaseModel = to_dataschema(**jsdata["input"])
-    if hasattr(ret, "model_dump"):
-        ret = ret.model_dump()
-    else:
-        ret = ret.dict()
+    ret = ret.model_dump()
     assert ret["steps"] == ref
 
 
@@ -114,10 +111,7 @@ def test_dataschema_update(inpath, datadir):
         jsdata = json.load(infile)
     ref = jsdata["output"]
     ret = to_dataschema(**jsdata["input"]).update()
-    if hasattr(ret, "model_dump"):
-        ret = ret.model_dump(exclude_none=True)
-    else:
-        ret = ret.dict(exclude_none=True)
+    ret = ret.model_dump(exclude_none=True)
     assert ret == ref
 
 

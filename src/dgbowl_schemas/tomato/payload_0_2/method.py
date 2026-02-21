@@ -1,7 +1,7 @@
-from pydantic.v1 import BaseModel, Extra
+from pydantic import BaseModel
 
 
-class Method(BaseModel, extra=Extra.allow):
+class Method(BaseModel, extra="allow"):
     """
     The :class:`Method` schema is completely *device*- and ``technique``- dependent,
     with extra arguments required by each ``technique`` defined by each device driver.

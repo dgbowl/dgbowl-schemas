@@ -1,14 +1,14 @@
-from pydantic.v1 import BaseModel, Extra, Field
+from pydantic import BaseModel, Field
 from typing import Optional, Sequence, List
 import os
 
 
-class Input(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
+class Input(BaseModel, extra="forbid", populate_by_name=True):
     files: Sequence[str] = Field(alias="folders")
-    prefix: Optional[str]
-    suffix: Optional[str]
-    contains: Optional[str]
-    exclude: Optional[str]
+    prefix: Optional[str] = None
+    suffix: Optional[str] = None
+    contains: Optional[str] = None
+    exclude: Optional[str] = None
     encoding: str = "UTF-8"
 
     def paths(self) -> List[str]:

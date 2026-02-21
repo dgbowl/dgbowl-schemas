@@ -1,4 +1,4 @@
-from pydantic.v1 import BaseModel, Extra, Field, root_validator
+from pydantic import BaseModel, Field, model_validator
 from typing import Sequence, Literal
 from .tomato import Tomato
 from .sample import Sample
@@ -13,7 +13,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-class Payload(BaseModel, extra=Extra.forbid):
+class Payload(BaseModel, extra="forbid"):
     version: Literal["0.2"]
     tomato: Tomato = Field(default_factory=Tomato)
     """Additional configuration options for tomato."""
@@ -24,7 +24,8 @@ class Payload(BaseModel, extra=Extra.forbid):
     method: Sequence[Method]
     """A sequence of the experimental methods."""
 
-    @root_validator(pre=True)
+    @model_validator(mode="before")
+    @classmethod
     def extract_samplefile(cls, values):  # pylint: disable=E0213
         """
         If ``samplefile`` is provided in ``values``, parse the file as ``sample``.
@@ -43,7 +44,8 @@ class Payload(BaseModel, extra=Extra.forbid):
             values["sample"] = sample["sample"]
         return values
 
-    @root_validator(pre=True)
+    @model_validator(mode="before")
+    @classmethod
     def extract_methodfile(cls, values):  # pylint: disable=E0213
         """
         If ``methodfile`` is provided in ``values``, parse the file as ``method``.
@@ -64,9 +66,10 @@ class Payload(BaseModel, extra=Extra.forbid):
 
     def update(self):
         logger.info("Updating from Payload-0.2 to Payload-1.0")
-        md = self.dict(exclude_defaults=True, exclude_none=True)
+        md = self.model_dump(exclude_defaults=True, exclude_none=True)
         md["version"] = "1.0"
-        md["settings"] = md.pop("tomato")
+        if "tomato" in md:
+            md["settings"] = md.pop("tomato")
         for step in md["method"]:
             step["component_tag"] = step.pop("device")
 
