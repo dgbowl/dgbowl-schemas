@@ -1,4 +1,4 @@
-from pydantic.v1 import BaseModel, Extra
+from pydantic import BaseModel
 from typing import Sequence
 from .metadata import Metadata
 from .step import Steps
@@ -9,7 +9,7 @@ from ..dataschema_5_0 import DataSchema as NewDataSchema
 logger = logging.getLogger(__name__)
 
 
-class DataSchema(BaseModel, extra=Extra.forbid):
+class DataSchema(BaseModel, extra="forbid"):
     metadata: Metadata
     """Metadata information for yadg."""
 
@@ -22,7 +22,7 @@ class DataSchema(BaseModel, extra=Extra.forbid):
         nsch = {"metadata": {}, "steps": []}
         nsch["metadata"] = {
             "version": "5.0",
-            "provenance": self.metadata.provenance.dict(exclude_none=True),
+            "provenance": self.metadata.provenance.model_dump(exclude_none=True),
         }
         if self.metadata.timezone is not None:
             nsch["step_defaults"] = {"timezone": self.metadata.timezone}
@@ -35,12 +35,12 @@ class DataSchema(BaseModel, extra=Extra.forbid):
             nstep = {
                 "parser": step.parser,
                 "tag": step.tag,
-                "input": step.input.dict(exclude_none=True),
+                "input": step.input.model_dump(exclude_none=True),
             }
             if step.externaldate is not None:
-                nstep["externaldate"] = step.externaldate.dict(exclude_none=True)
+                nstep["externaldate"] = step.externaldate.model_dump(exclude_none=True)
             if step.parameters is not None:
-                nstep["parameters"] = step.parameters.dict(exclude_none=True)
+                nstep["parameters"] = step.parameters.model_dump(exclude_none=True)
             else:
                 nstep["parameters"] = {}
 

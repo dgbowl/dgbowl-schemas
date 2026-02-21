@@ -1,24 +1,24 @@
-from pydantic.v1 import BaseModel, Extra, Field
+from pydantic import BaseModel, Field
 from typing import Optional, Sequence, List
 import os
 
 
-class Input(BaseModel, extra=Extra.forbid, allow_population_by_field_name=True):
+class Input(BaseModel, extra="forbid", populate_by_name=True):
     """Specification of input files/folders to be processed by the :class:`Step`."""
 
     files: Sequence[str] = Field(alias="folders")
     """Files, or folders to be searched for matching files."""
 
-    prefix: Optional[str]
+    prefix: Optional[str] = None
     """Prefix of the filenames to be matched."""
 
-    suffix: Optional[str]
+    suffix: Optional[str] = None
     """Suffix of the filenames to be matched."""
 
-    contains: Optional[str]
+    contains: Optional[str] = None
     """A string the matched filenames must contain."""
 
-    exclude: Optional[str]
+    exclude: Optional[str] = None
     """A string the matched filenames must not contain."""
 
     encoding: str = "UTF-8"

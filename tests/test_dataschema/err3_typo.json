@@ -1,22 +1,22 @@
 {
     "input": {
         "metadata": {
-            "provenance": {"type": "manual"}, 
+            "provenance": {"type": "manual"},
             "version": "4.2",
             "timezone": "UTC"
-        }, 
+        },
         "steps": [
             {
-                "parser": "typo", 
+                "parser": "typo",
                 "input": {
-                    "prefix": null, 
-                    "suffix": "txt", 
-                    "contains": null, 
-                    "encoding": "UTF-8", 
+                    "prefix": null,
+                    "suffix": "txt",
+                    "contains": null,
+                    "encoding": "UTF-8",
                     "folders": ["fol"]
-                } 
+                }
             }
         ]
     },
-    "exception": "No match for discriminator 'parser' and value 'typo'"
+    "exception": "Input tag 'typo' found using 'parser'"
 }

@@ -1,13 +1,13 @@
-from pydantic.v1 import BaseModel, Extra
+from pydantic import BaseModel
 from typing import Optional, Mapping, Literal, Any
 
 
-class Metadata(BaseModel, extra=Extra.forbid):
+class Metadata(BaseModel, extra="forbid"):
     """Metadata, including version and provenance of the :class:`DataSchema`."""
 
-    class Provenance(BaseModel, extra=Extra.forbid):
+    class Provenance(BaseModel, extra="forbid"):
         type: str
-        metadata: Optional[Mapping[str, Any]]
+        metadata: Optional[Mapping[str, Any]] = None
 
     version: Literal["4.2"]
 
