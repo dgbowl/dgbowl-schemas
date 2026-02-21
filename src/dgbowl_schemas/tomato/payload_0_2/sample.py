@@ -1,7 +1,7 @@
-from pydantic.v1 import BaseModel, Extra
+from pydantic import BaseModel
 
 
-class Sample(BaseModel, extra=Extra.allow):
+class Sample(BaseModel, extra="allow"):
     """
     Additional attributes for each :class:`Sample` may be required, depending on the
     :class:`Method` type.
