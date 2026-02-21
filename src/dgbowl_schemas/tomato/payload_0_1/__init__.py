@@ -1,4 +1,4 @@
-from pydantic.v1 import BaseModel, Extra, Field, root_validator
+from pydantic import BaseModel, Field, model_validator
 from typing import Sequence, Literal
 from .tomato import Tomato
 from .sample import Sample
@@ -13,13 +13,14 @@ import json
 logger = logging.getLogger(__name__)
 
 
-class Payload(BaseModel, extra=Extra.forbid):
+class Payload(BaseModel, extra="forbid"):
     version: Literal["0.1"]
     tomato: Tomato = Field(default_factory=Tomato)
     sample: Sample
     method: Sequence[Method]
 
-    @root_validator(pre=True)
+    @model_validator(mode="before")
+    @classmethod
     def extract_samplefile(cls, values):  # pylint: disable=E0213
         if "samplefile" in values:
             sf = Path(values.pop("samplefile"))
@@ -35,7 +36,8 @@ class Payload(BaseModel, extra=Extra.forbid):
             values["sample"] = sample["sample"]
         return values
 
-    @root_validator(pre=True)
+    @model_validator(mode="before")
+    @classmethod
     def extract_methodfile(cls, values):  # pylint: disable=E0213
         if "methodfile" in values:
             mf = Path(values.pop("methodfile"))
@@ -48,12 +50,16 @@ class Payload(BaseModel, extra=Extra.forbid):
                 else:
                     raise ValueError(f"Incorrect suffix of methodfile: '{mf}'")
             assert "method" in method
+            for step in method["method"]:
+                step["technique"] = str(step["technique"])
             values["method"] = method["method"]
+            print(values["method"])
         return values
 
     def update(self):
         logger.info("Updating from Payload-0.1 to Payload-0.2")
-        md = self.dict(exclude_defaults=True, exclude_none=True)
+        md = self.model_dump(exclude_defaults=True, exclude_none=True)
+        print(f"{md=}")
         md["version"] = "0.2"
 
         return NewPayload(**md)

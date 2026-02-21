@@ -1,5 +1,5 @@
-from pydantic.v1 import BaseModel, Extra
+from pydantic import BaseModel
 
 
-class Sample(BaseModel, extra=Extra.allow):
+class Sample(BaseModel, extra="allow"):
     name: str

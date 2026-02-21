@@ -1,9 +1,9 @@
-from pydantic.v1 import BaseModel, Extra, Field
+from pydantic import BaseModel, Field
 from typing import Literal
 
 
-class Tomato(BaseModel, extra=Extra.forbid):
-    class Output(BaseModel, extra=Extra.forbid):
+class Tomato(BaseModel, extra="forbid"):
+    class Output(BaseModel, extra="forbid"):
         path: str = None
         prefix: str = None
 
