@@ -21,6 +21,7 @@ class FileType(BaseModel, ABC, extra="forbid"):
     locale: Optional[str] = None
     encoding: Optional[str] = None
     parameters: Optional[Any] = None
+    suffix: Optional[tuple[str]] = None
 
     @field_validator("timezone")
     @classmethod
@@ -47,14 +48,17 @@ class Example(FileType):
 
 class Agilent_ch(FileType):
     filetype: Literal["agilent.ch"]
+    suffix: Optional[list[str]] = [".ch"]
 
 
 class Agilent_dx(FileType):
     filetype: Literal["agilent.dx"]
+    suffix: Optional[list[str]] = [".dx"]
 
 
 class Agilent_csv(FileType):
     filetype: Literal["agilent.csv"]
+    suffix: Optional[list[str]] = [".csv"]
 
 
 class Basic_csv(FileType):
@@ -74,27 +78,33 @@ class Basic_csv(FileType):
 
     parameters: Parameters = Field(default_factory=Parameters)
     filetype: Literal["basic.csv"]
+    suffix: Optional[list[str]] = [".csv"]
 
 
 class Drycal_csv(FileType):
     filetype: Literal["drycal.csv"]
+    suffix: Optional[list[str]] = [".csv"]
 
 
 class Drycal_rtf(FileType):
     filetype: Literal["drycal.rtf"]
+    suffix: Optional[list[str]] = [".rtf"]
 
 
 class Drycal_txt(FileType):
     filetype: Literal["drycal.txt"]
+    suffix: Optional[list[str]] = [".txt"]
 
 
 class EClab_mpr(FileType):
     filetype: Literal["eclab.mpr"]
+    suffix: Optional[list[str]] = [".mpr"]
 
 
 class EClab_mpt(FileType):
     filetype: Literal["eclab.mpt"]
     encoding: Optional[str] = "windows-1252"
+    suffix: Optional[list[str]] = [".mpt"]
 
     @field_validator("encoding")
     @classmethod
@@ -104,19 +114,23 @@ class EClab_mpt(FileType):
 
 class EmpaLC_csv(FileType):
     filetype: Literal["empalc.csv"]
+    suffix: Optional[list[str]] = [".csv"]
 
 
 class EmpaLC_xlsx(FileType):
     filetype: Literal["empalc.xlsx"]
+    suffix: Optional[list[str]] = [".xlsx"]
 
 
 class EZChrom_dat(FileType):
     filetype: Literal["ezchrom.dat"]
+    suffix: Optional[list[str]] = [".dat"]
 
 
 class EZChrom_asc(FileType):
     filetype: Literal["ezchrom.asc"]
     encoding: Optional[str] = "windows-1252"
+    suffix: Optional[list[str]] = [".dat.asc"]
 
     @field_validator("encoding")
     @classmethod
@@ -132,58 +146,67 @@ class FHI_csv(FileType):
 
     parameters: Parameters = Field(default_factory=Parameters)
     filetype: Literal["fhimcpt.csv"]
+    suffix: Optional[list[str]] = [".csv"]
 
 
 class FHI_vna(FileType):
     filetype: Literal["fhimcpt.vna"]
+    suffix: Optional[list[str]] = [".csv"]
 
 
 class Fusion_json(FileType):
     filetype: Literal["fusion.json"]
-
-
-class Fusion_zip(FileType):
-    filetype: Literal["fusion.zip"]
+    suffix: Optional[list[str]] = [".fusion-data"]
 
 
 class Fusion_csv(FileType):
     filetype: Literal["fusion.csv"]
+    suffix: Optional[list[str]] = [".csv"]
 
 
 class Panalytical_xy(FileType):
     filetype: Literal["panalytical.xy"]
+    suffix: Optional[list[str]] = [".xy"]
 
 
 class Panalytical_csv(FileType):
     filetype: Literal["panalytical.csv"]
+    suffix: Optional[list[str]] = [".csv"]
 
 
 class PicoLog_tc08(FileType):
     filetype: Literal["picolog.tc08"]
+    suffix: Optional[list[str]] = [".picolog"]
 
 
 class Panalytical_xrdml(FileType):
     filetype: Literal["panalytical.xrdml"]
+    suffix: Optional[list[str]] = [".xrdml"]
 
 
 class Phi_spe(FileType):
     filetype: Literal["phi.spe"]
+    suffix: Optional[list[str]] = [".spe"]
 
 
 class Quadstar_sac(FileType):
     filetype: Literal["quadstar.sac"]
+    suffix: Optional[list[str]] = [".sac"]
 
 
 class Tomato_json(FileType):
     filetype: Literal["tomato.json"]
+    suffix: Optional[list[str]] = [".json"]
 
 
 class Touchstone_snp(FileType):
     filetype: Literal["touchstone.snp"]
+    suffix: Optional[list[str]] = [".s1p", ".s2p"]
 
 
 class Yadg_json(FileType):
     filetype: Literal["yadg.json"]
+    suffix: Optional[list[str]] = [".json"]
 
 
 classlist = []

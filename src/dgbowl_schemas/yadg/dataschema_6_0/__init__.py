@@ -1,3 +1,4 @@
+import logging
 from pydantic import BaseModel, Field
 from typing import Sequence, Optional, Mapping, Any, Literal
 from .step import Step
@@ -8,6 +9,8 @@ from .filetype import (  # noqa: F401
     FileTypes as FileTypes,
 )
 from ..dataschema_7_0 import DataSchema as NewDataSchema
+
+logger = logging.getLogger(__name__)
 
 
 class DataSchema(BaseModel, extra="forbid"):
@@ -30,6 +33,9 @@ class DataSchema(BaseModel, extra="forbid"):
 
     def update(self):
         nsch = self.model_dump(exclude_none=True, exclude_defaults=True)
-
+        for si, s in enumerate(nsch["steps"]):
+            if s["extractor"]["filetype"] == "fusion.zip":
+                logger.debug("Converting fusion.zip to fusion.json in step %d", si)
+                nsch["steps"][si]["extractor"]["filetype"] == "fusion.json"
         nsch["version"] = "7.0"
         return NewDataSchema(**nsch)
