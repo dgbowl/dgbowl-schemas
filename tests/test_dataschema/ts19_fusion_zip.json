@@ -1,0 +1,41 @@
+{
+    "input": {
+        "version": "7.0",
+        "metadata": {
+            "provenance": {"type": "manual"}
+        },
+        "step_defaults": {
+            "timezone": "UTC"
+        },
+        "steps": [
+            {
+                "input": {
+                    "suffix": "zip",
+                    "folders": ["fol"]
+                },
+                "extractor": {"filetype": "fusion.zip"}
+            }
+        ]
+    },
+    "output": [
+        {
+            "tag": null,
+            "input": {
+                "prefix": null,
+                "suffix": "zip",
+                "contains": null,
+                "files": ["fol"],
+                "exclude": null
+            },
+            "extractor": {
+                "filetype": "fusion.json",
+                "suffix": [".fusion-data"],
+                "timezone": null,
+                "locale": null,
+                "encoding": null,
+                "parameters": null
+            },
+            "externaldate": null
+        }
+    ]
+}

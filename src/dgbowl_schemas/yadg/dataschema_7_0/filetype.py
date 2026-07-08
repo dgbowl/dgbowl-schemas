@@ -155,8 +155,20 @@ class FHI_vna(FileType):
 
 
 class Fusion_json(FileType):
-    filetype: Literal["fusion.json"]
+    filetype: Literal["fusion.json", "fusion.zip"]
     suffix: Optional[list[str]] = [".fusion-data"]
+
+    @field_validator("filetype")
+    @classmethod
+    def set_encoding(cls, value):
+        if value == "fusion.zip":
+            logger.warning(
+                "Use of 'fusion.zip' filetype has been deprecated in "
+                "DataSchema-7.0. Please use 'fusion.json' instead."
+            )
+            return "fusion.json"
+        return value
+        return encoding or "windows-1252"
 
 
 class Fusion_csv(FileType):

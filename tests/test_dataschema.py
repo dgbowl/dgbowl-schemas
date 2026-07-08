@@ -58,6 +58,7 @@ def test_dataschema_metadata_json(inpath, success, datadir):
         ("ts16_locales.json"),  # 5.1
         ("ts17_basic_csv.json"),  # 6.0
         ("ts18_basic_csv_suffix.json"),  # 7.0
+        ("ts19_fusion_zip.json"),  # 7.0
     ],
 )
 def test_dataschema_steps_json(inpath, datadir):
