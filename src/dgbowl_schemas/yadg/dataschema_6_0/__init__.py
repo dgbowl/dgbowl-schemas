@@ -33,9 +33,11 @@ class DataSchema(BaseModel, extra="forbid"):
 
     def update(self):
         nsch = self.model_dump(exclude_none=True, exclude_defaults=True)
+        print(f"{nsch=}")
         for si, s in enumerate(nsch["steps"]):
             if s["extractor"]["filetype"] == "fusion.zip":
                 logger.debug("Converting fusion.zip to fusion.json in step %d", si)
-                nsch["steps"][si]["extractor"]["filetype"] == "fusion.json"
+                nsch["steps"][si]["extractor"]["filetype"] = "fusion.json"
         nsch["version"] = "7.0"
+        print(f"{nsch=}")
         return NewDataSchema(**nsch)

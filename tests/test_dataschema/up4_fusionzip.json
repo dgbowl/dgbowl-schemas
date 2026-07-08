@@ -1,0 +1,38 @@
+{
+    "input": {
+        "version": "6.0",
+        "metadata": {
+            "provenance": {"type": "manual"}
+        },
+        "step_defaults": {
+            "timezone": "Europe/Berlin",
+            "locale": "en_GB.UTF-8"
+        },
+        "steps": [
+            {
+                "input": {"files": ["test.zip"]},
+                "extractor": {"filetype": "fusion.zip"}
+            }
+        ]
+    },
+    "output": {
+        "version": "7.0",
+        "metadata": {
+            "provenance": {"type": "manual"}
+        },
+        "step_defaults": {
+            "locale": "en_GB",
+            "timezone": "Europe/Berlin",
+            "encoding": "utf-8"
+        },
+        "steps": [
+            {
+                "input": {"files": ["test.zip"]},
+                "extractor": {
+                    "filetype": "fusion.json",
+                    "suffix": [".fusion-data"]
+                }
+            }
+        ]
+    }
+}
