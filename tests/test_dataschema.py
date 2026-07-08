@@ -57,6 +57,8 @@ def test_dataschema_metadata_json(inpath, success, datadir):
         ("ts15_example.json"),  # 5.1
         ("ts16_locales.json"),  # 5.1
         ("ts17_basic_csv.json"),  # 6.0
+        ("ts18_basic_csv_suffix.json"),  # 7.0
+        ("ts19_fusion_zip.json"),  # 7.0
     ],
 )
 def test_dataschema_steps_json(inpath, datadir):
@@ -102,6 +104,7 @@ def test_dataschema_err(inpath, datadir):
         ("up1_chromtrace.json"),  # 4.1
         ("up2_chromtrace.json"),  # 4.2
         ("up3_chromdata.json"),  # 4.2
+        ("up4_fusionzip.json"),  # 6.0
     ],
 )
 def test_dataschema_update(inpath, datadir):
@@ -132,7 +135,7 @@ def test_dataschema_update_chain(inpath, datadir):
     ret = to_dataschema(**jsdata)
     while hasattr(ret, "update"):
         ret = ret.update()
-    assert ret.version == "6.0"
+    assert ret.version == "7.0"
 
 
 @pytest.mark.parametrize(

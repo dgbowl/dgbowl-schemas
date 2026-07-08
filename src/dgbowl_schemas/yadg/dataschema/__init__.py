@@ -1,4 +1,4 @@
-from ..dataschema_6_0 import (
+from ..dataschema_7_0 import (
     DataSchema,
     StepDefaults,
     FileType,
