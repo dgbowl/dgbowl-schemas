@@ -168,7 +168,6 @@ class Fusion_json(FileType):
             )
             return "fusion.json"
         return value
-        return encoding or "windows-1252"
 
 
 class Fusion_csv(FileType):
