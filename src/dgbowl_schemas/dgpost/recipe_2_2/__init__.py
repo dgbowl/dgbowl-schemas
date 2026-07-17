@@ -3,4 +3,4 @@ from dgbowl_schemas.dgpost.recipe_2_1 import Recipe as Recipe_2_1
 
 
 class Recipe(Recipe_2_1, extra="forbid"):
-    version: Literal["2.2"]
+    version: Literal["2.2", "2.3", "2.4"]
