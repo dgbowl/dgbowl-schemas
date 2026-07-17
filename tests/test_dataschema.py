@@ -59,6 +59,7 @@ def test_dataschema_metadata_json(inpath, success, datadir):
         ("ts17_basic_csv.json"),  # 6.0
         ("ts18_basic_csv_suffix.json"),  # 7.0
         ("ts19_fusion_zip.json"),  # 7.0
+        ("ts20_legacy.json"),  # 3.1
     ],
 )
 def test_dataschema_steps_json(inpath, datadir):
@@ -121,6 +122,7 @@ def test_dataschema_update(inpath, datadir):
 @pytest.mark.parametrize(
     "inpath",
     [
+        ("chain_all_3.1.json"),  # 3.1
         ("chain_vna_4.0.json"),  # 4.0
         ("chain_gc_4.0.json"),  # 4.0
         ("chain_externaldate_4.0.json"),  # 4.0

@@ -8,6 +8,7 @@ from .dataschema_5_0 import DataSchema as DataSchema_5_0, Metadata as Metadata_5
 from .dataschema_4_2 import DataSchema as DataSchema_4_2, Metadata as Metadata_4_2
 from .dataschema_4_1 import DataSchema as DataSchema_4_1, Metadata as Metadata_4_1
 from .dataschema_4_0 import DataSchema as DataSchema_4_0, Metadata as Metadata_4_0
+from .dataschema_3_1 import DataSchema as DataSchema_3_1
 
 logger = logging.getLogger(__name__)
 
@@ -19,6 +20,7 @@ models = {
     "4.2": (DataSchema_4_2, Metadata_4_2),
     "4.1": (DataSchema_4_1, Metadata_4_1),
     "4.0": (DataSchema_4_0, Metadata_4_0),
+    "3.1": (DataSchema_3_1, None),
 }
 
 
@@ -32,7 +34,7 @@ def to_dataschema(**kwargs):
                 schema = Model(**kwargs)
                 return schema
             else:
-                Metadata(**kwargs["metadata"])
+                Metadata(**kwargs.get("metadata", {}))
                 break
         except ValidationError as e:
             errors.append(
