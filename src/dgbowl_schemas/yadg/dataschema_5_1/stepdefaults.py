@@ -1,6 +1,7 @@
+from __future__ import annotations
+
 import locale
 import logging
-from typing import Optional
 
 import tzlocal
 from babel import Locale, UnknownLocaleError
@@ -23,10 +24,10 @@ class StepDefaults(BaseModel, extra="forbid"):
 
     """
 
-    locale: Optional[str] = Field(None, validate_default=True)
+    locale: str | None = Field(None, validate_default=True)
     """Global locale specification. Will default to current locale."""
 
-    encoding: Optional[str] = "utf-8"
+    encoding: str = "utf-8"
     """Global filetype encoding. Will default to ``utf-8``."""
 
     @field_validator("timezone")

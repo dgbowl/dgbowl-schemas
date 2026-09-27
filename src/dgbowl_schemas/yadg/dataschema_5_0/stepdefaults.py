@@ -1,5 +1,6 @@
+from __future__ import annotations
+
 import locale
-from typing import Optional, Tuple, Union
 
 import tzlocal
 from pydantic import BaseModel, Field, field_validator
@@ -19,10 +20,10 @@ class StepDefaults(BaseModel, extra="forbid"):
 
     """
 
-    locale: Union[Tuple[str, str], str, None] = Field(None, validate_default=True)
+    locale: tuple[str, str] | str | None = Field(None, validate_default=True)
     """Global locale specification. Will default to current locale."""
 
-    encoding: Optional[str] = None
+    encoding: str | None = None
     """Global filetype encoding. Will default to ``None``."""
 
     @field_validator("timezone")
@@ -38,7 +39,7 @@ class StepDefaults(BaseModel, extra="forbid"):
         if v is None:
             for loc in (locale.getlocale(), locale.getlocale(locale.LC_NUMERIC)):
                 try:
-                    v = ".".join(loc)
+                    v = ".".join(loc)  # ty: ignore[no-matching-overload]
                     break
                 except TypeError:
                     pass

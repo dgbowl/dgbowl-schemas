@@ -1,4 +1,4 @@
-from typing import Optional, Union
+from __future__ import annotations
 
 from pydantic import BaseModel
 
@@ -8,7 +8,7 @@ from .input import Input
 
 
 class Step(BaseModel, extra="forbid"):
-    extractor: Union[FileTypes]
+    extractor: FileTypes
     input: Input
-    tag: Optional[str] = None
-    externaldate: Optional[ExternalDate] = None
+    tag: str | None = None
+    externaldate: ExternalDate | None = None

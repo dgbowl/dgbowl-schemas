@@ -1,5 +1,7 @@
+from __future__ import annotations
+
 from collections.abc import Sequence
-from typing import Literal, Optional
+from typing import Literal
 
 from pydantic import BaseModel, Field
 
@@ -13,7 +15,7 @@ class Save(BaseModel, extra="forbid", populate_by_name=True):
     as_: str = Field(alias="as")
     """Path to which the table is stored."""
 
-    type: Optional[Literal["pkl", "json", "xlsx", "csv", "nc"]] = None
+    type: Literal["pkl", "json", "xlsx", "csv", "nc"] | None = None
     """
     Type of the output file.
 
@@ -25,7 +27,7 @@ class Save(BaseModel, extra="forbid", populate_by_name=True):
         not be used for chaining of :mod:`dgpost` runs.
     """
 
-    columns: Optional[Sequence[str]] = None
+    columns: Sequence[str] | None = None
     """
     Columns to be exported. By default (``None``), all columns from the specified ``table``
     will be exported.

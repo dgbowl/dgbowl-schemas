@@ -1,11 +1,11 @@
-from typing import Optional
+from __future__ import annotations
 
 from pydantic import BaseModel
 
 
 class TimestampSpec(BaseModel, extra="forbid"):
-    index: Optional[int] = None
-    format: Optional[str] = None
+    index: int | None = None
+    format: str | None = None
 
 
 class Timestamp(BaseModel, extra="forbid"):
@@ -17,5 +17,5 @@ class UTS(BaseModel, extra="forbid"):
 
 
 class TimeDate(BaseModel, extra="forbid"):
-    date: Optional[TimestampSpec] = None
-    time: Optional[TimestampSpec] = None
+    date: TimestampSpec | None = None
+    time: TimestampSpec | None = None

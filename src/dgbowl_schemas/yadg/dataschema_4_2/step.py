@@ -1,5 +1,7 @@
+from __future__ import annotations
+
 from collections.abc import Mapping
-from typing import Any, Literal, Optional, Union
+from typing import Any, Literal, Union
 
 from pydantic import BaseModel, Field
 
@@ -21,9 +23,9 @@ class Dummy(BaseModel, extra="forbid"):
 
     parser: Literal["dummy"]
     input: Input
-    parameters: Optional[Params] = None
-    tag: Optional[str] = None
-    externaldate: Optional[ExternalDate] = None
+    parameters: Params | None = None
+    tag: str | None = None
+    externaldate: ExternalDate | None = None
 
 
 class BasicCSV(BaseModel, extra="forbid"):
@@ -33,17 +35,17 @@ class BasicCSV(BaseModel, extra="forbid"):
         sep: str = ","
         """Separator of table columns."""
 
-        strip: str = None
+        strip: str | None = None
         """A :class:`str` of characters to strip from headers & data."""
 
-        units: Optional[Mapping[str, str]] = None
+        units: Mapping[str, str] | None = None
         """A :class:`dict` containing ``column: unit`` keypairs."""
 
-        timestamp: Optional[Timestamps] = None
+        timestamp: Timestamps | None = None
         """Timestamp specification allowing calculation of Unix timestamp for
         each table row."""
 
-        sigma: Optional[Mapping[str, Tol]] = Field(None, deprecated=True)
+        sigma: Mapping[str, Tol] | None = Field(None, deprecated=True)
         """
         External uncertainty specification.
 
@@ -54,7 +56,7 @@ class BasicCSV(BaseModel, extra="forbid"):
 
         """
 
-        calfile: Optional[str] = Field(None, deprecated=True)
+        calfile: str | None = Field(None, deprecated=True)
         """
         Column calibration specification.
 
@@ -65,7 +67,7 @@ class BasicCSV(BaseModel, extra="forbid"):
 
         """
 
-        convert: Optional[Any] = Field(None, deprecated=True)
+        convert: Any | None = Field(None, deprecated=True)
         """
         Column renaming specification.
 
@@ -79,8 +81,8 @@ class BasicCSV(BaseModel, extra="forbid"):
     parser: Literal["basiccsv"]
     input: Input
     parameters: Params = Field(default_factory=Params)
-    tag: Optional[str] = None
-    externaldate: Optional[ExternalDate] = None
+    tag: str | None = None
+    externaldate: ExternalDate | None = None
 
 
 class MeasCSV(BaseModel, extra="forbid"):
@@ -99,7 +101,7 @@ class MeasCSV(BaseModel, extra="forbid"):
             Timestamp(timestamp={"index": 0, "format": "%Y-%m-%d-%H-%M-%S"})
         )
 
-        calfile: Optional[str] = Field(None, deprecated=True)
+        calfile: str | None = Field(None, deprecated=True)
         """
         Column calibration specification.
 
@@ -110,7 +112,7 @@ class MeasCSV(BaseModel, extra="forbid"):
 
         """
 
-        convert: Optional[Any] = Field(None, deprecated=True)
+        convert: Any | None = Field(None, deprecated=True)
         """
         Column renaming specification.
 
@@ -124,8 +126,8 @@ class MeasCSV(BaseModel, extra="forbid"):
     parser: Literal["meascsv"]
     input: Input
     parameters: Params = Field(default_factory=Params)
-    tag: Optional[str] = None
-    externaldate: Optional[ExternalDate] = None
+    tag: str | None = None
+    externaldate: ExternalDate | None = None
 
 
 class FlowData(BaseModel, extra="forbid"):
@@ -134,7 +136,7 @@ class FlowData(BaseModel, extra="forbid"):
     class Params(BaseModel, extra="forbid"):
         filetype: Literal["drycal.csv", "drycal.rtf", "drycal.txt"] = "drycal.csv"
 
-        calfile: Optional[str] = Field(None, deprecated=True)
+        calfile: str | None = Field(None, deprecated=True)
         """
         Column calibration specification.
 
@@ -145,7 +147,7 @@ class FlowData(BaseModel, extra="forbid"):
 
         """
 
-        convert: Optional[Any] = Field(None, deprecated=True)
+        convert: Any | None = Field(None, deprecated=True)
         """
         Column renaming specification.
 
@@ -159,8 +161,8 @@ class FlowData(BaseModel, extra="forbid"):
     parser: Literal["flowdata"]
     input: Input
     parameters: Params = Field(default_factory=Params)
-    tag: Optional[str] = None
-    externaldate: Optional[ExternalDate] = None
+    tag: str | None = None
+    externaldate: ExternalDate | None = None
 
 
 class ElectroChem(BaseModel, extra="forbid"):
@@ -178,8 +180,8 @@ class ElectroChem(BaseModel, extra="forbid"):
     parser: Literal["electrochem"]
     input: Input
     parameters: Params = Field(default_factory=Params)
-    tag: Optional[str] = None
-    externaldate: Optional[ExternalDate] = None
+    tag: str | None = None
+    externaldate: ExternalDate | None = None
 
 
 class ChromTrace(BaseModel, extra="forbid"):
@@ -203,7 +205,7 @@ class ChromTrace(BaseModel, extra="forbid"):
             "agilent.csv",
         ] = "ezchrom.asc"
 
-        calfile: Optional[str] = Field(None, deprecated=True)
+        calfile: str | None = Field(None, deprecated=True)
         """
         Species calibration specification.
 
@@ -214,7 +216,7 @@ class ChromTrace(BaseModel, extra="forbid"):
 
         """
 
-        species: Optional[Any] = Field(None, deprecated=True)
+        species: Any | None = Field(None, deprecated=True)
         """
         Species information as a :class:`dict`.
 
@@ -225,7 +227,7 @@ class ChromTrace(BaseModel, extra="forbid"):
 
         """
 
-        detectors: Optional[Any] = Field(None, deprecated=True)
+        detectors: Any | None = Field(None, deprecated=True)
         """
         Detector integration parameters as a :class:`dict`.
 
@@ -239,8 +241,8 @@ class ChromTrace(BaseModel, extra="forbid"):
     parser: Literal["chromtrace"]
     input: Input
     parameters: Params = Field(default_factory=Params)
-    tag: Optional[str] = None
-    externaldate: Optional[ExternalDate] = None
+    tag: str | None = None
+    externaldate: ExternalDate | None = None
 
 
 class ChromData(BaseModel, extra="forbid"):
@@ -258,8 +260,8 @@ class ChromData(BaseModel, extra="forbid"):
     parser: Literal["chromdata"]
     input: Input
     parameters: Params = Field(default_factory=Params)
-    tag: Optional[str] = None
-    externaldate: Optional[ExternalDate] = None
+    tag: str | None = None
+    externaldate: ExternalDate | None = None
 
 
 class MassTrace(BaseModel, extra="forbid"):
@@ -271,8 +273,8 @@ class MassTrace(BaseModel, extra="forbid"):
     parser: Literal["masstrace"]
     input: Input
     parameters: Params = Field(default_factory=Params)
-    tag: Optional[str] = None
-    externaldate: Optional[ExternalDate] = None
+    tag: str | None = None
+    externaldate: ExternalDate | None = None
 
 
 class QFTrace(BaseModel, extra="forbid", populate_by_name=True):
@@ -289,8 +291,8 @@ class QFTrace(BaseModel, extra="forbid", populate_by_name=True):
     parser: Literal["qftrace"]
     input: Input
     parameters: Params = Field(default_factory=Params)
-    tag: Optional[str] = None
-    externaldate: Optional[ExternalDate] = None
+    tag: str | None = None
+    externaldate: ExternalDate | None = None
 
 
 class XPSTrace(BaseModel, extra="forbid"):
@@ -302,8 +304,8 @@ class XPSTrace(BaseModel, extra="forbid"):
     parser: Literal["xpstrace"]
     input: Input
     parameters: Params = Field(default_factory=Params)
-    tag: Optional[str] = None
-    externaldate: Optional[ExternalDate] = None
+    tag: str | None = None
+    externaldate: ExternalDate | None = None
 
 
 class XRDTrace(BaseModel, extra="forbid"):
@@ -319,8 +321,8 @@ class XRDTrace(BaseModel, extra="forbid"):
     parser: Literal["xrdtrace"]
     input: Input
     parameters: Params = Field(default_factory=Params)
-    tag: Optional[str] = None
-    externaldate: Optional[ExternalDate] = None
+    tag: str | None = None
+    externaldate: ExternalDate | None = None
 
 
 Steps = Annotated[

@@ -1,6 +1,8 @@
+from __future__ import annotations
+
 import logging
 from collections.abc import Sequence
-from typing import Literal, Optional
+from typing import Literal
 
 from pydantic import BaseModel
 
@@ -16,11 +18,11 @@ logger = logging.getLogger(__name__)
 
 class Recipe(BaseModel, extra="forbid"):
     version: Literal["v1.0", "1.0", "1.1", "2.0"]
-    load: Optional[Sequence[Load]] = None
-    extract: Optional[Sequence[Extract]] = None
-    transform: Optional[Sequence[Transform]] = None
-    plot: Optional[Sequence[Plot]] = None
-    save: Optional[Sequence[Save]] = None
+    load: Sequence[Load] | None = None
+    extract: Sequence[Extract] | None = None
+    transform: Sequence[Transform] | None = None
+    plot: Sequence[Plot] | None = None
+    save: Sequence[Save] | None = None
 
     def update(self):
         logger.info("Updating from Recipe-1.0 to Recipe-2.1")
@@ -30,4 +32,4 @@ class Recipe(BaseModel, extra="forbid"):
             attr = getattr(self, k)
             if attr is not None:
                 nsch[k] = [i.model_dump(by_alias=True, exclude_none=True) for i in attr]
-        return NewRecipe(**nsch)
+        return NewRecipe(**nsch)  # ty: ignore[invalid-argument-type]

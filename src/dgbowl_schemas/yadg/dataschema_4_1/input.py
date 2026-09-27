@@ -1,19 +1,20 @@
+from __future__ import annotations
+
 import os
 from collections.abc import Sequence
-from typing import List, Optional
 
 from pydantic import BaseModel, Field
 
 
 class Input(BaseModel, extra="forbid", populate_by_name=True):
     files: Sequence[str] = Field(alias="folders")
-    prefix: Optional[str] = None
-    suffix: Optional[str] = None
-    contains: Optional[str] = None
-    exclude: Optional[str] = None
+    prefix: str | None = None
+    suffix: str | None = None
+    contains: str | None = None
+    exclude: str | None = None
     encoding: str = "UTF-8"
 
-    def paths(self) -> List[str]:
+    def paths(self) -> list[str]:
         ret = []
         for item in sorted(self.files):
             if os.path.isdir(item):

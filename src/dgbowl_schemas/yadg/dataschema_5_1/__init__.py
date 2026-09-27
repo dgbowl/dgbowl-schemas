@@ -1,5 +1,5 @@
 from collections.abc import Mapping, Sequence
-from typing import Any, Literal, Optional
+from typing import Any, Literal
 
 from pydantic import BaseModel, Field
 
@@ -25,7 +25,7 @@ class DataSchema(BaseModel, extra="forbid"):
 
     version: Literal["5.1"]
 
-    metadata: Optional[Mapping[str, Any]]
+    metadata: Mapping[str, Any]
     """Input metadata for :mod:`yadg`."""
 
     step_defaults: StepDefaults = Field(..., default_factory=StepDefaults)

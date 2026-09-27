@@ -1,6 +1,8 @@
+from __future__ import annotations
+
 import logging
 from collections.abc import Sequence
-from typing import Any, Optional
+from typing import Any
 
 from pydantic import BaseModel, Field, model_validator
 
@@ -8,9 +10,9 @@ logger = logging.getLogger(__name__)
 
 
 class At(BaseModel, extra="forbid"):
-    steps: Sequence[str] = None
-    indices: Sequence[int] = None
-    timestamps: Sequence[float] = None
+    steps: Sequence[str] | None = None
+    indices: Sequence[int] | None = None
+    timestamps: Sequence[float] | None = None
 
     @model_validator(mode="before")
     def check_one_input(cls, values):  # pylint: disable=E0213
@@ -28,7 +30,7 @@ class At(BaseModel, extra="forbid"):
 class Constant(BaseModel, extra="forbid"):
     value: Any
     as_: str = Field(alias="as")
-    units: Optional[str] = None
+    units: str | None = None
 
 
 class Column(BaseModel, extra="forbid"):
@@ -38,14 +40,14 @@ class Column(BaseModel, extra="forbid"):
 
 class Extract(BaseModel, extra="forbid", populate_by_name=True):
     into: str
-    from_: Optional[str] = Field(None, alias="from")
-    at: Optional[At] = None
-    constants: Optional[Sequence[Constant]] = None
-    columns: Optional[Sequence[Column]] = None
+    from_: str | None = Field(None, alias="from")
+    at: At | None = None
+    constants: Sequence[Constant] | None = None
+    columns: Sequence[Column] | None = None
 
     @model_validator(mode="before")
     def check_one_input(cls, values):  # pylint: disable=E0213
         keys = {"constants", "columns"}
         if len(keys.intersection(set(values))) == 0:
-            logging.info("did not provide any of '%s'", keys)
+            logger.info("did not provide any of '%s'", keys)
         return values

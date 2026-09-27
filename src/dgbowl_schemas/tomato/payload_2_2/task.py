@@ -1,4 +1,6 @@
-from typing import Any, Dict, Optional, Union
+from __future__ import annotations
+
+from typing import Any
 
 import pint
 from pydantic import BaseModel, Field, field_validator, model_validator
@@ -20,7 +22,7 @@ class Task(BaseModel, extra="forbid"):
     sampling_interval: float
     """the interval between measurements, in seconds"""
 
-    polling_interval: Optional[float] = None
+    polling_interval: float | None = None
     """
     the interval between polling for data by the ``tomato-job`` process, in seconds;
     defaults to the value in driver settings
@@ -32,27 +34,27 @@ class Task(BaseModel, extra="forbid"):
     on which this :class:`Task` will be executed
     """
 
-    task_name: Optional[str] = None
+    task_name: str | None = None
     """
     the (optional) name of the current :class:`Task`; can be used for triggering other
     :class:`Task` in parallel to this one via :obj:`start_with_task_name`
     """
 
-    task_params: Optional[Dict[str, Any]] = Field(default_factory=dict)
+    task_params: dict[str, Any] = Field(default_factory=dict)
     """
     a :class:`dict` of any additional parameters required to specify the experimental
     technique; the key-value pairs of this :class:`dict` will be used as attr-val
     pairs by the :func:`set_attr` method of the *component* executing this :class:`Task`
     """
 
-    start_with_task_name: Optional[str] = None
+    start_with_task_name: str | None = None
     """
     the :obj:`task_name` of the :class:`Task` that this :class:`Task` should be
     started in parallel with; when set, this :class:`Task` will wait for execution until
     a :class:`Task` with the matching :obj:`task_name` is started
     """
 
-    stop_with_task_name: Optional[str] = None
+    stop_with_task_name: str | None = None
     """
     the :obj:`task_name` of the :class:`Task` that, when started, will stop the execution
     of this :class:`Task`; when set, this :class:`Task` will execute normally, but if a
@@ -79,7 +81,7 @@ class Task(BaseModel, extra="forbid"):
     @field_validator(
         "max_duration", "sampling_interval", "polling_interval", mode="before"
     )
-    def convert_str_to_seconds(cls, v: Union[str, float]) -> float:
+    def convert_str_to_seconds(cls, v: str | float) -> float:
         if v is None:
             return v
         elif isinstance(v, str):

@@ -1,9 +1,11 @@
+from __future__ import annotations
+
 import inspect
 import logging
 import sys
 from abc import ABC
 from collections.abc import Mapping
-from typing import Any, Literal, Optional, TypeVar
+from typing import Any, Literal, TypeVar
 
 import tzlocal
 from babel import Locale
@@ -18,11 +20,11 @@ logger = logging.getLogger(__name__)
 class FileType(BaseModel, ABC, extra="forbid"):
     """Template abstract base class for parser classes."""
 
-    filetype: Optional[str] = None
-    timezone: Optional[str] = None
-    locale: Optional[str] = None
-    encoding: Optional[str] = None
-    parameters: Optional[Any] = None
+    filetype: str | None = None
+    timezone: str | None = None
+    locale: str | None = None
+    encoding: str | None = None
+    parameters: Any | None = None
 
     @field_validator("timezone")
     @classmethod
@@ -64,13 +66,13 @@ class Basic_csv(FileType):
         sep: str = ","
         """Separator of table columns."""
 
-        strip: Optional[str] = None
+        strip: str | None = None
         """A :class:`str` of characters to strip from headers & data."""
 
-        units: Optional[Mapping[str, str]] = None
+        units: Mapping[str, str] | None = None
         """A :class:`dict` containing ``column: unit`` keypairs."""
 
-        timestamp: Optional[Timestamps] = None
+        timestamp: Timestamps | None = None
         """Timestamp specification allowing calculation of Unix timestamp for
         each table row."""
 
@@ -96,7 +98,7 @@ class EClab_mpr(FileType):
 
 class EClab_mpt(FileType):
     filetype: Literal["eclab.mpt"]
-    encoding: Optional[str] = "windows-1252"
+    encoding: str = "windows-1252"
 
     @field_validator("encoding")
     @classmethod
@@ -118,7 +120,7 @@ class EZChrom_dat(FileType):
 
 class EZChrom_asc(FileType):
     filetype: Literal["ezchrom.asc"]
-    encoding: Optional[str] = "windows-1252"
+    encoding: str = "windows-1252"
 
     @field_validator("encoding")
     @classmethod
@@ -188,7 +190,7 @@ classlist = []
 for name, obj in inspect.getmembers(sys.modules[__name__]):
     if inspect.isclass(obj) and issubclass(obj, FileType) and obj is not FileType:
         classlist.append(obj)
-FileTypes = TypeVar("FileTypes", *classlist)
+FileTypes = TypeVar("FileTypes", *classlist)  # ty: ignore[invalid-legacy-type-variable]
 
 
 class ExtractorFactory(BaseModel):

@@ -1,4 +1,6 @@
-from typing import Literal, Optional
+from __future__ import annotations
+
+from typing import Literal
 
 from pydantic import BaseModel, Field
 
@@ -13,8 +15,8 @@ class Tomato(BaseModel, extra="forbid"):
         Provide the ``path`` and ``prefix`` for the final FAIR-data archive of the *job*.
         """
 
-        path: str = None
-        prefix: str = None
+        path: str | None = None
+        prefix: str | None = None
 
     class Snapshot(BaseModel, extra="forbid"):
         """
@@ -22,8 +24,8 @@ class Tomato(BaseModel, extra="forbid"):
         functionality of tomato.
         """
 
-        path: str = None
-        prefix: str = None
+        path: str | None = None
+        prefix: str | None = None
         frequency: int = 3600
 
     unlock_when_done: bool = False
@@ -34,5 +36,5 @@ class Tomato(BaseModel, extra="forbid"):
     output: Output = Field(default_factory=Output)
     """Options for final FAIR data output."""
 
-    snapshot: Optional[Snapshot] = None
+    snapshot: Snapshot | None = None
     """Options for periodic snapshotting."""

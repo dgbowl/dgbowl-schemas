@@ -9,5 +9,4 @@ class Parameters(BaseModel, extra="forbid"):
     """Empty parameters specification with no extras allowed."""
 
 
-
 Timestamps = Union[Timestamp, TimeDate, UTS]

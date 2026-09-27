@@ -1,4 +1,6 @@
-from typing import Any, Dict, Optional
+from __future__ import annotations
+
+from typing import Any
 
 from pydantic import BaseModel
 
@@ -19,10 +21,10 @@ class Task(BaseModel, extra="forbid"):
     sampling_interval: float
     """the interval between measurements, in seconds"""
 
-    polling_interval: Optional[int] = None
+    polling_interval: int | None = None
     """the interval between polling for data, in seconds; defaults to the value in driver settings"""
 
     technique_name: str
 
-    technique_params: Optional[Dict[str, Any]] = None
+    technique_params: dict[str, Any] | None = None
     """a :class:`dict` of additional parameters required to specify the experimental technique"""

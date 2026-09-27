@@ -1,6 +1,8 @@
+from __future__ import annotations
+
 import locale
 from abc import ABC
-from typing import Literal, Optional, Union
+from typing import Literal, Union
 
 import tzlocal
 from pydantic import BaseModel, Field, field_validator
@@ -11,10 +13,10 @@ from .stepdefaults import StepDefaults
 class FileType(BaseModel, ABC, extra="forbid"):
     """Template abstract base class for parser classes."""
 
-    filetype: Optional[str] = None
-    timezone: Optional[str] = None
-    locale: Optional[str] = None
-    encoding: Optional[str] = None
+    filetype: str | None = None
+    timezone: str | None = None
+    locale: str | None = None
+    encoding: str | None = None
 
     @field_validator("timezone")
     @classmethod
@@ -27,7 +29,7 @@ class FileType(BaseModel, ABC, extra="forbid"):
     @classmethod
     def locale_set_default(cls, v):
         if v == "getlocale":
-            v = ".".join(locale.getlocale())
+            v = ".".join(locale.getlocale())  # ty: ignore[no-matching-overload]
         return v
 
 
@@ -193,17 +195,17 @@ class ExtractorFactory(BaseModel):
 
     """
 
-    extractor: Union[
-        DummyFileTypes,
-        FlowDataFileTypes,
-        ElectroChemFileTypes,
-        ChromDataFileTypes,
-        ChromTraceFileTypes,
-        MassTraceFileTypes,
-        QFTraceFileTypes,
-        XPSTraceFileTypes,
-        XRDTraceFileTypes,
-    ] = Field(..., discriminator="filetype")
+    extractor: (
+        DummyFileTypes
+        | FlowDataFileTypes
+        | ElectroChemFileTypes
+        | ChromDataFileTypes
+        | ChromTraceFileTypes
+        | MassTraceFileTypes
+        | QFTraceFileTypes
+        | XPSTraceFileTypes
+        | XRDTraceFileTypes
+    ) = Field(..., discriminator="filetype")
 
     @field_validator("extractor")
     @classmethod
