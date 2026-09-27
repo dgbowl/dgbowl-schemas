@@ -1,7 +1,3 @@
-from __future__ import annotations
-
-from typing import Union
-
 from pydantic import BaseModel
 
 from .timestamp import UTS, TimeDate, Timestamp
@@ -12,4 +8,4 @@ class Tol(BaseModel, extra="forbid"):
     rtol: float | None = None
 
 
-Timestamps = Union[Timestamp, TimeDate, UTS]
+Timestamps = Timestamp | TimeDate | UTS

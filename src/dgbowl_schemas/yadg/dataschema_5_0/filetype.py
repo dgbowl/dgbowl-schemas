@@ -1,8 +1,6 @@
-from __future__ import annotations
-
 import locale
 from abc import ABC
-from typing import Literal, Union
+from typing import Literal
 
 import tzlocal
 from pydantic import BaseModel, Field, field_validator
@@ -42,10 +40,7 @@ class Tomato_json(FileType):
     filetype: Literal["tomato.json"]
 
 
-DummyFileTypes = Union[
-    NoFileType,
-    Tomato_json,
-]
+DummyFileTypes = NoFileType | Tomato_json
 
 
 class Drycal_csv(FileType):
@@ -60,11 +55,7 @@ class Drycal_txt(FileType):
     filetype: Literal["drycal.txt"]
 
 
-FlowDataFileTypes = Union[
-    Drycal_csv,
-    Drycal_rtf,
-    Drycal_txt,
-]
+FlowDataFileTypes = Drycal_csv | Drycal_rtf | Drycal_txt
 
 
 class EClab_mpr(FileType):
@@ -76,11 +67,7 @@ class EClab_mpt(FileType):
     encoding: str = "windows-1252"
 
 
-ElectroChemFileTypes = Union[
-    EClab_mpr,
-    EClab_mpt,
-    Tomato_json,
-]
+ElectroChemFileTypes = EClab_mpr | EClab_mpt | Tomato_json
 
 
 class EZChrom_asc(FileType):
@@ -119,22 +106,11 @@ class EmpaLC_xlsx(FileType):
     filetype: Literal["empalc.xlsx"]
 
 
-ChromTraceFileTypes = Union[
-    EZChrom_asc,
-    Fusion_json,
-    Fusion_zip,
-    Agilent_ch,
-    Agilent_dx,
-    Agilent_csv,
-]
+ChromTraceFileTypes = (
+    EZChrom_asc | Fusion_json | Fusion_zip | Agilent_ch | Agilent_dx | Agilent_csv
+)
 
-ChromDataFileTypes = Union[
-    Fusion_json,
-    Fusion_zip,
-    Fusion_csv,
-    EmpaLC_csv,
-    EmpaLC_xlsx,
-]
+ChromDataFileTypes = Fusion_json | Fusion_zip | Fusion_csv | EmpaLC_csv | EmpaLC_xlsx
 
 
 class Quadstar_sac(FileType):
@@ -170,11 +146,7 @@ class Panalytical_csv(FileType):
     filetype: Literal["panalytical.csv"]
 
 
-XRDTraceFileTypes = Union[
-    Panalytical_xrdml,
-    Panalytical_xy,
-    Panalytical_csv,
-]
+XRDTraceFileTypes = Panalytical_xrdml | Panalytical_xy | Panalytical_csv
 
 
 class ExtractorFactory(BaseModel):

@@ -1,6 +1,4 @@
-from __future__ import annotations
-
-from typing import Literal, Union
+from typing import Literal
 
 from pydantic import BaseModel, Field
 
@@ -45,10 +43,6 @@ class GCTrace(BaseModel, extra="forbid", populate_by_name=True):
 
 
 Steps = Annotated[
-    Union[
-        MeasCSV,
-        QFTrace,
-        GCTrace,
-    ],
+    MeasCSV | QFTrace | GCTrace,
     Field(discriminator="datagram"),
 ]

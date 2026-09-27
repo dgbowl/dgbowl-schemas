@@ -1,7 +1,5 @@
-from __future__ import annotations
-
 from collections.abc import Mapping
-from typing import Any, Literal, Union
+from typing import Any, Literal
 
 from pydantic import BaseModel, Field
 
@@ -153,16 +151,14 @@ class XPSTrace(BaseModel, extra="forbid", populate_by_name=True):
 
 
 Steps = Annotated[
-    Union[
-        Dummy,
-        BasicCSV,
-        MeasCSV,
-        FlowData,
-        ElectroChem,
-        ChromTrace,
-        MassTrace,
-        QFTrace,
-        XPSTrace,
-    ],
+    Dummy
+    | BasicCSV
+    | MeasCSV
+    | FlowData
+    | ElectroChem
+    | ChromTrace
+    | MassTrace
+    | QFTrace
+    | XPSTrace,
     Field(discriminator="parser"),
 ]
