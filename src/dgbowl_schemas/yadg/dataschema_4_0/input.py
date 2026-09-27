@@ -1,16 +1,17 @@
-from pydantic import BaseModel, model_validator
-from typing import Optional, Sequence, List
 import os
+from collections.abc import Sequence
+
+from pydantic import BaseModel, model_validator
 
 
 class Input(BaseModel, extra="forbid"):
-    files: Optional[Sequence[str]] = None
-    folders: Optional[Sequence[str]] = None
-    prefix: Optional[str] = None
-    suffix: Optional[str] = None
-    contains: Optional[str] = None
-    exclude: Optional[str] = None
-    encoding: Optional[str] = "UTF-8"
+    files: Sequence[str] | None = None
+    folders: Sequence[str] | None = None
+    prefix: str | None = None
+    suffix: str | None = None
+    contains: str | None = None
+    exclude: str | None = None
+    encoding: str = "UTF-8"
 
     @model_validator(mode="before")
     def files_or_folders(cls, values):  # pylint: disable=E0213
@@ -20,7 +21,7 @@ class Input(BaseModel, extra="forbid"):
             raise ValueError("Neither 'files' nor 'folders' provided.")
         return values
 
-    def paths(self) -> List[str]:
+    def paths(self) -> list[str]:
         ret = []
         if self.files is not None:
             paths = self.files

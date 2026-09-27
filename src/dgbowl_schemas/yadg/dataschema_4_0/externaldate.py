@@ -1,6 +1,7 @@
-from pydantic import BaseModel, Field
-from typing import Literal, Optional, Union
 import logging
+from typing import Literal
+
+from pydantic import BaseModel, Field
 
 logger = logging.getLogger(__name__)
 
@@ -9,7 +10,7 @@ class ExternalDateFile(BaseModel, extra="forbid"):
     class Content(BaseModel, extra="forbid"):
         path: str
         type: str
-        match: Optional[str]
+        match: str | None = None
 
     file: Content
 
@@ -31,10 +32,10 @@ class ExternalDateUTSOffset(BaseModel, extra="forbid"):
 
 
 class ExternalDate(BaseModel, extra="forbid", populate_by_name=True):
-    using: Union[
-        ExternalDateFile,
-        ExternalDateFilename,
-        ExternalDateISOString,
-        ExternalDateUTSOffset,
-    ] = Field(alias="from")
+    using: (
+        ExternalDateFile
+        | ExternalDateFilename
+        | ExternalDateISOString
+        | ExternalDateUTSOffset
+    ) = Field(alias="from")
     mode: Literal["add", "replace"] = "add"

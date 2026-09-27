@@ -1,14 +1,21 @@
 import logging
+from collections.abc import Mapping, Sequence
+from typing import Any, Literal
+
 from pydantic import BaseModel, Field
-from typing import Sequence, Optional, Mapping, Any, Literal
-from .step import Step
-from .stepdefaults import StepDefaults
-from .filetype import (  # noqa: F401
+
+from ..dataschema_7_0 import DataSchema as NewDataSchema
+from .filetype import (
     ExtractorFactory as ExtractorFactory,
+)
+from .filetype import (
     FileType as FileType,
+)
+from .filetype import (
     FileTypes as FileTypes,
 )
-from ..dataschema_7_0 import DataSchema as NewDataSchema
+from .step import Step
+from .stepdefaults import StepDefaults
 
 logger = logging.getLogger(__name__)
 
@@ -21,7 +28,7 @@ class DataSchema(BaseModel, extra="forbid"):
 
     version: Literal["6.0"]
 
-    metadata: Optional[Mapping[str, Any]]
+    metadata: Mapping[str, Any]
     """Input metadata for :mod:`yadg`."""
 
     step_defaults: StepDefaults = Field(..., default_factory=StepDefaults)

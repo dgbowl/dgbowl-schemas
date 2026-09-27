@@ -1,12 +1,11 @@
 from pydantic import BaseModel
-from typing import Optional
 
 
 class TimestampSpec(BaseModel, extra="forbid"):
     """Specification of the column index and string format of the timestamp."""
 
-    index: Optional[int] = None
-    format: Optional[str] = None
+    index: int | None = None
+    format: str | None = None
 
 
 class Timestamp(BaseModel, extra="forbid"):
@@ -24,5 +23,5 @@ class UTS(BaseModel, extra="forbid"):
 class TimeDate(BaseModel, extra="forbid"):
     """Timestamp from a separate date and/or time column."""
 
-    date: Optional[TimestampSpec] = None
-    time: Optional[TimestampSpec] = None
+    date: TimestampSpec | None = None
+    time: TimestampSpec | None = None

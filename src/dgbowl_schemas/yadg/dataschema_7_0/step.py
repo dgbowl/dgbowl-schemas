@@ -1,12 +1,12 @@
 from pydantic import BaseModel
-from typing import Optional, Union
+
 from .externaldate import ExternalDate
-from .input import Input
 from .filetype import FileTypes
+from .input import Input
 
 
 class Step(BaseModel, extra="forbid"):
-    extractor: Union[FileTypes]
+    extractor: FileTypes
     input: Input
-    tag: Optional[str] = None
-    externaldate: Optional[ExternalDate] = None
+    tag: str | None = None
+    externaldate: ExternalDate | None = None

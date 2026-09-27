@@ -1,6 +1,7 @@
-from pydantic import BaseModel, Field
-from typing import Optional, Sequence, List
 import os
+from collections.abc import Sequence
+
+from pydantic import BaseModel, Field
 
 
 class Input(BaseModel, extra="forbid", populate_by_name=True):
@@ -9,22 +10,22 @@ class Input(BaseModel, extra="forbid", populate_by_name=True):
     files: Sequence[str] = Field(alias="folders")
     """Files, or folders to be searched for matching files."""
 
-    prefix: Optional[str] = None
+    prefix: str | None = None
     """Prefix of the filenames to be matched."""
 
-    suffix: Optional[str] = None
+    suffix: str | None = None
     """Suffix of the filenames to be matched."""
 
-    contains: Optional[str] = None
+    contains: str | None = None
     """A string the matched filenames must contain."""
 
-    exclude: Optional[str] = None
+    exclude: str | None = None
     """A string the matched filenames must not contain."""
 
     encoding: str = "UTF-8"
     """File encoding."""
 
-    def paths(self) -> List[str]:
+    def paths(self) -> list[str]:
         """Returns a list of files to be processed by the :class:`Step`."""
         ret = []
         for item in sorted(self.files):

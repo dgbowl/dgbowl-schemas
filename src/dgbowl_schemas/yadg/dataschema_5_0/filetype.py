@@ -1,8 +1,9 @@
-from pydantic import BaseModel, Field, field_validator
-from abc import ABC
-from typing import Optional, Literal, Union
-import tzlocal
 import locale
+from abc import ABC
+from typing import Literal
+
+import tzlocal
+from pydantic import BaseModel, Field, field_validator
 
 from .stepdefaults import StepDefaults
 
@@ -10,10 +11,10 @@ from .stepdefaults import StepDefaults
 class FileType(BaseModel, ABC, extra="forbid"):
     """Template abstract base class for parser classes."""
 
-    filetype: Optional[str] = None
-    timezone: Optional[str] = None
-    locale: Optional[str] = None
-    encoding: Optional[str] = None
+    filetype: str | None = None
+    timezone: str | None = None
+    locale: str | None = None
+    encoding: str | None = None
 
     @field_validator("timezone")
     @classmethod
@@ -26,7 +27,7 @@ class FileType(BaseModel, ABC, extra="forbid"):
     @classmethod
     def locale_set_default(cls, v):
         if v == "getlocale":
-            v = ".".join(locale.getlocale())
+            v = ".".join(locale.getlocale())  # ty: ignore[no-matching-overload]
         return v
 
 
@@ -39,10 +40,7 @@ class Tomato_json(FileType):
     filetype: Literal["tomato.json"]
 
 
-DummyFileTypes = Union[
-    NoFileType,
-    Tomato_json,
-]
+DummyFileTypes = NoFileType | Tomato_json
 
 
 class Drycal_csv(FileType):
@@ -57,11 +55,7 @@ class Drycal_txt(FileType):
     filetype: Literal["drycal.txt"]
 
 
-FlowDataFileTypes = Union[
-    Drycal_csv,
-    Drycal_rtf,
-    Drycal_txt,
-]
+FlowDataFileTypes = Drycal_csv | Drycal_rtf | Drycal_txt
 
 
 class EClab_mpr(FileType):
@@ -73,11 +67,7 @@ class EClab_mpt(FileType):
     encoding: str = "windows-1252"
 
 
-ElectroChemFileTypes = Union[
-    EClab_mpr,
-    EClab_mpt,
-    Tomato_json,
-]
+ElectroChemFileTypes = EClab_mpr | EClab_mpt | Tomato_json
 
 
 class EZChrom_asc(FileType):
@@ -116,22 +106,11 @@ class EmpaLC_xlsx(FileType):
     filetype: Literal["empalc.xlsx"]
 
 
-ChromTraceFileTypes = Union[
-    EZChrom_asc,
-    Fusion_json,
-    Fusion_zip,
-    Agilent_ch,
-    Agilent_dx,
-    Agilent_csv,
-]
+ChromTraceFileTypes = (
+    EZChrom_asc | Fusion_json | Fusion_zip | Agilent_ch | Agilent_dx | Agilent_csv
+)
 
-ChromDataFileTypes = Union[
-    Fusion_json,
-    Fusion_zip,
-    Fusion_csv,
-    EmpaLC_csv,
-    EmpaLC_xlsx,
-]
+ChromDataFileTypes = Fusion_json | Fusion_zip | Fusion_csv | EmpaLC_csv | EmpaLC_xlsx
 
 
 class Quadstar_sac(FileType):
@@ -167,11 +146,7 @@ class Panalytical_csv(FileType):
     filetype: Literal["panalytical.csv"]
 
 
-XRDTraceFileTypes = Union[
-    Panalytical_xrdml,
-    Panalytical_xy,
-    Panalytical_csv,
-]
+XRDTraceFileTypes = Panalytical_xrdml | Panalytical_xy | Panalytical_csv
 
 
 class ExtractorFactory(BaseModel):
@@ -192,17 +167,17 @@ class ExtractorFactory(BaseModel):
 
     """
 
-    extractor: Union[
-        DummyFileTypes,
-        FlowDataFileTypes,
-        ElectroChemFileTypes,
-        ChromDataFileTypes,
-        ChromTraceFileTypes,
-        MassTraceFileTypes,
-        QFTraceFileTypes,
-        XPSTraceFileTypes,
-        XRDTraceFileTypes,
-    ] = Field(..., discriminator="filetype")
+    extractor: (
+        DummyFileTypes
+        | FlowDataFileTypes
+        | ElectroChemFileTypes
+        | ChromDataFileTypes
+        | ChromTraceFileTypes
+        | MassTraceFileTypes
+        | QFTraceFileTypes
+        | XPSTraceFileTypes
+        | XRDTraceFileTypes
+    ) = Field(..., discriminator="filetype")
 
     @field_validator("extractor")
     @classmethod

@@ -1,5 +1,7 @@
+from collections.abc import Mapping
+from typing import Any, Literal
+
 from pydantic import BaseModel
-from typing import Optional, Mapping, Literal, Any
 
 
 class Metadata(BaseModel, extra="forbid"):
@@ -7,7 +9,7 @@ class Metadata(BaseModel, extra="forbid"):
 
     class Provenance(BaseModel, extra="forbid"):
         type: str
-        metadata: Optional[Mapping[str, Any]] = None
+        metadata: Mapping[str, Any] | None = None
 
     version: Literal["4.2"]
 

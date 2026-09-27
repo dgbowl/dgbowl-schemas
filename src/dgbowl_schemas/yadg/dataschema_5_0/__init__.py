@@ -1,15 +1,19 @@
-from pydantic import BaseModel, Field
-from typing import Sequence
-from babel import Locale, UnknownLocaleError
 import logging
+from collections.abc import Sequence
+
+from babel import Locale, UnknownLocaleError
+from pydantic import BaseModel, Field
+
+from ..dataschema_5_1 import DataSchema as NewDataSchema
+from .filetype import (
+    ExtractorFactory as ExtractorFactory,
+)
+from .filetype import (
+    FileType as FileType,
+)
 from .metadata import Metadata
 from .step import Steps
 from .stepdefaults import StepDefaults
-from .filetype import (  # noqa: F401
-    ExtractorFactory as ExtractorFactory,
-    FileType as FileType,
-)
-from ..dataschema_5_1 import DataSchema as NewDataSchema
 
 logger = logging.getLogger(__name__)
 

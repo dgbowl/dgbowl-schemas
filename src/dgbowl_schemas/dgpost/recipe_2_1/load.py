@@ -1,6 +1,7 @@
-from pydantic import BaseModel, Field, field_validator
-from typing import Literal, Optional
 import logging
+from typing import Literal
+
+from pydantic import BaseModel, Field, field_validator
 
 logger = logging.getLogger(__name__)
 
@@ -19,7 +20,7 @@ class Load(BaseModel, extra="forbid", populate_by_name=True):
     ``yadg~5.0``, a ``datagram`` file in JSON format created using ``yadg~4.0``, or a
     ``table`` stored in a ``pkl`` file as created by Pandas."""
 
-    check: Optional[bool] = None
+    check: bool | None = None
     """
     .. deprecated:: 2.1
 

@@ -1,5 +1,7 @@
+from collections.abc import Sequence
+from typing import Any
+
 from pydantic import BaseModel, Field
-from typing import Sequence, Any, Dict
 
 
 class Transform(BaseModel, extra="forbid", populate_by_name=True):
@@ -11,5 +13,5 @@ class Transform(BaseModel, extra="forbid", populate_by_name=True):
     with_: str = Field(alias="with")
     """The name of the transform function from **dgpost's** transform library."""
 
-    using: Sequence[Dict[str, Any]]
+    using: Sequence[dict[str, Any]]
     """Specification of any parameters required by the transform function."""

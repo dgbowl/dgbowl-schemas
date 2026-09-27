@@ -1,5 +1,7 @@
+from collections.abc import Sequence
+from typing import Literal
+
 from pydantic import BaseModel, Field
-from typing import Sequence, Literal, Union, Optional
 
 
 class Pivot(BaseModel, extra="forbid", populate_by_name=True):
@@ -11,10 +13,10 @@ class Pivot(BaseModel, extra="forbid", populate_by_name=True):
     as_: str = Field(alias="as")
     """The name for the resulting table for in memory storage."""
 
-    using: Union[str, Sequence[str]]
+    using: str | Sequence[str]
     """A column name (or their sequence) by which the pivoting is performed."""
 
-    columns: Optional[Sequence[str]] = None
+    columns: Sequence[str] | None = None
     """A sequence of column names which are to be pivoted."""
 
     timestamp: Literal["first", "last", "mean"] = "first"
@@ -22,6 +24,6 @@ class Pivot(BaseModel, extra="forbid", populate_by_name=True):
     row, the ``first`` or ``last`` timestamp can be used as index. Alternatively, the
     ``mean`` can be calculated and used as index."""
 
-    timedelta: Optional[str] = None
+    timedelta: str | None = None
     """If provided, the corresponding time deltas for the pivoted data is computed and
     stored under the provided column name. By default, this data is not computed."""

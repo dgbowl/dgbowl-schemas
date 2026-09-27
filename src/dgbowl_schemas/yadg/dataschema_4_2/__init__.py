@@ -1,10 +1,11 @@
-from pydantic import BaseModel
-from typing import Sequence
-from .metadata import Metadata
-from .step import Steps
 import logging
+from collections.abc import Sequence
+
+from pydantic import BaseModel
 
 from ..dataschema_5_0 import DataSchema as NewDataSchema
+from .metadata import Metadata
+from .step import Steps
 
 logger = logging.getLogger(__name__)
 
@@ -52,7 +53,7 @@ class DataSchema(BaseModel, extra="forbid"):
             if len(extractor) > 0:
                 nstep["extractor"] = extractor
 
-            for k in {
+            for k in (
                 "sigma",
                 "calfile",
                 "convert",
@@ -64,7 +65,7 @@ class DataSchema(BaseModel, extra="forbid"):
                 "cutoff",
                 "threshold",
                 "transpose",
-            }:
+            ):
                 if k in nstep["parameters"]:
                     logger.warning(
                         "Parameter '%s' of parser '%s' is not "

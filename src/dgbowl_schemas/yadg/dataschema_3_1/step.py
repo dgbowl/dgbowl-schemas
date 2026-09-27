@@ -1,22 +1,24 @@
+from typing import Literal
+
 from pydantic import BaseModel, Field
-from typing import Optional, Literal, Union
+
 from .input import Input
 
 try:
     from typing import Annotated
 except ImportError:
-    from typing_extensions import Annotated
+    from typing import Annotated
 
 
 class MeasCSV(BaseModel, extra="forbid", populate_by_name=True):
     class Params(BaseModel, extra="forbid"):
-        Tcalfile: Optional[str] = None
-        MFCcalfile: Optional[str] = None
+        Tcalfile: str | None = None
+        MFCcalfile: str | None = None
 
     datagram: Literal["meascsv"]
     input: Input = Field(alias="import")
     parameters: Params = Field(default_factory=Params)
-    export: Optional[str] = None
+    export: str | None = None
 
 
 class QFTrace(BaseModel, extra="forbid", populate_by_name=True):
@@ -27,24 +29,20 @@ class QFTrace(BaseModel, extra="forbid", populate_by_name=True):
     datagram: Literal["qftrace"]
     input: Input = Field(alias="import")
     parameters: Params = Field(default_factory=Params)
-    export: Optional[str] = None
+    export: str | None = None
 
 
 class GCTrace(BaseModel, extra="forbid", populate_by_name=True):
     class Params(BaseModel, extra="forbid"):
-        calfile: Optional[str] = None
+        calfile: str | None = None
 
     datagram: Literal["gctrace"]
     input: Input = Field(alias="import")
     parameters: Params = Field(default_factory=Params)
-    export: Optional[str] = None
+    export: str | None = None
 
 
 Steps = Annotated[
-    Union[
-        MeasCSV,
-        QFTrace,
-        GCTrace,
-    ],
+    MeasCSV | QFTrace | GCTrace,
     Field(discriminator="datagram"),
 ]

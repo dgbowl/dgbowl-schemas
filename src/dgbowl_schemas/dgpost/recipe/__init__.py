@@ -1,3 +1,3 @@
-from ..recipe_2_1 import Recipe, Load, Extract, Pivot, Transform, Plot, Save
+from ..recipe_2_1 import Extract, Load, Pivot, Plot, Recipe, Save, Transform
 
-__all__ = ["Recipe", "Load", "Extract", "Pivot", "Transform", "Plot", "Save"]
+__all__ = ["Extract", "Load", "Pivot", "Plot", "Recipe", "Save", "Transform"]

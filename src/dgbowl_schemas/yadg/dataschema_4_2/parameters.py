@@ -1,14 +1,13 @@
 from pydantic import BaseModel
-from typing import Optional, Union
 
-from .timestamp import Timestamp, TimeDate, UTS
+from .timestamp import UTS, TimeDate, Timestamp
 
 
 class Tol(BaseModel, extra="forbid"):
     """Specification of absolute and relative tolerance/error."""
 
-    atol: Optional[float] = None
-    rtol: Optional[float] = None
+    atol: float | None = None
+    rtol: float | None = None
 
 
-Timestamps = Union[Timestamp, TimeDate, UTS]
+Timestamps = Timestamp | TimeDate | UTS

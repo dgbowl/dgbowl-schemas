@@ -1,12 +1,13 @@
-import pytest
-import os
 import json
+import locale
+import os
+
+import pytest
+from babel import UnknownLocaleError
+from pydantic import BaseModel, ValidationError
+
 from dgbowl_schemas.yadg import to_dataschema
 from dgbowl_schemas.yadg.dataschema import ExtractorFactory
-import locale
-from pydantic import BaseModel
-from babel import UnknownLocaleError
-from pydantic import ValidationError
 
 
 @pytest.mark.parametrize(
@@ -189,7 +190,7 @@ def test_extractor_factory(input, output):
     ],
 )
 def test_stepdefaults_locale(input, output):
-    ret = ExtractorFactory(extractor=dict(filetype="example", locale=input)).extractor
+    ret = ExtractorFactory(extractor={"filetype": "example", "locale": input}).extractor
     assert ret.locale == output
 
 
@@ -205,4 +206,4 @@ def test_stepdefaults_locale(input, output):
 )
 def test_stepdefaults_locale_fail(input):
     with pytest.raises((ValidationError, UnknownLocaleError)):
-        ExtractorFactory(extractor=dict(filetype="example", locale=input))
+        ExtractorFactory(extractor={"filetype": "example", "locale": input})

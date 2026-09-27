@@ -1,12 +1,13 @@
+from typing import Literal
+
 from pydantic import BaseModel
-from typing import Literal, Optional, Union
 
 
 class ExternalDateFile(BaseModel, extra="forbid"):
     class Content(BaseModel, extra="forbid"):
         path: str
         type: str
-        match: Optional[str] = None
+        match: str | None = None
 
     file: Content
 
@@ -28,10 +29,10 @@ class ExternalDateUTSOffset(BaseModel, extra="forbid"):
 
 
 class ExternalDate(BaseModel, extra="forbid"):
-    using: Union[
-        ExternalDateFile,
-        ExternalDateFilename,
-        ExternalDateISOString,
-        ExternalDateUTSOffset,
-    ]
+    using: (
+        ExternalDateFile
+        | ExternalDateFilename
+        | ExternalDateISOString
+        | ExternalDateUTSOffset
+    )
     mode: Literal["add", "replace"] = "add"

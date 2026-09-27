@@ -1,5 +1,6 @@
+from typing import Literal
+
 from pydantic import BaseModel
-from typing import Literal, Optional, Union
 
 
 class ExternalDateFile(BaseModel, extra="forbid"):
@@ -12,7 +13,7 @@ class ExternalDateFile(BaseModel, extra="forbid"):
         type: str
         """Type of the external date information file."""
 
-        match: Optional[str] = None
+        match: str | None = None
         """String to be matched within the file."""
 
     file: Content
@@ -46,12 +47,12 @@ class ExternalDateUTSOffset(BaseModel, extra="forbid"):
 class ExternalDate(BaseModel, extra="forbid"):
     """Supply timestamping information that are external to the processed file."""
 
-    using: Union[
-        ExternalDateFile,
-        ExternalDateFilename,
-        ExternalDateISOString,
-        ExternalDateUTSOffset,
-    ]
+    using: (
+        ExternalDateFile
+        | ExternalDateFilename
+        | ExternalDateISOString
+        | ExternalDateUTSOffset
+    )
     """Specification of the external date format."""
 
     mode: Literal["add", "replace"] = "add"

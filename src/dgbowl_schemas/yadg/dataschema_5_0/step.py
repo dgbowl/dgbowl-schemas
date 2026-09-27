@@ -1,37 +1,39 @@
-from pydantic import BaseModel, Field
 from abc import ABC
-from typing import Optional, Literal, Mapping, Union
+from collections.abc import Mapping
+from typing import Literal
+
+from pydantic import BaseModel, Field
+
 from .externaldate import ExternalDate
-from .input import Input
-from .parameters import Parameters, Timestamps, Timestamp
 from .filetype import (
-    FileType,
-    NoFileType,
-    DummyFileTypes,
-    FlowDataFileTypes,
-    ElectroChemFileTypes,
-    ChromTraceFileTypes,
     ChromDataFileTypes,
+    ChromTraceFileTypes,
+    DummyFileTypes,
+    ElectroChemFileTypes,
+    FileType,
+    FlowDataFileTypes,
     MassTraceFileTypes,
+    NoFileType,
     QFTraceFileTypes,
     XPSTraceFileTypes,
     XRDTraceFileTypes,
 )
-
+from .input import Input
+from .parameters import Parameters, Timestamp, Timestamps
 
 try:
     from typing import Annotated
 except ImportError:
-    from typing_extensions import Annotated
+    from typing import Annotated
 
 
 class Parser(BaseModel, ABC, extra="forbid"):
-    tag: Optional[str] = None
+    tag: str | None = None
     parser: str
     input: Input
-    extractor: Optional[FileType] = None
-    parameters: Optional[Parameters] = None
-    externaldate: Optional[ExternalDate] = None
+    extractor: FileType | None = None
+    parameters: Parameters | None = None
+    externaldate: ExternalDate | None = None
 
 
 class Dummy(Parser):
@@ -41,7 +43,7 @@ class Dummy(Parser):
         pass
 
     parser: Literal["dummy"]
-    parameters: Optional[Parameters] = None
+    parameters: Parameters | None = None
     extractor: DummyFileTypes = Field(default_factory=NoFileType)
 
 
@@ -52,13 +54,13 @@ class BasicCSV(Parser):
         sep: str = ","
         """Separator of table columns."""
 
-        strip: Optional[str] = None
+        strip: str | None = None
         """A :class:`str` of characters to strip from headers & data."""
 
-        units: Optional[Mapping[str, str]] = None
+        units: Mapping[str, str] | None = None
         """A :class:`dict` containing ``column: unit`` keypairs."""
 
-        timestamp: Optional[Timestamps] = None
+        timestamp: Timestamps | None = None
         """Timestamp specification allowing calculation of Unix timestamp for
         each table row."""
 
@@ -153,18 +155,16 @@ class XRDTrace(Parser):
 
 
 Steps = Annotated[
-    Union[
-        Dummy,
-        BasicCSV,
-        MeasCSV,
-        FlowData,
-        ElectroChem,
-        ChromTrace,
-        ChromData,
-        MassTrace,
-        QFTrace,
-        XPSTrace,
-        XRDTrace,
-    ],
+    Dummy
+    | BasicCSV
+    | MeasCSV
+    | FlowData
+    | ElectroChem
+    | ChromTrace
+    | ChromData
+    | MassTrace
+    | QFTrace
+    | XPSTrace
+    | XRDTrace,
     Field(discriminator="parser"),
 ]

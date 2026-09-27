@@ -1,8 +1,11 @@
 import logging
+from collections.abc import Sequence
+from typing import Literal
+
 from pydantic import BaseModel
-from typing import Sequence, Literal
-from .step import Steps
+
 from ..dataschema_5_1 import DataSchema as NewDataSchema
+from .step import Steps
 
 logger = logging.getLogger(__name__)
 
