@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>dgbowl_schemas.yadg.dataschema_5_1 package &mdash; dgbowl-schemas 126.dev1 documentation</title>
+  <title>dgbowl_schemas.yadg.dataschema_5_1 package &mdash; dgbowl-schemas 126.dev2 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/autodoc_pydantic.css" type="text/css" />
@@ -36,7 +36,7 @@
             dgbowl-schemas
           </a>
               <div class="version">
-                126.dev1
+                126.dev2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -131,16 +131,9 @@ introduced in <code class="docutils literal notranslate"><span class="pre">yadg-
 <span class="w">         </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">"anyOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">"additionalProperties"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null"</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">         </span><span class="p">],</span>
-<span class="w">         </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Metadata"</span>
+<span class="w">         </span><span class="nt">"additionalProperties"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Metadata"</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">"step_defaults"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">"$ref"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#/$defs/StepDefaults"</span>
@@ -680,16 +673,9 @@ introduced in <code class="docutils literal notranslate"><span class="pre">yadg-
 <span class="w">               </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Locale"</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">"encoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">"anyOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                  </span><span class="p">{</span>
-<span class="w">                     </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
-<span class="w">                  </span><span class="p">},</span>
-<span class="w">                  </span><span class="p">{</span>
-<span class="w">                     </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null"</span>
-<span class="w">                  </span><span class="p">}</span>
-<span class="w">               </span><span class="p">],</span>
 <span class="w">               </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"windows-1252"</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Encoding"</span>
+<span class="w">               </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Encoding"</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">"anyOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -741,16 +727,9 @@ introduced in <code class="docutils literal notranslate"><span class="pre">yadg-
 <span class="w">               </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Locale"</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">"encoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">"anyOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                  </span><span class="p">{</span>
-<span class="w">                     </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
-<span class="w">                  </span><span class="p">},</span>
-<span class="w">                  </span><span class="p">{</span>
-<span class="w">                     </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null"</span>
-<span class="w">                  </span><span class="p">}</span>
-<span class="w">               </span><span class="p">],</span>
 <span class="w">               </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"windows-1252"</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Encoding"</span>
+<span class="w">               </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Encoding"</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">"anyOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -1982,16 +1961,9 @@ introduced in <code class="docutils literal notranslate"><span class="pre">yadg-
 <span class="w">               </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Locale"</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">"encoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">"anyOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                  </span><span class="p">{</span>
-<span class="w">                     </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
-<span class="w">                  </span><span class="p">},</span>
-<span class="w">                  </span><span class="p">{</span>
-<span class="w">                     </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null"</span>
-<span class="w">                  </span><span class="p">}</span>
-<span class="w">               </span><span class="p">],</span>
 <span class="w">               </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"utf-8"</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Encoding"</span>
+<span class="w">               </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Encoding"</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">         </span><span class="p">},</span>
 <span class="w">         </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"StepDefaults"</span><span class="p">,</span>
@@ -2373,7 +2345,7 @@ introduced in <code class="docutils literal notranslate"><span class="pre">yadg-
 
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_1.DataSchema.metadata">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">metadata</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_1.DataSchema.metadata" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">metadata</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_1.DataSchema.metadata" title="Permalink to this definition"></a></dt>
 <dd><p>Input metadata for <a class="reference external" href="https://dgbowl.github.io/yadg/main/apidoc/yadg.html#module-yadg" title="(in yadg v7.0.dev2)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">yadg</span></code></a>.</p>
 </dd></dl>
 
@@ -4249,16 +4221,9 @@ each table row.</p>
 <span class="w">         </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Locale"</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">"encoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">"anyOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null"</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">         </span><span class="p">],</span>
 <span class="w">         </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"windows-1252"</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Encoding"</span>
+<span class="w">         </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Encoding"</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">"anyOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -4305,7 +4270,7 @@ each table row.</p>
 
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_1.filetype.EClab_mpt.encoding">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encoding</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'windows-1252'</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_1.filetype.EClab_mpt.encoding" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encoding</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'windows-1252'</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_1.filetype.EClab_mpt.encoding" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Validated by<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -4618,16 +4583,9 @@ each table row.</p>
 <span class="w">         </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Locale"</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">"encoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">"anyOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null"</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">         </span><span class="p">],</span>
 <span class="w">         </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"windows-1252"</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Encoding"</span>
+<span class="w">         </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Encoding"</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="nt">"anyOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -4666,7 +4624,7 @@ each table row.</p>
 
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_1.filetype.EZChrom_asc.encoding">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encoding</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'windows-1252'</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_1.filetype.EZChrom_asc.encoding" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encoding</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'windows-1252'</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_1.filetype.EZChrom_asc.encoding" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Validated by<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -6739,16 +6697,9 @@ correct <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_1.
 <span class="w">               </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Locale"</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">"encoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">"anyOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                  </span><span class="p">{</span>
-<span class="w">                     </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
-<span class="w">                  </span><span class="p">},</span>
-<span class="w">                  </span><span class="p">{</span>
-<span class="w">                     </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null"</span>
-<span class="w">                  </span><span class="p">}</span>
-<span class="w">               </span><span class="p">],</span>
 <span class="w">               </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"windows-1252"</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Encoding"</span>
+<span class="w">               </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Encoding"</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">"anyOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -6800,16 +6751,9 @@ correct <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_1.
 <span class="w">               </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Locale"</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">"encoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">"anyOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                  </span><span class="p">{</span>
-<span class="w">                     </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
-<span class="w">                  </span><span class="p">},</span>
-<span class="w">                  </span><span class="p">{</span>
-<span class="w">                     </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null"</span>
-<span class="w">                  </span><span class="p">}</span>
-<span class="w">               </span><span class="p">],</span>
 <span class="w">               </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"windows-1252"</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Encoding"</span>
+<span class="w">               </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Encoding"</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">"anyOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -8189,7 +8133,7 @@ correct <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_1.
 
 <dl class="py method">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_1.input.Input.paths">
-<span class="sig-name descname"><span class="pre">paths</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_1.input.Input.paths" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">paths</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_1.input.Input.paths" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a list of files to be processed by the <code class="xref py py-class docutils literal notranslate"><span class="pre">Step</span></code>.</p>
 </dd></dl>
 
@@ -8874,16 +8818,9 @@ correct <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_1.
 <span class="w">               </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Locale"</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">"encoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">"anyOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                  </span><span class="p">{</span>
-<span class="w">                     </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
-<span class="w">                  </span><span class="p">},</span>
-<span class="w">                  </span><span class="p">{</span>
-<span class="w">                     </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null"</span>
-<span class="w">                  </span><span class="p">}</span>
-<span class="w">               </span><span class="p">],</span>
 <span class="w">               </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"windows-1252"</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Encoding"</span>
+<span class="w">               </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Encoding"</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">"anyOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -8935,16 +8872,9 @@ correct <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_1.
 <span class="w">               </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Locale"</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">"encoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">"anyOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                  </span><span class="p">{</span>
-<span class="w">                     </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
-<span class="w">                  </span><span class="p">},</span>
-<span class="w">                  </span><span class="p">{</span>
-<span class="w">                     </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null"</span>
-<span class="w">                  </span><span class="p">}</span>
-<span class="w">               </span><span class="p">],</span>
 <span class="w">               </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"windows-1252"</span><span class="p">,</span>
-<span class="w">               </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Encoding"</span>
+<span class="w">               </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Encoding"</span><span class="p">,</span>
+<span class="w">               </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">               </span><span class="nt">"anyOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -10453,16 +10383,9 @@ correct <a class="reference internal" href="#dgbowl_schemas.yadg.dataschema_5_1.
 <span class="w">         </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Locale"</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="nt">"encoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nt">"anyOf"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">               </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null"</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">         </span><span class="p">],</span>
 <span class="w">         </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"utf-8"</span><span class="p">,</span>
-<span class="w">         </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Encoding"</span>
+<span class="w">         </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Encoding"</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
 <span class="w">      </span><span class="p">}</span>
 <span class="w">   </span><span class="p">},</span>
 <span class="w">   </span><span class="nt">"additionalProperties"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
@@ -10516,7 +10439,7 @@ Otherwise timezone offsets may not be accounted for correctly.</p>
 
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="dgbowl_schemas.yadg.dataschema_5_1.stepdefaults.StepDefaults.encoding">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encoding</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'utf-8'</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_1.stepdefaults.StepDefaults.encoding" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encoding</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'utf-8'</span></em><a class="headerlink" href="#dgbowl_schemas.yadg.dataschema_5_1.stepdefaults.StepDefaults.encoding" title="Permalink to this definition"></a></dt>
 <dd><p>Global filetype encoding. Will default to <code class="docutils literal notranslate"><span class="pre">utf-8</span></code>.</p>
 </dd></dl>
 
@@ -10855,7 +10778,7 @@ Otherwise timezone offsets may not be accounted for correctly.</p>
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       <span class="fa fa-book"> Other Versions</span>
-      v: 126.dev1
+      v: 126.dev2
       <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions"> 
