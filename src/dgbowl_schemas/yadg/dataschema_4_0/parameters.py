@@ -1,7 +1,8 @@
-from pydantic import BaseModel
 from typing import Optional, Union
 
-from .timestamp import Timestamp, TimeDate, UTS
+from pydantic import BaseModel
+
+from .timestamp import UTS, TimeDate, Timestamp
 
 
 class Tol(BaseModel, extra="forbid"):

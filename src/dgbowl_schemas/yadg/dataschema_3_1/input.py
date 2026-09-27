@@ -1,6 +1,8 @@
-from pydantic import BaseModel, model_validator
-from typing import Optional, Sequence, List
 import os
+from collections.abc import Sequence
+from typing import List, Optional
+
+from pydantic import BaseModel, model_validator
 
 
 class Input(BaseModel, extra="forbid"):

@@ -2,7 +2,7 @@ import importlib
 from importlib.metadata import version
 
 __version__ = version("dgbowl_schemas")
-__all__ = ["dgpost", "yadg", "tomato"]
+__all__ = ["dgpost", "tomato", "yadg"]
 
 
 def __getattr__(name: str):

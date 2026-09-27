@@ -1,6 +1,8 @@
-from pydantic import BaseModel, Field, model_validator
-from typing import Optional, Sequence, Any
 import logging
+from collections.abc import Sequence
+from typing import Any, Optional
+
+from pydantic import BaseModel, Field, model_validator
 
 logger = logging.getLogger(__name__)
 

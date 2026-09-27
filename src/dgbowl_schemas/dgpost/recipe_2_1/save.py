@@ -1,5 +1,7 @@
+from collections.abc import Sequence
+from typing import Literal, Optional
+
 from pydantic import BaseModel, Field
-from typing import Optional, Literal, Sequence
 
 
 class Save(BaseModel, extra="forbid", populate_by_name=True):

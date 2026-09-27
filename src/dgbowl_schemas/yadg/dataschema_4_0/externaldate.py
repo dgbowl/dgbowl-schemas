@@ -1,6 +1,7 @@
-from pydantic import BaseModel, Field
-from typing import Literal, Optional, Union
 import logging
+from typing import Literal, Optional, Union
+
+from pydantic import BaseModel, Field
 
 logger = logging.getLogger(__name__)
 

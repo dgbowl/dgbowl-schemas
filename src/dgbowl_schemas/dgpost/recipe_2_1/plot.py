@@ -1,5 +1,7 @@
+from collections.abc import Sequence
+from typing import Any, Dict, Literal, Optional, Tuple
+
 from pydantic import BaseModel, Field
-from typing import Literal, Sequence, Optional, Tuple, Any, Dict
 
 
 class SeriesIndex(BaseModel, extra="forbid"):

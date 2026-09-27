@@ -1,11 +1,13 @@
+from typing import Literal, Optional, Union
+
 from pydantic import BaseModel, Field
-from typing import Optional, Literal, Union
+
 from .input import Input
 
 try:
     from typing import Annotated
 except ImportError:
-    from typing_extensions import Annotated
+    from typing import Annotated
 
 
 class MeasCSV(BaseModel, extra="forbid", populate_by_name=True):

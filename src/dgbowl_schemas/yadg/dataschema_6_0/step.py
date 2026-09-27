@@ -1,8 +1,10 @@
-from pydantic import BaseModel
 from typing import Optional, Union
+
+from pydantic import BaseModel
+
 from .externaldate import ExternalDate
-from .input import Input
 from .filetype import FileTypes
+from .input import Input
 
 
 class Step(BaseModel, extra="forbid"):

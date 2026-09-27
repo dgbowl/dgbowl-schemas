@@ -1,14 +1,16 @@
-import sys
 import inspect
-from pydantic import BaseModel, Field, field_validator
+import logging
+import sys
 from abc import ABC
-from typing import Optional, Literal, Mapping, Any, TypeVar
+from collections.abc import Mapping
+from typing import Any, Literal, Optional, TypeVar
+
 import tzlocal
 from babel import Locale
-import logging
+from pydantic import BaseModel, Field, field_validator
 
+from .parameters import Timestamp, Timestamps
 from .stepdefaults import StepDefaults
-from .parameters import Timestamps, Timestamp
 
 logger = logging.getLogger(__name__)
 

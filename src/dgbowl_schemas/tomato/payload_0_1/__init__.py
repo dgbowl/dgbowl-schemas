@@ -1,14 +1,16 @@
-from pydantic import BaseModel, Field, model_validator
-from typing import Sequence, Literal
-from .tomato import Tomato
-from .sample import Sample
-from .method import Method
-from ..payload_0_2 import Payload as NewPayload
-
-import logging
-from pathlib import Path
-import yaml
 import json
+import logging
+from collections.abc import Sequence
+from pathlib import Path
+from typing import Literal
+
+import yaml
+from pydantic import BaseModel, Field, model_validator
+
+from ..payload_0_2 import Payload as NewPayload
+from .method import Method
+from .sample import Sample
+from .tomato import Tomato
 
 logger = logging.getLogger(__name__)
 

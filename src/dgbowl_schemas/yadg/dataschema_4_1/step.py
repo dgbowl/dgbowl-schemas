@@ -1,13 +1,16 @@
+from collections.abc import Mapping
+from typing import Any, Literal, Optional, Union
+
 from pydantic import BaseModel, Field
-from typing import Optional, Literal, Mapping, Any, Union
+
 from .externaldate import ExternalDate
 from .input import Input
-from .parameters import Tol, Timestamps, Timestamp
+from .parameters import Timestamp, Timestamps, Tol
 
 try:
     from typing import Annotated
 except ImportError:
-    from typing_extensions import Annotated
+    from typing import Annotated
 
 
 class Dummy(BaseModel, extra="forbid"):

@@ -1,5 +1,7 @@
+from collections.abc import Mapping
+from typing import Any, Literal, Optional
+
 from pydantic import BaseModel
-from typing import Optional, Mapping, Literal, Any
 
 
 class Metadata(BaseModel, extra="forbid"):

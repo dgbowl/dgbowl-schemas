@@ -1,5 +1,7 @@
+from collections.abc import Sequence
+from typing import Any, Dict
+
 from pydantic import BaseModel, Field
-from typing import Sequence, Any, Dict
 
 
 class Transform(BaseModel, extra="forbid", populate_by_name=True):

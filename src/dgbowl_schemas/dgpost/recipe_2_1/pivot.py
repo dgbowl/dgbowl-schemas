@@ -1,5 +1,7 @@
+from collections.abc import Sequence
+from typing import Literal, Optional, Union
+
 from pydantic import BaseModel, Field
-from typing import Sequence, Literal, Union, Optional
 
 
 class Pivot(BaseModel, extra="forbid", populate_by_name=True):

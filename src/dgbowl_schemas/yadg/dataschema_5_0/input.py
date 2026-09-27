@@ -1,6 +1,8 @@
-from pydantic import BaseModel, Field
-from typing import Optional, Sequence, List
 import os
+from collections.abc import Sequence
+from typing import List, Optional
+
+from pydantic import BaseModel, Field
 
 
 class Input(BaseModel, extra="forbid", populate_by_name=True):

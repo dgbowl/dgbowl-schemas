@@ -1,12 +1,13 @@
-import pytest
-import os
 import json
+import locale
+import os
+
+import pytest
+from babel import UnknownLocaleError
+from pydantic import BaseModel, ValidationError
+
 from dgbowl_schemas.yadg import to_dataschema
 from dgbowl_schemas.yadg.dataschema import ExtractorFactory
-import locale
-from pydantic import BaseModel
-from babel import UnknownLocaleError
-from pydantic import ValidationError
 
 
 @pytest.mark.parametrize(

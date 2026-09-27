@@ -1,5 +1,6 @@
-from pydantic import BaseModel, Field
 from typing import Literal, Optional, Union
+
+from pydantic import BaseModel, Field
 
 
 class Settings(BaseModel, extra="forbid"):

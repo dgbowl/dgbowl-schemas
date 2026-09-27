@@ -1,6 +1,7 @@
-from pydantic import BaseModel, Field, field_validator
-from typing import Literal, Optional
 import logging
+from typing import Literal, Optional
+
+from pydantic import BaseModel, Field, field_validator
 
 logger = logging.getLogger(__name__)
 

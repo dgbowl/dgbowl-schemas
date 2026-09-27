@@ -1,28 +1,30 @@
-from pydantic import BaseModel, Field
 from abc import ABC
-from typing import Optional, Literal, Mapping, Union
+from collections.abc import Mapping
+from typing import Literal, Optional, Union
+
+from pydantic import BaseModel, Field
+
 from .externaldate import ExternalDate
-from .input import Input
-from .parameters import Parameters, Timestamps, Timestamp
 from .filetype import (
-    FileType,
-    NoFileType,
-    DummyFileTypes,
-    FlowDataFileTypes,
-    ElectroChemFileTypes,
-    ChromTraceFileTypes,
     ChromDataFileTypes,
+    ChromTraceFileTypes,
+    DummyFileTypes,
+    ElectroChemFileTypes,
+    FileType,
+    FlowDataFileTypes,
     MassTraceFileTypes,
+    NoFileType,
     QFTraceFileTypes,
     XPSTraceFileTypes,
     XRDTraceFileTypes,
 )
-
+from .input import Input
+from .parameters import Parameters, Timestamp, Timestamps
 
 try:
     from typing import Annotated
 except ImportError:
-    from typing_extensions import Annotated
+    from typing import Annotated
 
 
 class Parser(BaseModel, ABC, extra="forbid"):

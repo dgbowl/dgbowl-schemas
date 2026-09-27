@@ -1,13 +1,20 @@
+from collections.abc import Mapping, Sequence
+from typing import Any, Literal, Optional
+
 from pydantic import BaseModel, Field
-from typing import Sequence, Optional, Mapping, Any, Literal
-from .step import Step
-from .stepdefaults import StepDefaults
-from .filetype import (  # noqa: F401
+
+from ..dataschema_6_0 import DataSchema as NewDataSchema
+from .filetype import (
     ExtractorFactory as ExtractorFactory,
+)
+from .filetype import (
     FileType as FileType,
+)
+from .filetype import (
     FileTypes as FileTypes,
 )
-from ..dataschema_6_0 import DataSchema as NewDataSchema
+from .step import Step
+from .stepdefaults import StepDefaults
 
 
 class DataSchema(BaseModel, extra="forbid"):

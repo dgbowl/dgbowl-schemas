@@ -1,12 +1,15 @@
+import logging
+from collections.abc import Sequence
+from typing import Literal, Optional
+
 from pydantic import BaseModel
-from typing import Optional, Literal, Sequence
-from .load import Load
+
+from ..recipe_2_1 import Recipe as NewRecipe
 from .extract import Extract
-from .transform import Transform
+from .load import Load
 from .plot import Plot
 from .save import Save
-from ..recipe_2_1 import Recipe as NewRecipe
-import logging
+from .transform import Transform
 
 logger = logging.getLogger(__name__)
 
@@ -23,7 +26,7 @@ class Recipe(BaseModel, extra="forbid"):
         logger.info("Updating from Recipe-1.0 to Recipe-2.1")
 
         nsch = {"version": "2.1"}
-        for k in {"load", "extract", "transform", "plot", "save"}:
+        for k in ("load", "extract", "transform", "plot", "save"):
             attr = getattr(self, k)
             if attr is not None:
                 nsch[k] = [i.model_dump(by_alias=True, exclude_none=True) for i in attr]

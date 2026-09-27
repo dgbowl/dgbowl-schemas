@@ -1,4 +1,5 @@
 from typing import Literal
+
 from dgbowl_schemas.dgpost.recipe_2_1 import Recipe as Recipe_2_1
 
 

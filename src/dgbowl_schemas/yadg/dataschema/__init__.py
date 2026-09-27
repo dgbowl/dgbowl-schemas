@@ -1,9 +1,9 @@
 from ..dataschema_7_0 import (
     DataSchema,
-    StepDefaults,
+    ExtractorFactory,
     FileType,
     FileTypes,
-    ExtractorFactory,
+    StepDefaults,
 )
 
-__all__ = ["DataSchema", "StepDefaults", "FileType", "FileTypes", "ExtractorFactory"]
+__all__ = ["DataSchema", "ExtractorFactory", "FileType", "FileTypes", "StepDefaults"]
