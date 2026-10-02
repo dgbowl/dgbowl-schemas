@@ -96,7 +96,7 @@ class EClab_mpr(FileType):
 
 class EClab_mpt(FileType):
     filetype: Literal["eclab.mpt"]
-    encoding: str = "windows-1252"
+    encoding: str | None = "windows-1252"
 
     @field_validator("encoding")
     @classmethod
@@ -118,7 +118,7 @@ class EZChrom_dat(FileType):
 
 class EZChrom_asc(FileType):
     filetype: Literal["ezchrom.asc"]
-    encoding: str = "windows-1252"
+    encoding: str | None = "windows-1252"
 
     @field_validator("encoding")
     @classmethod

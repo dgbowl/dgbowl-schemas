@@ -64,7 +64,7 @@ class EClab_mpr(FileType):
 
 class EClab_mpt(FileType):
     filetype: Literal["eclab.mpt", "marda:biologic-mpt"]
-    encoding: str = "windows-1252"
+    encoding: str | None = "windows-1252"
 
 
 ElectroChemFileTypes = EClab_mpr | EClab_mpt | Tomato_json

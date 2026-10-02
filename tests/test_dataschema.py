@@ -167,6 +167,17 @@ def test_dataschema_update_chain(inpath, datadir):
                 "encoding": "windows-1252",
             },
         ),
+        (  # ts2 - mpt file, encoding hard-set to None
+            {
+                "filetype": "eclab.mpt",
+                "encoding": None,
+            },
+            {
+                "filetype": "eclab.mpt",
+                "locale": "en_GB",
+                "encoding": "windows-1252",
+            },
+        ),
     ],
 )
 def test_extractor_factory(input, output):
